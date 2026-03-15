@@ -1,6 +1,6 @@
 # closure-bias-inheritance
 
-Companion code and reproducibility artifacts for neural-symbolic closure discovery in 1D reaction-diffusion systems, focusing on **bias inheritance**: restricted symbolic compression tends to preserve (not automatically repair) constitutive bias learned by a neural surrogate.
+Code for neural-symbolic closure discovery in 1D reaction-diffusion systems, focusing on **bias inheritance**: restricted symbolic compression tends to preserve (not automatically repair) constitutive bias learned by a neural surrogate.
 
 We consider the PDE
 
@@ -14,8 +14,6 @@ where the PDE structure is known but the constitutive laws `D(u)` and `R(u)` are
 
 - `src/closure_discovery/`: solver, weak-form residuals, models, symbolic restricted fitting, and evaluation metrics.
 - `experiments/`: benchmark scripts (polynomial baselines, excitation, cross-resolution, symbolic compression).
-- `results/`: saved benchmark CSVs used by the manuscript.
-- `paper_bundle/`: self-contained LaTeX draft (includes an Elsevier/JCP-style `elsarticle` entry) plus copied figures/CSV artifacts.
 
 Implemented synthetic cases:
 
@@ -30,21 +28,8 @@ Run a short smoke test:
 PYTHONPATH=src python experiments/run_case_a_mvp.py --epochs 5 --num-trajectories 4
 ```
 
-## Build The Paper PDF
-
-Draft (article class):
-
-```bash
-./paper_bundle/build.sh
-```
-
-Elsevier/JCP-style entry (`elsarticle`):
-
-```bash
-./paper_bundle/build.sh main_elsarticle.tex
-```
+Experiment outputs (CSVs/figures) are written under `results/` and ignored by default.
 
 ## License
 
 MIT, see `LICENSE`.
-

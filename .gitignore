@@ -16,6 +16,13 @@ wandb/
 runs/
 logs/
 
+# Experiment outputs (generated).
+results/
+
+# Manuscript sources are kept in a separate (private) repository during review.
+paper_bundle/
+docs/
+
 # LaTeX build artifacts.
 *.aux
 *.bbl
