@@ -1,0 +1,130 @@
+\section{Theory}
+
+The theory in this paper is intended as a mechanism-level explanation of the observed behavior, not as a full uniqueness-and-convergence theory for nonlinear PDE inverse problems. Its role is to justify the weak-form objective, explain when polynomial baselines are especially strong in the correctly specified regime, and formalize why symbolic compression preserves but does not repair constitutive bias.
+
+Unless stated otherwise, the closure-space norms below are taken in a common norm on the scalar constitutive functions. When a norm is restricted to the bounded state interval visited by the trajectories, we write it explicitly as an $L^\infty(\mathcal{U})$ norm. In the empirical evaluation, the reported closure metrics are relative discrete $L^2(\mathcal{U})$ errors on a common support grid, which is consistent with the topology induced by the weak-form objective and the rollout comparisons used in the paper.
+
+\subsection{Weak-form consistency}
+
+\begin{proposition}[Space-weak consistency]
+Assume
+\begin{equation}
+u \in L^2(0,T;H^1(\Omega)),
+\qquad
+u_t \in L^2(0,T;H^{-1}(\Omega)).
+\end{equation}
+Then for any spatial test function $\phi \in H^1(\Omega)$,
+\begin{equation}
+\int_0^T \langle u_t,\phi \rangle \, dt
++ \int_0^T \int_\Omega D(u) u_x \phi_x \, dx dt
+- \int_0^T \int_\Omega R(u) \phi \, dx dt
+= 0.
+\end{equation}
+Under periodic or no-flux boundaries,
+\begin{equation}
+\frac{d}{dt} \int_\Omega u \, dx = \int_\Omega R(u) \, dx.
+\end{equation}
+\end{proposition}
+
+This proposition legitimizes the weak residual and the mass-balance penalty. The second identity is obtained by choosing $\phi \equiv 1$, so the diffusion contribution vanishes and only the reaction-driven mass balance remains. The result should be read as a consistency statement for the space-weak training objective rather than as a complete space-time weak-solution definition.
+
+\subsection{Matched-library identification}
+
+\begin{proposition}[Discrete projected identification under sufficient excitation]
+Suppose the true closures lie in finite dictionaries:
+\begin{equation}
+D(u) = \sum_{i=1}^{p_D} a_i \psi_i(u),
+\qquad
+R(u) = \sum_{j=1}^{p_R} b_j \chi_j(u).
+\end{equation}
+After weak-form projection and discrete quadrature, the identification problem becomes
+\begin{equation}
+\Phi \theta = Y,
+\end{equation}
+where $\theta$ stacks the coefficients. If the Gram matrix
+\begin{equation}
+G = \Phi^\top \Phi
+\end{equation}
+is positive definite, then the least-squares estimator is unique.
+\end{proposition}
+
+This explains why weak polynomial baselines are so strong in Case~A and Case~B. The important point is not merely that the model is linear in coefficients, but that excitation coverage determines whether the induced design matrix has informative, nondegenerate columns. This is a uniqueness statement for the projected coefficient fit, not a full statistical consistency theorem for PDE closure recovery.
+
+\subsection{Low residual does not imply true closure recovery}
+
+\begin{proposition}[Non-identifiability under limited excitation]
+\label{prop:non_identifiability}
+Let $\mathcal{A}_{\mathcal{T}}(D,R)$ denote the weak-form observation operator induced by a finite trajectory set $\mathcal{T}$. If $\mathcal{A}_{\mathcal{T}}$ is not injective on the admissible closure class, then there exist nonzero perturbations $(\delta D,\delta R)$ such that
+\begin{equation}
+\mathcal{A}_{\mathcal{T}}(D+\delta D,R+\delta R)
+\approx
+\mathcal{A}_{\mathcal{T}}(D,R).
+\end{equation}
+Hence low weak residual on the observed trajectories does not imply unique or correct recovery of the true closure pair.
+\end{proposition}
+
+Here ``$\approx$'' means approximate equality in the induced observation norm or, equivalently in practice, a comparably small weak residual on the observed trajectory set. This proposition formalizes the central inverse-problem warning behind the paper. It explains why low weak loss and good short-horizon rollout can coexist with large closure error, especially when the observed data occupy only a narrow state interval or have weak gradient and curvature content.
+
+\subsection{Approximation bias under function-class mismatch}
+
+\begin{proposition}[Approximation bias]
+Let $\mathcal{F}$ be the hypothesis class used by the identifier. If the true closure $f^\ast$ does not belong to $\mathcal{F}$, define the best-in-class target
+\begin{equation}
+f^\dagger = \arg \min_{f \in \mathcal{F}} \mathcal{L}(f).
+\end{equation}
+Then the recovery error satisfies
+\begin{equation}
+\|f^\ast - \widehat{f}\|
+\le
+\|f^\ast - f^\dagger\|
++ \|f^\dagger - \widehat{f}\|.
+\end{equation}
+\end{proposition}
+
+The first term is model-class bias and the second is identification or optimization error. This decomposition explains why the mismatch regime is the right place to justify a neural surrogate: its main value is reduced approximation bias relative to a misspecified restricted library.
+
+\subsection{Symbolic compression as bias-preserving distillation}
+
+\begin{proposition}[Bias preservation under symbolic compression]
+Let $f^\ast$ be the true closure, $\widehat{f}$ the learned numerical surrogate, and $f_{\text{sym}}$ the compressed symbolic closure. Then
+\begin{equation}
+\left| \|f^\ast - f_{\text{sym}}\| - \|f^\ast - \widehat{f}\| \right|
+\le
+\|\widehat{f} - f_{\text{sym}}\|.
+\label{eq:bias_preservation}
+\end{equation}
+\end{proposition}
+
+Equation~\eqref{eq:bias_preservation} is the core theoretical explanation of the benchmark results. If compression error is small, then the symbolic true error must remain close to the neural true error. In other words, the symbolic stage cannot create a large correction unless it first departs substantially from the surrogate it is meant to compress.
+The estimate is a direct application of the reverse triangle inequality to the pair of vectors $f^\ast-f_{\text{sym}}$ and $f^\ast-\widehat{f}$.
+
+\subsection{Rollout preservation under small closure perturbations}
+
+\begin{remark}[Finite-time rollout stability]
+Let $u_1$ and $u_2$ solve the same initial-value problem on $[0,T]$ with closure pairs $f_1=(D_1,R_1)$ and $f_2=(D_2,R_2)$. Under uniform parabolicity and bounded-Lipschitz assumptions on both closures, there exists a constant $C_T$ such that
+\begin{equation}
+\sup_{t \in [0,T]} \|u_1(t) - u_2(t)\|_{L^2}
+\le
+C_T \left(
+\|D_1-D_2\|_{L^\infty(\mathcal{U})} + \|R_1-R_2\|_{L^\infty(\mathcal{U})}
+\right),
+\end{equation}
+where $\mathcal{U}$ is the bounded state range visited by the trajectories.
+\end{remark}
+
+This estimate should be read as a standard finite-time stability template rather than a fully derived theorem under minimal assumptions. It connects small closure-space compression error to small additional rollout degradation over finite horizons and explains why symbolic rollout almost matches neural rollout in the experiments.
+
+\subsection{Unified error decomposition}
+
+Combining the approximation-bias and compression statements gives the practical decomposition
+\begin{equation}
+\|f^\ast - f_{\text{sym}}\|
+\le
+\underbrace{\|f^\ast - f^\dagger\|}_{\text{model-class bias}}
++
+\underbrace{\|f^\dagger - \widehat{f}\|}_{\text{identification and optimization error}}
++
+\underbrace{\|\widehat{f} - f_{\text{sym}}\|}_{\text{symbolic compression error}}.
+\label{eq:total_decomposition}
+\end{equation}
+The experiments in this paper show that the third term is small, while the first two dominate. This is why the symbolic stage is not the main bottleneck.

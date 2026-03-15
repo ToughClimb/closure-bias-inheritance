@@ -1,0 +1,65 @@
+% Elsevier/JCP-friendly entry point (keeps the section sources unchanged).
+%
+% This file is intended for preprint-style compilation and later submission
+% formatting with the elsarticle class. Keep `main.tex` (article) for drafting.
+\documentclass[preprint,12pt]{elsarticle}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+}
+
+\journal{Journal of Computational Physics}
+
+\newcommand{\codeurl}{\texttt{https://github.com/ToughClimb/closure-bias-inheritance}}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{Bias Inheritance in Neural-Symbolic Closure Discovery Under Function-Class Mismatch}
+
+\author[aff1]{Hanbing Liang}
+\author[aff1]{Fujun Liu\corref{cor1}}
+\ead{fjliu@cust.edu.cn}
+\cortext[cor1]{Corresponding author.}
+\address[aff1]{Nanophotonics and Biophotonics Key Laboratory of Jilin Province, School of Physics, Changchun University of Science and Technology, Changchun 130022, P.R. China}
+
+\input{sections/abstract}
+
+\begin{keyword}
+closure discovery \sep weak form \sep symbolic regression \sep reaction-diffusion \sep identifiability
+\end{keyword}
+
+\end{frontmatter}
+
+\input{sections/introduction}
+\input{sections/problem_formulation}
+\input{sections/method}
+\input{sections/theory}
+\input{sections/experiments}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% Bibliography scaffold (fill `references.bib` and replace the style for the target venue).
+\nocite{*}
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\appendix
+\input{sections/appendix}
+
+\end{document}

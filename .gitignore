@@ -1,0 +1,30 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+build/
+dist/
+*.egg-info/
+outputs/
+
+# Local tooling and downloads (not part of the open-source release).
+.tools/
+
+# Training artifacts.
+checkpoints/
+wandb/
+runs/
+logs/
+
+# LaTeX build artifacts.
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc

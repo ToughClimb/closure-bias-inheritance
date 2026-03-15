@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it."
+title: "closure-discovery"
+version: "0.1.0"
+date-released: "2026-03-16"
+license: "MIT"
+authors:
+  - name: "Closure Discovery Authors"
+repository-code: "https://github.com/ToughClimb/closure-bias-inheritance"

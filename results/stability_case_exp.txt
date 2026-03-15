@@ -1,0 +1,25 @@
+stability_protocol
+  backbone=mlp
+  master_trajectories=8
+  subset_size=4
+  amplitude_range=(0.0, 1.8)
+seed_stability
+  runs=3
+  bin_coverage=0.844
+  gradient_rms=4.492e+00
+  final_weak_loss=3.743e-04 ± 2.283e-06
+  relative_error_D=4.675e-02 ± 3.274e-04
+  relative_error_R=3.963e-01 ± 1.062e-02
+  unseen_rollout_relative_l2=2.472e-03 ± 1.461e-04
+  diffusion_dispersion=1.554e-03
+  reaction_dispersion=3.028e-02
+subset_stability
+  runs=3
+  bin_coverage=0.844
+  gradient_rms=4.662e+00
+  final_weak_loss=3.871e-04 ± 4.947e-05
+  relative_error_D=4.704e-02 ± 1.672e-03
+  relative_error_R=3.847e-01 ± 5.094e-02
+  unseen_rollout_relative_l2=2.318e-03 ± 3.474e-05
+  diffusion_dispersion=7.767e-03
+  reaction_dispersion=1.563e-01

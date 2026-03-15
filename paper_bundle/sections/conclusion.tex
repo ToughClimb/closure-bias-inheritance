@@ -1,0 +1,7 @@
+\section{Conclusion}
+
+We presented a weak-form neural-symbolic framework for closure discovery in reaction-diffusion systems with known PDE structure and unknown constitutive laws. The framework separates numerical constitutive recovery, restricted symbolic compression, and forward validation by PDE re-simulation.
+
+The main result is not that symbolic regression magically repairs a biased neural surrogate. It does not. Instead, the experiments and theory show that once symbolic compression error is small, the symbolic closure largely inherits the constitutive bias already present in the learned numerical surrogate. This is why symbolic rollout remains close to neural rollout and why the bias inheritance ratio stays near one across clean, noisy, and sparse settings.
+
+The practical conclusion is straightforward. In neural-symbolic closure discovery, the main bottleneck lies in Stage~1 numerical constitutive recovery under limited excitation and function-class mismatch. Future progress should therefore focus on better identifiability, stronger validation protocols, and broader closure families, while keeping the symbolic stage restricted, interpretable, and explicitly validated by forward simulation.

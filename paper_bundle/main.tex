@@ -1,0 +1,48 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue,
+}
+
+\title{Bias Inheritance in Neural-Symbolic Closure Discovery Under Function-Class Mismatch}
+\author{}
+\date{}
+\newcommand{\codeurl}{\texttt{https://github.com/ToughClimb/closure-bias-inheritance}}
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+
+\begin{document}
+
+\maketitle
+
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/problem_formulation}
+\input{sections/method}
+\input{sections/theory}
+\input{sections/experiments}
+\input{sections/discussion}
+\input{sections/conclusion}
+
+% Bibliography scaffold (fill `references.bib` and replace the style for the target venue).
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{references}
+
+\appendix
+\input{sections/appendix}
+
+\end{document}
