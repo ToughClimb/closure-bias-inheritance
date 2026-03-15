@@ -18,7 +18,7 @@ where the PDE structure is known but the constitutive laws `D(u)` and `R(u)` are
 Implemented synthetic cases:
 
 - `case_a`, `case_b`: matched-library polynomial closures.
-- `case_exp` (paper stress test) and `case_c`: smooth non-polynomial closures for mismatch checks.
+- `case_exp` and `case_c`: smooth non-polynomial closures for mismatch checks.
 
 ## Quick Start
 
