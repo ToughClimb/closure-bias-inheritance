@@ -17,7 +17,9 @@ runs/
 logs/
 
 # Experiment outputs (generated).
-results/
+results/*
+!results/paper_artifacts/
+!results/paper_artifacts/**
 
 # Private research assets kept outside the public code repository.
 paper_bundle/

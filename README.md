@@ -32,6 +32,8 @@ The current paper-facing synthetic cases are:
 github_release/
 ├─ src/closure_discovery/   # core library code
 ├─ experiments/            # experiment and benchmark entry points
+├─ paper/                  # public manuscript source and compiled PDF
+├─ results/paper_artifacts/# paper-facing table summaries and figure assets
 ├─ pyproject.toml          # package metadata
 ├─ LICENSE
 └─ CITATION.cff
@@ -46,6 +48,16 @@ python -m pip install -e .
 ```
 
 The PySR benchmark is optional and may require extra local setup beyond the core dependencies.
+
+## Public Manuscript Material
+
+The repository also includes the current public manuscript source and selected paper-facing artifacts:
+
+- `paper/main.tex`: single-file manuscript source
+- `paper/references.bib`: bibliography database
+- `paper/main.pdf`: compiled PDF snapshot
+- `results/paper_artifacts/tables/`: CSV/Markdown table summaries used for paper figures/tables
+- `results/paper_artifacts/figures/`: exported paper-facing figures
 
 ## Quick Start
 
@@ -75,7 +87,7 @@ PYTHONPATH=src python experiments/run_pysr_symbolic_compression.py --case case_e
 
 - The paper-facing Stage-1 learner is a weak-form-driven hybrid objective, not pure weak-form training.
 - Experiment outputs are generated locally and are ignored by default.
-- This repository is the public code release; manuscript sources and large paper artifacts are intentionally excluded.
+- This repository is the public code-and-manuscript release; large training outputs beyond the paper-facing artifacts remain excluded.
 
 ## License
 
