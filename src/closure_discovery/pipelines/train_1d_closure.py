@@ -8,7 +8,10 @@ import numpy as np
 import torch
 
 from closure_discovery.data_generation.observations import apply_observation_model
-from closure_discovery.data_generation.rd_solver_1d import SimulationConfig1D, generate_dataset
+from closure_discovery.data_generation.rd_solver_1d import (
+    SimulationConfig1D,
+    generate_dataset,
+)
 from closure_discovery.evaluation.metrics import relative_l2_error, summarize_excitation
 from closure_discovery.evaluation.rollout import compare_cases_on_shared_initial_conditions
 from closure_discovery.models.mlp_closure import ReactionDiffusionClosure
@@ -20,6 +23,9 @@ from closure_discovery.weak_form.weak_residual import (
     strong_residual_loss,
     weak_loss_1d,
 )
+
+
+PAPER_STAGE1_OBJECTIVE_NAME = "paper_hybrid_stage1_v1"
 
 
 @dataclass(frozen=True)
@@ -47,6 +53,7 @@ class TrainingConfig:
     kan_grid_size: int = 16
     num_test_modes: int = 4
     num_bump_functions: int = 4
+    objective_name: str = PAPER_STAGE1_OBJECTIVE_NAME
 
 
 @dataclass(frozen=True)
@@ -55,8 +62,55 @@ class UnseenRolloutConfig:
     num_trajectories: int = 4
     seed_offset: int = 1000
     amplitude_range: tuple[float, float] | None = None
+    initial_clip_range: tuple[float, float] | None = None
     num_modes: int = 4
     simulation_config: SimulationConfig1D | None = None
+
+
+def make_paper_training_config(
+    *,
+    epochs: int = 150,
+    lr: float = 1.0e-3,
+    backbone: str = "mlp",
+    hidden_width: int = 64,
+    hidden_depth: int = 2,
+    diffusion_degree: int = 2,
+    reaction_degree: int = 3,
+    residual_scale: float = 0.1,
+    kan_grid_size: int = 16,
+    num_test_modes: int = 4,
+    num_bump_functions: int = 4,
+) -> TrainingConfig:
+    return TrainingConfig(
+        epochs=epochs,
+        lr=lr,
+        rollout_weight=0.1,
+        mass_weight=1.0,
+        strong_weight=1.0,
+        reaction_anchor_weight=1.0,
+        reg_weight=1.0e-4,
+        backbone=backbone,
+        hidden_width=hidden_width,
+        hidden_depth=hidden_depth,
+        diffusion_degree=diffusion_degree,
+        reaction_degree=reaction_degree,
+        residual_scale=residual_scale,
+        kan_grid_size=kan_grid_size,
+        num_test_modes=num_test_modes,
+        num_bump_functions=num_bump_functions,
+        objective_name=PAPER_STAGE1_OBJECTIVE_NAME,
+    )
+
+
+def summarize_training_objective(training_config: TrainingConfig) -> str:
+    return (
+        f"{training_config.objective_name}: "
+        f"weak + {training_config.rollout_weight:g}*rollout + "
+        f"{training_config.mass_weight:g}*mass + "
+        f"{training_config.strong_weight:g}*strong + "
+        f"{training_config.reaction_anchor_weight:g}*anchor + "
+        f"{training_config.reg_weight:g}*reg"
+    )
 
 
 def set_seed(seed: int) -> None:
@@ -75,12 +129,13 @@ def run_closure_identification(
     observation_config: ObservationConfig | None = None,
     training_config: TrainingConfig | None = None,
     unseen_rollout_config: UnseenRolloutConfig | None = None,
+    initial_clip_range: tuple[float, float] | None = None,
     seed: int = 0,
     device: str | torch.device | None = None,
     raw_dataset: dict[str, np.ndarray] | None = None,
 ) -> dict[str, Any]:
     observation_config = observation_config or ObservationConfig()
-    training_config = training_config or TrainingConfig()
+    training_config = training_config or make_paper_training_config()
     unseen_rollout_config = unseen_rollout_config or UnseenRolloutConfig()
     set_seed(seed)
 
@@ -92,6 +147,7 @@ def run_closure_identification(
             seed=seed,
             amplitude_range=amplitude_range,
             num_modes=num_initial_modes,
+            initial_clip_range=initial_clip_range,
         )
     else:
         dataset = {
@@ -234,6 +290,7 @@ def run_closure_identification(
     if unseen_rollout_config.enabled:
         rollout_config = unseen_rollout_config.simulation_config or simulation_config
         rollout_amplitude_range = unseen_rollout_config.amplitude_range or amplitude_range
+        rollout_initial_clip_range = unseen_rollout_config.initial_clip_range or rollout_amplitude_range
         unseen_rollout = compare_cases_on_shared_initial_conditions(
             true_case=case,
             predicted_case=learned_case,
@@ -241,6 +298,7 @@ def run_closure_identification(
             num_trajectories=unseen_rollout_config.num_trajectories,
             seed=seed + unseen_rollout_config.seed_offset,
             amplitude_range=rollout_amplitude_range,
+            initial_clip_range=rollout_initial_clip_range,
             num_modes=unseen_rollout_config.num_modes,
         )
         metrics["unseen_rollout_mse"] = unseen_rollout.mse
@@ -253,6 +311,7 @@ def run_closure_identification(
         "observation_config": asdict(observation_config),
         "training_config": asdict(training_config),
         "amplitude_range": amplitude_range,
+        "initial_clip_range": initial_clip_range or amplitude_range,
         "dataset": observed,
         "excitation": excitation,
         "history": history,

@@ -93,11 +93,13 @@ def mass_balance_loss(
     closure_model,
 ) -> torch.Tensor:
     """
-    Enforce the spatially averaged balance:
+    Reweight the spatially averaged balance:
 
         d/dt ∫ u dx = ∫ R(u) dx
 
     for periodic or no-flux boundaries, where the diffusion contribution vanishes.
+    This is the constant-test-function relation already contained in the weak form,
+    isolated here as an extra scalar penalty so it can receive its own optimization weight.
     """
 
     u_mid = u[:, 1:-1, :]

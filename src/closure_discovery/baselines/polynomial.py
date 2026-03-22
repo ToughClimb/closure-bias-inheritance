@@ -278,6 +278,7 @@ def run_polynomial_baseline(
         num_trajectories=unseen_rollout_config.num_trajectories,
         seed=seed + unseen_rollout_config.seed_offset,
         amplitude_range=rollout_amplitude_range,
+        initial_clip_range=unseen_rollout_config.initial_clip_range or rollout_amplitude_range,
         num_modes=unseen_rollout_config.num_modes,
     )
 

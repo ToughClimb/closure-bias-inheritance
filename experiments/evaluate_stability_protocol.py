@@ -11,8 +11,9 @@ from closure_discovery.data_generation.rd_solver_1d import SimulationConfig1D, g
 from closure_discovery.evaluation.metrics import pairwise_relative_l2_dispersion
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
-    TrainingConfig,
+    make_paper_training_config,
     run_closure_identification,
+    summarize_training_objective,
 )
 
 
@@ -86,7 +87,7 @@ def main() -> None:
         save_every=args.save_every,
         boundary="periodic",
     )
-    training_config = TrainingConfig(
+    training_config = make_paper_training_config(
         epochs=args.epochs,
         backbone=args.backbone,
         kan_grid_size=args.kan_grid_size,
@@ -104,6 +105,7 @@ def main() -> None:
         seed=args.dataset_seed,
         amplitude_range=amplitude_range,
         num_modes=4,
+        initial_clip_range=amplitude_range,
     )
 
     seed_results = []
@@ -116,6 +118,7 @@ def main() -> None:
             num_initial_modes=4,
             observation_config=observation_config,
             training_config=training_config,
+            initial_clip_range=amplitude_range,
             seed=args.base_seed + offset,
             raw_dataset=master_dataset,
         )
@@ -135,6 +138,7 @@ def main() -> None:
             num_initial_modes=4,
             observation_config=observation_config,
             training_config=training_config,
+            initial_clip_range=amplitude_range,
             seed=args.base_seed,
             raw_dataset=subset_dataset,
         )
@@ -145,6 +149,7 @@ def main() -> None:
     print(f"  master_trajectories={args.master_trajectories}")
     print(f"  subset_size={subset_size}")
     print(f"  amplitude_range={amplitude_range}")
+    print(f"  training_objective={summarize_training_objective(training_config)}")
     print_result_block("seed_stability", seed_results)
     print_result_block("subset_stability", subset_results)
 

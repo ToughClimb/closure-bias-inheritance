@@ -9,8 +9,9 @@ from closure_discovery.data_generation.cases import CASE_BUILDERS
 from closure_discovery.data_generation.rd_solver_1d import SimulationConfig1D
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
-    TrainingConfig,
+    make_paper_training_config,
     run_closure_identification,
+    summarize_training_objective,
 )
 
 
@@ -53,7 +54,7 @@ def main() -> None:
         save_every=args.save_every,
         boundary="periodic",
     )
-    training_config = TrainingConfig(
+    training_config = make_paper_training_config(
         epochs=args.epochs,
         backbone=args.backbone,
         kan_grid_size=args.kan_grid_size,
@@ -69,6 +70,7 @@ def main() -> None:
     }
 
     print(f"backbone={args.backbone}")
+    print(f"training_objective={summarize_training_objective(training_config)}")
     rows: list[dict[str, float | str]] = []
 
     for name, amplitude_range in regimes.items():
@@ -92,6 +94,7 @@ def main() -> None:
                 num_initial_modes=4,
                 observation_config=observation_config,
                 training_config=training_config,
+                initial_clip_range=amplitude_range,
                 seed=args.base_seed + offset,
             )
             excitation = result["excitation"]

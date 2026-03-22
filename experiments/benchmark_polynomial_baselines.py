@@ -10,8 +10,9 @@ from closure_discovery.data_generation.cases import CASE_BUILDERS
 from closure_discovery.data_generation.rd_solver_1d import SimulationConfig1D, generate_dataset
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
-    TrainingConfig,
+    make_paper_training_config,
     run_closure_identification,
+    summarize_training_objective,
 )
 
 
@@ -83,6 +84,13 @@ def main() -> None:
         f"  polynomial_library=(diffusion_degree={args.diffusion_degree}, "
         f"reaction_degree={args.reaction_degree})"
     )
+    training_config = make_paper_training_config(
+        epochs=args.epochs,
+        backbone=args.backbone,
+        kan_grid_size=args.kan_grid_size,
+        num_test_modes=args.num_modes,
+    )
+    print(f"  training_objective={summarize_training_objective(training_config)}")
 
     for setting in settings:
         metrics = {
@@ -100,6 +108,7 @@ def main() -> None:
                 seed=seed,
                 amplitude_range=amplitude_range,
                 num_modes=args.num_modes,
+                initial_clip_range=amplitude_range,
             )
             observation_config = ObservationConfig(
                 noise_level=setting["noise_level"],
@@ -114,12 +123,8 @@ def main() -> None:
                 amplitude_range=amplitude_range,
                 num_initial_modes=args.num_modes,
                 observation_config=observation_config,
-                training_config=TrainingConfig(
-                    epochs=args.epochs,
-                    backbone=args.backbone,
-                    kan_grid_size=args.kan_grid_size,
-                    num_test_modes=args.num_modes,
-                ),
+                training_config=training_config,
+                initial_clip_range=amplitude_range,
                 seed=seed,
                 raw_dataset=raw_dataset,
             )

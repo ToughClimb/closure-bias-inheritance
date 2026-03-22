@@ -7,8 +7,9 @@ from closure_discovery.data_generation.cases import CASE_BUILDERS
 from closure_discovery.data_generation.rd_solver_1d import SimulationConfig1D, generate_dataset
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
-    TrainingConfig,
+    make_paper_training_config,
     run_closure_identification,
+    summarize_training_objective,
 )
 
 
@@ -57,6 +58,7 @@ def main() -> None:
         seed=args.seed,
         amplitude_range=amplitude_range,
         num_modes=args.num_modes,
+        initial_clip_range=amplitude_range,
     )
     observation_config = ObservationConfig(
         noise_level=args.noise_level,
@@ -71,12 +73,13 @@ def main() -> None:
         amplitude_range=amplitude_range,
         num_initial_modes=args.num_modes,
         observation_config=observation_config,
-        training_config=TrainingConfig(
+        training_config=make_paper_training_config(
             epochs=args.epochs,
             backbone=args.backbone,
             kan_grid_size=args.kan_grid_size,
             num_test_modes=args.num_modes,
         ),
+        initial_clip_range=amplitude_range,
         seed=args.seed,
         raw_dataset=raw_dataset,
     )
@@ -122,6 +125,17 @@ def main() -> None:
     print(
         f"  polynomial_library=(diffusion_degree={args.diffusion_degree}, "
         f"reaction_degree={args.reaction_degree})"
+    )
+    print(
+        "  training_objective="
+        + summarize_training_objective(
+            make_paper_training_config(
+                epochs=args.epochs,
+                backbone=args.backbone,
+                kan_grid_size=args.kan_grid_size,
+                num_test_modes=args.num_modes,
+            )
+        )
     )
     print(
         f"  {args.backbone:<11} | ErrD={neural_result['metrics']['relative_error_D']:.6e} "

@@ -10,8 +10,9 @@ from closure_discovery.evaluation.metrics import relative_l2_error
 from closure_discovery.evaluation.rollout import compare_cases_on_shared_initial_conditions
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
-    TrainingConfig,
+    make_paper_training_config,
     run_closure_identification,
+    summarize_training_objective,
 )
 from closure_discovery.symbolic.restricted_fit import (
     SymbolicClosurePair,
@@ -82,12 +83,13 @@ def main() -> None:
             space_stride=args.space_stride,
             time_stride=args.time_stride,
         ),
-        training_config=TrainingConfig(
+        training_config=make_paper_training_config(
             epochs=args.epochs,
             backbone=args.backbone,
             kan_grid_size=args.kan_grid_size,
             num_test_modes=args.num_modes,
         ),
+        initial_clip_range=amplitude_range,
         seed=args.seed,
     )
 
@@ -135,6 +137,7 @@ def main() -> None:
         num_trajectories=4,
         seed=args.seed + 1000,
         amplitude_range=amplitude_range,
+        initial_clip_range=amplitude_range,
         num_modes=args.num_modes,
     )
 
@@ -145,6 +148,17 @@ def main() -> None:
     print(
         f"  observation=(noise={args.noise_level}, space_stride={args.space_stride}, "
         f"time_stride={args.time_stride})"
+    )
+    print(
+        "  training_objective="
+        + summarize_training_objective(
+            make_paper_training_config(
+                epochs=args.epochs,
+                backbone=args.backbone,
+                kan_grid_size=args.kan_grid_size,
+                num_test_modes=args.num_modes,
+            )
+        )
     )
     print(
         f"  neural_metrics=(ErrD={neural_result['metrics']['relative_error_D']:.6e}, "

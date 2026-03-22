@@ -32,14 +32,17 @@ def compare_cases_on_shared_initial_conditions(
     num_trajectories: int,
     seed: int,
     amplitude_range: tuple[float, float] = (0.2, 0.8),
+    initial_clip_range: tuple[float, float] | None = None,
     num_modes: int = 4,
 ) -> RolloutComparison:
+    clip_range = initial_clip_range or amplitude_range
     true_dataset = generate_dataset(
         case=true_case,
         config=config,
         num_trajectories=num_trajectories,
         seed=seed,
         amplitude_range=amplitude_range,
+        initial_clip_range=clip_range,
         num_modes=num_modes,
     )
     predicted_dataset = generate_dataset(
@@ -48,6 +51,7 @@ def compare_cases_on_shared_initial_conditions(
         num_trajectories=num_trajectories,
         seed=seed,
         amplitude_range=amplitude_range,
+        initial_clip_range=clip_range,
         num_modes=num_modes,
     )
 
@@ -57,4 +61,3 @@ def compare_cases_on_shared_initial_conditions(
         true_dataset=true_dataset,
         predicted_dataset=predicted_dataset,
     )
-

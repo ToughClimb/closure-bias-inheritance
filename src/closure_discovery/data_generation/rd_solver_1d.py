@@ -27,6 +27,22 @@ class SimulationConfig1D:
     def num_steps(self) -> int:
         return int(round(self.t_final / self.dt))
 
+    @property
+    def save_stride(self) -> int:
+        return max(self.save_every, 1)
+
+    @property
+    def saved_dt(self) -> float:
+        return self.dt * self.save_stride
+
+    @property
+    def last_saved_step(self) -> int:
+        return (self.num_steps // self.save_stride) * self.save_stride
+
+    @property
+    def last_saved_time(self) -> float:
+        return self.last_saved_step * self.dt
+
 
 def make_grid(config: SimulationConfig1D) -> Array:
     return np.linspace(0.0, config.length, config.nx, endpoint=False)
@@ -37,6 +53,7 @@ def random_fourier_initial_condition(
     rng: np.random.Generator,
     amplitude_range: tuple[float, float] = (0.2, 0.8),
     num_modes: int = 4,
+    clip_range: tuple[float, float] | None = None,
 ) -> Array:
     """Construct a smooth, positive random field from low-frequency Fourier modes."""
 
@@ -53,8 +70,11 @@ def random_fourier_initial_condition(
         base /= base.max()
 
     lower, upper = amplitude_range
+    if upper < lower:
+        raise ValueError(f"Expected amplitude_range[0] <= amplitude_range[1], got {amplitude_range}.")
     field = lower + (upper - lower) * base
-    return np.clip(field, 0.0, 1.5)
+    clip_lower, clip_upper = clip_range or amplitude_range
+    return np.clip(field, clip_lower, clip_upper)
 
 
 def _flux_divergence_periodic(u: Array, diffusion: callable, dx: float) -> Array:
@@ -108,7 +128,7 @@ def simulate_trajectory(
 ) -> tuple[Array, Array]:
     """Advance a single trajectory and return saved times and states."""
 
-    save_stride = max(config.save_every, 1)
+    save_stride = config.save_stride
     num_saves = config.num_steps // save_stride + 1
     trajectory = np.zeros((num_saves, config.nx), dtype=np.float64)
     times = np.zeros(num_saves, dtype=np.float64)
@@ -136,6 +156,7 @@ def generate_dataset(
     seed: int = 0,
     amplitude_range: tuple[float, float] = (0.2, 0.8),
     num_modes: int = 4,
+    initial_clip_range: tuple[float, float] | None = None,
 ) -> dict[str, Array]:
     rng = np.random.default_rng(seed)
     xs = make_grid(config)
@@ -150,6 +171,7 @@ def generate_dataset(
             rng=rng,
             amplitude_range=amplitude_range,
             num_modes=num_modes,
+            clip_range=initial_clip_range,
         )
         current_times, trajectory = simulate_trajectory(case=case, config=config, u0=u0)
         all_u0[index] = u0
@@ -163,4 +185,3 @@ def generate_dataset(
         "u0": all_u0,
         "u": np.stack(all_trajectories, axis=0),
     }
-

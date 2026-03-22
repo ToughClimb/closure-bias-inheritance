@@ -10,8 +10,9 @@ from closure_discovery.data_generation.rd_solver_1d import SimulationConfig1D
 from closure_discovery.evaluation.rollout import compare_cases_on_shared_initial_conditions
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
-    TrainingConfig,
+    make_paper_training_config,
     run_closure_identification,
+    summarize_training_objective,
 )
 
 
@@ -72,7 +73,7 @@ def main() -> None:
         save_every=args.val_save_every,
         boundary="periodic",
     )
-    training_config = TrainingConfig(
+    training_config = make_paper_training_config(
         epochs=args.epochs,
         backbone=args.backbone,
         kan_grid_size=args.kan_grid_size,
@@ -90,12 +91,13 @@ def main() -> None:
     print(f"  backbone={args.backbone}")
     print(
         f"  generation_grid=nx:{generation_config.nx}, dx:{generation_config.dx:.3e}, "
-        f"saved_dt:{generation_config.dt * generation_config.save_every:.3e}"
+        f"saved_dt:{generation_config.saved_dt:.3e}, saved_t_final:{generation_config.last_saved_time:.3e}"
     )
     print(
         f"  validation_grid=nx:{validation_config.nx}, dx:{validation_config.dx:.3e}, "
-        f"saved_dt:{validation_config.dt * validation_config.save_every:.3e}"
+        f"saved_dt:{validation_config.saved_dt:.3e}, saved_t_final:{validation_config.last_saved_time:.3e}"
     )
+    print(f"  training_objective={summarize_training_objective(training_config)}")
     rows: list[dict[str, float | str]] = []
 
     for setting in settings:
@@ -121,6 +123,7 @@ def main() -> None:
                     time_stride=setting["time_stride"],
                 ),
                 training_config=training_config,
+                initial_clip_range=amplitude_range,
                 seed=seed,
             )
             learned_case = result["tabulated_closure"].to_case(
@@ -133,6 +136,7 @@ def main() -> None:
                 num_trajectories=args.num_test_trajectories,
                 seed=seed + 1000,
                 amplitude_range=amplitude_range,
+                initial_clip_range=amplitude_range,
                 num_modes=4,
             )
 
@@ -158,9 +162,11 @@ def main() -> None:
                 "space_stride": float(setting["space_stride"]),
                 "time_stride": float(setting["time_stride"]),
                 "fine_nx": float(generation_config.nx),
-                "fine_saved_dt": generation_config.dt * generation_config.save_every,
+                "fine_saved_dt": generation_config.saved_dt,
+                "fine_saved_t_final": generation_config.last_saved_time,
                 "val_nx": float(validation_config.nx),
-                "val_saved_dt": validation_config.dt * validation_config.save_every,
+                "val_saved_dt": validation_config.saved_dt,
+                "val_saved_t_final": validation_config.last_saved_time,
                 "num_seeds": float(args.num_seeds),
                 "num_train_trajectories": float(args.num_train_trajectories),
                 "num_test_trajectories": float(args.num_test_trajectories),

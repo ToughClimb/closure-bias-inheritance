@@ -7,8 +7,9 @@ from closure_discovery.data_generation.rd_solver_1d import SimulationConfig1D
 from closure_discovery.evaluation.rollout import compare_cases_on_shared_initial_conditions
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
-    TrainingConfig,
+    make_paper_training_config,
     run_closure_identification,
+    summarize_training_objective,
 )
 
 
@@ -56,7 +57,7 @@ def main() -> None:
         space_stride=args.space_stride,
         time_stride=args.time_stride,
     )
-    training_config = TrainingConfig(
+    training_config = make_paper_training_config(
         epochs=args.epochs,
         backbone=args.backbone,
         kan_grid_size=args.kan_grid_size,
@@ -70,6 +71,7 @@ def main() -> None:
         num_initial_modes=4,
         observation_config=observation_config,
         training_config=training_config,
+        initial_clip_range=amplitude_range,
         seed=args.seed,
     )
 
@@ -88,6 +90,7 @@ def main() -> None:
         num_trajectories=args.num_test_trajectories,
         seed=args.seed + 1000,
         amplitude_range=amplitude_range,
+        initial_clip_range=amplitude_range,
         num_modes=4,
     )
 
@@ -100,7 +103,7 @@ def main() -> None:
     print(f"  amplitude_range={amplitude_range}")
     print(
         f"  generation_grid=nx:{fine_config.nx}, dx:{fine_config.dx:.3e}, "
-        f"saved_dt:{fine_config.dt * fine_config.save_every:.3e}"
+        f"saved_dt:{fine_config.saved_dt:.3e}, saved_t_final:{fine_config.last_saved_time:.3e}"
     )
     print(
         f"  identification_grid=nx:{observed['x'].shape[0]}, dx:{observed_dx:.3e}, "
@@ -108,8 +111,9 @@ def main() -> None:
     )
     print(
         f"  validation_grid=nx:{validation_config.nx}, dx:{validation_config.dx:.3e}, "
-        f"saved_dt:{validation_config.dt * validation_config.save_every:.3e}"
+        f"saved_dt:{validation_config.saved_dt:.3e}, saved_t_final:{validation_config.last_saved_time:.3e}"
     )
+    print(f"  training_objective={summarize_training_objective(training_config)}")
     print(f"  relative_error_D={result['metrics']['relative_error_D']:.6e}")
     print(f"  relative_error_R={result['metrics']['relative_error_R']:.6e}")
     print(f"  final_weak_loss={result['metrics']['final_weak_loss']:.6e}")

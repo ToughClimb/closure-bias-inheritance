@@ -1,34 +1,81 @@
 # closure-bias-inheritance
 
-Code for neural-symbolic closure discovery in 1D reaction-diffusion systems, focusing on **bias inheritance**: restricted symbolic compression tends to preserve (not automatically repair) constitutive bias learned by a neural surrogate.
+Code for neural-symbolic closure discovery in 1D reaction-diffusion systems with known PDE structure and unknown constitutive laws.
 
-We consider the PDE
+The repository studies the problem
 
 ```math
 u_t = \partial_x \left( D(u)\,u_x \right) + R(u),
 ```
 
-where the PDE structure is known but the constitutive laws `D(u)` and `R(u)` are unknown.
+with a focus on one paper-facing mechanism claim:
+restricted symbolic compression usually preserves the constitutive bias already present in the learned numerical surrogate, rather than automatically repairing it.
 
-## What This Repo Contains
+## Scope
 
-- `src/closure_discovery/`: solver, weak-form residuals, models, symbolic restricted fitting, and evaluation metrics.
-- `experiments/`: benchmark scripts (polynomial baselines, excitation, cross-resolution, symbolic compression).
+- 1D periodic reaction-diffusion solver
+- weak-form-driven hybrid Stage-1 closure identification
+- polynomial baselines for matched-library reference cases
+- restricted symbolic compression and forward rollout validation
+- excitation and cross-resolution diagnostics
+- optional PySR-based Stage-2 replacement check
 
-Implemented synthetic cases:
+The current paper-facing synthetic cases are:
 
-- `case_a`, `case_b`: matched-library polynomial closures.
-- `case_exp` and `case_c`: smooth non-polynomial closures for mismatch checks.
+- `case_a`: matched-library reference case
+- `case_b`: second matched-library reference case
+- `case_exp`: smooth non-polynomial mismatch stress test
+
+## Repository Layout
+
+```text
+github_release/
+├─ src/closure_discovery/   # core library code
+├─ experiments/            # experiment and benchmark entry points
+├─ pyproject.toml          # package metadata
+├─ LICENSE
+└─ CITATION.cff
+```
+
+## Installation
+
+Core dependencies are listed in `pyproject.toml`.
+
+```bash
+python -m pip install -e .
+```
+
+The PySR benchmark is optional and may require extra local setup beyond the core dependencies.
 
 ## Quick Start
 
-Run a short smoke test:
+Smoke test:
 
 ```bash
 PYTHONPATH=src python experiments/run_case_a_mvp.py --epochs 5 --num-trajectories 4
 ```
 
-Experiment outputs (CSVs/figures) are written under `results/` and ignored by default.
+Representative paper-facing runs:
+
+```bash
+PYTHONPATH=src python experiments/benchmark_polynomial_baselines.py --case case_exp --num-seeds 3
+PYTHONPATH=src python experiments/benchmark_symbolic_compression.py --case case_exp --num-seeds 3
+PYTHONPATH=src python experiments/compare_excitation_protocol.py --case case_exp --num-seeds 3
+PYTHONPATH=src python experiments/cross_resolution_benchmark.py --case case_exp --num-seeds 3
+PYTHONPATH=src python experiments/objective_ablation.py --case case_exp --num-seeds 3
+```
+
+Optional PySR Stage-2 replacement check:
+
+```bash
+PYTHONPATH=src python experiments/run_pysr_symbolic_compression.py --case case_exp --seed 0
+```
+
+## Notes
+
+- The paper-facing Stage-1 learner is a weak-form-driven hybrid objective, not pure weak-form training.
+- Experiment outputs are generated locally and are ignored by default.
+- This repository is the public code release; manuscript sources and large paper artifacts are intentionally excluded.
 
 ## License
 

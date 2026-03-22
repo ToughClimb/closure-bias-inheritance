@@ -14,8 +14,9 @@ from closure_discovery.data_generation.rd_solver_1d import SimulationConfig1D, g
 from closure_discovery.evaluation.metrics import pairwise_relative_l2_dispersion
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
-    TrainingConfig,
+    make_paper_training_config,
     run_closure_identification,
+    summarize_training_objective,
 )
 
 
@@ -98,6 +99,7 @@ def main() -> None:
         seed=args.dataset_seed,
         amplitude_range=amplitude_range,
         num_modes=4,
+        initial_clip_range=amplitude_range,
     )
 
     if args.subset_size is not None:
@@ -117,6 +119,10 @@ def main() -> None:
     print(f"  epochs={args.epochs}")
     print(f"  widths={args.widths}")
     print(f"  depths={args.depths}")
+    print(
+        "  training_objective="
+        + summarize_training_objective(make_paper_training_config(epochs=args.epochs, backbone="mlp"))
+    )
 
     for width in args.widths:
         for depth in args.depths:
@@ -130,12 +136,13 @@ def main() -> None:
                     amplitude_range=amplitude_range,
                     num_initial_modes=4,
                     observation_config=observation_config,
-                    training_config=TrainingConfig(
+                    training_config=make_paper_training_config(
                         epochs=args.epochs,
                         backbone="mlp",
                         hidden_width=width,
                         hidden_depth=depth,
                     ),
+                    initial_clip_range=amplitude_range,
                     seed=seed,
                     raw_dataset=master_dataset,
                 )
@@ -197,4 +204,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

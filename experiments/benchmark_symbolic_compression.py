@@ -13,8 +13,9 @@ from closure_discovery.evaluation.metrics import relative_l2_error
 from closure_discovery.evaluation.rollout import compare_cases_on_shared_initial_conditions
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
-    TrainingConfig,
+    make_paper_training_config,
     run_closure_identification,
+    summarize_training_objective,
 )
 from closure_discovery.symbolic.restricted_fit import (
     SymbolicClosurePair,
@@ -100,7 +101,7 @@ def run_symbolic_compression_once(
         amplitude_range=amplitude_range,
         num_initial_modes=num_modes,
         observation_config=observation_config,
-        training_config=TrainingConfig(
+        training_config=make_paper_training_config(
             epochs=epochs,
             backbone=backbone,
             hidden_width=hidden_width,
@@ -108,6 +109,7 @@ def run_symbolic_compression_once(
             kan_grid_size=kan_grid_size,
             num_test_modes=num_modes,
         ),
+        initial_clip_range=amplitude_range,
         seed=seed,
         raw_dataset=raw_dataset,
     )
@@ -148,6 +150,7 @@ def run_symbolic_compression_once(
         num_trajectories=4,
         seed=seed + 1000,
         amplitude_range=amplitude_range,
+        initial_clip_range=amplitude_range,
         num_modes=num_modes,
     )
 
@@ -202,6 +205,19 @@ def main() -> None:
         print(f"  hidden_width={args.hidden_width}")
         print(f"  hidden_depth={args.hidden_depth}")
     print(f"  num_seeds={args.num_seeds}")
+    print(
+        "  training_objective="
+        + summarize_training_objective(
+            make_paper_training_config(
+                epochs=args.epochs,
+                backbone=args.backbone,
+                hidden_width=args.hidden_width,
+                hidden_depth=args.hidden_depth,
+                kan_grid_size=args.kan_grid_size,
+                num_test_modes=args.num_modes,
+            )
+        )
+    )
 
     for setting in SETTING_LIBRARY:
         setting_rows: list[dict[str, object]] = []
@@ -214,6 +230,7 @@ def main() -> None:
                 seed=seed,
                 amplitude_range=amplitude_range,
                 num_modes=args.num_modes,
+                initial_clip_range=amplitude_range,
             )
             observation_config = ObservationConfig(
                 noise_level=setting["noise_level"],

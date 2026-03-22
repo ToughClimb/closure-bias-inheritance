@@ -8,6 +8,7 @@ from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
     TrainingConfig,
     run_closure_identification,
+    summarize_training_objective,
 )
 
 
@@ -50,6 +51,22 @@ def main() -> None:
         save_every=args.save_every,
         boundary="periodic",
     )
+    training_config = TrainingConfig(
+        epochs=args.epochs,
+        lr=args.lr,
+        rollout_weight=args.rollout_weight,
+        mass_weight=args.mass_weight,
+        strong_weight=args.strong_weight,
+        reaction_anchor_weight=args.reaction_anchor_weight,
+        reg_weight=args.reg_weight,
+        backbone=args.backbone,
+        hidden_width=args.hidden_width,
+        hidden_depth=args.hidden_depth,
+        kan_grid_size=args.kan_grid_size,
+        num_test_modes=args.num_modes,
+        num_bump_functions=args.num_bump_functions,
+        objective_name="custom_cli",
+    )
     result = run_closure_identification(
         case=case,
         simulation_config=config,
@@ -61,21 +78,8 @@ def main() -> None:
             space_stride=args.space_stride,
             time_stride=args.time_stride,
         ),
-        training_config=TrainingConfig(
-            epochs=args.epochs,
-            lr=args.lr,
-            rollout_weight=args.rollout_weight,
-            mass_weight=args.mass_weight,
-            strong_weight=args.strong_weight,
-            reaction_anchor_weight=args.reaction_anchor_weight,
-            reg_weight=args.reg_weight,
-            backbone=args.backbone,
-            hidden_width=args.hidden_width,
-            hidden_depth=args.hidden_depth,
-            kan_grid_size=args.kan_grid_size,
-            num_test_modes=args.num_modes,
-            num_bump_functions=args.num_bump_functions,
-        ),
+        training_config=training_config,
+        initial_clip_range=(args.amplitude_min, args.amplitude_max),
         seed=args.seed,
     )
     excitation = result["excitation"]
@@ -89,6 +93,7 @@ def main() -> None:
         f"weak_diffusion_energy={excitation.weak_diffusion_energy:.3e}"
     )
     print(f"backbone={args.backbone}")
+    print(f"training_objective={summarize_training_objective(training_config)}")
     for record in result["history"]:
         epoch = int(record["epoch"])
         if epoch == 1 or epoch % 5 == 0 or epoch == args.epochs:
