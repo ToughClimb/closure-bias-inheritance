@@ -342,6 +342,64 @@ def plot_rollout_and_bir(aggregated_rows: list[dict[str, object]], output_path: 
     plt.close(fig)
 
 
+def plot_case_exp_observation_breakdown(aggregated_rows: list[dict[str, object]], output_path: Path) -> None:
+    case_rows = {
+        str(row["setting"]): row
+        for row in aggregated_rows
+        if str(row["case"]) == "case_exp"
+    }
+    panel_settings = [
+        ("Noise progression", ["clean", "noise_1", "noise_5"]),
+        ("Sparse observation breakdown", ["clean", "sparse_time", "sparse_space", "sparse_both"]),
+    ]
+    metric_specs = [
+        ("neural_true_ErrD", "neural ErrD", "o"),
+        ("neural_true_ErrR", "neural ErrR", "s"),
+        ("symbolic_unseen", "symbolic unseen", "^"),
+    ]
+
+    fig, axes = plt.subplots(1, 2, figsize=(10.5, 4.2))
+    axes = np.atleast_1d(axes)
+    legend_handles: list[object] = []
+
+    for axis, (title, settings) in zip(axes, panel_settings, strict=True):
+        x = np.arange(len(settings))
+        for metric_key, label, marker in metric_specs:
+            means = [float(case_rows[setting][f"{metric_key}_mean"]) for setting in settings]
+            stds = [float(case_rows[setting][f"{metric_key}_std"]) for setting in settings]
+            line = axis.errorbar(
+                x,
+                means,
+                yerr=stds,
+                marker=marker,
+                linewidth=2,
+                capsize=3,
+                label=label,
+            )
+            if len(legend_handles) < len(metric_specs):
+                legend_handles.append(line.lines[0])
+        axis.set_title(title)
+        axis.set_yscale("log")
+        axis.set_xticks(x)
+        axis.set_xticklabels([SETTING_LABELS[setting] for setting in settings], rotation=20)
+        axis.set_ylabel("relative metric value")
+        axis.grid(axis="y", linestyle=":", alpha=0.4)
+
+    if legend_handles:
+        fig.legend(
+            legend_handles,
+            [label for _, label, _ in metric_specs],
+            loc="upper center",
+            bbox_to_anchor=(0.5, 1.05),
+            ncol=3,
+            frameon=False,
+        )
+    fig.tight_layout(rect=(0, 0, 1, 0.93))
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    fig.savefig(output_path, dpi=200, bbox_inches="tight")
+    plt.close(fig)
+
+
 def main() -> None:
     args = parse_args()
     output_dir = args.output_dir
@@ -359,6 +417,7 @@ def main() -> None:
 
     plot_error_propagation(symbolic_aggregated, figures_dir / "symbolic_error_propagation.png")
     plot_rollout_and_bir(symbolic_aggregated, figures_dir / "symbolic_rollout_and_bir.png")
+    plot_case_exp_observation_breakdown(symbolic_aggregated, figures_dir / "case_exp_observation_breakdown.png")
 
     if args.baseline_csv:
         baseline_rows: list[dict[str, str]] = []

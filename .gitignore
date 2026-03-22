@@ -35,5 +35,6 @@ docs/
 *.log
 *.out
 *.run.xml
+*.spl
 *.synctex.gz
 *.toc

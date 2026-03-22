@@ -1,6 +1,6 @@
 # closure-bias-inheritance
 
-Code for neural-symbolic closure discovery in 1D reaction-diffusion systems with known PDE structure and unknown constitutive laws.
+Code for neural-symbolic closure discovery in reaction-diffusion systems with known PDE structure and unknown constitutive laws.
 
 The repository studies the problem
 
@@ -14,6 +14,7 @@ restricted symbolic compression usually preserves the constitutive bias already 
 ## Scope
 
 - 1D periodic reaction-diffusion solver
+- minimal 2D periodic appendix benchmark for dimensionality checking
 - weak-form-driven hybrid Stage-1 closure identification
 - polynomial baselines for matched-library reference cases
 - restricted symbolic compression and forward rollout validation
@@ -56,6 +57,7 @@ The repository also includes the current public manuscript source and selected p
 - `paper/main.tex`: single-file manuscript source
 - `paper/references.bib`: bibliography database
 - `paper/main.pdf`: compiled PDF snapshot
+- `paper/case_exp_observation_breakdown.png`: appendix observation-breakdown figure
 - `results/paper_artifacts/tables/`: CSV/Markdown table summaries used for paper figures/tables
 - `results/paper_artifacts/figures/`: exported paper-facing figures
 
@@ -75,6 +77,7 @@ PYTHONPATH=src python experiments/benchmark_symbolic_compression.py --case case_
 PYTHONPATH=src python experiments/compare_excitation_protocol.py --case case_exp --num-seeds 3
 PYTHONPATH=src python experiments/cross_resolution_benchmark.py --case case_exp --num-seeds 3
 PYTHONPATH=src python experiments/objective_ablation.py --case case_exp --num-seeds 3
+PYTHONPATH=src python experiments/benchmark_2d_bias_inheritance.py --cases case_a case_exp --num-seeds 3
 ```
 
 Optional PySR Stage-2 replacement check:
@@ -86,6 +89,7 @@ PYTHONPATH=src python experiments/run_pysr_symbolic_compression.py --case case_e
 ## Notes
 
 - The paper-facing Stage-1 learner is a weak-form-driven hybrid objective, not pure weak-form training.
+- The main benchmark suite is 1D; the public repository also includes a minimal 2D appendix check showing the same bias-inheritance mechanism on small periodic runs.
 - Experiment outputs are generated locally and are ignored by default.
 - This repository is the public code-and-manuscript release; large training outputs beyond the paper-facing artifacts remain excluded.
 
