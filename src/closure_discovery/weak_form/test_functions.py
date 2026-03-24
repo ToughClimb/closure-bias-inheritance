@@ -75,3 +75,35 @@ def make_test_functions_1d(
     phi, norms = _normalize_rows(phi, dx)
     grad_phi = grad_phi / norms
     return phi, grad_phi
+
+
+def make_time_test_functions_1d(
+    ts: Array,
+    num_modes: int = 4,
+) -> tuple[Array, Array]:
+    """Return temporal test functions psi_m and their time derivatives."""
+
+    if ts.ndim != 1:
+        raise ValueError("ts must be one-dimensional")
+    if len(ts) < 2:
+        raise ValueError("at least two saved times are required")
+    if num_modes < 1:
+        raise ValueError("num_modes must be positive")
+
+    dt = float(ts[1] - ts[0])
+    duration = float(ts[-1] - ts[0])
+    shifted = ts - ts[0]
+    psi_list = []
+    dpsi_list = []
+    for mode in range(1, num_modes + 1):
+        wave = np.pi * mode / max(duration, dt)
+        psi = np.sin(wave * shifted)
+        dpsi = wave * np.cos(wave * shifted)
+        psi_list.append(psi)
+        dpsi_list.append(dpsi)
+
+    psi = np.stack(psi_list, axis=0)
+    dpsi = np.stack(dpsi_list, axis=0)
+    psi, norms = _normalize_rows(psi, dt)
+    dpsi = dpsi / norms
+    return psi, dpsi

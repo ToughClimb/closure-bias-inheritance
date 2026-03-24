@@ -16,12 +16,13 @@ from closure_discovery.evaluation.metrics import relative_l2_error, summarize_ex
 from closure_discovery.evaluation.rollout import compare_cases_on_shared_initial_conditions
 from closure_discovery.models.mlp_closure import ReactionDiffusionClosure
 from closure_discovery.models.tabulated_closure import tabulated_closure_from_model
-from closure_discovery.weak_form.test_functions import make_test_functions_1d
+from closure_discovery.weak_form.test_functions import make_test_functions_1d, make_time_test_functions_1d
 from closure_discovery.weak_form.weak_residual import (
     mass_balance_loss,
     one_step_rollout_loss,
     strong_residual_loss,
     weak_loss_1d,
+    weak_loss_space_time_1d,
 )
 
 
@@ -53,6 +54,8 @@ class TrainingConfig:
     kan_grid_size: int = 16
     num_test_modes: int = 4
     num_bump_functions: int = 4
+    num_time_test_modes: int = 4
+    weak_form_variant: str = "space_weak"
     objective_name: str = PAPER_STAGE1_OBJECTIVE_NAME
 
 
@@ -80,6 +83,7 @@ def make_paper_training_config(
     kan_grid_size: int = 16,
     num_test_modes: int = 4,
     num_bump_functions: int = 4,
+    num_time_test_modes: int = 4,
 ) -> TrainingConfig:
     return TrainingConfig(
         epochs=epochs,
@@ -98,13 +102,15 @@ def make_paper_training_config(
         kan_grid_size=kan_grid_size,
         num_test_modes=num_test_modes,
         num_bump_functions=num_bump_functions,
+        num_time_test_modes=num_time_test_modes,
+        weak_form_variant="space_weak",
         objective_name=PAPER_STAGE1_OBJECTIVE_NAME,
     )
 
 
 def summarize_training_objective(training_config: TrainingConfig) -> str:
     return (
-        f"{training_config.objective_name}: "
+        f"{training_config.objective_name} [{training_config.weak_form_variant}]: "
         f"weak + {training_config.rollout_weight:g}*rollout + "
         f"{training_config.mass_weight:g}*mass + "
         f"{training_config.strong_weight:g}*strong + "
@@ -173,6 +179,13 @@ def run_closure_identification(
         boundary=simulation_config.boundary,
         num_bumps=training_config.num_bump_functions,
     )
+    psi_np = None
+    dpsi_np = None
+    if training_config.weak_form_variant == "space_time_weak":
+        psi_np, dpsi_np = make_time_test_functions_1d(
+            observed["t"],
+            num_modes=training_config.num_time_test_modes,
+        )
     excitation = summarize_excitation(observed["u"], dx=dx, value_range=case.value_range)
 
     if device is None:
@@ -183,6 +196,8 @@ def run_closure_identification(
     u = torch.tensor(observed["u"], dtype=torch.float32, device=device)
     phi = torch.tensor(phi_np, dtype=torch.float32, device=device)
     grad_phi = torch.tensor(grad_phi_np, dtype=torch.float32, device=device)
+    psi = torch.tensor(psi_np, dtype=torch.float32, device=device) if psi_np is not None else None
+    dpsi = torch.tensor(dpsi_np, dtype=torch.float32, device=device) if dpsi_np is not None else None
 
     model = ReactionDiffusionClosure(
         hidden_width=training_config.hidden_width,
@@ -204,15 +219,32 @@ def run_closure_identification(
     history: list[dict[str, float]] = []
     for epoch in range(1, training_config.epochs + 1):
         optimizer.zero_grad()
-        weak = weak_loss_1d(
-            u=u,
-            dt=dt,
-            dx=dx,
-            phi=phi,
-            grad_phi=grad_phi,
-            closure_model=model,
-            boundary=simulation_config.boundary,
-        )
+        if training_config.weak_form_variant == "space_weak":
+            weak = weak_loss_1d(
+                u=u,
+                dt=dt,
+                dx=dx,
+                phi=phi,
+                grad_phi=grad_phi,
+                closure_model=model,
+                boundary=simulation_config.boundary,
+            )
+        elif training_config.weak_form_variant == "space_time_weak":
+            if psi is None or dpsi is None:
+                raise RuntimeError("space_time_weak requires temporal test functions")
+            weak = weak_loss_space_time_1d(
+                u=u,
+                dt=dt,
+                dx=dx,
+                phi=phi,
+                grad_phi=grad_phi,
+                psi=psi,
+                dpsi=dpsi,
+                closure_model=model,
+                boundary=simulation_config.boundary,
+            )
+        else:
+            raise ValueError(f"Unsupported weak_form_variant: {training_config.weak_form_variant}")
         rollout = one_step_rollout_loss(
             u=u,
             dt=dt,

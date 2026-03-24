@@ -74,6 +74,59 @@ def weak_loss_1d(
     return residual.pow(2).mean()
 
 
+def weak_residual_space_time_1d(
+    u: torch.Tensor,
+    dt: float,
+    dx: float,
+    phi: torch.Tensor,
+    grad_phi: torch.Tensor,
+    psi: torch.Tensor,
+    dpsi: torch.Tensor,
+    closure_model,
+    boundary: str = "periodic",
+) -> torch.Tensor:
+    """
+    Compute separable space-time weak residuals without explicitly differentiating u in time.
+
+    The temporal test functions are assumed to vanish at the first and last saved times,
+    so integration by parts moves the time derivative from u_t onto dpsi.
+    """
+
+    ux = spatial_gradient(u, dx, boundary=boundary)
+    diffusion = closure_model.diffusion(u)
+    reaction = closure_model.reaction(u)
+
+    term_time = -torch.einsum("mt,kx,btx->bmk", dpsi, phi, u) * dt * dx
+    term_diff = torch.einsum("mt,kx,btx->bmk", psi, grad_phi, diffusion * ux) * dt * dx
+    term_react = torch.einsum("mt,kx,btx->bmk", psi, phi, reaction) * dt * dx
+    return term_time + term_diff - term_react
+
+
+def weak_loss_space_time_1d(
+    u: torch.Tensor,
+    dt: float,
+    dx: float,
+    phi: torch.Tensor,
+    grad_phi: torch.Tensor,
+    psi: torch.Tensor,
+    dpsi: torch.Tensor,
+    closure_model,
+    boundary: str = "periodic",
+) -> torch.Tensor:
+    residual = weak_residual_space_time_1d(
+        u=u,
+        dt=dt,
+        dx=dx,
+        phi=phi,
+        grad_phi=grad_phi,
+        psi=psi,
+        dpsi=dpsi,
+        closure_model=closure_model,
+        boundary=boundary,
+    )
+    return residual.pow(2).mean()
+
+
 def one_step_rollout_loss(
     u: torch.Tensor,
     dt: float,
