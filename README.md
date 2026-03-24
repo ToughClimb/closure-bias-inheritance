@@ -18,6 +18,7 @@ restricted symbolic compression usually preserves the constitutive bias already 
 - weak-form-driven hybrid Stage-1 closure identification
 - polynomial baselines for matched-library reference cases
 - restricted symbolic compression and forward rollout validation
+- multi-case Stage-1 noise-sensitivity sweeps
 - excitation and cross-resolution diagnostics
 - optional PySR-based Stage-2 replacement check
 
@@ -57,9 +58,11 @@ The repository also includes the current public manuscript source and selected p
 - `paper/main.tex`: single-file manuscript source
 - `paper/references.bib`: bibliography database
 - `paper/main.pdf`: compiled PDF snapshot
+- `paper/noise_sweep_all_cases.png`: appendix multi-case noise-sweep figure
 - `paper/case_exp_observation_breakdown.png`: appendix observation-breakdown figure
 - `results/paper_artifacts/tables/`: CSV/Markdown table summaries used for paper figures/tables
 - `results/paper_artifacts/figures/`: exported paper-facing figures
+- `results/noise_sweep_case_{a,b,exp}.{csv,md}`: detailed Stage-1 noise-sweep summaries
 
 ## Quick Start
 
@@ -74,6 +77,7 @@ Representative paper-facing runs:
 ```bash
 PYTHONPATH=src python experiments/benchmark_polynomial_baselines.py --case case_exp --num-seeds 3
 PYTHONPATH=src python experiments/benchmark_symbolic_compression.py --case case_exp --num-seeds 3
+PYTHONPATH=src python experiments/benchmark_noise_sweep.py --case case_exp --num-seeds 3
 PYTHONPATH=src python experiments/compare_excitation_protocol.py --case case_exp --num-seeds 3
 PYTHONPATH=src python experiments/cross_resolution_benchmark.py --case case_exp --num-seeds 3
 PYTHONPATH=src python experiments/objective_ablation.py --case case_exp --num-seeds 3

@@ -20,6 +20,8 @@ logs/
 results/*
 !results/paper_artifacts/
 !results/paper_artifacts/**
+!results/noise_sweep_case_*.csv
+!results/noise_sweep_case_*.md
 
 # Private research assets kept outside the public code repository.
 paper_bundle/
