@@ -58,6 +58,7 @@ The repository also includes the current public manuscript source and selected p
 - `paper/main.tex`: single-file manuscript source
 - `paper/references.bib`: bibliography database
 - `paper/main.pdf`: compiled PDF snapshot
+- `paper_bundle_latest.zip`: downloadable zip snapshot of the entire `paper/` directory
 - `paper/noise_sweep_all_cases.png`: appendix multi-case noise-sweep figure
 - `paper/case_exp_observation_breakdown.png`: appendix observation-breakdown figure
 - `results/paper_artifacts/tables/`: CSV/Markdown table summaries used for paper figures/tables
