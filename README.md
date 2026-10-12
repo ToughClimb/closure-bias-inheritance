@@ -121,3 +121,5 @@ The original optional PySR runner includes case, observation setting, seed, oper
 - Local Linux/WSL CUDA checks cover short 1D and 2D optimizer resume. Full GPU campaigns and native Windows execution remain unvalidated.
 
 MIT license; see [LICENSE](LICENSE).
+
+Additional reviewer experiments and coefficient-refit commands are described in [REVIEWER_EXPERIMENTS.md](REVIEWER_EXPERIMENTS.md).

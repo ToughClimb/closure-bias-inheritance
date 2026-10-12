@@ -21,6 +21,7 @@ dev = [
 revision = [
   "scipy>=1.17",
   "pandas>=2.2",
+  "sympy>=1.14",
 ]
 pysr = [
   "pysr>=1.5",
