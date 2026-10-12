@@ -4,6 +4,8 @@ from typing import Any
 
 import numpy as np
 
+from .validation import validate_subsampling
+
 
 Array = np.ndarray
 
@@ -13,8 +15,7 @@ def subsample_dataset(
     space_stride: int = 1,
     time_stride: int = 1,
 ) -> dict[str, Array]:
-    if space_stride < 1 or time_stride < 1:
-        raise ValueError("space_stride and time_stride must be positive integers")
+    space_stride, time_stride = validate_subsampling(dataset, space_stride, time_stride)
 
     u = dataset["u"][:, ::time_stride, ::space_stride]
     return {
@@ -31,8 +32,8 @@ def add_gaussian_noise(
     seed: int = 0,
     clip_range: tuple[float, float] | None = None,
 ) -> dict[str, Array]:
-    if noise_level < 0.0:
-        raise ValueError("noise_level must be non-negative")
+    if not np.isfinite(noise_level) or noise_level < 0.0:
+        raise ValueError("noise_level must be finite and non-negative")
 
     if noise_level == 0.0:
         return {

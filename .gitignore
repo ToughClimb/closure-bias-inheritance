@@ -6,6 +6,8 @@ build/
 dist/
 *.egg-info/
 outputs/
+evidence/
+figures/
 
 # Local tooling and downloads (not part of the open-source release).
 .tools/

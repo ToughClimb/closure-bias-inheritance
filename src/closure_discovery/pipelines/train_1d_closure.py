@@ -6,6 +6,7 @@ from typing import Any
 
 import numpy as np
 import torch
+from closure_discovery.pipelines.training_state import assert_finite_state
 
 from closure_discovery.data_generation.observations import apply_observation_model
 from closure_discovery.data_generation.rd_solver_1d import (
@@ -274,8 +275,12 @@ def run_closure_identification(
             + training_config.reaction_anchor_weight * reaction_anchor
             + training_config.reg_weight * reg
         )
+        if not torch.isfinite(loss):
+            raise FloatingPointError(f'Nonfinite loss at epoch {epoch}')
         loss.backward()
+        assert_finite_state(model, gradients=True, epoch=epoch)
         optimizer.step()
+        assert_finite_state(model, optimizer, epoch=epoch)
 
         history.append(
             {

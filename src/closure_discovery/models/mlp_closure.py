@@ -127,8 +127,8 @@ class KANScalarNet(nn.Module):
         basis = self._hat_basis(scaled_u)
         spline = torch.einsum("...k,k->...", basis, self.spline_coefficients)
         centered = 2.0 * scaled_u / float(self.grid_size - 1) - 1.0
-        base = centered * self.base_weight + self.base_bias
-        return spline + base.squeeze(-1)
+        base = centered * self.base_weight[0] + self.base_bias[0]
+        return spline + base
 
 
 def _flux_divergence_periodic_torch(u: torch.Tensor, diffusion: torch.Tensor, dx: float) -> torch.Tensor:

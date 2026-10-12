@@ -6,6 +6,8 @@ from typing import Any
 
 import numpy as np
 import torch
+from closure_discovery.pipelines.training_state import assert_finite_state
+from closure_discovery.data_generation.validation import validate_subsampling
 
 from closure_discovery.data_generation.rd_solver_2d import (
     SimulationConfig2D,
@@ -100,8 +102,10 @@ def apply_observation_model_2d(
     seed: int,
     clip_range: tuple[float, float] | None,
 ) -> dict[str, np.ndarray]:
-    stride = observation_config.space_stride
-    observed_u = dataset["u"][:, :: observation_config.time_stride, ::stride, ::stride].copy()
+    stride, time_stride = validate_subsampling(dataset, observation_config.space_stride, observation_config.time_stride)
+    if not np.isfinite(observation_config.noise_level) or observation_config.noise_level < 0:
+        raise ValueError("noise_level must be finite and nonnegative")
+    observed_u = dataset["u"][:, ::time_stride, ::stride, ::stride].copy()
     if observation_config.noise_level > 0.0:
         rng = np.random.default_rng(seed)
         scale = observation_config.noise_level * np.std(observed_u)
@@ -239,8 +243,12 @@ def run_closure_identification_2d(
             + training_config.reaction_anchor_weight * reaction_anchor
             + training_config.reg_weight * reg
         )
+        if not torch.isfinite(loss):
+            raise FloatingPointError(f'Nonfinite loss at epoch {epoch}')
         loss.backward()
+        assert_finite_state(model, gradients=True, epoch=epoch)
         optimizer.step()
+        assert_finite_state(model, optimizer, epoch=epoch)
 
         history.append(
             {

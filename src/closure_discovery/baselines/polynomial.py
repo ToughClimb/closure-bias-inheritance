@@ -269,26 +269,23 @@ def run_polynomial_baseline(
     diffusion_pred = closure.diffusion(evaluation_grid)
     reaction_pred = closure.reaction(evaluation_grid)
 
-    rollout_config = unseen_rollout_config.simulation_config or simulation_config
-    rollout_amplitude_range = unseen_rollout_config.amplitude_range or amplitude_range
-    rollout = compare_cases_on_shared_initial_conditions(
-        true_case=case,
-        predicted_case=learned_case,
-        config=rollout_config,
-        num_trajectories=unseen_rollout_config.num_trajectories,
-        seed=seed + unseen_rollout_config.seed_offset,
-        amplitude_range=rollout_amplitude_range,
-        initial_clip_range=unseen_rollout_config.initial_clip_range or rollout_amplitude_range,
-        num_modes=unseen_rollout_config.num_modes,
-    )
-
     metrics = {
         "fit_mse": fit_mse,
         "relative_error_D": relative_l2_error(diffusion_true, diffusion_pred),
         "relative_error_R": relative_l2_error(reaction_true, reaction_pred),
-        "unseen_rollout_mse": rollout.mse,
-        "unseen_rollout_relative_l2": rollout.relative_l2,
     }
+    rollout = None
+    if unseen_rollout_config.enabled:
+        rollout_config = unseen_rollout_config.simulation_config or simulation_config
+        rollout_amplitude_range = unseen_rollout_config.amplitude_range or amplitude_range
+        rollout = compare_cases_on_shared_initial_conditions(
+            true_case=case, predicted_case=learned_case, config=rollout_config,
+            num_trajectories=unseen_rollout_config.num_trajectories,
+            seed=seed + unseen_rollout_config.seed_offset, amplitude_range=rollout_amplitude_range,
+            initial_clip_range=unseen_rollout_config.initial_clip_range or rollout_amplitude_range,
+            num_modes=unseen_rollout_config.num_modes,
+        )
+        metrics.update(unseen_rollout_mse=rollout.mse, unseen_rollout_relative_l2=rollout.relative_l2)
 
     return {
         "method": method,

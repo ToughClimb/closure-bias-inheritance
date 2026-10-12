@@ -96,9 +96,11 @@ def weak_residual_space_time_1d(
     diffusion = closure_model.diffusion(u)
     reaction = closure_model.reaction(u)
 
-    term_time = -torch.einsum("mt,kx,btx->bmk", dpsi, phi, u) * dt * dx
-    term_diff = torch.einsum("mt,kx,btx->bmk", psi, grad_phi, diffusion * ux) * dt * dx
-    term_react = torch.einsum("mt,kx,btx->bmk", psi, phi, reaction) * dt * dx
+    weights = torch.ones(u.shape[1], dtype=psi.dtype, device=psi.device)
+    weights[[0, -1]] = 0.5
+    term_time = -torch.einsum("mt,kx,btx->bmk", dpsi * weights, phi, u) * dt * dx
+    term_diff = torch.einsum("mt,kx,btx->bmk", psi * weights, grad_phi, diffusion * ux) * dt * dx
+    term_react = torch.einsum("mt,kx,btx->bmk", psi * weights, phi, reaction) * dt * dx
     return term_time + term_diff - term_react
 
 

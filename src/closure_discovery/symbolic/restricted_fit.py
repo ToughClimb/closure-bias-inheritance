@@ -18,6 +18,8 @@ class SymbolicExpression:
     expression: str
     complexity: int
     fit_mse: float
+    numerator_degree: int | None = None
+    denominator_degree: int | None = None
 
     def evaluate(self, u: Array) -> Array:
         values = np.asarray(u, dtype=np.float64)
@@ -29,7 +31,18 @@ class SymbolicExpression:
             return output
 
         if self.family == "rational":
-            split_index = (len(self.parameters) + 1) // 2
+            if self.numerator_degree is None:
+                # Historical exports used the fixed degree-2/degree-2 family.
+                if len(self.parameters) != 5 or self.denominator_degree is not None:
+                    raise ValueError("Rational expressions with non-default degrees require explicit degree metadata")
+                numerator_degree, denominator_degree = 2, 2
+            else:
+                numerator_degree, denominator_degree = self.numerator_degree, self.denominator_degree
+            if denominator_degree is None or min(numerator_degree, denominator_degree) < 0:
+                raise ValueError("Rational degrees must be nonnegative and explicitly specified")
+            if len(self.parameters) != numerator_degree + denominator_degree + 1:
+                raise ValueError("Rational parameter count does not match its degrees")
+            split_index = numerator_degree + 1
             numerator_coefficients = self.parameters[:split_index]
             denominator_coefficients = self.parameters[split_index:]
             numerator = np.zeros_like(values, dtype=np.float64)
@@ -176,6 +189,8 @@ def fit_rational_family(
     ridge: float = 1.0e-10,
     denominator_tol: float = 1.0e-3,
 ) -> list[SymbolicExpression]:
+    if numerator_degree < 0 or denominator_degree < 0:
+        raise ValueError("Rational degrees must be nonnegative")
     design_columns = [u**power for power in range(numerator_degree + 1)]
     design_columns.extend([-(values * (u**power)) for power in range(1, denominator_degree + 1)])
     design = np.stack(design_columns, axis=-1)
@@ -202,6 +217,8 @@ def fit_rational_family(
             expression=_rational_expression(numerator, denominator),
             complexity=numerator_degree + denominator_degree + 1,
             fit_mse=mean_squared_error(values, prediction),
+            numerator_degree=numerator_degree,
+            denominator_degree=denominator_degree,
         )
     ]
 

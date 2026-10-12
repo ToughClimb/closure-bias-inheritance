@@ -197,7 +197,7 @@ def write_markdown(path: Path, rows: list[dict[str, object]]) -> None:
         "| Case | Neural ErrD | Neural ErrR | Symbolic ErrD | Symbolic ErrR | Neural unseen | Symbolic unseen | BIR_D | BIR_R | Weak loss | Coverage |",
         "| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |",
     ]
-    for case_name in DEFAULT_CASES:
+    for case_name in sorted(grouped):
         case_rows = grouped.get(case_name, [])
         if not case_rows:
             continue

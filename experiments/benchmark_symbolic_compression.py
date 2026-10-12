@@ -10,6 +10,7 @@ import numpy as np
 from closure_discovery.data_generation.cases import CASE_BUILDERS
 from closure_discovery.data_generation.rd_solver_1d import SimulationConfig1D, generate_dataset
 from closure_discovery.evaluation.metrics import relative_l2_error
+from closure_discovery.evaluation.protocol import training_metadata
 from closure_discovery.evaluation.rollout import compare_cases_on_shared_initial_conditions
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
@@ -160,6 +161,7 @@ def run_symbolic_compression_once(
     symbolic_true_err_r = relative_l2_error(reaction_true, reaction_symbolic_values)
 
     return {
+        **training_metadata(neural_result, num_initial_modes=num_modes),
         "neural_true_ErrD": neural_true_err_d,
         "neural_true_ErrR": neural_true_err_r,
         "neural_unseen": float(neural_result["metrics"]["unseen_rollout_relative_l2"]),
@@ -299,6 +301,10 @@ def main() -> None:
         "space_stride",
         "time_stride",
         "backbone",
+        "protocol_id",
+        "surrogate_signature",
+        "device",
+        "epochs",
         "neural_true_ErrD",
         "neural_true_ErrR",
         "neural_unseen",

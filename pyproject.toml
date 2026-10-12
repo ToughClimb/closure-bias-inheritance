@@ -18,6 +18,18 @@ dependencies = [
 dev = [
   "pytest>=8.0",
 ]
+revision = [
+  "scipy>=1.17",
+  "pandas>=2.2",
+]
+pysr = [
+  "pysr>=1.5",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "revision"]
+markers = ["cuda: opt-in checks on a locally available CUDA device"]
 
 [tool.setuptools]
 package-dir = {"" = "src"}

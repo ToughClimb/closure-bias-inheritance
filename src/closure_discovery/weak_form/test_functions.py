@@ -2,13 +2,17 @@ from __future__ import annotations
 
 import numpy as np
 
+from closure_discovery.data_generation.validation import uniform_spacing
+
 
 Array = np.ndarray
 
 
 def _normalize_rows(values: Array, dx: float) -> tuple[Array, Array]:
     norms = np.sqrt(np.sum(values**2, axis=1, keepdims=True) * dx)
-    norms = np.where(norms > 0.0, norms, 1.0)
+    threshold = 64 * np.finfo(float).eps * np.sqrt(values.shape[1] * dx)
+    if not np.all(np.isfinite(norms)) or np.any(norms <= threshold):
+        raise ValueError("A test function is unresolved or has a near-zero sampled norm")
     return values / norms, norms
 
 
@@ -21,10 +25,16 @@ def make_test_functions_1d(
 ) -> tuple[Array, Array]:
     """Return test functions phi_k and their spatial derivatives."""
 
-    dx = xs[1] - xs[0]
+    xs = np.asarray(xs)
+    dx = uniform_spacing(xs, "space")
+    if num_modes < 0 or num_bumps < 0:
+        raise ValueError("Test-function counts must be nonnegative")
     length = xs[-1] - xs[0] + dx
 
     if boundary == "periodic":
+        maximum = (len(xs) - 1) // 2
+        if num_modes > maximum:
+            raise ValueError(f"Fourier modes must be below Nyquist: grid size {len(xs)} supports at most {maximum} modes, got {num_modes}")
         phi_list = []
         grad_list = []
         if include_constant:
@@ -90,7 +100,7 @@ def make_time_test_functions_1d(
     if num_modes < 1:
         raise ValueError("num_modes must be positive")
 
-    dt = float(ts[1] - ts[0])
+    dt = uniform_spacing(ts, "time")
     duration = float(ts[-1] - ts[0])
     shifted = ts - ts[0]
     psi_list = []

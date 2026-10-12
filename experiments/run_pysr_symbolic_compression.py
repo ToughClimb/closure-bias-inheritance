@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import warnings
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -12,6 +13,7 @@ import sympy as sp
 from closure_discovery.data_generation.cases import CASE_BUILDERS, ReactionDiffusionCase
 from closure_discovery.data_generation.rd_solver_1d import SimulationConfig1D
 from closure_discovery.evaluation.metrics import relative_l2_error
+from closure_discovery.evaluation.protocol import configuration_signature, training_metadata
 from closure_discovery.evaluation.rollout import compare_cases_on_shared_initial_conditions
 from closure_discovery.pipelines.train_1d_closure import (
     ObservationConfig,
@@ -37,6 +39,7 @@ class PySRExpression:
     complexity: int
     fit_loss: float
     predict: callable
+    backend_version: str
 
 
 def parse_args() -> argparse.Namespace:
@@ -80,7 +83,7 @@ def parse_args() -> argparse.Namespace:
         "--output-csv",
         type=Path,
         default=None,
-        help="Optional CSV output path. Defaults to results/pysr_symbolic_<case>_seed<seed>.csv",
+        help="Optional CSV output path. The default includes case, setting, seed, operators and protocol/search IDs.",
     )
     return parser.parse_args()
 
@@ -121,6 +124,7 @@ def _fit_pysr_expression(
     operator_mode: str,
 ) -> PySRExpression:
     try:
+        import pysr
         from pysr import PySRRegressor
     except ModuleNotFoundError as exc:
         raise ModuleNotFoundError(
@@ -163,6 +167,7 @@ def _fit_pysr_expression(
         complexity=complexity,
         fit_loss=fit_loss,
         predict=_make_callable(expression),
+        backend_version=pysr.__version__,
     )
 
 
@@ -188,6 +193,8 @@ def _reference_row(
     case: str,
     setting: str,
     seed: int,
+    protocol_id: str,
+    surrogate_signature: str,
 ) -> dict[str, str] | None:
     if not reference_csv.exists():
         return None
@@ -196,7 +203,9 @@ def _reference_row(
         reader = csv.DictReader(handle)
         for row in reader:
             if row["case"] == case and row["setting"] == setting and int(row["seed"]) == seed:
-                return row
+                if row.get("protocol_id") == protocol_id and row.get("surrogate_signature") == surrogate_signature:
+                    return row
+                warnings.warn("Reference row has missing or different training/target identity; it was not compared", RuntimeWarning)
     return None
 
 
@@ -247,7 +256,12 @@ def main() -> None:
         (args.noise_level, args.space_stride, args.time_stride),
         f"noise_{args.noise_level:g}_space_{args.space_stride}_time_{args.time_stride}",
     )
-    pysr_root = Path("results") / "pysr_runs" / args.case / setting_name / f"seed_{args.seed}"
+    metadata = training_metadata(neural_result, num_initial_modes=args.num_modes)
+    search_configuration = dict(operator_mode=args.operator_mode, niterations=args.pysr_niterations,
+        populations=args.pysr_populations, population_size=args.pysr_population_size, maxsize=args.pysr_maxsize,
+        timeout=args.pysr_timeout, parsimony=1e-4)
+    pysr_root = (Path("results") / "pysr_runs" / args.case / setting_name / f"seed_{args.seed}" /
+                 args.operator_mode / metadata["protocol_id"][:12] / configuration_signature(search_configuration)[:12])
     diffusion_expr = _fit_pysr_expression(
         name="diffusion",
         u_grid=u_grid,
@@ -299,6 +313,7 @@ def main() -> None:
     pysr_true_err_d = relative_l2_error(diffusion_true, diffusion_pysr)
     pysr_true_err_r = relative_l2_error(reaction_true, reaction_pysr)
     result = {
+        **metadata,
         "case": args.case,
         "setting": setting_name,
         "seed": args.seed,
@@ -323,8 +338,8 @@ def main() -> None:
         "bir_D": pysr_true_err_d / (neural_true_err_d + 1.0e-12),
         "bir_R": pysr_true_err_r / (neural_true_err_r + 1.0e-12),
     }
-
-    output_csv = args.output_csv or Path("results") / f"pysr_symbolic_{args.case}_seed{args.seed}.csv"
+    result["search_id"] = configuration_signature(dict(search_configuration, version=diffusion_expr.backend_version))
+    output_csv = args.output_csv or default_output_path(args.case, setting_name, args.seed, args.operator_mode, result["protocol_id"], result["search_id"])
     output_csv.parent.mkdir(parents=True, exist_ok=True)
     with output_csv.open("w", newline="") as handle:
         writer = csv.DictWriter(handle, fieldnames=list(result))
@@ -374,6 +389,8 @@ def main() -> None:
         case=args.case,
         setting=setting_name,
         seed=args.seed,
+        protocol_id=result["protocol_id"],
+        surrogate_signature=result["surrogate_signature"],
     )
     if reference is not None:
         print("  restricted_reference")
@@ -389,6 +406,10 @@ def main() -> None:
         print(f"    symbolic_expr_R={reference['symbolic_expr_R']}")
 
     print(f"  output_csv={output_csv}")
+
+
+def default_output_path(case, setting, seed, operator_mode, protocol_id, search_id):
+    return Path("results") / f"pysr_symbolic_{case}_{setting}_seed{seed}_{operator_mode}_{protocol_id[:12]}_{search_id[:12]}.csv"
 
 
 if __name__ == "__main__":
