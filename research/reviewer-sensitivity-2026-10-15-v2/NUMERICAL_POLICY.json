@@ -1,0 +1,12 @@
+{
+  "policy_id": "gradient-diagnostics-v2",
+  "training_dtype": "float32 unchanged",
+  "float32_rule": "Finite values required; component-gradient/direct-total discrepancies are reported with legacy heuristic pass flag, never asserted to be an exact decomposition.",
+  "float64_rule": "Deep-copy the same float32 model state; promote each already-built float32 context tensor to float64 without replacing input constants; support is a fresh requires_grad leaf. Independently compute component and total gradients.",
+  "validation_atol": 1e-11,
+  "validation_rtol": 1e-09,
+  "validation_scale": "sum of weighted component-gradient L2 norms",
+  "interpretation": "A predeclared validation precision requirement, not a rigorous floating-point roundoff theorem. No tolerance is selected using true closure errors.",
+  "training_not_changed": true,
+  "old_results_policy": "V1 failures and interrupted tasks remain archived; all V2 model fits begin afresh, using only byte-identical shared observation inputs."
+}

@@ -1,7 +1,7 @@
 __pycache__/
 *.pyc
 .pytest_cache/
-.venv/
+.venv*/
 build/
 dist/
 *.egg-info/
@@ -42,3 +42,10 @@ docs/
 *.spl
 *.synctex.gz
 *.toc
+
+# Local manuscript drafts, delivery helpers, and generated research receipts.
+manuscript/
+local_preview/
+release_checks/
+research/*/MANIFEST.json
+research/*/PHYSICS_EQUIVALENCE.json

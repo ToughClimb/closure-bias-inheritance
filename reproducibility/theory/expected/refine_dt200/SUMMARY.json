@@ -1,0 +1,71 @@
+{
+  "status": "complete",
+  "mode": "refine",
+  "cells": 2,
+  "seed_units": 2,
+  "driver_sha256": "c2b925aeb958c5dc655738448a56596fc24887f0ee58edef84645be18cfc26c7",
+  "checked_utc": "2026-10-15T07:58:18.449207+00:00",
+  "by_predictor": {
+    "first": {
+      "pairs": 6,
+      "certified": 5,
+      "sign_agreements": 5,
+      "at_reference_1e_6": 5,
+      "at_reference_1e_5": 5,
+      "at_reference_1e_4": 3
+    },
+    "second": {
+      "pairs": 6,
+      "certified": 6,
+      "sign_agreements": 6,
+      "at_reference_1e_6": 6,
+      "at_reference_1e_5": 6,
+      "at_reference_1e_4": 4
+    }
+  },
+  "arithmetic_scope": "Padded float64 evaluation of analytic continuous-time enclosures; not formally verified rounding arithmetic.",
+  "critical": [
+    {
+      "seed": 3,
+      "pattern": "high",
+      "horizon": 0.6,
+      "kind": "first",
+      "predicted_change": -1.7995117524977095e-07,
+      "actual_change": 1.535215358514504e-07,
+      "bound": 6.535367439210085e-07,
+      "interval_lower": -8.334879191707795e-07,
+      "interval_upper": 4.7358556867123757e-07,
+      "certified": false,
+      "prediction_sign_agrees": false,
+      "symbolic_state_bound": 0.00013422945664080541,
+      "neural_state_bound": 1.437569664635314e-06,
+      "observed_remainder_inf": 0.00010369298132051341,
+      "bound_to_observed_remainder": 1.2944893177090186,
+      "reference_rms_uncertainty_radius": 0.0,
+      "certified_at_1e_6_reference_rms": false,
+      "certified_at_1e_5_reference_rms": false,
+      "certified_at_1e_4_reference_rms": false
+    },
+    {
+      "seed": 3,
+      "pattern": "high",
+      "horizon": 0.6,
+      "kind": "second",
+      "predicted_change": 1.733020252751355e-07,
+      "actual_change": 1.535215358514504e-07,
+      "bound": 4.527089829155556e-08,
+      "interval_lower": 1.2803112698357995e-07,
+      "interval_upper": 2.1857292356669105e-07,
+      "certified": true,
+      "prediction_sign_agrees": true,
+      "symbolic_state_bound": 7.939291133191437e-06,
+      "neural_state_bound": 1.437569664635314e-06,
+      "observed_remainder_inf": 5.6801539431994286e-06,
+      "bound_to_observed_remainder": 1.3977246413711664,
+      "reference_rms_uncertainty_radius": 1.3323115940335867e-05,
+      "certified_at_1e_6_reference_rms": true,
+      "certified_at_1e_5_reference_rms": true,
+      "certified_at_1e_4_reference_rms": false
+    }
+  ]
+}

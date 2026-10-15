@@ -1,0 +1,159 @@
+{
+  "study_id": "reviewer-sensitivity-2026-10-15",
+  "classification": "fresh_followup",
+  "reviewer_targets": [
+    "R1.3",
+    "R2.3",
+    "R3.3",
+    "R5.M2",
+    "R5.M3",
+    "R3.1"
+  ],
+  "design_status": "Follow-up motivated by archived diagnostics; frozen before this fresh campaign. Historical outputs are never used as training checkpoints.",
+  "cases": [
+    "case_a",
+    "case_exp"
+  ],
+  "settings": {
+    "clean": 0.0,
+    "noise3": 0.03
+  },
+  "data_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "initialization_rule": "init_seed = data_seed, identical across weight configurations within an input",
+  "simulation": {
+    "nx": 64,
+    "length": 1.0,
+    "dt": 0.0001,
+    "t_final": 0.1,
+    "save_every": 10,
+    "boundary": "periodic"
+  },
+  "num_trajectories": 8,
+  "num_initial_modes": 4,
+  "num_test_modes": 4,
+  "observation_rule": "Gaussian sigma=noise_level*std(clean field), same saved array and noise draw within case/setting/seed; original state-range clipping retained and measured",
+  "generation_clip": [
+    -0.25,
+    2.0
+  ],
+  "default_weights": {
+    "weak": 1.0,
+    "rollout": 0.1,
+    "mass": 1.0,
+    "strong": 1.0,
+    "anchor": 1.0,
+    "reg": 0.0001
+  },
+  "core_oat_factors": [
+    0.0,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "dense_oat_additional_factors": {
+    "strong": [
+      0.001,
+      0.01,
+      0.03,
+      0.3,
+      3.0
+    ],
+    "anchor": [
+      0.03,
+      0.3,
+      3.0,
+      30.0
+    ]
+  },
+  "interaction_terms": [
+    "strong",
+    "anchor"
+  ],
+  "interaction_factors": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "fixed_budget": 150,
+  "longer_variants": [
+    "default",
+    "drop_strong",
+    "drop_anchor",
+    "reduced_space_weak",
+    "space_time_weak"
+  ],
+  "longer_checkpoints": [
+    150,
+    500,
+    1500
+  ],
+  "diagnostic_epochs": [
+    0,
+    1,
+    50,
+    150,
+    500,
+    1000,
+    1500
+  ],
+  "checkpoint_every": 50,
+  "model": "repository ReactionDiffusionClosure defaults: polynomial residual MLP, width 64, depth 2, positive diffusion parameterization",
+  "optimizer": {
+    "name": "Adam",
+    "learning_rate": 0.001,
+    "dtype": "float32",
+    "batch": "all observed trajectories",
+    "early_stopping": false,
+    "gradient_clipping": false
+  },
+  "symbolic": {
+    "fit_points": 512,
+    "evaluation_points": 256,
+    "relative_tolerance": 0.05,
+    "absolute_tolerance": 1e-08
+  },
+  "baselines": [
+    "strong_poly",
+    "weak_poly",
+    "spacetime_poly"
+  ],
+  "selection_rule": "No default, weight, seed, checkpoint, continuation, or symbolic family is chosen using true closure error. True laws are used only for synthetic generation and evaluation. Every declared configuration and failure is retained.",
+  "diagnostics": [
+    "post-update raw/weighted loss",
+    "unweighted and weighted parameter-gradient norm per component",
+    "pairwise gradient cosines",
+    "component alignment with total gradient",
+    "actual Adam update norm",
+    "teacher/frozen closure errors",
+    "paired common-norm BIR and compression bound",
+    "sampled diffusion and reaction margins"
+  ],
+  "claims": "Fixed-budget sensitivity and conditional mechanisms; neither convergence nor a globally optimal weight vector is claimed. OAT does not characterize the full six-weight interaction surface.",
+  "temporal_control_variants": {
+    "reduced_space_weak": {
+      "weak_variant": "space_weak",
+      "weights_zero": [
+        "strong",
+        "mass"
+      ]
+    },
+    "space_time_weak": {
+      "weak_variant": "space_time_weak",
+      "weights_zero": [
+        "strong",
+        "mass"
+      ]
+    }
+  },
+  "gradient_parameter_blocks": [
+    "all",
+    "D_branch_including_log_diffusion_scale",
+    "R_branch"
+  ]
+}

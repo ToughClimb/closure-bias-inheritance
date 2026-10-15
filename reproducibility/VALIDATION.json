@@ -1,0 +1,82 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-15T11:05:11.233665+00:00",
+  "scope": "Public source, frozen theory reproduction, unit tests, and named entry-point checks. Full long training sweeps were not repeated for this publication.",
+  "unit_tests": {
+    "command": "python -m pytest -q",
+    "passed": 151,
+    "cuda_skipped_in_default_run": 2
+  },
+  "cuda_tests": {
+    "command": "CLOSURE_TEST_CUDA=1 python -m pytest -q -m cuda",
+    "passed": 2
+  },
+  "portability_regression_subset": {
+    "passed": 37,
+    "scope": "Linear PDE, Burgers, slit-flow and basic-PDE tests after entry-point changes"
+  },
+  "isolated_theory_reproduction": {
+    "receipt": "THEORY_REPRODUCTION.json",
+    "receipt_sha256": "aeeba509671b5d09bc5b379e9289421774af6069131d5aeaf9a24638c29eae33",
+    "fresh_python_environment": true,
+    "outside_original_workspace": true,
+    "network_required_during_computation": false,
+    "all_scientific_driver_sources_byte_identical_to_reproduced_copy": true
+  },
+  "direct_entry_checks": {
+    "linear_pde_declare": "passed",
+    "slit_flow_declare": "passed",
+    "basic_pde_full_control": "passed",
+    "sensitivity_cuda_seed0_150_epoch_prefix": "passed",
+    "rheology_archive_download_and_checksum": "passed",
+    "rheology_dataset_audit": "passed"
+  },
+  "rheology": {
+    "rows": 12500,
+    "files": 50,
+    "materials": 10,
+    "independent_test_ids": 50,
+    "nonpositive_rows": 238,
+    "doi": "10.5281/zenodo.19699588"
+  },
+  "publication_scan": {
+    "scope": "Git index including NPZ string metadata; known private identifiers checked separately",
+    "findings": 0
+  },
+  "environment": {
+    "python": "3.12.13",
+    "platform": "Linux",
+    "dependency_snapshot": "requirements-linux-tested.txt"
+  },
+  "reproduction_source_sha256": {
+    "research/theory-pipeline-2026-10-15/build_assets.py": "cc06cb62c30eab88c7f69b697e83cc5032c322ebd827d0c83ec3efda589e51e5",
+    "research/theory-pipeline-2026-10-15/check_curvature.py": "4a198c87f35cbae0bfdd833dec250026b899faa26224cb56a8681b82acd7678f",
+    "research/theory-pipeline-2026-10-15/check_tangent.py": "d8263f9b3c619b968ffa29aa012a99e53392ebe0ac392064e5cb4d08de66bc55",
+    "research/theory-pipeline-2026-10-15/function_basis.py": "5a20963750417dde3c2fedde246c2fc9c5875090f92045ad73e14185f288e5c5",
+    "research/theory-pipeline-2026-10-15/metric_audit.py": "0d746e5068b45b98bae7c0f1534bf1966ac4e84ad0e19996d2b47359ae106b8b",
+    "research/theory-pipeline-2026-10-15/mismatched_ellipsoid.py": "ec6a62a8e9af62bebbc3225d3e7d4f70376f6115fe5eec453fc63fac9c6d6a2a",
+    "research/theory-pipeline-2026-10-15/observation_ellipsoid.py": "7bb34eebe98423bdbc3f24f9bbbcbfc4b3e131176214f8bb00b277458eeb97ce",
+    "research/theory-pipeline-2026-10-15/reproduce_numerics.py": "8bb394f797ac607145b9ba1ba8d16c621600e661215e9a1c2ab6f77f81953a91",
+    "research/theory-pipeline-2026-10-15/response_bounds.py": "dbfd06c8ba76f2fe73368ac974daddc8eb73619dea4c26b05f1519d8d1815c93",
+    "research/theory-pipeline-2026-10-15/verify_bounds.py": "bae4af551dec86aed4c0f12763477ec6c7a2d5e8853641964e169e06b362dd61"
+  },
+  "input_manifest_sha256": "52a569aad01d2e84c86053a46c9f593f45954fee598fcf785a9c2b5535f1403d",
+  "objective_control_validation": {
+    "status": "passed",
+    "expected_fits": 1360,
+    "actual_fits": 1360,
+    "status_counts": {
+      "passed": 1360
+    },
+    "bundle_count": 20
+  },
+  "regularization_validation": {
+    "status": "passed",
+    "total": 320,
+    "passed": 320,
+    "failed": 0,
+    "repeated_reference_count": 80,
+    "new_interventions": 240,
+    "maximum_reference_reproduction_difference": 0.0
+  }
+}

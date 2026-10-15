@@ -1,0 +1,75 @@
+{
+  "created_utc_before_training": "2026-10-13T01:30:43.985616+00:00",
+  "data_doi": "10.5281/zenodo.19699588",
+  "archive_sha256": "a2a7a84d92bf84a69e6f6c49e0ae976d916cc63fa46ff28bccd08a7ebdd4e218",
+  "scope": "Measured steady-shear constitutive prediction and processing-window benchmark; slit-flow predictions have no observed Q ground truth.",
+  "split": "All10materials, leave-one-whole-file-replicate-out of5. All temperatures/shearrates in that file heldout. No heldout hyperparameter/model/family/epoch selection.",
+  "arms": {
+    "primary_high_shear": "rate>=10/s, allpositive (source torque warning fixed threshold)",
+    "full_positive": "all strictlypositive viscosity records; 238 nonpositive raw observations retained and scored in rawspace but excluded from logfit"
+  },
+  "input_normalization": "Training-only actualT min/max and actualrate min/max for each material/fold/arm; features scaled reciprocal kelvin and logarithmic shear rate. No target min/max from heldout.",
+  "neural_model": "logeta = train_mean_logeta + tanh MLP 2x16; exp ensures positiveviscosity, no monotonicityconstraint",
+  "seeds": [
+    0,
+    1
+  ],
+  "independent_teachers": 200,
+  "optimizer": {
+    "name": "Adam",
+    "float": "float64",
+    "steps": 6000,
+    "learning_rate_schedule": [
+      [
+        0,
+        0.003
+      ],
+      [
+        4000,
+        0.001
+      ],
+      [
+        5000,
+        0.0003
+      ]
+    ],
+    "checkpoint_steps": [
+      2000,
+      6000
+    ],
+    "batching": "Independentweights, fullbatchpermodel; sum of permodelmean losses; no sharedweights, no datasetshuffle. GPU batched implementation."
+  },
+  "symbolic_families": "exp(totaldegree1/2/3 polynomial) in normalized1/T andloggamma; allreported, primarydegree2; no free structuresearch",
+  "compression": "Ordinaryleastsquares on teacherlogeta at61x61uniformnormalizedfeaturegrid withintrainingranges. Eachtemperature/ratecombination equallyweighted in thosefeatures.",
+  "direct_refit": "OLSsamepolynomialfamily on sameoriginaltraining logobservations; exactconvexoptimum independentstart so directfit=coefficientrefit countedonce, nottwomethods.",
+  "metrics": [
+    "heldoutlogRMSE positive eligible",
+    "heldoutrawrelativeL2 allfinite inclnegative for fullrange secondary",
+    "relativeL2 highshear primary",
+    "meanabsolute logerror",
+    "compressionlogRMSE againstteacher on sameheldoutinputs",
+    "processingeta<=.4 classification atgamma20 using ownreplicate loggamma/logeta interpolation",
+    "crossingtemperature sets, noextrapolation; unique/multiple/unbracketedexplicit; onlyunique-uniquepairs give scalarabsoluteerror"
+  ],
+  "processing_reference": "At eachnominalT, interpolate heldoutreplicate logeta vsloggamma to20/s, temperature samebracketweighted; referencepiecewiselinearlogeta vsactualT; useall10T including125 upturn. Modelreference comparison atsameT, allbranchesretained. 0.40 Pa s sourcepracticalprocessingbenchmark, notvalidatedprintability.",
+  "physical_checks": "eta positivebyarchitecture. Stressincrementalmonotonicity 1+dlogeta/dloggamma evaluated on 61x201withintraininginputrectangle; failures are definitive samples, passes arenotglobalproof. Also report rawstressnonmonotonicity withoutsmoothing.",
+  "flow": {
+    "temperatures_celsius": [
+      35,
+      75,
+      125
+    ],
+    "half_gap_m": 0.0005,
+    "wall_stress": "40/s times geometricmean viscosity from4trainingreplicates at40/s (eachlograteinterpolationwithinmatchednominalT); noheldoutaccess",
+    "scope": "Final6000checkpoint, primaryhighshear arm; allNNseeds,frozenprimarydegree2,anddirectdegree2; commonpressure perfold",
+    "method": "invertstrictlyincreasingstress only, integrate measured-rate-supportedouterregion. Conditionalunmeasuredcoreband assumesunknowninverseextensionmonotone withPhi(0)=0; no extrapolated centerestimate. Wallstressoutsideinterval->explicitinvalid. 128pointGauss vsindependentadaptivequad",
+    "core_bound": "Q in [Q_supported, Q_supported+H^2*gamma_min*(tau_min/tau_wall)^2]",
+    "interpretation": "DerivedPDE sensitivity conditionalonsteadygeneralizedNewtonian no-slipassumptions; noexperimentalQtruth",
+    "rate_support": "At each nominaltemperature panel, max of minimumrates and min of maximumrates over four trainingreplicates afterprimarycut. This common measuredinterval, notglobalnormalizationbounds, restricts inversions.",
+    "temperature_evaluation": "Mean of fourtrainingreplicate actualtemperatures interpolated at40/s for eachnominal35/75/125panel, reportedexplicitly."
+  },
+  "uncertainty": "Perwhole-replicate results retained; seedmean first, across5foldSD descriptive. Folds sharetrainingdata, materials selectedexperimentaldesign; no independentN fromtemperature or randomrows; no pvalues.",
+  "failures": "Allnonfinite/invalid/absentcrossings retained withstatus. No clipping, absolutevalue repair, sortingstress toforceinverse, outlierdeletionbyoutcome, ortruthtuning.",
+  "data_audit_sha256": "0c5ff2052ae9bab2f658f90d2d6f1130c2c0507c4170ef8af44f9d5df849a0bd",
+  "pretraining_support_clarification_utc": "2026-10-13T01:30:53.639212+00:00"
+}

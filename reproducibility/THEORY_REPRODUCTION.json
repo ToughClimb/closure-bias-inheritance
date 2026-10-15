@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-10-15T10:51:36.008366+00:00",
+  "repository": ".",
+  "output_directory": "recomputed",
+  "original_results_preserved": "reproducibility/theory/expected",
+  "response_counts_reproduced": true,
+  "sharp_matched_and_mismatched_intervals_reproduced": true,
+  "all_15_full_metric_diagnostics_reproduced": true,
+  "all_10_constructed_controls_reproduced": true,
+  "numerical_ingredient_checks_passed": true,
+  "figures_and_tables_regenerated": true,
+  "driver_sha256": "8bb394f797ac607145b9ba1ba8d16c621600e661215e9a1c2ab6f77f81953a91"
+}

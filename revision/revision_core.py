@@ -314,8 +314,14 @@ def rollout_targets(t_final, save_dt):
     return targets
 
 
-def strict_rollout(D,R,u0,*,nx=None,t_final=.5,save_dt=.01,max_dt=1e-4,state_clip=None,adaptive=True,allow_nonpositive=False):
-    """Unit-periodic-domain RK4 with explicit geometry, CFL and failure status."""
+def strict_rollout(D,R,u0,*,nx=None,t_final=.5,save_dt=.01,max_dt=1e-4,state_clip=None,adaptive=True,allow_nonpositive=False,state_range=None,range_tolerance=1e-10):
+    """Periodic RK4; numerical completion and state-domain diagnostics are separate.
+
+    Legacy ``status='stable'`` denotes completion under the numerical guards.
+    Range diagnostics never clip or stop an otherwise valid numerical trajectory.
+    Accepted states and RK trial stages are tracked separately, including the
+    initial state. Legacy state_min/state_max retain their terminal meanings.
+    """
     state=np.array(u0,dtype=float)
     if state.ndim < 1 or state.shape[-1] < 2 or not np.isfinite(state).all():
         raise ValueError('Initial states must have a finite spatial axis with at least two cells')
@@ -326,6 +332,26 @@ def strict_rollout(D,R,u0,*,nx=None,t_final=.5,save_dt=.01,max_dt=1e-4,state_cli
     targets=rollout_targets(t_final,save_dt)
     if state_clip is not None and (len(state_clip)!=2 or not np.isfinite(state_clip).all() or state_clip[0]>=state_clip[1]):
         raise ValueError('state_clip must be an ordered finite pair')
+    if state_range is not None and (len(state_range)!=2 or not np.isfinite(state_range).all() or state_range[0]>=state_range[1]):
+        raise ValueError('state_range must be an ordered finite pair')
+    if not np.isfinite(range_tolerance) or range_tolerance<0:raise ValueError('range_tolerance must be nonnegative and finite')
+    audit=dict(accepted_min=float(state.min()),accepted_max=float(state.max()),
+        stage_min=float(state.min()),stage_max=float(state.max()),first_accepted_violation=None,
+        first_stage_violation=None,accepted_nonfinite=False,stage_nonfinite=False)
+    def track(values,time,stage,accepted=False):
+        key='accepted' if accepted else 'stage'
+        if not np.isfinite(values).all():
+            audit[key+'_nonfinite']=True
+            return
+        lo=float(values.min());hi=float(values.max())
+        audit[key+'_min']=min(audit[key+'_min'],lo);audit[key+'_max']=max(audit[key+'_max'],hi)
+        if state_range is not None and (lo<state_range[0]-range_tolerance or hi>state_range[1]+range_tolerance):
+            first='first_'+key+'_violation'
+            if audit[first] is None:
+                bad=(values<state_range[0]-range_tolerance)|(values>state_range[1]+range_tolerance)
+                index=tuple(int(i) for i in np.argwhere(bad)[0])
+                audit[first]=dict(time=float(time),stage=stage,index=index,state_min=lo,state_max=hi)
+    track(state,0.,'initial',accepted=True);track(state,0.,'initial')
     dx=1/cells;t=0.;snapshots=[state.copy()];times=[0.];steps=0;min_d=float('inf');max_d=0.;clip_count=0;clipped_entries=0
     def constitutive(u):
         d=np.broadcast_to(np.asarray(D(u),dtype=float),u.shape)
@@ -333,8 +359,9 @@ def strict_rollout(D,R,u0,*,nx=None,t_final=.5,save_dt=.01,max_dt=1e-4,state_cli
         if not np.isfinite(d).all() or not np.isfinite(r).all() or (np.min(d)<=0 and not allow_nonpositive):
             raise FloatingPointError('invalid constitutive values')
         return d,r
-    def rhs(u):
+    def rhs(u,time=0.,stage='initial'):
         nonlocal min_d,max_d
+        track(u,time,stage)
         d,r=constitutive(u);min_d=min(min_d,float(d.min()));max_d=max(max_d,float(d.max()))
         flux=.5*(d+np.roll(d,-1,-1))*(np.roll(u,-1,-1)-u)/dx
         return (flux-np.roll(flux,1,-1))/dx+r
@@ -346,8 +373,9 @@ def strict_rollout(D,R,u0,*,nx=None,t_final=.5,save_dt=.01,max_dt=1e-4,state_cli
                 d,_=constitutive(state)
                 h=min(max_dt,.35*dx*dx/max(float(np.max(d)),1e-8),target-t) if adaptive else min(max_dt,target-t)
                 if t+h==t:raise FloatingPointError('time step underflow')
-                k1=rhs(state);k2=rhs(state+h*k1/2);k3=rhs(state+h*k2/2);k4=rhs(state+h*k3)
+                k1=rhs(state,t,'k1');k2=rhs(state+h*k1/2,t+h/2,'k2');k3=rhs(state+h*k2/2,t+h/2,'k3');k4=rhs(state+h*k3,t+h,'k4')
                 state=state+h*(k1+2*k2+2*k3+k4)/6;t+=h;steps+=1
+                track(state,t,'accepted_before_clip',accepted=True)
                 if state_clip is not None:
                     changed=(state<state_clip[0])|(state>state_clip[1]);clip_count+=int(changed.any());clipped_entries+=int(changed.sum())
                     state=np.clip(state,*state_clip)
@@ -362,7 +390,16 @@ def strict_rollout(D,R,u0,*,nx=None,t_final=.5,save_dt=.01,max_dt=1e-4,state_cli
         state_min=float(np.min(state)) if np.isfinite(state).all() else None,
         state_max=float(np.max(state)) if np.isfinite(state).all() else None,
         clip_steps=clip_count,clipped_cell_steps=clipped_entries,state_clip=state_clip,adaptive=adaptive,
-        nx=cells,requested_final_time=float(t_final),reached_final_time=reached)
+        nx=cells,requested_final_time=float(t_final),reached_final_time=reached,numerical_completion=reached,
+        accepted_state_min=None if audit['accepted_nonfinite'] else audit['accepted_min'],
+        accepted_state_max=None if audit['accepted_nonfinite'] else audit['accepted_max'],
+        rk_stage_state_min=None if audit['stage_nonfinite'] else audit['stage_min'],
+        rk_stage_state_max=None if audit['stage_nonfinite'] else audit['stage_max'],
+        accepted_state_range_valid=None if state_range is None else audit['first_accepted_violation'] is None and not audit['accepted_nonfinite'],
+        rk_stage_state_range_valid=None if state_range is None else audit['first_stage_violation'] is None and not audit['stage_nonfinite'],
+        first_accepted_range_violation=audit['first_accepted_violation'],first_rk_stage_range_violation=audit['first_stage_violation'],
+        state_range=state_range,range_tolerance=range_tolerance,
+        range_tracking='Initial state, every accepted pre-clipping step and every RK RHS stage; legacy extrema remain terminal')
 
 
 def observation_diagnostics(raw,observed,case,seed,noise):

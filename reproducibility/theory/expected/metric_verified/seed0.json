@@ -1,0 +1,163 @@
+{
+  "status": "complete",
+  "seed": 0,
+  "basis": {
+    "grid_points": 512,
+    "fitting_interval": [
+      0,
+      1.2
+    ],
+    "inner_product": "mean(D1*D2)+mean(R1*R2), absolute branch scales fixed at one",
+    "dimensions": 9,
+    "projection_rank": 7,
+    "functions": "D polynomials degree<=2, R polynomials degree<=3, plus each actual frozen native residual",
+    "transformations": {
+      "D": [
+        [
+          -1.0000000000000002,
+          -1.728671193017126,
+          -2.2230042767961593
+        ],
+        [
+          0.0,
+          2.8811186550285424,
+          11.136815543557232
+        ],
+        [
+          -0.0,
+          -0.0,
+          -9.280679619631027
+        ]
+      ],
+      "R": [
+        [
+          -1.0000000000000002,
+          -1.728671193017126,
+          -2.22300427679616,
+          -2.6149271408448667
+        ],
+        [
+          0.0,
+          2.8811186550285424,
+          11.136815543557233,
+          26.27778988799439
+        ],
+        [
+          -0.0,
+          -0.0,
+          -9.280679619631027,
+          -54.79894496646568
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          30.443858314703153
+        ]
+      ]
+    },
+    "teacher_polynomial_coefficients": {
+      "D": [
+        -0.04014999969390277,
+        0.017141957186121798,
+        -0.0001859386268931642
+      ],
+      "R": [
+        -0.11882460429128512,
+        -0.06929883411042598,
+        0.10741787942535452,
+        -0.002165106426454611
+      ]
+    },
+    "residual_norms": {
+      "D": 0.00033611036010581017,
+      "R": 0.006851735215318987
+    },
+    "maximum_gram_identity_error": 7.434330928646204e-14,
+    "teacher_coordinates": [
+      -0.04014999969390277,
+      0.017141957186121798,
+      -0.0001859386268931642,
+      -0.11882460429128512,
+      -0.06929883411042598,
+      0.10741787942535452,
+      -0.002165106426454611,
+      0.00033611036010581017,
+      0.006851735215318987
+    ],
+    "truth_coordinates": [
+      -0.04000000000000001,
+      0.017354370293890125,
+      -0.0,
+      -0.11953033268101747,
+      -0.06941748117556056,
+      0.10775072957854752,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "source_sha256": {
+    "weights": "088c816303b6404257e290ae0e2630c75b045d42da675a6ffa42b1d1f4e4e1fd",
+    "metadata": "c1901772841d028f93e3accd595ae59344fd8a74e24ea491f2ad14092de1f9a6"
+  },
+  "driver_sha256": "0d746e5068b45b98bae7c0f1534bf1966ac4e84ad0e19996d2b47359ae106b8b",
+  "basis_sha256": "5a20963750417dde3c2fedde246c2fc9c5875090f92045ad73e14185f288e5c5",
+  "matrix_diagnostics": {
+    "0.1": {
+      "maximum_gain": 0.08125215835446664,
+      "commutator_norm": 0.19099824774041452,
+      "relative_commutator": 0.367293302637626,
+      "diffusion_reaction_cross_norm": 0.020665943206938077
+    },
+    "0.3": {
+      "maximum_gain": 0.13014850940718165,
+      "commutator_norm": 0.3469496799649532,
+      "relative_commutator": 0.27919618531516827,
+      "diffusion_reaction_cross_norm": 0.10223186647531317
+    },
+    "0.6": {
+      "maximum_gain": 0.16947431837575566,
+      "commutator_norm": 0.3315499904441118,
+      "relative_commutator": 0.17201188507122292,
+      "diffusion_reaction_cross_norm": 0.27974447625641075
+    }
+  },
+  "witness": [
+    -0.15703809995400522,
+    0.06629357926325635,
+    0.8425449843643775,
+    0.043378396776652776,
+    -0.09493226582884975,
+    0.14697255136269177,
+    0.14003500905268912,
+    0.4213410553742695,
+    -0.17728312348633704
+  ],
+  "constructed_witness_checks": [
+    {
+      "epsilon": 0.0003213561262617355,
+      "diffusion_error_squared_before": 9.464323812950955e-08,
+      "diffusion_error_squared_after": 7.630993477038842e-08,
+      "reaction_error_squared_before": 8.626521756438942e-09,
+      "reaction_error_squared_after": 5.380824885544783e-09,
+      "predicted_dynamical_gain": 1.7501572165499077e-08,
+      "actual_dynamical_gain": 1.801098832902939e-08,
+      "relative_linearization_error": 0.02910688015414567,
+      "minimum_queried_diffusion": 0.010048303006064085
+    },
+    {
+      "epsilon": 0.00016067806313086776,
+      "diffusion_error_squared_before": 2.3660809532377387e-08,
+      "diffusion_error_squared_after": 1.9077483692597104e-08,
+      "reaction_error_squared_before": 2.1566304391097354e-09,
+      "reaction_error_squared_after": 1.3452062213861957e-09,
+      "predicted_dynamical_gain": 4.375393041374769e-09,
+      "actual_dynamical_gain": 4.438510698248166e-09,
+      "relative_linearization_error": 0.014425597032435926,
+      "minimum_queried_diffusion": 0.010324151503032042
+    }
+  ],
+  "scope": "Five seed-specific function-coordinate diagnostics at synthetic truth; projection is the declared polynomial reference, not the actual nonlinear selected expression.",
+  "seconds": 17.801476558990544
+}

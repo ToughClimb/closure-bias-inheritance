@@ -1,0 +1,21 @@
+{
+  "created_utc_before_followup_fit": "2026-10-13T01:35:43.684913+00:00",
+  "motivation_after_original_results": "Originaldegree1/2/3compressionhaslargefamilyapproximationerror; assessfidelitycomplexityspectrumwithoutclaimingfaithfulbiasinheritancefrompoorcompression",
+  "inputs": "All100final6000stepprimaryhigh-shearteachers; noNNretraining",
+  "degrees": [
+    4,
+    6,
+    8
+  ],
+  "methods": [
+    "frozenlogpolynomialOLS61x61sameprojectiongrid",
+    "directsamefamilyOLSoriginaltraininglogeta"
+  ],
+  "all_families_reported": true,
+  "heldout_model_selection": false,
+  "metrics": "High-shearheldoutlogRMSE/relativeL2, teacherlogcompressionerroronheldoutandprojectiongrid, measured-derivedprocessingwindowfull50holdoutsets, physicalstressmargin61x201grid; allmetadataasoriginal. No low-shearpolynomialextrapolation inthiscomplexityfollowup.",
+  "flow": "Fixeddegree8 all100frozen+50directfits, threeTpanels, samepressureandcommonsupportandrefinednumericalquadrature; no goodcase selection",
+  "empirical_training_baseline": "For each querygamma, interpolate eachof4trainingreplicates logeta vsloggamma separatelyat10nominalT; average4logetaand4actualT; interpolate average logeta versusmeanactualT. No extrapolation inrateorT: onlyqueryinsideall4replicate supportedrate intervalsandmeanT range eligible. Reportcoverageandcompareallmodels onsameeligibleheldoutsubset. Processingwindowrestricttointersection ofheldoutandtrainingtemperature supportatgamma20; savecommon-domainlengthanderrorsforallmethods.",
+  "uncertainty": "Wholephysicalreplicates; seedmeansfirst, no newindependentmeasurementcount. Addeddegreesandbaselinearemotivatedfollowupsnotpreregisteredoriginalstudy",
+  "original_protocol_sha256": "0c12932c3e4a5118b83510ce0b4d88a78bf9f8d96038d14639979cd537570621"
+}

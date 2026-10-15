@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "seed_units": 5,
+  "complete_matrices": 15,
+  "functions_per_matrix": 9,
+  "new_tangent_solves": 20,
+  "new_nonlinear_control_solves": 80,
+  "all_commutators_nonzero": true,
+  "all_two_branch_improvements_and_dynamical_increases": true,
+  "driver_sha256": "0d746e5068b45b98bae7c0f1534bf1966ac4e84ad0e19996d2b47359ae106b8b",
+  "completed_utc": "2026-10-15T08:08:34.603361+00:00"
+}

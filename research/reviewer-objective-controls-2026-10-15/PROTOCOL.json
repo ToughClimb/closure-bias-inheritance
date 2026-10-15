@@ -1,0 +1,47 @@
+{
+  "study_id": "reviewer-objective-controls-2026-10-15",
+  "classification": "fresh_exploratory_mechanism_followup",
+  "purpose": "Separate effects of the implemented observation objective from finite neural optimization, within an explicitly different fixed polynomial model class.",
+  "inputs": "Read-only shared reviewer-sensitivity-2026-10-15 input manifest and its twenty hashed NPZ files; no historical training checkpoints.",
+  "families": {"diffusion_degree": 2, "reaction_degree": 3, "coefficient_order": ["D0", "D1", "D2", "R0", "R1", "R2", "R3"], "basis": "physical-state monomials"},
+  "loss": "Exact discrete six-term revision_core.objective_terms, including mean factors, periodic face-averaged diffusion, 256-point smoothness support, original normalized spatial tests and optional full space-time weak trapezoidal tests. Baseline computation uses float64; neural training remains float32.",
+  "weight_configs": "Read shared sensitivity MANIFEST.json, deduplicate identical variant/weights/weak_variant, retain core/dense/joint and optional weak phases. No weight selection by true closure error.",
+  "linear_solver": "Per-term QR compression of augmented normalized [A,-b]; weighted stacking; column equilibration and SVD least squares, no added ridge. Report rank, singular values, condition numbers, loss and stationarity.",
+  "least_squares_certificate": {"relative_stationarity_tolerance": 1e-7, "finite_coefficients_required": true, "failure_status": "failed_certificate", "rank_deficiency": "Explicitly flagged even when the minimum-norm SVD result satisfies stationarity; no uniqueness claim."},
+  "constraint_arms": ["unconstrained", "positive_diffusion"],
+  "positive_diffusion": {
+    "minimum": 0.0001,
+    "numerical_guard": 1e-10,
+    "initial_grid_points": 33,
+    "solver": "QR-whitened convex quadratic program, SLSQP with analytic gradient and linear inequalities; continuous quadratic-D minimum at endpoints and interior vertex supplies additional separating cuts when required.",
+    "maximum_cuts": 50,
+    "maximum_solver_iterations": 1000,
+    "slsqp_ftol": 1e-13,
+    "primal_tolerance": 1e-10,
+    "relative_kkt_tolerance": 1e-7,
+    "rule": "Optimizer success alone is insufficient. Preserve status, exact continuous minimum, active-set multipliers, primal feasibility, stationarity, complementarity and primal-dual gap. Failed attempts are explicit and not silently retried by changing the scientific protocol."
+  },
+  "oracle_arms": [
+    {"name": "observed_features_observed_targets", "features": "observed", "targets": "observed", "oracle": false},
+    {"name": "clean_features_observed_targets", "features": "clean", "targets": "observed", "oracle": true},
+    {"name": "observed_features_clean_targets", "features": "observed", "targets": "clean", "oracle": true},
+    {"name": "clean_features_clean_targets", "features": "clean", "targets": "clean", "oracle": true}
+  ],
+  "oracle_configurations": ["default", "drop_strong", "space_time_weak"],
+  "main_configurations": "All 34 shared-manifest configurations, twenty inputs, observed-feature/observed-target arm, two constraint arms: 1360 coefficient fits.",
+  "oracle_count": "6 levels x 2 cases x 5 seeds x 2 clipping arms x 4 target/feature arms x 3 fixed configurations x 2 constraints = 2880 diagnostic fits; repeated zero-noise fields do not add samples.",
+  "oracle_definition": "A is built from the selected feature field, b from the selected target field, while tests/support/anchor/regularizer remain fixed. Space-weak target uses projected central time differences; strong/mass use corresponding time differences; rollout target uses U[n+1]-U[n]. Full space-time target uses the selected field against differentiated temporal tests. Clean fields are synthetic oracle information, never a deployable observed-data method.",
+  "noise_curve": {
+    "cases": ["case_a", "case_exp"],
+    "seeds": [0, 1, 2, 3, 4],
+    "levels": [0, 0.003, 0.01, 0.02, 0.03, 0.05],
+    "coupling": "Reuse the shared clean_u and seed-specific numpy default_rng Gaussian draw, scale by level*std(clean_u), exactly reproduce the shared noise3 field before using additional levels.",
+    "clipping_arms": ["original_clipped", "unclipped_diagnostic"],
+    "zero_noise": "Original observation helper does not clip zero-noise data; clipped and unclipped diagnostic fields coincide and are not independent replicates.",
+    "configuration_rule": "Only the three fixed oracle_configurations: default, drop_strong, space_time_weak. These were selected for mechanism coverage before oracle results, not by true error. CLI may select a predeclared subset for resource staging, recording the selection."
+  },
+  "evaluation": "256 uniform states on the case interval; true D/R only in post-fit evaluation, plus observed enclosure metrics, exact quadratic diffusion minimum, R(0), R(0.01), full coefficients and per-component losses. No closure truth in fitting, hyperparameter choice or solver stopping.",
+  "validation": ["Matrix residual loss versus direct revision_core objective_terms for random coefficients, both weak variants", "Coefficient gradient versus Torch autograd and centered finite differences", "QR-compressed versus full-row SVD solution", "Known algebraic residual unit cases", "Convex constrained test with independent scalar optimum", "Actual input hash and shared noise3 reconstruction", "Failure preservation and complete result cardinality"],
+  "resources": {"device": "cpu", "maximum_processes": 2, "blas_threads_per_process": 1},
+  "interpretation": "Global optimum is within the seven-coefficient class, not the neural hypothesis class. Target variance amplification alone is not proof of population bias; finite sample oracle contrasts remain descriptive unless additional noise replication or an analytical expectation argument is provided."
+}

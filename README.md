@@ -11,10 +11,12 @@ The experiments distinguish **faithful compression of a frozen surrogate** from 
 ## Layout
 
 - `src/closure_discovery/`: solvers, observations, neural models, weak objectives, polynomial fits and restricted symbolic expressions.
-- `experiments/`: original benchmarks and optional PySR comparison.
+- `experiments/`: original benchmarks, PDE and rheology controls, and optional PySR comparison.
 - `revision/`: resumable experiment runners, observation refits, validation, portable exports, reports and provenance.
 - `tests/`: numerical invariants, optimizer resume checks and experiment-integrity regressions.
 - `results/paper_artifacts/`: historical selected tables and figures.
+- `research/`: loss-weight, objective, selector, forward-response and theoretical diagnostics.
+- `reproducibility/theory/`: frozen numerical inputs, expected results and input hashes for the theory diagnostics.
 - `CODE_AUDIT_FIXES.md`: defect mapping, validation and compatibility notes.
 
 Revision tools use this repository's core implementation. Generated outputs and checkpoints are ignored by Git. Manuscript and review correspondence are maintained separately.
@@ -29,7 +31,19 @@ uv pip install --python .venv/bin/python -e ".[dev,revision]"
 .venv/bin/python -m pytest
 ```
 
-If a virtual environment already exists in the parent workspace, keep it there and use `../.venv/bin/python` in place of `.venv/bin/python`. The current local workspace retains that environment and its CUDA Torch installation. SciPy 1.17.0 and pandas 2.2.3 were selected to match the validated migration environment; the package extras allow compatible newer versions.
+Each checkout uses its own environment. The tested direct dependency versions are recorded in `reproducibility/requirements-tests.txt`; the full tested Linux environment is recorded in `reproducibility/requirements-linux-tested.txt`. The package extras allow compatible newer versions, which can produce different floating-point results.
+
+## Reproduce the frozen theory diagnostics
+
+The following CPU workflow uses the included five-seed Case A and Case Exp inputs. It recomputes the response enclosures, observation-based ranking intervals, complete response matrices, nonlinear projection controls, two tables and the diagnostic figure. It does not retrain the frozen networks.
+
+```bash
+uv venv .venv-theory
+uv pip install --python .venv-theory/bin/python -r reproducibility/requirements-theory.txt
+.venv-theory/bin/python research/theory-pipeline-2026-10-15/reproduce_numerics.py --output outputs/theory-recomputed --workers 4
+```
+
+Choose an output directory that does not exist. Inputs resolve relative to the script's checkout, so the command can also be invoked from another working directory. Each input hash is checked before computation. The final `REPRODUCTION.json` is written only after all numerical comparisons pass. See [reproducibility/README.md](reproducibility/README.md) for expected results, tolerances, environment details and commands for the additional experiments.
 
 Optional PySR requires its Python package and a working Julia runtime:
 
@@ -100,9 +114,9 @@ These commands launch experiments; they are not required to rebuild already comp
 Point `--input-root` at an existing project containing `evidence/` and, optionally, binary outputs. Write regenerated reports into a separate work root:
 
 ```bash
-.venv/bin/python revision/rebuild_reports.py --input-root /path/to/existing-project --work-root outputs/rebuilt
-.venv/bin/python revision/audit_bundle.py --input-root /path/to/existing-project --work-root outputs/rebuilt --require-full
-.venv/bin/python revision/record_provenance.py --input-root /path/to/existing-project --work-root outputs/rebuilt
+.venv/bin/python revision/rebuild_reports.py --input-root outputs/existing-project --work-root outputs/rebuilt
+.venv/bin/python revision/audit_bundle.py --input-root outputs/existing-project --work-root outputs/rebuilt --require-full
+.venv/bin/python revision/record_provenance.py --input-root outputs/existing-project --work-root outputs/rebuilt
 ```
 
 Portable CSV curves and histories suffice for report reconstruction. Model training and validation use local outputs in their chosen work root; historical input paths are read-only. The bundle audit checks expected configuration identities, final epochs, histories, source hashes and curve metrics, and identifies the five historical invalid Nyquist runs separately.

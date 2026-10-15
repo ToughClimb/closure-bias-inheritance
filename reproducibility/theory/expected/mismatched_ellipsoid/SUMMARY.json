@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "case": "Exp",
+  "seeds": 5,
+  "all_five_intervals_contain_actual_gains": true,
+  "robust_rankings_at_oracle_budgets": 0,
+  "all_ten_outer_product_extremizers_attain_bounds": true,
+  "approximation_remainder_norm": 0.005833000775500583,
+  "driver_sha256": "ec6a62a8e9af62bebbc3225d3e7d4f70376f6115fe5eec453fc63fac9c6d6a2a",
+  "completed_utc": "2026-10-15T08:20:34.077109+00:00",
+  "limitation": "Budgets are evaluated from synthetic truth, not inferred by the algorithm."
+}

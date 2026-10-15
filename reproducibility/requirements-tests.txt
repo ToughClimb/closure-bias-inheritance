@@ -1,0 +1,10 @@
+# Versions used to validate the frozen numerical reproduction on Linux.
+# These pins describe a tested numerical environment, not minimum requirements.
+numpy==2.4.6
+scipy==1.17.0
+matplotlib==3.11.0
+pillow==12.2.0
+pandas==2.2.3
+sympy==1.14.0
+torch==2.12.0
+pytest==9.1.0

@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "seed_units": 5,
+  "all_sharp_support_intervals_verified": true,
+  "robust_rankings_at_oracle_budget": 5,
+  "matrix_reconstruction_max_relative_error": 8.326578860997696e-16,
+  "driver_sha256": "384f5dafde90f14838edcee0178918f5bbb0980c839c7b7ae8732087aa31482a",
+  "completed_utc": "2026-10-15T08:05:25.542718+00:00",
+  "limitation": "Consistency budget is measured from synthetic truth; no truth-free calibration claimed."
+}

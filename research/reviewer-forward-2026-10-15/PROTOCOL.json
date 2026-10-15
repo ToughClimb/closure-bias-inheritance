@@ -1,0 +1,146 @@
+{
+  "study_id": "reviewer-forward-2026-10-15",
+  "classification": "fresh_same_cohort_forward_followup",
+  "upstream_study": "reviewer-sensitivity-2026-10-15",
+  "training_output_directory": "reviewer-sensitivity-2026-10-15-v2",
+  "training_version_rule": "Only V2 checkpoints may enter formal forward results. V1 failed/interrupted training is excluded; the original shared V1 input NPZ files remain the byte-verified observation source.",
+  "cases": [
+    "case_a",
+    "case_exp"
+  ],
+  "settings": [
+    "clean",
+    "noise3"
+  ],
+  "data_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "variants": [
+    "default",
+    "drop_strong",
+    "drop_anchor",
+    "reduced_space_weak",
+    "space_time_weak"
+  ],
+  "training_checkpoints": [
+    150,
+    1500
+  ],
+  "methods": [
+    "native",
+    "frozen"
+  ],
+  "baseline_methods": [
+    "strong_poly",
+    "weak_poly",
+    "spacetime_poly"
+  ],
+  "baseline_rule": "Fit each input once with the existing seven-coefficient reference and ridge1e-8; do not duplicate fits across variants/checkpoints.",
+  "global_reference_variants": [
+    "default",
+    "drop_strong"
+  ],
+  "global_reference_source": "outputs/reviewer-objective-controls-2026-10-15/shared/bundles/<input_id>.json; observed_features_observed_targets, positive_diffusion, passed only. Import the existing coefficients/KKT records; never refit them here. Unconstrained results are retained as static metadata only.",
+  "initial_conditions": [
+    {
+      "id": "low",
+      "mean_fraction": 0.05,
+      "half_amplitude_fraction": 0.04
+    },
+    {
+      "id": "midlow",
+      "mean_fraction": 0.3,
+      "half_amplitude_fraction": 0.2
+    },
+    {
+      "id": "midhigh",
+      "mean_fraction": 0.65,
+      "half_amplitude_fraction": 0.2
+    },
+    {
+      "id": "high",
+      "mean_fraction": 0.9,
+      "half_amplitude_fraction": 0.08
+    }
+  ],
+  "initial_shape": "sin(2*pi*x+phase1)+.25*sin(6*pi*x+phase2), phases from PCG64(data_seed+20261015), divided by its nx64 maximum absolute value; odd modes make nx64 minimum=-maximum and mean=0. All four patterns share this shape, which is shared across methods/noise/variants/checkpoints.",
+  "horizons": [
+    0.1,
+    0.3,
+    0.6
+  ],
+  "save_dt": 0.01,
+  "nx": 64,
+  "length": 1.0,
+  "spatial_operator": "Periodic conservative arithmetic-face diffusion flux plus local reaction; same nx64 formulation for all models and truth. This is a temporal-resolution audit, not an independent spatial-formulation certificate.",
+  "solver": {
+    "method": "RK45",
+    "rtol": 1e-06,
+    "atol": 1e-09,
+    "max_step": 0.01,
+    "cfl": 0.35,
+    "max_rhs_evaluations": 150000,
+    "absolute_state_guard": 10.0,
+    "range_tolerance": 1e-10
+  },
+  "refined_solver": {
+    "method": "RK45",
+    "rtol": 1e-07,
+    "atol": 1e-10,
+    "max_step": 0.005,
+    "cfl": 0.175,
+    "max_rhs_evaluations": 300000,
+    "absolute_state_guard": 10.0,
+    "range_tolerance": 1e-10
+  },
+  "numerical_comparison": {
+    "truth": "All ten case/seed combinations and all four ICs receive primary/refined integrations.",
+    "models": {
+      "data_seeds": [
+        0
+      ],
+      "variants": [
+        "default",
+        "drop_strong"
+      ],
+      "cases": [
+        "case_a",
+        "case_exp"
+      ],
+      "settings": [
+        "clean",
+        "noise3"
+      ],
+      "training_checkpoints": [
+        150,
+        1500
+      ],
+      "methods": [
+        "native",
+        "frozen"
+      ]
+    },
+    "absolute_rms_tolerance": 1e-07,
+    "relative_to_truth_tolerance": 1e-06,
+    "gap_rule": "A claimed endpoint method gap must exceed the sum of the two endpoint temporal discrepancies; otherwise mark the comparison numerically unresolved. Passing this test does not certify the spatial continuum solution.",
+    "failure_rule": "Retain primary and refined failures. Do not replace primary scores by whichever solve is closer to truth; failed comparisons are unresolved."
+  },
+  "native_rule": "Load original checkpoint weights on CPU, export exact polynomial-residual/tanh structure with NumpyMLPClosure, evaluate float64 including outside U, and verify against the same weights evaluated by float64 torch. Never use interpolated saved curves to evolve the PDE.",
+  "frozen_rule": "Use the original selected expressions from the checkpoint evaluation; do not refit to float64 native outputs or select using true error.",
+  "clipping": false,
+  "out_of_support": "Record accepted-state and RHS-trial-stage departures from U separately, continue actual native/symbolic formulas. A support departure is extrapolation, not automatically numerical failure.",
+  "accepted_audit_scope": "Initial state, accepted RK nodes, and saved dense-output samples. These checks are not a continuous-time trajectory certificate. Queried positive D is not a certificate of positivity throughout U.",
+  "numerical_guards": "Stop on nonfinite states/closures, nonpositive diffusion at a queried state, magnitude>10, step/evaluation failure, or a non-removable rational pole in a queried continuous-field state enclosure. A trial guard failure is reported as such and is not proof of continuum blow-up.",
+  "pole_rule": "Cancel rational numerator/denominator common factors exactly over rational representations of stored binary floats; inspect real roots of the remaining denominator. A pole in a sampled field enclosure gives a conservative domain guard, not a fitted-model improvement claim.",
+  "metrics": {
+    "endpoint": "sqrt(dx*sum((prediction-truth)^2))/sqrt(dx*sum(truth^2)) on each identical final-time field. If truth RMS<=1e-12, use absolute RMS and label it.",
+    "space_time": "sqrt(trapezoid(dx*sum((prediction-truth)^2), saved_times))/sqrt(trapezoid(dx*sum(truth^2), saved_times)) through the same horizon, using the common0.01 sampling grid including t=0. If truth RMS<=1e-12, use time/space absolute RMS and label it.",
+    "failure": "An unreached horizon has null errors and explicit failure/guard status, never zero. Completed endpoint errors remain available after a later failure. Numerical completion, accepted nonnegativity, accepted support, and trial-stage support are separate."
+  },
+  "statistics": "Aggregate over the five independent data seeds within each case/setting/variant/checkpoint/method/IC/horizon. Reused baselines, ICs, checkpoints and paired seeds are not independent replicates. Report completion/validity denominators alongside successful-subset error means.",
+  "formal_launch": "Build and benchmark only until root reviews this concrete protocol and commands. Pilot artifacts are classified runtime_pilot and excluded from formal inference."
+}

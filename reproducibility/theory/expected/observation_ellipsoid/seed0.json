@@ -1,0 +1,164 @@
+{
+  "status": "complete",
+  "seed": 0,
+  "driver_sha256": "384f5dafde90f14838edcee0178918f5bbb0980c839c7b7ae8732087aa31482a",
+  "source_sha256": {
+    "weights": "088c816303b6404257e290ae0e2630c75b045d42da675a6ffa42b1d1f4e4e1fd",
+    "metadata": "c1901772841d028f93e3accd595ae59344fd8a74e24ea491f2ad14092de1f9a6",
+    "input": "be0d5a4a8c3184611e1a6e6aa7bd373c90d18090b818e96e6ce7be92d232d0ee",
+    "quadratic_bundle": "b875fb8998b0e8c81f5d3061799bc848da745bb14f9a256007657e6c8c7ba91a"
+  },
+  "basis": {
+    "grid_points": 512,
+    "fitting_interval": [
+      0,
+      1.2
+    ],
+    "inner_product": "mean(D1*D2)+mean(R1*R2), absolute branch scales fixed at one",
+    "dimensions": 9,
+    "projection_rank": 7,
+    "functions": "D polynomials degree<=2, R polynomials degree<=3, plus each actual frozen native residual",
+    "transformations": {
+      "D": [
+        [
+          -1.0000000000000002,
+          -1.728671193017126,
+          -2.2230042767961593
+        ],
+        [
+          0.0,
+          2.8811186550285424,
+          11.136815543557232
+        ],
+        [
+          -0.0,
+          -0.0,
+          -9.280679619631027
+        ]
+      ],
+      "R": [
+        [
+          -1.0000000000000002,
+          -1.728671193017126,
+          -2.22300427679616,
+          -2.6149271408448667
+        ],
+        [
+          0.0,
+          2.8811186550285424,
+          11.136815543557233,
+          26.27778988799439
+        ],
+        [
+          -0.0,
+          -0.0,
+          -9.280679619631027,
+          -54.79894496646568
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          30.443858314703153
+        ]
+      ]
+    },
+    "teacher_polynomial_coefficients": {
+      "D": [
+        -0.04014999969390277,
+        0.017141957186121798,
+        -0.0001859386268931642
+      ],
+      "R": [
+        -0.11882460429128512,
+        -0.06929883411042598,
+        0.10741787942535452,
+        -0.002165106426454611
+      ]
+    },
+    "residual_norms": {
+      "D": 0.00033611036010581017,
+      "R": 0.006851735215318987
+    },
+    "maximum_gram_identity_error": 7.434330928646204e-14,
+    "teacher_coordinates": [
+      -0.04014999969390277,
+      0.017141957186121798,
+      -0.0001859386268931642,
+      -0.11882460429128512,
+      -0.06929883411042598,
+      0.10741787942535452,
+      -0.002165106426454611,
+      0.00033611036010581017,
+      0.006851735215318987
+    ],
+    "truth_coordinates": [
+      -0.04000000000000001,
+      0.017354370293890125,
+      -0.0,
+      -0.11953033268101747,
+      -0.06941748117556056,
+      0.10775072957854752,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "maximum_augmented_gram_relative_discrepancy": 6.488516172859378e-16,
+  "minimum_objective": 7.137401309568629e-05,
+  "minimum_consistency_budget": 0.008448314216202324,
+  "oracle_truth_consistency_budget": 0.008615405818269209,
+  "ellipsoid_radius": 0.0016885509520830756,
+  "reference_coefficients": [
+    -0.04004253731382312,
+    0.017386701604523734,
+    -1.3547527425258887e-05,
+    -0.12008984520829188,
+    -0.06827884071794788,
+    0.10634104459058348,
+    0.00065684686368568
+  ],
+  "center_gain": -4.702235062538152e-05,
+  "dual_sensitivity": 7.4356989585203106e-09,
+  "interval_halfwidth": 2.511111311162521e-11,
+  "interval_lower": -4.702237573649463e-05,
+  "interval_upper": -4.7022325514268404e-05,
+  "actual_constitutive_gain": -4.7022342017869014e-05,
+  "robust_sign": true,
+  "critical_consistency_budget": 3161.9321120893464,
+  "extremizers": [
+    {
+      "sign": -1,
+      "theta": [
+        -0.04002254346822836,
+        0.01737549470399286,
+        -1.699599728629253e-05,
+        -0.12026261414067148,
+        -0.07005588467432503,
+        0.1070328816699952,
+        0.001265718349171164
+      ],
+      "gain": -4.702232551426835e-05
+    },
+    {
+      "sign": 1,
+      "theta": [
+        -0.04006253115941789,
+        0.01739790850505461,
+        -1.0099057564225243e-05,
+        -0.11991707627591229,
+        -0.06650179676157073,
+        0.10564920751117177,
+        4.7975378200196e-05
+      ],
+      "gain": -4.7022375736494596e-05
+    }
+  ],
+  "minimum_observation_singular_value": 0.5230250787485979,
+  "actual_neural_recovery_error": 0.007243758885620265,
+  "neural_recovery_bound": 0.06666516998974688,
+  "native_polynomial_tail_norm": 0.006859974171599539,
+  "native_full_objective": 0.0010550057381173632,
+  "native_residual_corrected_norm": 0.026067055793088063,
+  "scope": "Actual frozen MLP and nonlinear selected expressions; truth assumed in V. Oracle budget evaluates the theorem, not a truth-free budget estimator; priors and discretization are included in consistency error."
+}

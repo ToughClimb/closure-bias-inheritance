@@ -1,0 +1,43 @@
+{
+  "recorded_utc": "2026-10-15T01:08:52.684955+00:00",
+  "authority": "Declared device and memory policy for the isolated GPU cohort; resource limits are part of the recorded execution protocol.",
+  "neural_training": {
+    "device": "cuda",
+    "cpu_fallback": false,
+    "workers_max": 4,
+    "workers_selection": "4 only if isolated pilot host RAM <4GiB; otherwise reduce. No CPU neural workers.",
+    "systemd": {
+      "MemoryMax": "6G",
+      "MemoryHigh": "5G",
+      "MemorySwapMax": "0",
+      "CPUQuota": "400%",
+      "Nice": 5,
+      "OOMPolicy": "stop",
+      "Restart": "no"
+    },
+    "before_launch": [
+      "CUDA model/observation tensors verified on device",
+      "pilot group host RSS/PSS+cgroup peak",
+      "CUDA memory/utilization/process inventory",
+      "free memory and unrelated existing jobs"
+    ],
+    "cohort_policy": "100 GPU long configurations start fresh; original680 CPU150 retained as independent prefix cohort; interrupted CPU-long remains excluded trace. No CPU/GPU trajectory splice."
+  },
+  "cpu_postprocessing": {
+    "workers_max": 2,
+    "default_systemd_memorymax": "2G",
+    "BLAS_threads": 1,
+    "scope": [
+      "symbolic analysis",
+      "linear/constrained coefficient solves",
+      "PDE integration",
+      "plots and package checks"
+    ]
+  },
+  "host_protection": {
+    "avoid_high_memory_parallel_jobs": true,
+    "launch_available_memory_min_GiB": 12,
+    "target_available_memory_min_GiB": 8,
+    "action_if_resource_limit_fails": "Stop affected job, retain exception/checkpoints, diagnose before retry; never switch silently to CPU or increase memory cap."
+  }
+}

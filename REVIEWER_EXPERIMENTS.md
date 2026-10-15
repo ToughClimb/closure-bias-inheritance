@@ -30,12 +30,12 @@ Representative repaired-code CPU verification passed all 37 closure and 56 valid
 
 ## Commands
 
-Use the retained parent environment in the current workspace, or replace `../.venv/bin/python` with the interpreter for a fresh project installation.
+Run these commands from the repository root with the project environment described in README.md. `outputs/reference` denotes a previously generated campaign containing its evidence and observation artifacts.
 
 ```bash
-../.venv/bin/python experiments/run_pysr_observation_refit.py --work-root outputs/pysr-refit-40 --input-root /path/to/archive --device cpu --workers 3 --max-nfev 40 --reconstruct-observations
-../.venv/bin/python experiments/continue_pysr_observation_refit.py --work-root outputs/pysr-refit-120 --base-root outputs/pysr-refit-40 --device cpu --workers 3 --additional-nfev 80
-../.venv/bin/python experiments/summarize_pysr_observation_refit.py --work-root outputs/pysr-refit-report --input-root /path/to/archive --refit-root outputs/pysr-refit-120
+.venv/bin/python experiments/run_pysr_observation_refit.py --work-root outputs/pysr-refit-40 --input-root outputs/reference --device cpu --workers 3 --max-nfev 40 --reconstruct-observations
+.venv/bin/python experiments/continue_pysr_observation_refit.py --work-root outputs/pysr-refit-120 --base-root outputs/pysr-refit-40 --device cpu --workers 3 --additional-nfev 80
+.venv/bin/python experiments/summarize_pysr_observation_refit.py --work-root outputs/pysr-refit-report --input-root outputs/reference --refit-root outputs/pysr-refit-120
 ```
 
 The input JSON and portable curves follow the `revision/` runner schema. Each process records source/input hashes, protocol, optimizer status and validation status. In this local campaign, systemd user services retain explicit command lines and logs; the root virtual environment and historical repository stay in place. No remote push or manuscript edit is part of these experiments.

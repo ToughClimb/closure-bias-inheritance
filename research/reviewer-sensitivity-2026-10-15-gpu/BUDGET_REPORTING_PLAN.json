@@ -1,0 +1,24 @@
+{
+  "report_kind": "fresh_cuda100_budget_only",
+  "source_cohort": "fresh_cuda_long",
+  "tasks": 100,
+  "evaluation_epochs": [150, 500, 1500],
+  "evaluation_pairs": 300,
+  "diagnostics": 700,
+  "training_or_optimization_steps": 0,
+  "uniform_reference_objective": "Existing repository float32 space_weak objective, evaluated at each saved CUDA-trained model with all six original default weights; CPU evaluation only",
+  "uniform_reference_weights": {"weak": 1.0, "rollout": 0.1, "mass": 1.0, "strong": 1.0, "anchor": 1.0, "reg": 0.0001},
+  "cross_device_component_verification": {
+    "applies_to_states": 240,
+    "native_weak_variant": "space_weak",
+    "all_six_raw_components": true,
+    "atol": 0.000001,
+    "rtol": 0.001,
+    "criterion": "abs(CPU-common-form component - native-CUDA raw component) <= atol + rtol*abs(native)",
+    "scope": "Fixed float32 cross-device evaluation check, not a roundoff theorem or optimizer convergence test; a failure stops report completion"
+  },
+  "native_objective_policy": "Post-update native total_loss can be compared across budgets within the same objective arm. It is not used to rank different loss weight vectors.",
+  "cpu_cohort_policy": "CPU680 epoch150 is a separate complete weight/interaction cohort. No CPU endpoint or interrupted CPU continuation enters CUDA budget lines.",
+  "selection": "All declared seeds, variants and checkpoints; no true-error-based selection",
+  "uncertainty": "Mean and sample SD across five paired seeds; paired differences use descriptive Student-t 95% intervals"
+}

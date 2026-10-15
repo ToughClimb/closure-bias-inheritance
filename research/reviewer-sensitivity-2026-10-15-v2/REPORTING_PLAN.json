@@ -1,0 +1,18 @@
+{
+  "classification": "reporting_plan",
+  "formal_output_root": "outputs/reviewer-sensitivity-2026-10-15-v2",
+  "fitting_source_is_unchanged": true,
+  "scope": "Both cases, both noise settings, every declared weight/objective configuration and five paired seeds; no best-weight, seed or checkpoint filtering.",
+  "stages": {
+    "prefix": "Require all 680 fixed-budget epoch-150 evaluations, including authoritative checkpoint-150 metadata while a continuation is running.",
+    "full": "Require all 680 tasks at their declared maximum budget and all 880 task/evaluation-epoch pairs."
+  },
+  "uncertainty": "Arithmetic means and sample standard deviations across the five data/initialization seeds. Paired contrasts use seed-matched differences and a two-sided Student-t 95% interval with four degrees of freedom. These are descriptive small-sample intervals, without a multiple-comparison significance claim.",
+  "oat": "Display all six components, factors 0/0.1/1/10 and every predeclared dense strong/anchor factor; the shared default is included at factor one. Errors and downstream BIR retain both cases and noise settings.",
+  "budget": "Display all five predeclared longer variants at 150, 500 and 1500 epochs; compare changes within each seed, never select the lowest-error epoch.",
+  "interactions": "Display the complete strong-by-anchor 3x3 grid at factors 0.1/1/10 and the four corner second differences y(a,b)-y(a,1)-y(1,b)+y(1,1). These describe the measured responses, not the full six-dimensional interaction surface.",
+  "gradient": "Retain raw and weighted component losses, all/D/R parameter-block norms, cosines and actual-update dot products. Report per-seed normalized magnitude shares before aggregation. A post-update gradient dotted with the previous actual Adam update is a local directional diagnostic, not an exact finite loss change or causal attribution.",
+  "numerics": "The actual float32 diagnostics retain direct-versus-component discrepancies and legacy heuristic flags. Independent promoted-input/state FP64 gates must all pass. Undefined zero-norm cosines remain missing, never zero.",
+  "references": "Shared non-oracle same-objective seven-coefficient polynomial controls are joined with unconstrained and positive-diffusion arms separate, their different hypothesis class stated, and input/per-variant weights matched. Oracle rows cannot enter these comparison plots. Separately, read the existing 60 strong/space-weak/space-time direct D2/R3 residual-fit coefficients from forward-v2 and evaluate the common 256-point closure errors. These are the same 60 fits reused by both reports, not additional independent samples or newly fitted references, and their objectives differ from the neural hybrid objective.",
+  "partial_policy": "Incomplete reporting requires an explicit --allow-partial flag, records every missing/failing task and evaluation, and watermarks every figure. Complete reporting is the default."
+}

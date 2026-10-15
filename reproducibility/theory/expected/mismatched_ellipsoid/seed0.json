@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "case": "Exp",
+  "seed": 0,
+  "driver_sha256": "ec6a62a8e9af62bebbc3225d3e7d4f70376f6115fe5eec453fc63fac9c6d6a2a",
+  "source_sha256": {
+    "weights": "44ec3032af5407c98a6dc807e7111ca0e9ae2a717379762027c910b67bd56ddb",
+    "metadata": "a3f9fa34f414b9ff05d3f958cc69add48c1c4c8e827fdab224fa6794adb2baeb",
+    "input": "e15d3eaa2fc0b398e44104cfcfd1e01ebdb483cfb731c9d1d043ab2f0e6ca7f2",
+    "quadratic_bundle": "19388153ecb3d81f3c7c1fe94f135c15c56753e979d82c14ee5c622c3e4f050c"
+  },
+  "approximation_remainder_norm": 0.005833000775500583,
+  "minimum_consistency_budget": 0.16329743092661217,
+  "oracle_projected_truth_consistency_budget": 0.17942449970112365,
+  "center_gain": -1.7239512905485284e-07,
+  "observation_halfwidth": 1.8238037189391064e-08,
+  "approximation_halfwidth": 4.435472211375576e-06,
+  "interval_lower": -4.6261053776198206e-06,
+  "interval_upper": 4.281315119510115e-06,
+  "actual_constitutive_gain": -4.3831633096143687e-07,
+  "robust_sign": false,
+  "sharp_outer_product_extremizers": [
+    {
+      "sign": -1,
+      "gain": 4.281315119509556e-06
+    },
+    {
+      "sign": 1,
+      "gain": -4.626105377619587e-06
+    }
+  ],
+  "selected_families": [
+    "rational",
+    "polynomial"
+  ],
+  "scope": "Both true Exp branches lie outside the polynomial reference. Approximation and projected-consistency budgets are oracle diagnostics; candidate functions and models remain frozen."
+}

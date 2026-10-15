@@ -1,0 +1,67 @@
+{
+  "cohort_id": "reviewer-sensitivity-2026-10-15-gpu",
+  "classification": "fresh_cuda_long_continuation_study",
+  "reason": "Separate CUDA training cohort. CPU long continuations are excluded; host memory stability is a launch constraint.",
+  "parent_scientific_protocol": "reviewer-sensitivity-2026-10-15",
+  "protocol_bytes_unchanged": true,
+  "parent_cpu_root": "outputs/reviewer-sensitivity-2026-10-15-v2",
+  "required_device": "cuda",
+  "cpu_fallback_allowed": false,
+  "cases": [
+    "case_a",
+    "case_exp"
+  ],
+  "settings": [
+    "clean",
+    "noise3"
+  ],
+  "data_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "variants": [
+    "default",
+    "drop_strong",
+    "drop_anchor",
+    "reduced_space_weak",
+    "space_time_weak"
+  ],
+  "fresh_task_count": 100,
+  "max_epochs": 1500,
+  "evaluation_epochs": [
+    150,
+    500,
+    1500
+  ],
+  "diagnostic_epochs": [
+    0,
+    1,
+    50,
+    150,
+    500,
+    1000,
+    1500
+  ],
+  "evaluation_pairs": 300,
+  "diagnostics": 700,
+  "optimizer_steps": 150000,
+  "initialization": "Same init_seed=data_seed and same CPU-created initial state before .to(cuda); pair input/init hashes to the CPU reference, but GPU trajectory is fresh and separate.",
+  "input_policy": "Copy the exact same 20 NPZ and metadata bytes; their original generation protocol/hash remains authoritative.",
+  "checkpoint_policy": "No CPU optimizer/model/curve checkpoint is imported. Start every declared GPU task from scratch and retain its own 150/500/1500 states. Resume only CUDA checkpoints from this new source/config/device identity.",
+  "comparison_policy": "CPU epoch-150 OAT and GPU budget trajectories remain separate cohorts; never splice CPU150 with GPU500/1500. Cross-device optimization values need not be bitwise identical.",
+  "reporting_counts": {
+    "cpu_prefix_tasks": 680,
+    "cpu_prefix_evaluations": 680,
+    "cpu_prefix_diagnostics": 2720,
+    "gpu_fresh_tasks": 100,
+    "gpu_evaluations": 300,
+    "gpu_diagnostics": 700,
+    "combined_evaluation_pairs": 980,
+    "combined_diagnostics": 3420
+  },
+  "non_evidence_pilots": "Sequential three-step CUDA state/RNG/noninterference tests followed by four-worker 150-step runtime/memory pilot in separate output subroots; never formal evidence.",
+  "resource_policy": "Recorded launch limits: MemoryMax6G/MemoryHigh5G/MemorySwapMax0/CPUQuota400%/Nice5/OOMPolicystop/Restartno; require host MemAvailable>=12GiB and target>=8GiB margin; workers<=4 selected after measured pilot host RAM (<4GiB for four workers)."
+}

@@ -1,0 +1,129 @@
+{
+  "source_training_device": "cuda",
+  "source_device_proof": {
+    "source_checkpoint_sha256": "0084ac49497757ef71309f3c8fd0bba5221022868a8d92abe4ef7288faef6da4",
+    "source_training_device": "cuda",
+    "source_training_dtype": "float32",
+    "training_study": "reviewer-sensitivity-2026-10-15-gpu",
+    "GPU_scratch_task_id": "gpu_case_a_clean_s4_default",
+    "original_initial_state_sha256": "48ed6f4a071411a02a37bf3df5005ef601fcec28e674bbdb8929c1c6a52b26fd",
+    "forward_evaluation_device": "cpu",
+    "forward_cohort": "fresh_GPU_only",
+    "CPU_model_or_optimizer_imported": false
+  },
+  "source_device_proof_sha256": "852f8081524cf52eb3834d4aea1748418ade7f8e6416702405a3e42539794035",
+  "identity": {
+    "training_id": "gpu_case_a_clean_s4_default",
+    "epoch": 1500,
+    "checkpoint_sha256": "0084ac49497757ef71309f3c8fd0bba5221022868a8d92abe4ef7288faef6da4",
+    "input_file_sha256": "51ad8b4b59b207fa02fd81da13005ce04f1844bdd8484ce4f17653eec066f316",
+    "protocol_sha256": "903c36c78f225fd4e442a6e1dad1b753b48dfb199734081a499b7b10b4771f67",
+    "driver_sha256": "71d926c8fe4350572d4f4c78f8c6ac6f3a03947c59ea83724796a84d4547decd",
+    "model_metadata_sha256": "32e089fd010e2eb86d3d490567cbf3227925c6d098c9273acddc11202ac9312a"
+  },
+  "export_file": "gpu_case_a_clean_s4_default_e1500.npz",
+  "export_sha256": "b2d1ef4a6640a24aeaeaf0a3c49d0f14c683f7ead9fe92134878769096d5e1f8",
+  "export_bytes": 42401,
+  "source_checkpoint": "outputs/reviewer-sensitivity-2026-10-15-gpu/runs/gpu_case_a_clean_s4_default/checkpoint_1500.pt",
+  "source_forward_result": "outputs/reviewer-forward-2026-10-15-gpu/runs/gpu_case_a_clean_s4_default__e1500__native/result.json",
+  "source_forward_result_sha256": "0b962d9aebd1da924d9975739bbadd9faf91415adc2de3a48d8d8cffd90ebec5",
+  "model_verification": {
+    "evaluation_dtype": "float64",
+    "original_training_dtype": "torch.float32",
+    "outside_support_probe": true,
+    "maximum_absolute_difference": {
+      "D": 2.7755575615628914e-17,
+      "R": 8.326672684688674e-17
+    },
+    "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension",
+    "float32_curve_export_maximum_absolute_difference": {
+      "D": 1.6112536950496636e-08,
+      "R": 5.637725553064854e-08
+    }
+  },
+  "native_metadata": {
+    "backbone": "mlp",
+    "min_diffusion": 0.0001,
+    "branches": {
+      "D": {
+        "lower": 0.0,
+        "upper": 1.2000000476837158,
+        "degree": 2,
+        "residual_scale": 0.1,
+        "layers": [
+          {
+            "input": 1,
+            "output": 64
+          },
+          {
+            "input": 64,
+            "output": 64
+          },
+          {
+            "input": 64,
+            "output": 1
+          }
+        ]
+      },
+      "R": {
+        "lower": 0.0,
+        "upper": 1.2000000476837158,
+        "degree": 3,
+        "residual_scale": 0.1,
+        "layers": [
+          {
+            "input": 1,
+            "output": 64
+          },
+          {
+            "input": 64,
+            "output": 64
+          },
+          {
+            "input": 64,
+            "output": 1
+          }
+        ]
+      }
+    }
+  },
+  "reload_arrays_bitwise_equal": true,
+  "reload_evaluation_bitwise_equal": true,
+  "frozen_expressions": [
+    {
+      "family": "polynomial",
+      "parameters": [
+        0.010794691266915128,
+        0.04515836601077241,
+        0.008261376250864125,
+        -0.004088399992739369
+      ],
+      "expression": "0.0107947 + 0.0451584*u + 0.00826138*u^2 - 0.0040884*u^3",
+      "complexity": 4,
+      "fit_mse": 2.1502558486027537e-08,
+      "numerator_degree": null,
+      "denominator_degree": null
+    },
+    {
+      "family": "polynomial",
+      "parameters": [
+        0.006873349100548634,
+        0.9406238501312542,
+        -0.8172475334148936,
+        -0.25591995303279874,
+        0.12773612737861129
+      ],
+      "expression": "0.00687335 + 0.940624*u - 0.817248*u^2 - 0.25592*u^3 + 0.127736*u^4",
+      "complexity": 5,
+      "fit_mse": 2.4010848287168674e-05,
+      "numerator_degree": null,
+      "denominator_degree": null
+    }
+  ],
+  "value_range": [
+    0.0,
+    1.2
+  ],
+  "fits_or_integrations_performed": 0,
+  "scope": "Same trained polynomial-residual MLP weights used by native forward evaluation, including outside U; no saved-curve interpolation. Frozen expression parameters are exact stored binary-float JSON values, not rounded display strings."
+}
