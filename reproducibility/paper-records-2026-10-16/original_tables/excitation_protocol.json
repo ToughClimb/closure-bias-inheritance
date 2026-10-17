@@ -1,0 +1,21 @@
+{
+  "table": "Table 2",
+  "cases": [
+    "A",
+    "B",
+    "Exp"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "epochs": 150,
+  "nx": 48,
+  "training_horizon": 0.05,
+  "save_every": 5,
+  "trajectories": 6,
+  "metric_domain": "ErrD/ErrR use the full preset state interval for each case.",
+  "preserved_outputs": "Aggregate means and population SDs; individual fitted models were not serialized by the original driver.",
+  "separate_control": "The exact-observation narrow-support diagnostic in Appendix F is a separately generated experiment, not a decomposition of these Table 2 rows."
+}

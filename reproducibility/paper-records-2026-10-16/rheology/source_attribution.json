@@ -1,0 +1,10 @@
+{
+  "title": "Rheological Data For Syntactic Foam",
+  "creators": [
+    "Caleb Beckwith",
+    "Nikhil Gupta"
+  ],
+  "doi": "10.5281/zenodo.19699588",
+  "license": "CC-BY-4.0",
+  "reuse": "observations.csv is the existing normalized tabulation of the original public measurements; training_specs and numerical fit records are derived research outputs."
+}

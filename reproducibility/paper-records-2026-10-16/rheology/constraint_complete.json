@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "quadratic_programs": 150,
+  "direct_fits": 50,
+  "frozen_fits": 100,
+  "new_neural_training": 0,
+  "heldout_replicate_files": 50,
+  "degree": 6,
+  "coefficients_per_model": 28,
+  "minimum_global_bernstein_margin": 0.0500000099999907,
+  "sampled_stress_violations_constrained": 0,
+  "sampled_stress_violations_baseline": {
+    "direct_d6": 16,
+    "frozen_d6": 39
+  },
+  "max_kkt_stationarity_l2": 7.858932990935624e-17,
+  "max_kkt_complementarity": 1.157449140478998e-18,
+  "max_primal_dual_gap": 2.1684043449710093e-19,
+  "max_baseline_relative_l2_recheck_difference": 9.714451465470121e-17,
+  "max_baseline_window_recheck_difference": 4.440892098500626e-16,
+  "constraint_positive_margin": 0.05,
+  "certificate_scope": "Only each training rectangle, sufficient Bernstein inequalities verified in floating point",
+  "min_heldout_outside_rectangle": 0,
+  "max_heldout_outside_rectangle": 17,
+  "total_fit_seconds": 0.04172229766844959,
+  "mean_fit_seconds": 0.0002781486511229973,
+  "protocol_sha256": "f27ffb0b32422f9c6a32064df9dd4641e0a0a87f2037ea6d707be1660240bcf1"
+}

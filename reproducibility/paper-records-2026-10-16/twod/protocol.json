@@ -1,0 +1,38 @@
+{
+  "training_epochs": 150,
+  "training_grid": [
+    40,
+    40
+  ],
+  "training_horizon": 0.1,
+  "trajectories": 6,
+  "validation_grid": [
+    32,
+    32
+  ],
+  "validation_horizon": 0.3,
+  "fields_per_batch": 2,
+  "validation_patterns": [
+    "full_support",
+    "mean0.6_amp0.25"
+  ],
+  "metric": "Endpoint relative L2 at T=0.3 over both unseen initial fields and all spatial cells within each seed; then mean/sample SD across seeds.",
+  "completion_by_method": {
+    "neural": {
+      "completed": 50,
+      "total": 50
+    },
+    "frozen": {
+      "completed": 50,
+      "total": 50
+    },
+    "weak_poly": {
+      "completed": 50,
+      "total": 50
+    },
+    "strong_poly": {
+      "completed": 46,
+      "total": 50
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "table": "Table 4",
+  "cases": [
+    "Exp"
+  ],
+  "settings": [
+    "clean",
+    "noise5"
+  ],
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "csv_verified_operator_mode": "exp",
+  "binary_operators": [
+    "+",
+    "-",
+    "*"
+  ],
+  "unary_operators": [
+    "exp"
+  ],
+  "archived_driver": {
+    "model_selection": "best",
+    "parsimony": 0.0001,
+    "deterministic": true,
+    "parallelism": "serial",
+    "loss": "PySR default squared error",
+    "default_niterations": 40,
+    "default_timeout_seconds": 180,
+    "default_populations": 8,
+    "default_population_size": 48,
+    "default_maxsize": 30
+  },
+  "run_specific_budget_overrides": null,
+  "realized_stopping_reasons": null,
+  "metadata_scope": "Operators are saved in each original CSV. The other settings are the archived driver's configuration and defaults; the original CSVs omit run-specific limit overrides and stopping metadata.",
+  "archived_driver_sha256": "d3fede715101ef31740f21f010c6eeb7f908c1190a9ba3dae11955af50db3799"
+}

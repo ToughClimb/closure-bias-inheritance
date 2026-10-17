@@ -1,0 +1,854 @@
+{
+  "status": "passed",
+  "new_neural_training": 0,
+  "existing_twod_tasks": 25,
+  "existing_constraint_fits": 150,
+  "existing_core_record_files_preserved": 41,
+  "origins": {
+    "twod/task_records.json": [
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_a_0_0_e150.json",
+        "sha256": "8d5a3d3344e8bb19d30374992bab2fc666ca6266ab229ed45d145eb54bcf3f21"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_a_0_1_e150.json",
+        "sha256": "9f3915d4cc375a05aff251f4485c62cbf0f0172051aa210d0dfcf9c7486eec5d"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_a_0_2_e150.json",
+        "sha256": "bbf7db70a0e5d11949b25ede20ec085984f65e1434433473ec797c71477439c2"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_a_0_3_e150.json",
+        "sha256": "42bec356335169d1405ac57dcda031b49fe4d9e8bdb24e634aa6d0cc6b9a5171"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_a_0_4_e150.json",
+        "sha256": "3fad0171b2ce6138da3471bd307d360fd57477c34f5a3acfdc5dd7adaaddafad"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_exp_0.03_0_e150.json",
+        "sha256": "74d3d90201eb45985ff7b9ebfcbe251a793128ef656597d5d489cafcc125e173"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_exp_0.03_1_e150.json",
+        "sha256": "37d3fd59cb9592efdbdfb9abaf1fda3b6d4857b14d2ea27d51f264fe9fb23212"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_exp_0.03_2_e150.json",
+        "sha256": "548532c9a061c05583a9fd4477c302fb3cfa6bec1b6b15d09718b7d32aab9394"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_exp_0.03_3_e150.json",
+        "sha256": "07436cc86b265507cace1d2b0bee26bed5adbc19962bc668c5b34dc0f3799f23"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_exp_0.03_4_e150.json",
+        "sha256": "d792cb97b70776953aa151e66b432542fbf70510602e8ae01ff5c255c0b6c03e"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_exp_0_0_e150.json",
+        "sha256": "73b3752653fecc4b31f3df7b7a88c29e1f2d51796d84959e4627cedbdfad1360"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_exp_0_1_e150.json",
+        "sha256": "40b8fc1050a3f1c8d4988948e26c85cd428d875da4e33758da47683f3c44b194"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_exp_0_2_e150.json",
+        "sha256": "2d120e0c575fe147d9b9cb85120fa2b4b25b5692491a8898d71fc5200e880451"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_exp_0_3_e150.json",
+        "sha256": "57f5d9b91930e095a1e80a6a6579b1244e672742ca79181a6bd8ef0050cd955a"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_exp_0_4_e150.json",
+        "sha256": "182d9893d627d3da8e3e6c3b0d1a3dd453c8c37937849945abc3c8d234db66b5"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_trig_0.03_0_e150.json",
+        "sha256": "856c33c7808935458e543f0e50d6a9354b4de9b0dab199562090e3638baf3805"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_trig_0.03_1_e150.json",
+        "sha256": "da25094e521fe5a938f3a24c37c26ce2944cfd90173f4d0ce870886d980a2144"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_trig_0.03_2_e150.json",
+        "sha256": "5205772cc172a7e27c28432d43f2a8f8951eee3ac21ad9090789f81732eb9f46"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_trig_0.03_3_e150.json",
+        "sha256": "cfcdf37527bb5a4599ad8dd1cacc2071a0d36bc6c4517113cc65fea0ee29949d"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_trig_0.03_4_e150.json",
+        "sha256": "385e8134d31d6a047d9fe24ae23971c5c359e139386f790d9d126f2ef7a5402c"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_trig_0_0_e150.json",
+        "sha256": "77eba65e3aba5f8a893fb3312599e943e2bf7f82d36bce4c2f834ee098a2ea13"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_trig_0_1_e150.json",
+        "sha256": "e53cd15c22508d194d047b04c3679d78e9b2000265378fa0713d3d8ceaa6bc67"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_trig_0_2_e150.json",
+        "sha256": "e7647e1c465ec50e1baa0ee246fe6912f537889563d0e1eedde61a2330fe2485"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_trig_0_3_e150.json",
+        "sha256": "e5d019ec8215b714e0f4860c1d9e001f30e40d8a000e82c30fd7f766e134f4a2"
+      },
+      {
+        "identifier": "research-sandbox/projects/eaai-26-10676/evidence/2d/2d_case_trig_0_4_e150.json",
+        "sha256": "6d39e6e9e2439190a9d6fb7b9d060cc2f464611c534b0b053c1e6db3096f16e2"
+      }
+    ],
+    "twod/protocol.json": [],
+    "original_tables/excitation_case_a.csv": [
+      {
+        "identifier": "local_archive/results/excitation_case_a.csv",
+        "sha256": "ae586b38a62aaeaa694e50f798a943b33a08bbabad155f0354fba5c4f4c16d92"
+      }
+    ],
+    "original_tables/excitation_case_b.csv": [
+      {
+        "identifier": "local_archive/results/excitation_case_b.csv",
+        "sha256": "d2bca4f8cc0e4537e2b7f6d47dd47c898e540559612c57894011795207fa1279"
+      }
+    ],
+    "original_tables/excitation_case_exp.csv": [
+      {
+        "identifier": "local_archive/results/excitation_case_exp.csv",
+        "sha256": "0a693656df06f758e58b3c07674d9b8f3a4412b3dfb89e77ad3ebe45af2a36ae"
+      }
+    ],
+    "original_tables/excitation_protocol.json": [],
+    "pysr_original/pysr_case_exp_summary.csv": [
+      {
+        "identifier": "local_archive/results/pysr_case_exp_summary.csv",
+        "sha256": "117c302c6c4c74915001f69a198069446b59d86cc73d024c14bb5ecd6fe2ef13"
+      }
+    ],
+    "pysr_original/pysr_symbolic_case_exp_clean_seed0.csv": [
+      {
+        "identifier": "local_archive/results/pysr_symbolic_case_exp_clean_seed0.csv",
+        "sha256": "db7c1e609e04f07075019c5451a50136a2053fddec66ce5df3adb8e8a03d4c78"
+      }
+    ],
+    "pysr_original/pysr_symbolic_case_exp_clean_seed1.csv": [
+      {
+        "identifier": "local_archive/results/pysr_symbolic_case_exp_clean_seed1.csv",
+        "sha256": "88b4596d6695031e72146c93fc2765a672d2c50ea31205408b31401f7f84b64d"
+      }
+    ],
+    "pysr_original/pysr_symbolic_case_exp_clean_seed2.csv": [
+      {
+        "identifier": "local_archive/results/pysr_symbolic_case_exp_clean_seed2.csv",
+        "sha256": "514b37cc054ce533a2cd046223f1894076a3cdb80909c1d333a29d5ef9d808a5"
+      }
+    ],
+    "pysr_original/pysr_symbolic_case_exp_noise5_seed0.csv": [
+      {
+        "identifier": "local_archive/results/pysr_symbolic_case_exp_noise5_seed0.csv",
+        "sha256": "7ef8c018111e85f28ff27b7b80c9bb595b3d55649f541bdd28fc9104d0de0a07"
+      }
+    ],
+    "pysr_original/pysr_symbolic_case_exp_noise5_seed1.csv": [
+      {
+        "identifier": "local_archive/results/pysr_symbolic_case_exp_noise5_seed1.csv",
+        "sha256": "547c4513807d2fe0fc1380a912d762469463d7fe03b755b929e9c7e212353b93"
+      }
+    ],
+    "pysr_original/pysr_symbolic_case_exp_noise5_seed2.csv": [
+      {
+        "identifier": "local_archive/results/pysr_symbolic_case_exp_noise5_seed2.csv",
+        "sha256": "43d12a699ba7688d30744bb9202580cd4ec6bac725976bd555e543e2b80c5051"
+      }
+    ],
+    "pysr_original/protocol.json": [],
+    "original_tables/baseline_summary.csv": [
+      {
+        "identifier": "public-release-20261015/results/paper_artifacts/tables/baseline_summary.csv",
+        "sha256": "db73e2be6524c954187e4b7ba8329c1e22c8efbbd619e6d2eebcb99b4cf58efe"
+      }
+    ],
+    "original_tables/symbolic_summary.csv": [
+      {
+        "identifier": "public-release-20261015/results/paper_artifacts/tables/symbolic_summary.csv",
+        "sha256": "338279daa0b3f992731806cbbcc65a7ba24d0c75e7c9fc275279be44a7a8f2cc"
+      }
+    ],
+    "original_tables/cross_resolution_case_exp.csv": [
+      {
+        "identifier": "local_archive/results/cross_resolution_case_exp.csv",
+        "sha256": "c6b44e7b199d499d41ab4fd3e32541aec9b988302540765f9ecf0e4f6d23d320"
+      }
+    ],
+    "original_tables/objective_ablation_case_exp_clean.csv": [
+      {
+        "identifier": "local_archive/results/objective_ablation_case_exp_clean.csv",
+        "sha256": "eedcd83bfb086f29148c992f4b5134122b6a78ad46d9c6e8989a97002f85f36a"
+      }
+    ],
+    "rheology/inputs/observations.csv": [
+      {
+        "identifier": "outputs/rheology-engineering-2026-10-13/observations.csv",
+        "sha256": "ea16c0c5c283c21c9d5b38f928722f2f18dac4a0de09135fd0591a02ca231bd7"
+      }
+    ],
+    "rheology/inputs/training_specs.json": [
+      {
+        "identifier": "outputs/rheology-engineering-2026-10-13/training_specs.json",
+        "sha256": "3502291ca324014d222319d144811d82e610ce6d344c8a69fea1fd258ca57fbb"
+      }
+    ],
+    "rheology/inputs/checkpoint_2000.npz": [
+      {
+        "identifier": "outputs/rheology-engineering-2026-10-13/models/checkpoint_2000.npz",
+        "sha256": "1c215c0dffb4146560dee062c2c2332e241146087c2cd2f43bf32e53cbb8650c"
+      }
+    ],
+    "rheology/inputs/checkpoint_6000.npz": [
+      {
+        "identifier": "outputs/rheology-engineering-2026-10-13/models/checkpoint_6000.npz",
+        "sha256": "6bae48ff49d80f82ff3df1e4623986bf3e6d0c932716983a67a673a490976fe3"
+      }
+    ],
+    "rheology/original_model_definitions.json": [
+      {
+        "identifier": "outputs/rheology-engineering-2026-10-13/reports/model_definitions.json",
+        "sha256": "6d7de6513732854b498dd3ad53dd56b8f748367cade07ce6433b346de114ab7a"
+      }
+    ],
+    "rheology/complexity_model_definitions.json": [
+      {
+        "identifier": "outputs/rheology-engineering-2026-10-13/complexity/model_definitions.json",
+        "sha256": "7ed8e47abad51e18327b5daed81c63f31a362b2e6f6d3cae3a397ccfe900b9a2"
+      }
+    ],
+    "rheology/constrained_model_definitions.json": [
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/model_definitions.json",
+        "sha256": "0a3673e3c5fe04d80abbf392bd7c16ce26395d194bb28dc7a0789ae4fe7f3352"
+      }
+    ],
+    "rheology/constraint_complete.json": [
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/COMPLETE.json",
+        "sha256": "5355ec41f1f644598df97bf3976b43cf3405c2341efd6f725bd80e4562b67088"
+      }
+    ],
+    "rheology/constraint_fit_records.json": [
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold0_seed-1_direct_d6.json",
+        "sha256": "01a007301ce8f8c694e30284aecd0dc8550855d0cea2825b4bf4a33acb680f8e"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold0_seed0_frozen_d6.json",
+        "sha256": "e78be48f79ae4545211c39a6fc12e4d614eb3f6ec15ac236aeabba8cec904b9d"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold0_seed1_frozen_d6.json",
+        "sha256": "d9ee52579cf6697b4ff755a6465796d9d8f6df2b8e2c76199d8950ecc19b99a9"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold1_seed-1_direct_d6.json",
+        "sha256": "7a64eab8a73991dd25ac07053dd6d8aceb98b1d2bd4249a8accc26c33ff93d00"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold1_seed0_frozen_d6.json",
+        "sha256": "aeb16fc09ee056c5825435232e3ace96fabda1d34e98b500a430cce9c6f29934"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold1_seed1_frozen_d6.json",
+        "sha256": "1c4d6788f5c799689cd88d3c2b84adfcd1c8986c392650c27685e545390b86a0"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold2_seed-1_direct_d6.json",
+        "sha256": "86b41bcdc0f3baba741c3479393a3bfe3600e1181cdf3973d90ec586904cb373"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold2_seed0_frozen_d6.json",
+        "sha256": "046325653ff01f78c3a48887271ba43c8f1dc362add873edea7e8a68680d772e"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold2_seed1_frozen_d6.json",
+        "sha256": "b63f9381493508060a4db9119badbd4f6af5cd7f7d5141f644a3e927a1255274"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold3_seed-1_direct_d6.json",
+        "sha256": "1457a5e60e6830f9130aad7b2f82393d900383e16858c8c642c6d567ed4c1829"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold3_seed0_frozen_d6.json",
+        "sha256": "0cb3fb8494a504eca75782e6266d14b4ef05c91e7d4ae810456f8ee4b0647e3f"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold3_seed1_frozen_d6.json",
+        "sha256": "49e7cafe754d35c651a28aea8a6a6f3cb535c93f9e681beadbb5c547a779def8"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold4_seed-1_direct_d6.json",
+        "sha256": "52713344251ca3e4a50876ebf9f78c99ab9627fe64f57176d10b0b34484bf646"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold4_seed0_frozen_d6.json",
+        "sha256": "b8f19c2d4d9b955d3d5e25a27000083c2909690c76e2cf2903886b0377a06125"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_10%_fold4_seed1_frozen_d6.json",
+        "sha256": "0cc82fb1be363023d0380d81facf95be14c90938712b76bc24eb0f4344ffc3e7"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold0_seed-1_direct_d6.json",
+        "sha256": "e3314abd511eee9b94eb235afbb351672582bfd88699300ad2ed74c3559c3e15"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold0_seed0_frozen_d6.json",
+        "sha256": "79e0f7a320dc04bd86a613f4d22ebf03eb45df8a02a63a433d096c74a736be2a"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold0_seed1_frozen_d6.json",
+        "sha256": "80d984e1180400f62a54801940b90122017f0a688f7f07a099933a97cfb2b977"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold1_seed-1_direct_d6.json",
+        "sha256": "5328ce4f3a6fdf244fb6e24344c5cb3427b3d26e1c21fdef66bb5971839c3472"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold1_seed0_frozen_d6.json",
+        "sha256": "240c27316c2ba14ee8714a672be1e9f287a19929e50b11d5b0b8981ef90c1ebd"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold1_seed1_frozen_d6.json",
+        "sha256": "e59d496aec09fdbc5644fcb036aa5180ffca4ecb170f64fbf3d0a86f4c17a84e"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold2_seed-1_direct_d6.json",
+        "sha256": "dbd090cbac875496929f71233c6ba731ad341e30852285161fa02e34ea12cc95"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold2_seed0_frozen_d6.json",
+        "sha256": "e7f0d8835c0984bb1d2a470f73540542b4eee9da70b3207bfebc9cda88249bfd"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold2_seed1_frozen_d6.json",
+        "sha256": "866199acc0b8b991fe41fc4fa31a595d01a52a08a4d63905f9778b9999eb5088"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold3_seed-1_direct_d6.json",
+        "sha256": "c1b5863b6b40b46e255c2d654256c63ed0c64ebad01f8dc6e540de628141bf0d"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold3_seed0_frozen_d6.json",
+        "sha256": "9d73b110d27f66773036c9d9922d9bf85f94b61fcbabfc3a3046be54c281c46c"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold3_seed1_frozen_d6.json",
+        "sha256": "16f45dfa017f13596d96b20c1b2cdda1776a1bb577681d8d6f3f63e5f4640217"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold4_seed-1_direct_d6.json",
+        "sha256": "552474fcc533e7dce65e3e898911cc012bf428a72c194a819a363d29fca2bc5f"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold4_seed0_frozen_d6.json",
+        "sha256": "774cbc43fdf0b7512f012610cf88582d89f1c79f892172f3284e54704230b064"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_20%_fold4_seed1_frozen_d6.json",
+        "sha256": "16940c3b293565c7f878d71f6b1f2ba40bb623aee5d96602aea5569653ca781c"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold0_seed-1_direct_d6.json",
+        "sha256": "56c3d490f69905226979ebe3e63904a4f7b48bcba390ae0a7f39cdea32b678f4"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold0_seed0_frozen_d6.json",
+        "sha256": "ceedc6b57dfa5d6cceda8d0438ec71ff9cef4e85aa243872080e49a45121ee9c"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold0_seed1_frozen_d6.json",
+        "sha256": "c1cf7619ebfe62f05e0a1ab87afb84b21ac61fbdb5d4c9cc4fa0903a8a24014d"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold1_seed-1_direct_d6.json",
+        "sha256": "72f6ee7dd36f3dec862c3c35970a297aa0d7f2bf8a442dc3b9dc4100a0e6a342"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold1_seed0_frozen_d6.json",
+        "sha256": "9242a3b72de0356204b323b6936749e2947b95c18598bd6104775666cce6d0d0"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold1_seed1_frozen_d6.json",
+        "sha256": "b3e4d1d6024e758b1f0f0fe07540bc553f8de2572d6602be19b1eea468a885b4"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold2_seed-1_direct_d6.json",
+        "sha256": "67fa68c1e9a537fbf0b5de3f137844744197966150eaea962f4b12de61f3bd6d"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold2_seed0_frozen_d6.json",
+        "sha256": "9cb4173bd154bce84224eeb55fe8d15dca6e39020b36b66e1ac32ba4b064f7a9"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold2_seed1_frozen_d6.json",
+        "sha256": "09356c07e6d784bb5aa8cb208d7a12f5f0eae7be287089746ae0285c1c6f9ece"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold3_seed-1_direct_d6.json",
+        "sha256": "19f417a1209f844016afc6aad9007ff866116c246fb3c2f45f9775ca928a3ad0"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold3_seed0_frozen_d6.json",
+        "sha256": "811ba3c5df0aa158ae08a0bf604497f313bf902b5a1b543cbf288a1b827a3afb"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold3_seed1_frozen_d6.json",
+        "sha256": "53c415faf8eb0f2892268719d25a0e97a8dbfbdd5810aa8f889c25a79065efe7"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold4_seed-1_direct_d6.json",
+        "sha256": "6bec06a13af76f113f010b84c54b653bd5cb65b954a253b40ee52116d7c0de0a"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold4_seed0_frozen_d6.json",
+        "sha256": "8c2bf297945e46dc400c2ac837a18d8695daea259dc3c99d00c2e6561e7288b6"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_13gcc_40%_fold4_seed1_frozen_d6.json",
+        "sha256": "9ceefe3b608bc2d4fce6ab02764824cac541b3ae4580889b51da26162f0014cf"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold0_seed-1_direct_d6.json",
+        "sha256": "5e608f4a14007b866b34f19d849d8cdba7e8646dfe9e01d092e7a5010f199ae3"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold0_seed0_frozen_d6.json",
+        "sha256": "38af807c75d6cb74eb398917890350c603ffe952e4512300c66cbd4a5a58d466"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold0_seed1_frozen_d6.json",
+        "sha256": "9e714500b3d9603ae64e9b5835b29205b5204285f7985134f96e42259ee04df1"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold1_seed-1_direct_d6.json",
+        "sha256": "1978eea18385876a342d8b04e8cc8b09e4dd20ff48686909fa02a9d8fa6231ba"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold1_seed0_frozen_d6.json",
+        "sha256": "c6f3c452099b77cae8ee958a00c04ff6920df57739c0cfd7a8115f1b7781c5e4"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold1_seed1_frozen_d6.json",
+        "sha256": "29e635a888303c79d763c6c196820cfeb4eb96b97d95a453470fa23477eaa3ef"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold2_seed-1_direct_d6.json",
+        "sha256": "cd9b0e3ddf9eb49d91bd0738fbd1c50dbbc8845f0a64660aca1d7270f59882df"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold2_seed0_frozen_d6.json",
+        "sha256": "4ab3261111121aea2f9827d2d39b1e58ebd028dda0c152312431012c8c668ad7"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold2_seed1_frozen_d6.json",
+        "sha256": "22cbc2f675d8ed92fc9b7109510cc2a416843d7ae6dec6c3dd122873dfccb6ab"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold3_seed-1_direct_d6.json",
+        "sha256": "96b1d9eb76f9c75719798e560e5e45f890921499630580b6d03dcd63d1051696"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold3_seed0_frozen_d6.json",
+        "sha256": "d50de55fc646386db863417d2217007eac1e2b327e7d0ebe7c8e406113d669ac"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold3_seed1_frozen_d6.json",
+        "sha256": "c96fdd504cb5155fcc9631f6ef9068afd2f0eb7f61320c7e76cee910b3da0323"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold4_seed-1_direct_d6.json",
+        "sha256": "f09327d8a87133c82dd98b656e2cbb7c9f86601f324119aba3ccf370052c185e"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold4_seed0_frozen_d6.json",
+        "sha256": "c41e96182656572c4d001a07ab7c34bbfe0c119b4df530d3853e18ceabb03922"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_10%_fold4_seed1_frozen_d6.json",
+        "sha256": "4b34841fbbfa4a0d26714f57f706c097d55a35bbdea135a0a03df36fab61e0a6"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold0_seed-1_direct_d6.json",
+        "sha256": "08b7b9b2b3fb539838974d71c6efa4b26776c4ba23cbd9ad6a31f63c42109c2c"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold0_seed0_frozen_d6.json",
+        "sha256": "9d74e01562e09c93aa676404dfbe12b6d2489a372a76ef3239a625602192f288"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold0_seed1_frozen_d6.json",
+        "sha256": "74f500dbcd37a70d34cf065b26606d84bb9eb48b89c696c8dc287c3c35704263"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold1_seed-1_direct_d6.json",
+        "sha256": "fbea441c2642b3903e64859ecfe32d0a5a201706f760a7eb2a6a86812c203c43"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold1_seed0_frozen_d6.json",
+        "sha256": "c50eea83b332c6226543d3bd6dbfafce0a49279c46e920a33f580c169d6e7002"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold1_seed1_frozen_d6.json",
+        "sha256": "1a19bd03cd36d1cb8777d72c833bba1ebf812b3caa79d4a74841a926a74454a6"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold2_seed-1_direct_d6.json",
+        "sha256": "082b6d749461c4bf0461e6c52a216173f0b94ed06f5c3baa12c18b7ff0a0a5d3"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold2_seed0_frozen_d6.json",
+        "sha256": "9afc859687fccd83ef243654b638dba1134728c6b2ac978d6d950dd80d623987"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold2_seed1_frozen_d6.json",
+        "sha256": "2a680a57d92c8bafe6fe5fea0124f9e19021b73a1d1d0223e90383acb6d0bd59"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold3_seed-1_direct_d6.json",
+        "sha256": "b3e0aa264600f3714d2adc77500dc87b97f39ab24742c04b0397b05753c52e9c"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold3_seed0_frozen_d6.json",
+        "sha256": "4df8fffe5c871453e5d0cb6558f903b9c729cea30da2c480d2bf98d5eb36770d"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold3_seed1_frozen_d6.json",
+        "sha256": "26508e3ac1459e2dd339874ee39711c3a7ceb87c5fb4e08f548e0ff6ab97eeeb"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold4_seed-1_direct_d6.json",
+        "sha256": "f9b188f1b63f40586eb127daf4003b384536d38b72f575640630ccd6655fbbfb"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold4_seed0_frozen_d6.json",
+        "sha256": "9af42869787f84332cbfc0739d19f79c6a404af185f28c6000b9184dd15276bd"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_20%_fold4_seed1_frozen_d6.json",
+        "sha256": "6b5d4740f7097be3439394b2d847eb833938b655fd88ea405e1cccffbae31c2f"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold0_seed-1_direct_d6.json",
+        "sha256": "b196b9af36a9321758714acc65d20e955981d58aec144d744d92a8e2f63a2553"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold0_seed0_frozen_d6.json",
+        "sha256": "f8fdd36bb47cd4ca0d23284cf6ff904cd725cdc0ff5ff704708bffe33522783e"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold0_seed1_frozen_d6.json",
+        "sha256": "41c153856d7a1152aa1255b5c5c3f836099b7e13d298668804b05b8e840b2c0f"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold1_seed-1_direct_d6.json",
+        "sha256": "eb9e5ef80db5a7d38a46fa081f3c86ff48992cc3a313b9cf297a3a3ce2ca35b2"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold1_seed0_frozen_d6.json",
+        "sha256": "dff9b866262ef00ea39fc4f5b6112503c8bfb1ee1519351543293342752ad252"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold1_seed1_frozen_d6.json",
+        "sha256": "15a4a2bb80b918897206762c5466c368c1923d12832fd9d6959e55257d44bfcf"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold2_seed-1_direct_d6.json",
+        "sha256": "2819576f6b73ce0714d6e2e0d6c93ba70b6934e36a39f6a939d77694f674ff1a"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold2_seed0_frozen_d6.json",
+        "sha256": "b64268c979b7c2e9572a97ab504dd97a1e4506b9a01d70fe7bfb3d7cb5afd491"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold2_seed1_frozen_d6.json",
+        "sha256": "3573f73bd9a6081fc471bfb8570cc9e0f27b561c5c0ad65de1ce4a53d78134f6"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold3_seed-1_direct_d6.json",
+        "sha256": "9acf84a6ddc323cde848af4f33402ccd53711b460bc4912525223dbf9e215d71"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold3_seed0_frozen_d6.json",
+        "sha256": "ce19d45bf6e2eb69d31162b33ea82f898dc08efb0292259ed403b6f925b5c61e"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold3_seed1_frozen_d6.json",
+        "sha256": "0df64dbf301c3f4eeff4c8642fb488ac7569e30ed4ce173d9c4d1b8034039b1b"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold4_seed-1_direct_d6.json",
+        "sha256": "4ca16b86190fb0025eee6a30458c2bfb8779225664b5e49e949ab69e3b0ed967"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold4_seed0_frozen_d6.json",
+        "sha256": "be9513cf96f32087ff80ca8e6b9328d35b6057c371291d91834156d2bc836cce"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_23gcc_40%_fold4_seed1_frozen_d6.json",
+        "sha256": "87adf91305a3077f3227f016d9d0e6fa2be53e98fa1f881c605bfbbce8ee28fe"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold0_seed-1_direct_d6.json",
+        "sha256": "132ee74a12386db5d9169448a52469ff95dc6ea630410844ba1bb25eae5a5841"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold0_seed0_frozen_d6.json",
+        "sha256": "7b3720561b07afae2a68e967657064162f8969ff284bc259f860bf0b6c7aa295"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold0_seed1_frozen_d6.json",
+        "sha256": "ebb81b82e68618403427ffdab9d27fd15f4b83219c842e7d4b1e34699528c326"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold1_seed-1_direct_d6.json",
+        "sha256": "fe79333887355f774ffba793debb8b3c4c7c173968748ca856b34b3ba8727a95"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold1_seed0_frozen_d6.json",
+        "sha256": "f7bff08b32085ecff07de75fa82ce43dd693b819f8c7586cbf4f1c3fbc9c94b0"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold1_seed1_frozen_d6.json",
+        "sha256": "8d172f7b6d7feeec373b29ce7b7740b909571247efc26ae772019330cf98c91e"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold2_seed-1_direct_d6.json",
+        "sha256": "945b582a51acef8d4a2adec837fe8ae3b64b89c3a2c0116328e8e414da2dfed9"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold2_seed0_frozen_d6.json",
+        "sha256": "997d7c95ca7bbeed098446e74a461b84f61818859c3e35bff64637ae6b0cad2f"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold2_seed1_frozen_d6.json",
+        "sha256": "713134e3521fa64d190a9741d4a8c57580ffbcbdeaacf892afc273504b8d8a63"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold3_seed-1_direct_d6.json",
+        "sha256": "eba6890d0fc36174d36fcbc2fe1c40162ca6baea75a4c8b8de2371b10bcf8bb1"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold3_seed0_frozen_d6.json",
+        "sha256": "f80e39624058ddc833dddebc9bf3d00c21864494d54661a3de2f134abe93cb10"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold3_seed1_frozen_d6.json",
+        "sha256": "d6edd5aa3850c93c1d6b9a2639312023f8f426e50cfe26e807ff115999fe25f6"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold4_seed-1_direct_d6.json",
+        "sha256": "29d6cd94267606ae239d2e9058c2a97ac0316210dfd869b4e4fbf6e0b89de54d"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold4_seed0_frozen_d6.json",
+        "sha256": "228a3f7dfe0e893912c86e090771e3eeca57a33ac60f86f70853ed992be4236c"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_10%_fold4_seed1_frozen_d6.json",
+        "sha256": "cbbb91b7c5bbdaef23ca4e169679d0c1553ecdf86996c2deeb5db0ef987cf403"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold0_seed-1_direct_d6.json",
+        "sha256": "cd45bfd9284811c8f0d11cf9857c05c57986f9aa0e951c4a42fe2eb3a76e707c"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold0_seed0_frozen_d6.json",
+        "sha256": "f5530fd749c2f4192f54056a9568a4ef9db5570e169596a9586ab7a1fab23fab"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold0_seed1_frozen_d6.json",
+        "sha256": "0269b5a488b2604d14b1631db61475d6b8beae442f8b7dc3f3218fd3c3663cfd"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold1_seed-1_direct_d6.json",
+        "sha256": "d8695bb83e3737696ba7845c3c1d5242b1b8366148888bc24085bfbd5bec3448"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold1_seed0_frozen_d6.json",
+        "sha256": "6e2a3eab8fd2b4fee6966f6fae058d1a22d893935f407e40ac2a34e0d61a6768"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold1_seed1_frozen_d6.json",
+        "sha256": "ca13da5023c3a45822f2271983c187359045194982bc7e48a1cddc518b2f5ebe"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold2_seed-1_direct_d6.json",
+        "sha256": "2a726944c361d062df0189c49027fc4fbaba2879bdbf9274ede37d023fec21d2"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold2_seed0_frozen_d6.json",
+        "sha256": "867b9f7144bcd41f21764440f7aab65dd75ae83976ef31b19a76f1041e4a2c28"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold2_seed1_frozen_d6.json",
+        "sha256": "fc97e01db41c8bd356f99eea435a5c31c3196d502cd8a18942c06fe82a36c293"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold3_seed-1_direct_d6.json",
+        "sha256": "fed7aff00ea0704aef2e549ee43f669c8253d6391bd113098b4c8c45eaff2a6f"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold3_seed0_frozen_d6.json",
+        "sha256": "1ebfca1a0b279430dacef01899ae521db29b11fe3423ef6f911398f32a55a41c"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold3_seed1_frozen_d6.json",
+        "sha256": "e53c8ae9d6d434a173b6686f1cab6cf3e4e224efea278f0a87c79ae2fab22447"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold4_seed-1_direct_d6.json",
+        "sha256": "23041d80f623f5968bf4acbe73cae38f571b3b9803c8e16da289dfa4b83c7bf1"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold4_seed0_frozen_d6.json",
+        "sha256": "d6980ca3d1db6fa0d8aaf09c4067457294034449d584a101dbb5a9ea45ca7cb7"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_20%_fold4_seed1_frozen_d6.json",
+        "sha256": "9b01eecaf88bc09426d8cb736295f9e5896784ecfa1045e103949bb37ea05657"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold0_seed-1_direct_d6.json",
+        "sha256": "9574a5c41336d36df5eaf79846eeb36ef6d28bf7ece939708854f64143702b2e"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold0_seed0_frozen_d6.json",
+        "sha256": "5b96148ebec12c369561988c249f173890aa8d0b7efc509dfe4cfe3fdbb5744a"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold0_seed1_frozen_d6.json",
+        "sha256": "17074da299190226ce970530017797dd30152759b2b1a6b83ddd7c178319b4df"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold1_seed-1_direct_d6.json",
+        "sha256": "79b4968f67485d7da38336e5ede4bba4605e9bc45b0a21176b5a06aa971b2bba"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold1_seed0_frozen_d6.json",
+        "sha256": "c312d2d63e222f264757002a811b6efaa3ab06af6c50b91c43e20e45d7ce1459"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold1_seed1_frozen_d6.json",
+        "sha256": "2dd4599d0ba738d98a3ea337e891f6bdad7ded22d36e1c8c97458660191cf40c"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold2_seed-1_direct_d6.json",
+        "sha256": "d59f4e11fbe031a459fd944d553312b0fa16a29ec544a76231ae137cf56c393e"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold2_seed0_frozen_d6.json",
+        "sha256": "52b3a983029e1ba60b5f4ecf152c62e90975cd618f3666d57f4452a42047da4f"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold2_seed1_frozen_d6.json",
+        "sha256": "184e1858883bd1e165a38976ae6d01943f6e5ea9a1073ed109f5e0f1fe5c9c01"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold3_seed-1_direct_d6.json",
+        "sha256": "27987fa778785ecfea36b942b5b57e0a2cabe1532f268e5bd698997e6ef56ce7"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold3_seed0_frozen_d6.json",
+        "sha256": "53097ddeced9998e52fe6f5865be6aa0baf5e8d94e8fcf7e5f084a3c72cce7ed"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold3_seed1_frozen_d6.json",
+        "sha256": "54dc5dec68fa827d241b29e355c98c3088cd30a14feae85e991754a76538381a"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold4_seed-1_direct_d6.json",
+        "sha256": "61a65cd1c6625a6693fc21dc89ffbb816f767bd7dabb996c8e4f43aad57cff10"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold4_seed0_frozen_d6.json",
+        "sha256": "ac943d7e8ee207e82b7af8d0f78eaf5c96fa373a90596831e8edcd003f9b900f"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/0_31gcc_40%_fold4_seed1_frozen_d6.json",
+        "sha256": "3730a9bea1612474c3ff353af340adb11a23b423fbab23592009001f61826b80"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold0_seed-1_direct_d6.json",
+        "sha256": "b5777af2be162e32b5b9f8c488ae9fc4daf0c1ce8aee7a86364babcfbf61b7dd"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold0_seed0_frozen_d6.json",
+        "sha256": "829c2fc3c12cd9a747ac27d87eaa461d083eeac77d14ff5cb65d5fd1735695b2"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold0_seed1_frozen_d6.json",
+        "sha256": "e6beae46a341c7085601cbbc516ae0349a24eaf4faf8769800fa696922c6e238"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold1_seed-1_direct_d6.json",
+        "sha256": "7de854127fa7c70853b4b227ebfaa9039a587fad46c46e39933638ed2e856e82"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold1_seed0_frozen_d6.json",
+        "sha256": "fbb3fb44783531311dfafe1320673fd97e1f4170592c15eddf1691ba013b8943"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold1_seed1_frozen_d6.json",
+        "sha256": "bc9b5d2962dfc7cf3da6b9c5cb4cfdd96cda952a3e7786139d43716fc370c329"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold2_seed-1_direct_d6.json",
+        "sha256": "8429738055bfd4fa07536f29cc7eb24865c14f10bb38986c485963df5ad3ed67"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold2_seed0_frozen_d6.json",
+        "sha256": "8b88fa11e6a709f61c03e5060542153808454111d9e180011fc56ab75f8ec01f"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold2_seed1_frozen_d6.json",
+        "sha256": "3707ba48971eaed2a9c80233a247fd7d5c2b836320ee6b2169bc07e7b5541ceb"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold3_seed-1_direct_d6.json",
+        "sha256": "b1698cfd7375e36691a9fa9b47cfe3f8dcb1f946eaf1ea558fe7222d0e5e763a"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold3_seed0_frozen_d6.json",
+        "sha256": "b9724b1517bdc4175ec7c6b242e2ff56e442ed8cdca1d6ab004ccd50b18fbc9d"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold3_seed1_frozen_d6.json",
+        "sha256": "76fa8980e7f16a3813b9144cd575c92b59223ebaab9e61a75fa4d6dfedc912bb"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold4_seed-1_direct_d6.json",
+        "sha256": "c110ab47f94683e767cdc92ae1e2be5166bd796611329e965c3c201dcf8c7f24"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold4_seed0_frozen_d6.json",
+        "sha256": "fd2a01ef8d8bbf08de80afe3b375cb56a269e8a91799e6cfc11a8de957318831"
+      },
+      {
+        "identifier": "outputs/rheology-monotone-2026-10-13/fits/Neat_fold4_seed1_frozen_d6.json",
+        "sha256": "25369bb4b97271e2e64e4f00364b5a0a74c5fb46c47eff104a68aaaf52411767"
+      }
+    ],
+    "rheology/source_attribution.json": []
+  },
+  "notes": [
+    "Original Table 2 has aggregate CSVs but no saved per-seed models.",
+    "Original PySR CSVs confirm the no-division operator set; per-run stopping metadata were not retained.",
+    "All 25 stored 2D training budgets are 150 epochs."
+  ]
+}

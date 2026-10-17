@@ -212,7 +212,7 @@ def plot_error_propagation(aggregated_rows: list[dict[str, object]], output_path
     axes = np.asarray(axes)
     if axes.ndim == 1:
         axes = axes.reshape(2, n_cases)
-    stage_labels = ["Stage 1 neural", "Stage 2 symbolic fit", "Stage 3 symbolic true"]
+    stage_labels = ["Stage 1 neural", "Stage 2 symbolic fit", "Symbolic closure error"]
     metrics_by_component = {
         "D": ["neural_true_ErrD_mean", "symbolic_surrogate_ErrD_mean", "symbolic_true_ErrD_mean"],
         "R": ["neural_true_ErrR_mean", "symbolic_surrogate_ErrR_mean", "symbolic_true_ErrR_mean"],
