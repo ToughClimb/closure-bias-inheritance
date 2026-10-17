@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "table2_saved_models": 18,
+  "table4_saved_teachers": 6,
+  "neural_state_roundtrips_verified": 24,
+  "pysr_expressions_and_stops_verified": 12,
+  "stopping_counts": {
+    "iteration_budget": 12
+  },
+  "neural_training_runs": 0,
+  "pysr_searches_run": 0
+}

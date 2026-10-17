@@ -1,10 +1,10 @@
 # Numerical records for the 2026-10-16 manuscript revision
 
-This directory contains the 76 frozen CSV/JSON/NPZ files used by the revised
+This directory contains the 315 frozen CSV/JSON/NPZ/TOML files used by the revised
 paper: full-precision coefficients, per-dataset measurements, statistical
 summaries, forward checks, and rheology diagnostics. `MANIFEST.json` lists
 every data file, its size, SHA-256, CSV columns and row count, and the hash
-of the original audited record.
+of the original audited record where available.
 
 ## Files cited by name in the paper
 
@@ -79,9 +79,7 @@ displayed numbers. The 41 files published previously retain their hashes.
   are aggregated only for completed trajectories. Neural/frozen/weak
   polynomial completion is 50/50 each, and strong polynomial is 46/50.
   Actual training length is 150 epochs.
-- `original_tables/` preserves the main-table aggregate CSVs. Original
-  Table 2 models were not serialized by its driver; the narrow-support
-  model-level diagnostic in Appendix F is an independently generated cohort.
+- `original_tables/` preserves the main-table aggregate CSVs. The complete original-protocol Table 2 rerun, including saved models and its direct support decomposition, is in `main_table_rerun/`. Appendix F also retains its separately generated method comparison.
 - `pysr_original/` preserves the six original Exp clean/5%-noise seed CSVs,
   its aggregate table and its verified-versus-unrecorded protocol metadata.
   These operators omit division. The five-seed clean/3%-noise expansion
@@ -105,3 +103,46 @@ python reproducibility/verify_rheology_records.py
 This second check uses the research environment (NumPy, pandas, SciPy and
 PyTorch), reads saved arrays, and calls no optimizer or neural training.
 `TARGETED_PROVENANCE.json` records original-file hashes for the added inputs.
+
+## Fully recorded main-table reruns (2026-10-17)
+
+`main_table_rerun/` contains the repeated original Table 2 and Table 4 cohorts.
+The table index points to these current records. The older aggregate CSVs in
+`original_tables/` and `pysr_original/` remain historical snapshots.
+
+- Table 2: all 18 original-protocol neural fits (three cases, low/high
+  excitation, seeds 0--2) with observed arrays, complete numeric model state,
+  150-epoch histories, closure grids, and full validation trajectories. All 72
+  displayed original means/SDs are reproduced. The six-row domain summary
+  directly splits the same runs into visited and complementary state subsets.
+- Table 4: six saved Exp teachers (clean/5% noise, seeds 0--2), both restricted
+  and PySR fits on the identical teacher within each seed, and all 12 actual
+  PySR search records. The models use 256 fitting states, binary +,-,* and unary
+  exp. Every branch completes 40 iterations (320 population cycles); cycle
+  logs also retain evaluation counts. Each branch's `parameters.json` retains
+  all effective Python parameters and the observer identifier.
+- `environment/` contains the Python package snapshot and native Julia project
+  and manifest. The runs used PySR 2.7.0, SymbolicRegression.jl 2.7.1, Julia
+  1.13.2, and single-thread CPU neural training. Symbolic models are exact
+  executable SymPy exports; neural state dictionaries use numeric NPZ arrays.
+
+Re-evaluate all 24 saved neural models, the support split, all 12 exact symbolic
+exports and their actual stopping logs without fitting or invoking Julia:
+
+```bash
+python reproducibility/verify_main_table_reruns.py
+```
+
+To regenerate the cohort in the project environment:
+
+```bash
+python experiments/rerun_main_table_records.py --suite excitation
+python experiments/rerun_main_table_records.py --suite pysr-teachers
+python experiments/rerun_main_table_pysr.py
+python experiments/export_main_table_rerun_records.py --destination outputs/rerun-record-export
+```
+
+Install the optional PySR dependency as `pysr==2.7.0` for these reproduction
+commands. The captured Julia Project/Manifest pins the backend environment;
+retain Julia 1.13.2 when comparing deterministic search outputs. The broader
+five-seed clean/3%-noise PySR campaign remains a separate 512-state cohort.

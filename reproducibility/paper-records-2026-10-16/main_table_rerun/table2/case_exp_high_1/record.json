@@ -1,0 +1,169 @@
+{
+  "id": "case_exp_high_1",
+  "status": "complete",
+  "protocol": {
+    "suite": "excitation",
+    "case": "case_exp",
+    "setting": "high",
+    "seed": 1,
+    "simulation": {
+      "nx": 48,
+      "dt": 0.0001,
+      "t_final": 0.05,
+      "save_every": 5,
+      "boundary": "periodic"
+    },
+    "trajectories": 6,
+    "amplitude_range": [
+      0.0,
+      1.8
+    ],
+    "initial_clip_range": [
+      0.0,
+      1.8
+    ],
+    "observation": {
+      "noise_level": 0.0,
+      "space_stride": 1,
+      "time_stride": 1
+    },
+    "training": {
+      "epochs": 150,
+      "lr": 0.001,
+      "rollout_weight": 0.1,
+      "mass_weight": 1.0,
+      "strong_weight": 1.0,
+      "reaction_anchor_weight": 1.0,
+      "reg_weight": 0.0001,
+      "backbone": "mlp",
+      "hidden_width": 64,
+      "hidden_depth": 2,
+      "diffusion_degree": 2,
+      "reaction_degree": 3,
+      "residual_scale": 0.1,
+      "kan_grid_size": 16,
+      "num_test_modes": 4,
+      "num_bump_functions": 4,
+      "num_time_test_modes": 4,
+      "weak_form_variant": "space_weak",
+      "objective_name": "paper_hybrid_stage1_v1"
+    },
+    "modes": 4,
+    "closure_grid_points": 256,
+    "unseen_trajectories": 4,
+    "unseen_seed_offset": 1000,
+    "replication": "Three data seeds; population SD matches the original tables"
+  },
+  "core_signature": "b5f5601ef047992eb90fa7bd9fd4bddaf47eb22cb99ef925dd011a03ffb60b3d",
+  "runner_sha256": "0da7d51b55987db1275814475ea090d8fdf257d15d085ac7d98980144c99c3fe",
+  "environment": {
+    "python": "3.12.13 (main, Jun  2 2026, 22:27:15) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "packages": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.0",
+      "torch": "2.12.0",
+      "pysr": "2.7.0",
+      "juliacall": "0.9.36",
+      "juliapkg": "0.1.27"
+    },
+    "torch_threads": 1,
+    "device": "cpu"
+  },
+  "started_utc": "2026-10-17T03:07:47.651190+00:00",
+  "metrics": {
+    "relative_error_D": 0.04673542454838753,
+    "relative_error_R": 0.4093509316444397,
+    "final_loss": 0.04596051201224327,
+    "final_weak_loss": 0.0004161638207733631,
+    "final_rollout_loss": 1.1439486691244838e-08,
+    "final_mass_loss": 0.00015439400158356875,
+    "final_strong_loss": 0.04492294415831566,
+    "final_reaction_anchor_loss": 0.00046218556235544384,
+    "final_reg_loss": 0.04823834449052811,
+    "unseen_rollout_mse": 7.71147666673213e-06,
+    "unseen_rollout_relative_l2": 0.0026951742564674972
+  },
+  "excitation": {
+    "state_min": 0.0,
+    "state_max": 1.8,
+    "state_bin_coverage": 1.0,
+    "gradient_rms": 4.846823375603968,
+    "curvature_rms": 81.05467284630451,
+    "weak_diffusion_energy": 230.70511424205955
+  },
+  "support": {
+    "observed_min": 0.0,
+    "observed_max": 1.8,
+    "grid_points": 256,
+    "visited_points": 256,
+    "complement_points": 0,
+    "definition": "Uniform preset grid intersected with the min-to-max observed-state enclosure; complement is the remaining preset-grid points"
+  },
+  "domain_errors": {
+    "diffusion_full": 0.04673542478376045,
+    "diffusion_visited": 0.04673542478376045,
+    "diffusion_complement": null,
+    "reaction_full": 0.40935091807102314,
+    "reaction_visited": 0.40935091807102314,
+    "reaction_complement": null
+  },
+  "neural_model": {
+    "class_name": "ReactionDiffusionClosure",
+    "state_file": "neural_state.npz",
+    "architecture": {
+      "epochs": 150,
+      "lr": 0.001,
+      "rollout_weight": 0.1,
+      "mass_weight": 1.0,
+      "strong_weight": 1.0,
+      "reaction_anchor_weight": 1.0,
+      "reg_weight": 0.0001,
+      "backbone": "mlp",
+      "hidden_width": 64,
+      "hidden_depth": 2,
+      "diffusion_degree": 2,
+      "reaction_degree": 3,
+      "residual_scale": 0.1,
+      "kan_grid_size": 16,
+      "num_test_modes": 4,
+      "num_bump_functions": 4,
+      "num_time_test_modes": 4,
+      "weak_form_variant": "space_weak",
+      "objective_name": "paper_hybrid_stage1_v1"
+    },
+    "input_range": [
+      0.0,
+      1.8
+    ],
+    "roundtrip_predictions_byte_identical": true
+  },
+  "artifacts": [
+    {
+      "path": "curves.npz",
+      "sha256": "06763cb5c70c1c8d85d166d7b55c78c80fe54397f1d0bb7f823f20e4b297a5a3",
+      "size": 5765
+    },
+    {
+      "path": "history.json",
+      "sha256": "6466c92613a0c15443ebf1b642bd77aeac4b690f8fcc6db2fc418387569cfcb6",
+      "size": 46145
+    },
+    {
+      "path": "neural_state.npz",
+      "sha256": "bbdf6b944c7ec8fdaa2d46cc89e75b692c05b15b62ff9cd5a3acbbdcbfa91efc",
+      "size": 37000
+    },
+    {
+      "path": "neural_validation.npz",
+      "sha256": "0ea2493095984737cdf7d196aa73df9dc2c501cc5ab832f016b41d6c803de42a",
+      "size": 294650
+    },
+    {
+      "path": "observations.npz",
+      "sha256": "21cc92945974d769796fb01493cb9894ba8164af678af714a1a0800a92a5ea93",
+      "size": 222052
+    }
+  ],
+  "seconds": 14.66195208299905
+}

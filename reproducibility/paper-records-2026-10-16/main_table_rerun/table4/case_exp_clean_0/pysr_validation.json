@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "unseen_relative_l2": 0.0032340563029315864,
+  "branch_records_sha256": {
+    "diffusion": "56af5cfec5d3a43bea5aae941741923d6b862773ea1625eb40380e10e8b6e26e",
+    "reaction": "ab05b6d9d589e5a46886210ac7cca57baf949a8346a5614d7a5f9bfb6937725f"
+  },
+  "validation_sha256": "6a4bd6bd1ba6d569be412320551d095c44d5edb05e51c6f74d2df15632360c1a"
+}

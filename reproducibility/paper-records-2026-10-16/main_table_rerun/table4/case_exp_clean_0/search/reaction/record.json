@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "id": "case_exp_clean_0",
+  "branch": "reaction",
+  "config": {
+    "binary_operators": [
+      "+",
+      "-",
+      "*"
+    ],
+    "unary_operators": [
+      "exp"
+    ],
+    "elementwise_loss": "PySR default L2DistLoss (squared error)",
+    "model_selection": "best",
+    "parsimony": 0.0001,
+    "deterministic": true,
+    "parallelism": "serial",
+    "niterations": 40,
+    "populations": 8,
+    "population_size": 48,
+    "maxsize": 30,
+    "timeout_in_seconds": 180.0,
+    "precision": 32,
+    "early_stop_condition": null,
+    "max_evals": null,
+    "input_stream": "devnull",
+    "support_points": 256,
+    "random_state": 101
+  },
+  "versions": {
+    "pysr": "2.7.0",
+    "julia": "1.13.2",
+    "symbolic_regression": "2.7.1"
+  },
+  "teacher_record_sha256": "9c8f80e7a33741b1ec16f63411b8d4c22768c5c22dd0b15f88cdf7b37162e74b",
+  "started_utc": "2026-10-17T03:17:35.396622+00:00",
+  "seconds": 1.6054906930075958,
+  "stopping_reason": "iteration_budget",
+  "total_population_cycles": 320,
+  "completed_population_cycles": 320,
+  "remaining_population_cycles": 0,
+  "cycle_callbacks": 320,
+  "evaluations": 620638.0,
+  "expression": "(x0 - 1.2612683)*(x0 - 1*(-0.033566892))*(1.088846 + x0*(-0.22964941))*(-0.23161644)",
+  "expression_sympy_srepr": "Mul(Float('-0.23161644000000001', precision=53), Add(Float('1.088846', precision=53), Mul(Float('-0.22964941', precision=53), Symbol('x0'))), Add(Symbol('x0'), Float('-1.2612683', precision=53)), Add(Symbol('x0'), Mul(Integer(-1), Float('-0.033566892000000001', precision=53))))",
+  "complexity": 15,
+  "fit_loss": 6.730917e-08,
+  "expression_roundtrip_max_absolute_difference": 0.0,
+  "metrics": {
+    "surrogate_error": 0.003493872225546867,
+    "true_error": 0.43710147886737133,
+    "BIR": 0.9986258375826701
+  },
+  "model_export": "expression_sympy_srepr; exact constructor representation verified against native PySR predictions"
+}

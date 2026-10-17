@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "id": "case_exp_noise5_0",
+  "branch": "reaction",
+  "config": {
+    "binary_operators": [
+      "+",
+      "-",
+      "*"
+    ],
+    "unary_operators": [
+      "exp"
+    ],
+    "elementwise_loss": "PySR default L2DistLoss (squared error)",
+    "model_selection": "best",
+    "parsimony": 0.0001,
+    "deterministic": true,
+    "parallelism": "serial",
+    "niterations": 40,
+    "populations": 8,
+    "population_size": 48,
+    "maxsize": 30,
+    "timeout_in_seconds": 180.0,
+    "precision": 32,
+    "early_stop_condition": null,
+    "max_evals": null,
+    "input_stream": "devnull",
+    "support_points": 256,
+    "random_state": 101
+  },
+  "versions": {
+    "pysr": "2.7.0",
+    "julia": "1.13.2",
+    "symbolic_regression": "2.7.1"
+  },
+  "teacher_record_sha256": "bae6a9ebbf6976dcabb42376e677750cb3c0a8c3625ad5da1bfa1e4f91a48253",
+  "started_utc": "2026-10-17T03:17:46.501956+00:00",
+  "seconds": 1.9271473470143974,
+  "stopping_reason": "iteration_budget",
+  "total_population_cycles": 320,
+  "completed_population_cycles": 320,
+  "remaining_population_cycles": 0,
+  "cycle_callbacks": 320,
+  "evaluations": 640338.0,
+  "expression": "(x0 - exp((-x0*x0*x0 + x0)*exp(x0*(x0 + x0)*0.2181377) - 1*(-0.5864976)))*(-0.46583632) - 0.35771543",
+  "expression_sympy_srepr": "Add(Mul(Float('-0.46583632000000003', precision=53), Add(Symbol('x0'), Mul(Integer(-1), exp(Add(Mul(Add(Mul(Integer(-1), Mul(Symbol('x0'), Symbol('x0'), Symbol('x0'))), Symbol('x0')), exp(Mul(Float('0.21813769999999999', precision=53), Symbol('x0'), Add(Symbol('x0'), Symbol('x0'))))), Mul(Integer(-1), Float('-0.58649759999999995', precision=53))))))), Float('-0.35771543', precision=53))",
+  "complexity": 25,
+  "fit_loss": 0.00011992169,
+  "expression_roundtrip_max_absolute_difference": 8.881784197001252e-16,
+  "metrics": {
+    "surrogate_error": 0.014968563243834379,
+    "true_error": 4.929154295554997,
+    "BIR": 0.999624196527174
+  },
+  "model_export": "expression_sympy_srepr; exact constructor representation verified against native PySR predictions"
+}

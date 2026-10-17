@@ -8,6 +8,7 @@ import json
 import math
 from pathlib import Path
 import statistics
+import tomllib
 import zipfile
 
 
@@ -45,6 +46,9 @@ def verify(records: Path) -> dict:
             with zipfile.ZipFile(path) as archive:
                 assert archive.testzip() is None
                 assert sorted(archive.namelist()) == entry['npz_members']
+        elif path.suffix == '.toml':
+            value=tomllib.loads(data.decode('utf-8'))
+            assert len(value)==entry['toml_tables'],entry['path']
         else:
             raise AssertionError(entry['path'])
     assert total_bytes == manifest["total_bytes"]

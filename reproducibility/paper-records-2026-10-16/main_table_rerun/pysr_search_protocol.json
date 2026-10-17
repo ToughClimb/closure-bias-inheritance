@@ -1,0 +1,40 @@
+{
+  "settings": {
+    "binary_operators": [
+      "+",
+      "-",
+      "*"
+    ],
+    "unary_operators": [
+      "exp"
+    ],
+    "elementwise_loss": "PySR default L2DistLoss (squared error)",
+    "model_selection": "best",
+    "parsimony": 0.0001,
+    "deterministic": true,
+    "parallelism": "serial",
+    "niterations": 40,
+    "populations": 8,
+    "population_size": 48,
+    "maxsize": 30,
+    "timeout_in_seconds": 180.0,
+    "precision": 32,
+    "early_stop_condition": null,
+    "max_evals": null,
+    "input_stream": "devnull",
+    "support_points": 256
+  },
+  "versions": {
+    "pysr": "2.7.0",
+    "julia": "1.13.2",
+    "symbolic_regression": "2.7.1"
+  },
+  "logger_source_sha256": "2074f3896b7e67a461812150c0dfc594f3d02e5b63badb6712ce42458ccb93b7",
+  "runner_sha256": "3ded95630995d4e8b776bd1b9ea65389f6d7b78e860c22d3a079ec04082ae812",
+  "backend_source_sha256": "6af0073d8307f2827eb01b02573a2399d4d103719b3a477dde1655c70c94fb7e",
+  "stopping_observation": "Actual remaining population cycles logged after every completed backend cycle. A normal return with cycles left is timeout: loss/evaluation/user-input/external stopping is disabled.",
+  "command": [
+    "python",
+    "experiments/rerun_main_table_pysr.py"
+  ]
+}

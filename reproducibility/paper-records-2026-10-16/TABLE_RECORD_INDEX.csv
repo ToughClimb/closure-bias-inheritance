@@ -1,12 +1,6 @@
 table,label,record_file,note
 1,tab:baseline_map,original_tables/baseline_summary.csv,
-2,tab:excitation,original_tables/excitation_case_a.csv,Original aggregate only; interval decomposition is a separate Appendix F cohort
-2,tab:excitation,original_tables/excitation_case_b.csv,Original aggregate only; interval decomposition is a separate Appendix F cohort
-2,tab:excitation,original_tables/excitation_case_exp.csv,Original aggregate only; interval decomposition is a separate Appendix F cohort
-2,tab:excitation,original_tables/excitation_protocol.json,Original aggregate only; interval decomposition is a separate Appendix F cohort
 3,tab:symbolic_summary,original_tables/symbolic_summary.csv,
-4,tab:pysr_check,pysr_original/pysr_case_exp_summary.csv,
-4,tab:pysr_check,pysr_original/protocol.json,
 5,tab:cross_resolution,original_tables/cross_resolution_case_exp.csv,
 A.6,tab:objective_ablation,original_tables/objective_ablation_case_exp_clean.csv,
 A.7,tab:2d_bias_inheritance,campaign_2d_metrics_summary.csv,
@@ -44,3 +38,11 @@ H.15,tab:rheology_comparison,rheology/constraint_fit_records.json,
 H.15,tab:rheology_comparison,rheology/constraint_checks.csv,
 H.15,tab:rheology_comparison,rheology/inputs/training_specs.json,
 H.15,tab:rheology_comparison,rheology/inputs/checkpoint_6000.npz,
+2,tab:excitation,main_table_rerun/table2_aggregate.csv,18 saved original-protocol models under main_table_rerun/table2; full-interval displayed values reproduced; direct visited/complementary split
+2,tab:excitation,main_table_rerun/table2_domain_summary.csv,18 saved original-protocol models under main_table_rerun/table2; full-interval displayed values reproduced; direct visited/complementary split
+2,tab:excitation,main_table_rerun/PROVENANCE.json,18 saved original-protocol models under main_table_rerun/table2; full-interval displayed values reproduced; direct visited/complementary split
+4,tab:pysr_check,main_table_rerun/table4_summary.csv,"Fully recorded rerun: six shared teachers, 12 PySR branches; exact expressions and actual cycle logs under main_table_rerun/table4"
+4,tab:pysr_check,main_table_rerun/table4_by_seed.csv,"Fully recorded rerun: six shared teachers, 12 PySR branches; exact expressions and actual cycle logs under main_table_rerun/table4"
+4,tab:pysr_check,main_table_rerun/pysr_search_protocol.json,"Fully recorded rerun: six shared teachers, 12 PySR branches; exact expressions and actual cycle logs under main_table_rerun/table4"
+4,tab:pysr_check,main_table_rerun/pysr_search_COMPLETE.json,"Fully recorded rerun: six shared teachers, 12 PySR branches; exact expressions and actual cycle logs under main_table_rerun/table4"
+4,tab:pysr_check,main_table_rerun/PROVENANCE.json,"Fully recorded rerun: six shared teachers, 12 PySR branches; exact expressions and actual cycle logs under main_table_rerun/table4"

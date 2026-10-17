@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "branches": 12,
+  "stopping_counts": {
+    "iteration_budget": 12,
+    "timeout": 0
+  }
+}

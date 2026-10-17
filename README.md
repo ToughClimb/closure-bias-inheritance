@@ -24,7 +24,7 @@ Revision tools use this repository's core implementation. Run outputs and checkp
 
 ## Numerical records cited by the revised paper
 
-The [numerical-records index](reproducibility/paper-records-2026-10-16/README.md) maps manuscript appendices to 76 checked-in CSV/JSON/NPZ files. The [table-to-record index](reproducibility/paper-records-2026-10-16/TABLE_RECORD_INDEX.csv) covers all 15 tables. It includes the 25 original 2D tasks, all 150 constrained rheology fits and their saved inputs, [complete same-observation model coefficients](reproducibility/paper-records-2026-10-16/sameobs_model_descriptors.json) and [BIR means, sample SDs and confidence intervals](reproducibility/paper-records-2026-10-16/campaign_bir_summary.csv). The submission source package includes the same records in `LaTeX/Evidence/`.
+The [numerical-records index](reproducibility/paper-records-2026-10-16/README.md) maps manuscript appendices to 315 checked-in CSV/JSON/NPZ/TOML files. The [table-to-record index](reproducibility/paper-records-2026-10-16/TABLE_RECORD_INDEX.csv) covers all 15 tables. It includes the 25 original 2D tasks, all 150 constrained rheology fits and their saved inputs, [complete same-observation model coefficients](reproducibility/paper-records-2026-10-16/sameobs_model_descriptors.json) and [BIR means, sample SDs and confidence intervals](reproducibility/paper-records-2026-10-16/campaign_bir_summary.csv). The current Table 2/Table 4 reruns include all 24 neural models, observed arrays and 12 complete PySR search logs in `main_table_rerun/`. The submission source package includes the same records in `LaTeX/Evidence/`.
 
 ```bash
 python3 reproducibility/verify_paper_records.py

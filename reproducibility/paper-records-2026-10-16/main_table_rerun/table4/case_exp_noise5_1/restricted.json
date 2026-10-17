@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "teacher_record_sha256": "93f5f4b040a612935b8ef2f3cefa2d1027ebba9ebc9dd95cfa59dbefb6e35b2f",
+  "fitting_states": 256,
+  "relative_selection_tolerance": 0.05,
+  "absolute_selection_tolerance": 1e-08,
+  "expressions": {
+    "diffusion": {
+      "family": "polynomial",
+      "parameters": [
+        0.005900081281422645,
+        0.0013563944258598694,
+        -0.0006699963740496532
+      ],
+      "expression": "0.00590008 + 0.00135639*u - 0.000669996*u^2",
+      "complexity": 3,
+      "fit_mse": 5.931236717721266e-12,
+      "numerator_degree": null,
+      "denominator_degree": null
+    },
+    "reaction": {
+      "family": "rational",
+      "parameters": [
+        0.44079011180550015,
+        -0.16712024911573836,
+        -0.2616536864094438,
+        -1.4522884240783658,
+        0.6934675828758142
+      ],
+      "expression": "(0.44079 - 0.16712*u - 0.261654*u^2) / (1 - 1.45229*u + 0.693468*u^2)",
+      "complexity": 5,
+      "fit_mse": 0.0001867136858751467,
+      "numerator_degree": 2,
+      "denominator_degree": 2
+    }
+  },
+  "metrics": {
+    "diffusion": {
+      "surrogate_error": 0.00038062956004867226,
+      "true_error": 0.8374130489128525,
+      "BIR": 0.9999970534763274
+    },
+    "reaction": {
+      "surrogate_error": 0.019378014800663305,
+      "true_error": 4.709877149887649,
+      "BIR": 0.9991011003340597
+    }
+  },
+  "unseen_relative_l2": 0.10721949973336747
+}

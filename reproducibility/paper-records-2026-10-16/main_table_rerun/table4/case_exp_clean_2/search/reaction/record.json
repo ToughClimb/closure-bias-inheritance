@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "id": "case_exp_clean_2",
+  "branch": "reaction",
+  "config": {
+    "binary_operators": [
+      "+",
+      "-",
+      "*"
+    ],
+    "unary_operators": [
+      "exp"
+    ],
+    "elementwise_loss": "PySR default L2DistLoss (squared error)",
+    "model_selection": "best",
+    "parsimony": 0.0001,
+    "deterministic": true,
+    "parallelism": "serial",
+    "niterations": 40,
+    "populations": 8,
+    "population_size": 48,
+    "maxsize": 30,
+    "timeout_in_seconds": 180.0,
+    "precision": 32,
+    "early_stop_condition": null,
+    "max_evals": null,
+    "input_stream": "devnull",
+    "support_points": 256,
+    "random_state": 103
+  },
+  "versions": {
+    "pysr": "2.7.0",
+    "julia": "1.13.2",
+    "symbolic_regression": "2.7.1"
+  },
+  "teacher_record_sha256": "fd7502eab9f51dba173aa4a3e615caf06a524cb28484e7d2f262e5206ea2b87f",
+  "started_utc": "2026-10-17T03:17:42.651898+00:00",
+  "seconds": 1.514960439002607,
+  "stopping_reason": "iteration_budget",
+  "total_population_cycles": 320,
+  "completed_population_cycles": 320,
+  "remaining_population_cycles": 0,
+  "cycle_callbacks": 320,
+  "evaluations": 629087.0,
+  "expression": "(x0*(0.14766982 - (-0.20125325)*(0.46299377 - x0)) + 0.010091276)*exp((0.46396932 - x0)*0.14215526)",
+  "expression_sympy_srepr": "Mul(Add(Mul(Symbol('x0'), Add(Float('0.14766982000000001', precision=53), Mul(Integer(-1), Mul(Float('-0.20125324999999999', precision=53), Add(Float('0.46299377000000003', precision=53), Mul(Integer(-1), Symbol('x0'))))))), Float('0.010091276', precision=53)), exp(Mul(Float('0.14215526000000001', precision=53), Add(Float('0.46396932000000002', precision=53), Mul(Integer(-1), Symbol('x0'))))))",
+  "complexity": 18,
+  "fit_loss": 6.9469486e-08,
+  "expression_roundtrip_max_absolute_difference": 1.2490009027033011e-15,
+  "metrics": {
+    "surrogate_error": 0.0036351460602519346,
+    "true_error": 0.45086707319594854,
+    "BIR": 0.9999201938055825
+  },
+  "model_export": "expression_sympy_srepr; exact constructor representation verified against native PySR predictions"
+}

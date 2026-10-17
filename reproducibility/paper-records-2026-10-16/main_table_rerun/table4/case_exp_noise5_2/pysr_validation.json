@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "unseen_relative_l2": 0.1017200309579063,
+  "branch_records_sha256": {
+    "diffusion": "f2ce06fb72ae3b718417690f927dcb63fa648ee54397b44e849baffef513c0b8",
+    "reaction": "875e838de02985c02931c599a1f861c620cf663949d35d4dce62cc486a0edba2"
+  },
+  "validation_sha256": "7242ef4b838f888a5db9d4c3097dca58e79eb7bc2eeb68cf3d2777db6f03f098"
+}

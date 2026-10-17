@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "id": "case_exp_clean_2",
+  "branch": "diffusion",
+  "config": {
+    "binary_operators": [
+      "+",
+      "-",
+      "*"
+    ],
+    "unary_operators": [
+      "exp"
+    ],
+    "elementwise_loss": "PySR default L2DistLoss (squared error)",
+    "model_selection": "best",
+    "parsimony": 0.0001,
+    "deterministic": true,
+    "parallelism": "serial",
+    "niterations": 40,
+    "populations": 8,
+    "population_size": 48,
+    "maxsize": 30,
+    "timeout_in_seconds": 180.0,
+    "precision": 32,
+    "early_stop_condition": null,
+    "max_evals": null,
+    "input_stream": "devnull",
+    "support_points": 256,
+    "random_state": 2
+  },
+  "versions": {
+    "pysr": "2.7.0",
+    "julia": "1.13.2",
+    "symbolic_regression": "2.7.1"
+  },
+  "teacher_record_sha256": "fd7502eab9f51dba173aa4a3e615caf06a524cb28484e7d2f262e5206ea2b87f",
+  "started_utc": "2026-10-17T03:17:41.109801+00:00",
+  "seconds": 1.5285703819827177,
+  "stopping_reason": "iteration_budget",
+  "total_population_cycles": 320,
+  "completed_population_cycles": 320,
+  "remaining_population_cycles": 0,
+  "cycle_callbacks": 320,
+  "evaluations": 613404.0,
+  "expression": "-(-0.008717511)*x0*(x0*(-x0 - 0.007332091) - (-x0 + x0*x0))*exp(x0*(-0.253867)*x0) + x0*0.03226749 - 1*(-0.018322742)",
+  "expression_sympy_srepr": "Add(Mul(Integer(-1), Mul(Float('-0.0087175110000000007', precision=53), Symbol('x0'), Add(Mul(Symbol('x0'), Add(Mul(Integer(-1), Symbol('x0')), Float('-0.0073320909999999998', precision=53))), Mul(Integer(-1), Add(Mul(Integer(-1), Symbol('x0')), Mul(Symbol('x0'), Symbol('x0'))))), exp(Mul(Float('-0.25386700000000001', precision=53), Symbol('x0'), Symbol('x0'))))), Mul(Float('0.032267490000000003', precision=53), Symbol('x0')), Mul(Integer(-1), Float('-0.018322742', precision=53)))",
+  "complexity": 28,
+  "fit_loss": 2.8620818e-08,
+  "expression_roundtrip_max_absolute_difference": 1.3877787807814457e-17,
+  "metrics": {
+    "surrogate_error": 0.004333755796936674,
+    "true_error": 0.047741465353343886,
+    "BIR": 1.0098498083142953
+  },
+  "model_export": "expression_sympy_srepr; exact constructor representation verified against native PySR predictions"
+}

@@ -1,0 +1,933 @@
+{
+  "status": "complete",
+  "table2_saved_models": 18,
+  "table4_saved_teachers": 6,
+  "pysr_completed_searches": 12,
+  "source_core_signature": "b5f5601ef047992eb90fa7bd9fd4bddaf47eb22cb99ef925dd011a03ffb60b3d",
+  "executed_source_sha256": {
+    "rerun_main_table_records.py": "0da7d51b55987db1275814475ea090d8fdf257d15d085ac7d98980144c99c3fe",
+    "rerun_main_table_pysr.py": "3ded95630995d4e8b776bd1b9ea65389f6d7b78e860c22d3a079ec04082ae812",
+    "main_table_search_logger.jl": "2074f3896b7e67a461812150c0dfc594f3d02e5b63badb6712ce42458ccb93b7"
+  },
+  "commands": [
+    [
+      "python",
+      "experiments/rerun_main_table_records.py",
+      "--suite",
+      "excitation"
+    ],
+    [
+      "python",
+      "experiments/rerun_main_table_records.py",
+      "--suite",
+      "pysr-teachers"
+    ],
+    [
+      "python",
+      "experiments/rerun_main_table_pysr.py"
+    ],
+    [
+      "python",
+      "experiments/export_main_table_rerun_records.py"
+    ]
+  ],
+  "copied_input_hashes": {
+    "table2/case_a_high_0/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_0/record.json",
+      "sha256": "cd093d60a3a0ec1562c742f63e5143e61f31c6651c379165d6dd8fc221af56ac"
+    },
+    "table2/case_a_high_0/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_0/observations.npz",
+      "sha256": "2bf6383dcd01ce96e7cbe00da4d077e4a60b2921e5965da24f03abb67a9831db"
+    },
+    "table2/case_a_high_0/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_0/neural_state.npz",
+      "sha256": "47eb83cf19521918f21374c58c835134165ef1c48007d7e2372a9f7bf18e984c"
+    },
+    "table2/case_a_high_0/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_0/curves.npz",
+      "sha256": "8b0fb6b6d8eeb950c1d42707bd82f99229ee9aab9179b298bdf6181b6994ddeb"
+    },
+    "table2/case_a_high_0/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_0/neural_validation.npz",
+      "sha256": "57c8690e121916fa38928664b995c35a45fc0c3b7b96de80099e15a4dab4e2f6"
+    },
+    "table2/case_a_high_0/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_0/history.json",
+      "sha256": "272a2183dbb9d1e2b2c85905d9877eccf6c1a9c793265de9af14026ca87a3686"
+    },
+    "table2/case_a_high_1/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_1/record.json",
+      "sha256": "90dbd44c16fa879574e51a44a54d78334960fca0a9c105b9214c6c0374b92c9e"
+    },
+    "table2/case_a_high_1/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_1/observations.npz",
+      "sha256": "76a1f7f5a820227693d0a69435a348b45b94c49aad345180425eecbf3a1420ee"
+    },
+    "table2/case_a_high_1/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_1/neural_state.npz",
+      "sha256": "716caf970714d11a2fa792f713a4a25ebbe27dfa1032b02dc06bcddc6c129aa6"
+    },
+    "table2/case_a_high_1/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_1/curves.npz",
+      "sha256": "74ba258ae8dc868e8887ffee7856566ea170f9b66d75ae331b56317d38cfdb9b"
+    },
+    "table2/case_a_high_1/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_1/neural_validation.npz",
+      "sha256": "279919ff1ff27adc2c2b45040a707521d996636773fa8f21dee82924b965e5f9"
+    },
+    "table2/case_a_high_1/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_1/history.json",
+      "sha256": "3eb799f68479ab14703d2c98054067dfdb850c192b694be736fb5834453b0d29"
+    },
+    "table2/case_a_high_2/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_2/record.json",
+      "sha256": "023585f0a827e20e7ee0e5ff0eaac3f462e93cf648dd95aa2ef1654ff40c6991"
+    },
+    "table2/case_a_high_2/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_2/observations.npz",
+      "sha256": "f13ea23c903de96c5b617a3755b38340c700cff7ad69c4dc6b536881e945566f"
+    },
+    "table2/case_a_high_2/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_2/neural_state.npz",
+      "sha256": "b7e1d69f0beb91f84a0a467bd76b22bb6e1af50edb876ea53ce2d96b0464fffd"
+    },
+    "table2/case_a_high_2/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_2/curves.npz",
+      "sha256": "73cde7d58412b0e117287a361e2bcf75b082ae154bc3e8f761802b0fc5f6e66e"
+    },
+    "table2/case_a_high_2/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_2/neural_validation.npz",
+      "sha256": "90aeeae8ef3a03e26302aa4010d4ae0e3515a795e71356d11e4e2bf5f96df30c"
+    },
+    "table2/case_a_high_2/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_high_2/history.json",
+      "sha256": "07f83eb3cd4ce3d4cf1fd0dedadfec14743fd4b6f2716135dbf33b6c13ed63bf"
+    },
+    "table2/case_a_low_0/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_0/record.json",
+      "sha256": "d7726bb0748b393978d4e10000901d075958cbdfd331ec039d03c9b1b3b664f8"
+    },
+    "table2/case_a_low_0/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_0/observations.npz",
+      "sha256": "74cd0131413ee37862c5e2e8777a0004fead2a48479632a3a329a07be00aefe1"
+    },
+    "table2/case_a_low_0/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_0/neural_state.npz",
+      "sha256": "eacab8d0ad1df5ae19feab2c63bf9875505d6c76731ae45199579b1dd7bb3421"
+    },
+    "table2/case_a_low_0/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_0/curves.npz",
+      "sha256": "9f97e5e91ba82e23610edc7d480a66eeebae156d2d07b9a4e9ee0c0eafe5b16c"
+    },
+    "table2/case_a_low_0/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_0/neural_validation.npz",
+      "sha256": "88543e5434aebf23d6badc3a3d55f76d8b8904c419abfcd992899b9ea88e4eff"
+    },
+    "table2/case_a_low_0/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_0/history.json",
+      "sha256": "23ca8da0e2c681d13ad6e1a24048770ebaded1f4a5f9d4141e31dcdc8d64dcc3"
+    },
+    "table2/case_a_low_1/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_1/record.json",
+      "sha256": "f02641722c1aa64a4604668db626819bce384fc8c1cc53b27566b3dc7788b384"
+    },
+    "table2/case_a_low_1/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_1/observations.npz",
+      "sha256": "ccf69286ecfa8798ef9a89477cb3aaeb40f665194a64cb502d3c16fe21d192b6"
+    },
+    "table2/case_a_low_1/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_1/neural_state.npz",
+      "sha256": "a9d05c9b6a2b7dd34606937359ad46d4df1813046a98f8aaf6c9672d6f9cb63a"
+    },
+    "table2/case_a_low_1/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_1/curves.npz",
+      "sha256": "b0475a36f32e25708b2aafd08ef5c13f7185703285514e05638c91d18833b68e"
+    },
+    "table2/case_a_low_1/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_1/neural_validation.npz",
+      "sha256": "4766f97915a462dbe92d4df5f035df1d53a4d27e1773c815aa9ec06a55237ccd"
+    },
+    "table2/case_a_low_1/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_1/history.json",
+      "sha256": "3e14a32aa389c35dc1aaba97d5932d53bb3831296fb52324ebe94bfeba650f75"
+    },
+    "table2/case_a_low_2/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_2/record.json",
+      "sha256": "c1f5a8b4e77b5b71487ed4f7a63acbf7db9be3aec57a8a16325d4b32640f360f"
+    },
+    "table2/case_a_low_2/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_2/observations.npz",
+      "sha256": "af94f148821c3a58088e6a1bf2ed9827bd993f8c877159529fab45aca9c1d793"
+    },
+    "table2/case_a_low_2/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_2/neural_state.npz",
+      "sha256": "72cbe4e3d6045114ce28daebcc37325e242dd6dbb3bd3745bee4bb4f0f28e13b"
+    },
+    "table2/case_a_low_2/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_2/curves.npz",
+      "sha256": "bb25562a8d864902f1907a4ad0fdcda8a41d4ea9618a9f652d2cb27640cba220"
+    },
+    "table2/case_a_low_2/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_2/neural_validation.npz",
+      "sha256": "f0fe03568d663c88d388d8da40d901ac51914e5b8929fdfd3e42e54c2facf79b"
+    },
+    "table2/case_a_low_2/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_a_low_2/history.json",
+      "sha256": "e94b0620e7a27fca7997ef05945061ed629e0da8dfa8dff441fb535f414ca354"
+    },
+    "table2/case_b_high_0/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_0/record.json",
+      "sha256": "c333668aae15af553bb2c3ca95764e77229d1dceb3170636038c5a28f794d677"
+    },
+    "table2/case_b_high_0/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_0/observations.npz",
+      "sha256": "1f8e0ffda427627ef7396c900a4189e95f3d5114939ed2ec802f00a0d7de185f"
+    },
+    "table2/case_b_high_0/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_0/neural_state.npz",
+      "sha256": "f566d829be19a3ed86296bfcf1fd8d7acff840227b301b582aac5ec2f2b3f62e"
+    },
+    "table2/case_b_high_0/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_0/curves.npz",
+      "sha256": "22bb38db24e4ee2b1608da92f3983d394dec425905388974d1b608fd545890b3"
+    },
+    "table2/case_b_high_0/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_0/neural_validation.npz",
+      "sha256": "3765c2c5e56e59137b21cf122b6b2c2da206f15a02973ca5d6459a8e9d42d73f"
+    },
+    "table2/case_b_high_0/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_0/history.json",
+      "sha256": "59cd72d0cb97b516bb5826ff242b022cc03b42132b93ebc174613c2cf76d4b0e"
+    },
+    "table2/case_b_high_1/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_1/record.json",
+      "sha256": "901d8f7d15047ec97471994b687a65de1560af58c819b8277f8b1bb0a8c32374"
+    },
+    "table2/case_b_high_1/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_1/observations.npz",
+      "sha256": "1d0a323c7c5b8c2ac68df0e706ebb8115d93d82f13271dd6367f9a61cfa991b0"
+    },
+    "table2/case_b_high_1/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_1/neural_state.npz",
+      "sha256": "a12535c214410416830dad978ff2382b034f4f83e44dc6911a4a86916d0cf17f"
+    },
+    "table2/case_b_high_1/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_1/curves.npz",
+      "sha256": "f2cd062a5184a6f075dbc5a4d6a0842cacec1d3b6b8a21626728353f19b54516"
+    },
+    "table2/case_b_high_1/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_1/neural_validation.npz",
+      "sha256": "30b3bf3cc3d2f9266820f2efbb1d3d1b3defaa8181ad3843812fa168c53bd28d"
+    },
+    "table2/case_b_high_1/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_1/history.json",
+      "sha256": "a9fc24428210b85941f518f470b8220bc66676de7fd2c78d12ad0b0febfca519"
+    },
+    "table2/case_b_high_2/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_2/record.json",
+      "sha256": "73dabcd3e48b7821a684b72c10a0aeb585c40e0e84ef835eee9285d600e1a96c"
+    },
+    "table2/case_b_high_2/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_2/observations.npz",
+      "sha256": "de9dd30b8be1db52b5a9d899708eefb6f2d8928d40cb4310669883561208d286"
+    },
+    "table2/case_b_high_2/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_2/neural_state.npz",
+      "sha256": "e6288d4dfb564e3b4b16f32d3c59b87b7bbf84bc5e0419fec585521398280c28"
+    },
+    "table2/case_b_high_2/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_2/curves.npz",
+      "sha256": "91a8375d68f1d0a2a91d511aefb607798f9e85e7ab0cedff3ead434bf55bdf3b"
+    },
+    "table2/case_b_high_2/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_2/neural_validation.npz",
+      "sha256": "95090bc9182a03ecfd2cac107c26b2ad17239a8cce1ce3a19f20bdb2d0dd7e5d"
+    },
+    "table2/case_b_high_2/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_high_2/history.json",
+      "sha256": "9879847cccc6e9135f35687c7f43870990c4d8620b79da544d9d482b2f49b6e5"
+    },
+    "table2/case_b_low_0/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_0/record.json",
+      "sha256": "4ae3ebea03a398b7b0e32abe721f085a9ac98d611ca6afa861f01dade8a77dc0"
+    },
+    "table2/case_b_low_0/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_0/observations.npz",
+      "sha256": "52013c0312af52888ccf6a68593f6d5aafe6f12d65c02167d5fd303b238918dc"
+    },
+    "table2/case_b_low_0/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_0/neural_state.npz",
+      "sha256": "acf84ea8e6289f9d7483e46d1ce01dffcc72d53ccb22d15c14eb53ebdce18518"
+    },
+    "table2/case_b_low_0/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_0/curves.npz",
+      "sha256": "d7a125a312fe730b585559dfdfa9d7b6279f79a85cb12649829069267decdaa0"
+    },
+    "table2/case_b_low_0/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_0/neural_validation.npz",
+      "sha256": "ef1109d287f60f1030aa557e4e025c89f6717b8d757569082e5f5340c3cd048a"
+    },
+    "table2/case_b_low_0/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_0/history.json",
+      "sha256": "ef451bc688f5b22889fc9d64019c38a9362a1ccc808bc0b3d1159276a5890f49"
+    },
+    "table2/case_b_low_1/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_1/record.json",
+      "sha256": "c8f6812e05515eddf90707399d43389b44254352f97948cdd64cf0ce3ee54954"
+    },
+    "table2/case_b_low_1/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_1/observations.npz",
+      "sha256": "b32e588d01d305a84f12e868d112308837a9a087d5ba99a098230820473410e6"
+    },
+    "table2/case_b_low_1/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_1/neural_state.npz",
+      "sha256": "772eca612e3f1bb73a678c5e86300ca0bc7e57a94075ab02f05387f5a1165707"
+    },
+    "table2/case_b_low_1/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_1/curves.npz",
+      "sha256": "ec2e06b4a45d0a70798ad113a2b0391a3e40383fb67d133b161da1b18413994e"
+    },
+    "table2/case_b_low_1/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_1/neural_validation.npz",
+      "sha256": "c08c1a91cbb7b1e461cbd634107c7d7731711d94fb2aca9c19b3ba4cbd3292ab"
+    },
+    "table2/case_b_low_1/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_1/history.json",
+      "sha256": "67545650de51b6d26f43c4a2c396c9baf33cc9a7465b1cae692ebdda073086e6"
+    },
+    "table2/case_b_low_2/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_2/record.json",
+      "sha256": "7c399dbf03892a747d90f63e317a8b65711b1918f2b9a4476a1026c80fff9af9"
+    },
+    "table2/case_b_low_2/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_2/observations.npz",
+      "sha256": "a71fcd179cd594aeca020ea6056bb3403c76abdb3c56b9b190cbf030f932f3c2"
+    },
+    "table2/case_b_low_2/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_2/neural_state.npz",
+      "sha256": "14a715f03258b444657450a7f3235d87715b8f6435210f145fda849d81ba3f61"
+    },
+    "table2/case_b_low_2/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_2/curves.npz",
+      "sha256": "ca30554b3f8a17be23cb65415623fd86343b5a0a3c77a4c2c610756148fd5e77"
+    },
+    "table2/case_b_low_2/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_2/neural_validation.npz",
+      "sha256": "84b0dd6674fc4905c2618b5d7d355ae1cb3e62679e942af707c25b3dc26ed78c"
+    },
+    "table2/case_b_low_2/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_b_low_2/history.json",
+      "sha256": "a7a5bc2fef37555d4520b1d60d3f80eaa15c6dbfb3fa8eb967ea7801ab324ea2"
+    },
+    "table2/case_exp_high_0/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_0/record.json",
+      "sha256": "de2f23a949490949a5214d207abd04a63be3045b80d9ec2b8eeb013241497654"
+    },
+    "table2/case_exp_high_0/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_0/observations.npz",
+      "sha256": "921187292a4f268018e6d7732ba035d468417aacb6d260964edb115aeb61ef04"
+    },
+    "table2/case_exp_high_0/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_0/neural_state.npz",
+      "sha256": "f0cd1a8a5ab48ef50aa524ffb44c64897a7d313aa62113ce734426d1448b5968"
+    },
+    "table2/case_exp_high_0/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_0/curves.npz",
+      "sha256": "67b366addeb89982051e0a753c0265a6d5e28c6ef342553b9ab9055d21abe8c2"
+    },
+    "table2/case_exp_high_0/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_0/neural_validation.npz",
+      "sha256": "a3aff860346a41f1ec87a2cfe1a0c960839417c37f40ad9f70c4dc5d6ab82de7"
+    },
+    "table2/case_exp_high_0/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_0/history.json",
+      "sha256": "d6d58b8e7d8a256666dcf676e3a4ea769931d4f2e7400478915c876ff1e0299e"
+    },
+    "table2/case_exp_high_1/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_1/record.json",
+      "sha256": "5a3737ac552f3d225f385a28863575db87024fdc46e09d71c65b9f042fe911bd"
+    },
+    "table2/case_exp_high_1/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_1/observations.npz",
+      "sha256": "21cc92945974d769796fb01493cb9894ba8164af678af714a1a0800a92a5ea93"
+    },
+    "table2/case_exp_high_1/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_1/neural_state.npz",
+      "sha256": "bbdf6b944c7ec8fdaa2d46cc89e75b692c05b15b62ff9cd5a3acbbdcbfa91efc"
+    },
+    "table2/case_exp_high_1/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_1/curves.npz",
+      "sha256": "06763cb5c70c1c8d85d166d7b55c78c80fe54397f1d0bb7f823f20e4b297a5a3"
+    },
+    "table2/case_exp_high_1/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_1/neural_validation.npz",
+      "sha256": "0ea2493095984737cdf7d196aa73df9dc2c501cc5ab832f016b41d6c803de42a"
+    },
+    "table2/case_exp_high_1/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_1/history.json",
+      "sha256": "6466c92613a0c15443ebf1b642bd77aeac4b690f8fcc6db2fc418387569cfcb6"
+    },
+    "table2/case_exp_high_2/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_2/record.json",
+      "sha256": "7e39201b0326f0afdec557001bbf17b374114cc661830695ac0300395c51d698"
+    },
+    "table2/case_exp_high_2/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_2/observations.npz",
+      "sha256": "ab7bdab23f4b95c7febd55694bfe5270f266b7740b894f6e905e8d9c61b7b6f7"
+    },
+    "table2/case_exp_high_2/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_2/neural_state.npz",
+      "sha256": "b13feb8db9941ac403bebf8de2cffd7ae81455c006c39ae386e210f352cf4b07"
+    },
+    "table2/case_exp_high_2/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_2/curves.npz",
+      "sha256": "c2991064ed6e2607d9ad03e1bed92b2fb30301daeca7302d2d02a144d665bfe6"
+    },
+    "table2/case_exp_high_2/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_2/neural_validation.npz",
+      "sha256": "43e3262b2b25d034d627721032407e51c4b6c1bfcc17dfe5c506c9179a827e2b"
+    },
+    "table2/case_exp_high_2/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_high_2/history.json",
+      "sha256": "e0ace9220606d72587ab33603ab51b9e8a5b1e4d9f2ff03ba8356df1107e6cc1"
+    },
+    "table2/case_exp_low_0/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_0/record.json",
+      "sha256": "0cdcb10f58738ed7dda29e000b8c58d978a9b65873fa28e9cf576639762265d5"
+    },
+    "table2/case_exp_low_0/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_0/observations.npz",
+      "sha256": "7a74736b4e442eeca32ec3a1a8b082addb98f0cb7961ebcc211167cfc5c1dc7d"
+    },
+    "table2/case_exp_low_0/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_0/neural_state.npz",
+      "sha256": "2c3f12e1e4d315fb15d3ec0790a74871559a41d502be7786c2c899c0fa7b67d6"
+    },
+    "table2/case_exp_low_0/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_0/curves.npz",
+      "sha256": "ba7b2d9b88ae0e413abbe0f8c7042e87826cbfb84391a8f3e27fcf7066641e76"
+    },
+    "table2/case_exp_low_0/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_0/neural_validation.npz",
+      "sha256": "b02ff7ffb24eb70fa9bbb42449fcca9a609625c1d76a31794fa812ae4aa43a0e"
+    },
+    "table2/case_exp_low_0/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_0/history.json",
+      "sha256": "f1ac87fb9ad8eaba188d1267186ca005b58018c72b4883a297ad7b22fd367f8c"
+    },
+    "table2/case_exp_low_1/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_1/record.json",
+      "sha256": "88554b3d4d64e87481b4177c2e97354bb54c88d36f84ccc66ff0c0f5879f061d"
+    },
+    "table2/case_exp_low_1/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_1/observations.npz",
+      "sha256": "d273ba41013eb919aa0c5e8d0541bd2681c9edee90ee58086a68c18b935dd6e4"
+    },
+    "table2/case_exp_low_1/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_1/neural_state.npz",
+      "sha256": "ee19d90cb1c3b822836c9083f6ec8c6071997338bef87e92cebd375f438cc98f"
+    },
+    "table2/case_exp_low_1/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_1/curves.npz",
+      "sha256": "a8da7ca64c6a6459d87a0de577e57c722b97c2b188bd95739db31d4763c4df87"
+    },
+    "table2/case_exp_low_1/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_1/neural_validation.npz",
+      "sha256": "f180a33cc00d5ed60886902bde6fa7aeee079c5377f976e6a66ab141eccb433b"
+    },
+    "table2/case_exp_low_1/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_1/history.json",
+      "sha256": "43acea065d6af3d6ba6759dc9363183919d7e068c30dcb39256dcb22703bb9b8"
+    },
+    "table2/case_exp_low_2/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_2/record.json",
+      "sha256": "816c514da5915abcb6248ecc685a29ffa306c1057d46b1277768a0fdd99e8cd6"
+    },
+    "table2/case_exp_low_2/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_2/observations.npz",
+      "sha256": "dceef12b507d303c0f95dee12bb90081b8aa05071d52f8e0f5a5ab8ad6c1a162"
+    },
+    "table2/case_exp_low_2/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_2/neural_state.npz",
+      "sha256": "8f5fe6952a1597e66e157c689dcaf34c2b53f6f5c285926d8142bbc506e79bbd"
+    },
+    "table2/case_exp_low_2/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_2/curves.npz",
+      "sha256": "e1d46281418d8ac5b275c46f61dd47f57afb0549195d3d3c1f17c219ef8f1665"
+    },
+    "table2/case_exp_low_2/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_2/neural_validation.npz",
+      "sha256": "6925cbd4cd113b5479e46b5f4c6d240c357c097e43310c6573db5e432688f114"
+    },
+    "table2/case_exp_low_2/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/excitation/case_exp_low_2/history.json",
+      "sha256": "26546686a42be3bf5e132ce60823fd762e49ef32115080225362d52d47403e20"
+    },
+    "table2_domain_summary.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/table2_domain_summary.csv",
+      "sha256": "604c8d7775fbe6e66dcc564b46045a2cf401b68371bb35b1a2a0c2e816ef759d"
+    },
+    "table4/case_exp_clean_0/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/record.json",
+      "sha256": "9c8f80e7a33741b1ec16f63411b8d4c22768c5c22dd0b15f88cdf7b37162e74b"
+    },
+    "table4/case_exp_clean_0/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/observations.npz",
+      "sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557"
+    },
+    "table4/case_exp_clean_0/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/neural_state.npz",
+      "sha256": "0c93492af2e1f3e2be1a3bc3538ca7cd52e58284e52e2140b3326d705f190ff5"
+    },
+    "table4/case_exp_clean_0/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/curves.npz",
+      "sha256": "240944be19292aa8658ef730fafd1867bff82eb741281b76bed287d666b8a2e6"
+    },
+    "table4/case_exp_clean_0/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/neural_validation.npz",
+      "sha256": "735c7768020d227d96d6397e3e4041e1f734148bc74c226a4edeb3ab26df16e4"
+    },
+    "table4/case_exp_clean_0/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/history.json",
+      "sha256": "574fd029ab4e5748a6d7d8ec51f4803718e77c612bfd702e82c3ef469b5ef384"
+    },
+    "table4/case_exp_clean_0/restricted.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/restricted.json",
+      "sha256": "845be955fa4321f9c862ad9135df3fd951981021df0ddc05d637b6c48a95504c"
+    },
+    "table4/case_exp_clean_0/restricted_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/restricted_validation.npz",
+      "sha256": "5e94787a68bc53fe35aa4e3a6e8f868e880807f6806786218be8da4b771e53d8"
+    },
+    "table4/case_exp_clean_0/pysr_validation.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/pysr_validation.json",
+      "sha256": "bfa77602445c34bbc73719c58e43dbb9bac8417a74e31b770dacb0574159c550"
+    },
+    "table4/case_exp_clean_0/pysr_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/pysr_validation.npz",
+      "sha256": "6a4bd6bd1ba6d569be412320551d095c44d5edb05e51c6f74d2df15632360c1a"
+    },
+    "table4/case_exp_clean_0/search/diffusion/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/search/diffusion/record.json",
+      "sha256": "56af5cfec5d3a43bea5aae941741923d6b862773ea1625eb40380e10e8b6e26e",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_clean_0/search/diffusion/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/search/diffusion/cycles.csv",
+      "sha256": "87d826e4dd39649d97757d596bbaaff85120ae90f0ae80ae3fd00c6f72978fcb"
+    },
+    "table4/case_exp_clean_0/search/diffusion/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/search/diffusion/prediction.npz",
+      "sha256": "7ef59afbcc9b3e72eff91d1f76d7ac4242395fc9e9f6c2c23f6147f3a0625572"
+    },
+    "table4/case_exp_clean_0/search/diffusion/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/search/diffusion/hall_of_fame.csv",
+      "sha256": "96aa78c7764df349fc1874b7aa3fca251bfd2caa8c9c47a27b0bcefc88b60891"
+    },
+    "table4/case_exp_clean_0/search/reaction/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/search/reaction/record.json",
+      "sha256": "ab05b6d9d589e5a46886210ac7cca57baf949a8346a5614d7a5f9bfb6937725f",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_clean_0/search/reaction/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/search/reaction/cycles.csv",
+      "sha256": "92d5c92cf51eab2044e1f6c97eecbed5cb2a7a0961eca249cd7ba0785f68c6f8"
+    },
+    "table4/case_exp_clean_0/search/reaction/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/search/reaction/prediction.npz",
+      "sha256": "43dc8666ca2836a98c7aede9c960513b7d6553d33a816ca6dffd697b8ff5fbd0"
+    },
+    "table4/case_exp_clean_0/search/reaction/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_0/search/reaction/hall_of_fame.csv",
+      "sha256": "20cff79dcab5c7987bc837f3a79888f8eb665b772ee7a4a6ddda9f245b6ee3f9"
+    },
+    "table4/case_exp_clean_1/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/record.json",
+      "sha256": "09055ed13917a15f63e25374f769ed0c7d23a9869c8a876781a8b5c4fbf6dd1d"
+    },
+    "table4/case_exp_clean_1/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/observations.npz",
+      "sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5"
+    },
+    "table4/case_exp_clean_1/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/neural_state.npz",
+      "sha256": "33f7315e83c97eb9194619e2477dab4c023e6acd8454ceeb8b6fb840822a3f1d"
+    },
+    "table4/case_exp_clean_1/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/curves.npz",
+      "sha256": "c656cb1b837fa4aaa215151eb303f3b5522026a19eb1dc3e9d9b059ae1ba3a3e"
+    },
+    "table4/case_exp_clean_1/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/neural_validation.npz",
+      "sha256": "8a206ccb5f7db7cd39e86ec6efdc9e6689b34f8582f482f37ff2091c999f6cac"
+    },
+    "table4/case_exp_clean_1/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/history.json",
+      "sha256": "ed8911eff259882f8401f7a9d69e8f9bbe576d884caef78e8c9f72bd2964040c"
+    },
+    "table4/case_exp_clean_1/restricted.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/restricted.json",
+      "sha256": "f538f92a9ddb7c81b8614c1952043c7975aabbdbb1e9f40e2b9191aa5f6b73f7"
+    },
+    "table4/case_exp_clean_1/restricted_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/restricted_validation.npz",
+      "sha256": "d157347499a4cbc47edddf9348b6f9f3741468c6504d6c0ab67d92e09fab2611"
+    },
+    "table4/case_exp_clean_1/pysr_validation.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/pysr_validation.json",
+      "sha256": "290ba3939c90163911bcd0b055bb2ba55d64e0735134507608f7e1a2bb12c7f4"
+    },
+    "table4/case_exp_clean_1/pysr_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/pysr_validation.npz",
+      "sha256": "f9469eff80b254eeb30cb5a8de28d75587a70e4f948fcf434983a71d5660fc94"
+    },
+    "table4/case_exp_clean_1/search/diffusion/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/search/diffusion/record.json",
+      "sha256": "b45f6255707ca4578fa41b9cd9ffd7dbfce6d034e46f446f3819ef9ffce571f3",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_clean_1/search/diffusion/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/search/diffusion/cycles.csv",
+      "sha256": "6d7325668d408422e3b7139527f92effda31f9bdb5bb9d87b93d95fe02d60e72"
+    },
+    "table4/case_exp_clean_1/search/diffusion/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/search/diffusion/prediction.npz",
+      "sha256": "2e0b64807c3106d2b5593646b97f49410ed21b2490f953f77213222a8f7c83ef"
+    },
+    "table4/case_exp_clean_1/search/diffusion/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/search/diffusion/hall_of_fame.csv",
+      "sha256": "9960b5fd543c2975fb770d6ca7a18922bb5f7eb2525b6bed68c89e25a5e91426"
+    },
+    "table4/case_exp_clean_1/search/reaction/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/search/reaction/record.json",
+      "sha256": "19072c5bfc4c54804f37fdbb90fe06f5eae60de3ce627beb86ca64788b2d1fe5",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_clean_1/search/reaction/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/search/reaction/cycles.csv",
+      "sha256": "8a29cd68f0f2e5cb26e732b26c6c413add120abb0d154ad90fc4e1fa0d3a5365"
+    },
+    "table4/case_exp_clean_1/search/reaction/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/search/reaction/prediction.npz",
+      "sha256": "87c0847f64a95a2f47d899bdd752e7c9f845525ff9189de93109a8b50cd3f38b"
+    },
+    "table4/case_exp_clean_1/search/reaction/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_1/search/reaction/hall_of_fame.csv",
+      "sha256": "8a3668ce6c83d799ed05439ef3787e15272dcc1c01654c7b3065477d98da4725"
+    },
+    "table4/case_exp_clean_2/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/record.json",
+      "sha256": "fd7502eab9f51dba173aa4a3e615caf06a524cb28484e7d2f262e5206ea2b87f"
+    },
+    "table4/case_exp_clean_2/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/observations.npz",
+      "sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f"
+    },
+    "table4/case_exp_clean_2/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/neural_state.npz",
+      "sha256": "6a55366afba71a861b1bc0ad50674386b06c4476c939f42ee239d2eb05d1528c"
+    },
+    "table4/case_exp_clean_2/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/curves.npz",
+      "sha256": "5341f9068cef729ea36cb7222a2cacfe33325c2ac23fdbe6c1bc1e2d58aeece5"
+    },
+    "table4/case_exp_clean_2/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/neural_validation.npz",
+      "sha256": "8859b81e20e4aa687d0923b8ca3dd26f3b26e875ab2b2c287e52fcec935a06ce"
+    },
+    "table4/case_exp_clean_2/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/history.json",
+      "sha256": "83d00747bbe79c39b72f8f169b1a8fe8c37d37cdb5afdf5c77cf8544689e1040"
+    },
+    "table4/case_exp_clean_2/restricted.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/restricted.json",
+      "sha256": "5936442d8ffeba8af6b0331721830bb85536dc24eed86b3cb8f0b71f8d9d7d02"
+    },
+    "table4/case_exp_clean_2/restricted_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/restricted_validation.npz",
+      "sha256": "8e089f22774dbca746349db87e06dcc46e6c4f8ba8a04a8021202a6e40b63e5d"
+    },
+    "table4/case_exp_clean_2/pysr_validation.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/pysr_validation.json",
+      "sha256": "cede9cdbcc3c91cd32dbabdd660a209a67c14a04c69dca9440406363188d2489"
+    },
+    "table4/case_exp_clean_2/pysr_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/pysr_validation.npz",
+      "sha256": "8c31cce8a49c43ec10209fb8bcca285e341955c41482900d59d902cbc2bf2e76"
+    },
+    "table4/case_exp_clean_2/search/diffusion/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/search/diffusion/record.json",
+      "sha256": "f668dd4bb28c1215ccbe52cf4c7dbad87cef57fdc36f8c998300297fd3443e0e",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_clean_2/search/diffusion/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/search/diffusion/cycles.csv",
+      "sha256": "3bd0057ff280d210f160882bbe06c0fd3171ffebbaa7f109f2c5870929d87bb4"
+    },
+    "table4/case_exp_clean_2/search/diffusion/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/search/diffusion/prediction.npz",
+      "sha256": "746fb204ad22d4137f8b89e1866c432ebced63afae708de49d3df704aba12f9d"
+    },
+    "table4/case_exp_clean_2/search/diffusion/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/search/diffusion/hall_of_fame.csv",
+      "sha256": "8a831ffc230c6d708321768a77c46cc2d1537b869c723005219c5caa0d2a4667"
+    },
+    "table4/case_exp_clean_2/search/reaction/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/search/reaction/record.json",
+      "sha256": "18582f8cae3c8e07ec5a3f732a6b5f805d85be62a7de8e1cbeff8122d8285c29",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_clean_2/search/reaction/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/search/reaction/cycles.csv",
+      "sha256": "5a9fdd24e9cc496628cf59a659b629fa91b326c71fa58535c3794b20f51e9419"
+    },
+    "table4/case_exp_clean_2/search/reaction/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/search/reaction/prediction.npz",
+      "sha256": "fa9f82ac9a60b71a46fde4f25a20eecc0dd9499c8b2f43059e6afd031cdcd9b6"
+    },
+    "table4/case_exp_clean_2/search/reaction/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_clean_2/search/reaction/hall_of_fame.csv",
+      "sha256": "b4d9d9cda271e88ff040f190bdfa6ca94c54cb680593462ff711eee418f32f8d"
+    },
+    "table4/case_exp_noise5_0/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/record.json",
+      "sha256": "bae6a9ebbf6976dcabb42376e677750cb3c0a8c3625ad5da1bfa1e4f91a48253"
+    },
+    "table4/case_exp_noise5_0/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/observations.npz",
+      "sha256": "e07b0b8a5ba44b28e6ff11ab42890656a7d2a335c8b6c6ff2f866a813f4c2899"
+    },
+    "table4/case_exp_noise5_0/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/neural_state.npz",
+      "sha256": "7e7400d6319535593e1f8a063b541e3b8c47a0a6c7355240bf264b60fad5b19a"
+    },
+    "table4/case_exp_noise5_0/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/curves.npz",
+      "sha256": "0405e1b6b216b1035722d5ff9103a79a6316dba3764512474d4e28c6a0afce3a"
+    },
+    "table4/case_exp_noise5_0/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/neural_validation.npz",
+      "sha256": "6fce6d148d8bde68b6ed6656229bf1d8203f2ed2661849999e56f0df1167b1c4"
+    },
+    "table4/case_exp_noise5_0/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/history.json",
+      "sha256": "fb6f0b6369efcd76f97bcc00ded84d4593ad5d76f1071cfe8eb985a5d445ab3c"
+    },
+    "table4/case_exp_noise5_0/restricted.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/restricted.json",
+      "sha256": "ddcae43857df3a2ccaac0a0f5bd69df12e3aef68d464acb5dda9b92b8d9b7547"
+    },
+    "table4/case_exp_noise5_0/restricted_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/restricted_validation.npz",
+      "sha256": "b973b6ae9edb201eed55947ce6ae97226709dad1b3670b4574f5fbe0b2d2a8f1"
+    },
+    "table4/case_exp_noise5_0/pysr_validation.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/pysr_validation.json",
+      "sha256": "232b14a071ba0a444f0edd94d4f923dfa5b17de9e7359b62a1b873634dc65cd4"
+    },
+    "table4/case_exp_noise5_0/pysr_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/pysr_validation.npz",
+      "sha256": "ea6326781c1f123ce094f396ef352f43429f20111b7fcb44fdaafdcf2b6ce2f6"
+    },
+    "table4/case_exp_noise5_0/search/diffusion/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/search/diffusion/record.json",
+      "sha256": "189c4e93a82d7ff491efb272ef5cee36cef01bd857a865e28078b422ee1208b9",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_noise5_0/search/diffusion/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/search/diffusion/cycles.csv",
+      "sha256": "050abd9e15db9b99e536d05d64a626720188fbbd74c6b056b178beccfe045436"
+    },
+    "table4/case_exp_noise5_0/search/diffusion/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/search/diffusion/prediction.npz",
+      "sha256": "698b86252cabfb1a80ffa6986f7d97804db0272d9b5a6be8e71277baefe5d337"
+    },
+    "table4/case_exp_noise5_0/search/diffusion/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/search/diffusion/hall_of_fame.csv",
+      "sha256": "47d1f5e28fae2cb956a9e5f1b1e567f7765bb2ff8d6a547c9c82b76320357b80"
+    },
+    "table4/case_exp_noise5_0/search/reaction/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/search/reaction/record.json",
+      "sha256": "f8ed38108fd0b1a758753a50b00a830ce9512274278014c73664f611873301fc",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_noise5_0/search/reaction/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/search/reaction/cycles.csv",
+      "sha256": "724c9cfee53d429433cb3579c325f5e0682f96647a10d552f51bc83ac9e7bcf5"
+    },
+    "table4/case_exp_noise5_0/search/reaction/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/search/reaction/prediction.npz",
+      "sha256": "0496966fdf01a0d38319a2962dadc9aa9e765552e6394fe36d9d9ab827bd8556"
+    },
+    "table4/case_exp_noise5_0/search/reaction/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_0/search/reaction/hall_of_fame.csv",
+      "sha256": "f2b8bb89c32610f148f0b31db9c08120812aaebd8e0b3edb7573867b9427c0aa"
+    },
+    "table4/case_exp_noise5_1/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/record.json",
+      "sha256": "93f5f4b040a612935b8ef2f3cefa2d1027ebba9ebc9dd95cfa59dbefb6e35b2f"
+    },
+    "table4/case_exp_noise5_1/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/observations.npz",
+      "sha256": "9b38e212d3529d7e1162a6989c0f195ac2b122fb5d72ef75f3f69eed7bf83bbe"
+    },
+    "table4/case_exp_noise5_1/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/neural_state.npz",
+      "sha256": "711266b80ae3f0feb70329283cfab437fcefbba3d04617349b01499bea1d8c0c"
+    },
+    "table4/case_exp_noise5_1/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/curves.npz",
+      "sha256": "9d43491fb8da93bbfaef9546d01754c9277e5ff160c9bcb5e7cd7cafa8ef153b"
+    },
+    "table4/case_exp_noise5_1/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/neural_validation.npz",
+      "sha256": "58c6ac2151a41340efe5cf57fed2c22fd02d1d4a9f3e2a3b127687f7d221e6dc"
+    },
+    "table4/case_exp_noise5_1/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/history.json",
+      "sha256": "8674e31cf11871dbeca90ccace12302d039e5089a9714e75dadd2397a15629b2"
+    },
+    "table4/case_exp_noise5_1/restricted.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/restricted.json",
+      "sha256": "f531292779b1efd428c0cef58821db9fcfe6cc0e38a28eb5dcc56c84217c2b3f"
+    },
+    "table4/case_exp_noise5_1/restricted_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/restricted_validation.npz",
+      "sha256": "fd055d9a8bda6f65dac9a7539ca1f141d8fcf48efe8cc10de6be8cad1fdf28d0"
+    },
+    "table4/case_exp_noise5_1/pysr_validation.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/pysr_validation.json",
+      "sha256": "1108980e7d13d21e17c442d210fa8546d12a63402554a0c2bba65f8b31542e73"
+    },
+    "table4/case_exp_noise5_1/pysr_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/pysr_validation.npz",
+      "sha256": "d593010be2ac28a941146ec48ff03c378be7055bdfe7d7d97a6d2acb69afdfbb"
+    },
+    "table4/case_exp_noise5_1/search/diffusion/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/search/diffusion/record.json",
+      "sha256": "1041947c8555238967d5cb9b5ecaa8aa00835f98d0e029c5df07134c291ae49e",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_noise5_1/search/diffusion/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/search/diffusion/cycles.csv",
+      "sha256": "011c948c42957f1a7e004c245c0cad34add5d4420452f1183255e09b44ea15a8"
+    },
+    "table4/case_exp_noise5_1/search/diffusion/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/search/diffusion/prediction.npz",
+      "sha256": "110f4f900cd54bfce259c14e1331e8d3a20f5fa099f2967e220f137ef4b92a7d"
+    },
+    "table4/case_exp_noise5_1/search/diffusion/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/search/diffusion/hall_of_fame.csv",
+      "sha256": "2a8053ee9775c760158d1ccb3a7eecf4c4af91f973e4d50fa9ffee3184818b30"
+    },
+    "table4/case_exp_noise5_1/search/reaction/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/search/reaction/record.json",
+      "sha256": "622b621d3d48265fd0ea3ad42b50cb74b742781ba9d8739aaf3227e82172e03b",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_noise5_1/search/reaction/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/search/reaction/cycles.csv",
+      "sha256": "71f1d845e7a26a8adb50a43dd21f31f04da060c4473d6daaba8cc94f5390ac4f"
+    },
+    "table4/case_exp_noise5_1/search/reaction/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/search/reaction/prediction.npz",
+      "sha256": "9d6fd02a77c22b352b4023b818492778b7d9313f9e3f64e995672f7751c06053"
+    },
+    "table4/case_exp_noise5_1/search/reaction/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_1/search/reaction/hall_of_fame.csv",
+      "sha256": "0ec6526c3797132296b97fd82cee3ba12ffe4fcc9fe47cff9c8bdbf46f759b88"
+    },
+    "table4/case_exp_noise5_2/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/record.json",
+      "sha256": "b80a5d79f9d3f84b78d709da76c010861b6e56ac028c59ad90630d7accb5485d"
+    },
+    "table4/case_exp_noise5_2/observations.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/observations.npz",
+      "sha256": "a5d2e912bfec733ef80362259c8b903d983d58227816a2034d23249cd0333504"
+    },
+    "table4/case_exp_noise5_2/neural_state.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/neural_state.npz",
+      "sha256": "0f82eccfb10b770b5421004100d9a49d4c31f8919e9c611c031a9159762b51b0"
+    },
+    "table4/case_exp_noise5_2/curves.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/curves.npz",
+      "sha256": "d9cf6e50a8960f7d36e3f986cda6608b83d9b81d867e949869872af86aea78c8"
+    },
+    "table4/case_exp_noise5_2/neural_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/neural_validation.npz",
+      "sha256": "430c2812b5751fa16922b151082b156b6c2b14f74a10c779d547970fe2cb3bed"
+    },
+    "table4/case_exp_noise5_2/history.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/history.json",
+      "sha256": "1116b9816a2ef0133047625a92cca53ab307467caf8c517427414562fbeffcd0"
+    },
+    "table4/case_exp_noise5_2/restricted.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/restricted.json",
+      "sha256": "77c308983d69faaaea04b77655f6975d683c6feeee0cbddc77e72d12177f6fb8"
+    },
+    "table4/case_exp_noise5_2/restricted_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/restricted_validation.npz",
+      "sha256": "293f9d21884cf88e9ead3f4ff9ba80279d88f0e9668e18fbe182baf15dfd63af"
+    },
+    "table4/case_exp_noise5_2/pysr_validation.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/pysr_validation.json",
+      "sha256": "3bf2a628655845df39554d5eb04857d52e84a09dc609024781569d60e3342cb9"
+    },
+    "table4/case_exp_noise5_2/pysr_validation.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/pysr_validation.npz",
+      "sha256": "7242ef4b838f888a5db9d4c3097dca58e79eb7bc2eeb68cf3d2777db6f03f098"
+    },
+    "table4/case_exp_noise5_2/search/diffusion/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/search/diffusion/record.json",
+      "sha256": "f2ce06fb72ae3b718417690f927dcb63fa648ee54397b44e849baffef513c0b8",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_noise5_2/search/diffusion/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/search/diffusion/cycles.csv",
+      "sha256": "eeb9cba48951d04f5bb9767b190e6e0c3607b7949a8a98ea474ee28ab74e27c9"
+    },
+    "table4/case_exp_noise5_2/search/diffusion/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/search/diffusion/prediction.npz",
+      "sha256": "95de9b881cb71f82c546f648c99813a5fc8353761636269612f79a1c1e93299e"
+    },
+    "table4/case_exp_noise5_2/search/diffusion/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/search/diffusion/hall_of_fame.csv",
+      "sha256": "2c638592d60b3f9ae8153a89e7d22f3ad072a2d1a06c09fdde35e2122ba49afd"
+    },
+    "table4/case_exp_noise5_2/search/reaction/record.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/search/reaction/record.json",
+      "sha256": "875e838de02985c02931c599a1f861c620cf663949d35d4dce62cc486a0edba2",
+      "metadata_change": "Private native-checkpoint locator replaced by the delivered exact expression export; numeric fields unchanged"
+    },
+    "table4/case_exp_noise5_2/search/reaction/cycles.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/search/reaction/cycles.csv",
+      "sha256": "aaef250452417f8f0b56a515fa2c3154966b77603e026e02f21f8ef1fe4dd60e"
+    },
+    "table4/case_exp_noise5_2/search/reaction/prediction.npz": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/search/reaction/prediction.npz",
+      "sha256": "ad17c2c77788d71e6b86e53fbfbb8cb6e5438f801167bc10eed38c91c554e88d"
+    },
+    "table4/case_exp_noise5_2/search/reaction/hall_of_fame.csv": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr/case_exp_noise5_2/search/reaction/hall_of_fame.csv",
+      "sha256": "76dbd9110dbbb06fd0e0f84c5598c1ec731cbe579a579def81545e167892f41f"
+    },
+    "pysr_search_protocol.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr_search_protocol.json",
+      "sha256": "d5044b8d4ef066fc06e811bde531bdd44638a3bddf184ff9f0a84f3cd73ece48"
+    },
+    "pysr_search_COMPLETE.json": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/pysr_search_COMPLETE.json",
+      "sha256": "4260f9f11d034d16430d7c50bf21a684868487be899801127a69b7bd3d84cb22"
+    },
+    "environment/Project.toml": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/julia-runtime/project/Project.toml",
+      "sha256": "da9e64b189d0215988eb4d21d6c66d4f2b1988af8d8912d4e472a3fd5308abb1"
+    },
+    "environment/Manifest.toml": {
+      "source": "outputs/table2-table4-rerun-2026-10-17/julia-runtime/project/Manifest.toml",
+      "sha256": "3428639e897a653afb92ab24dbbf9f4de0e980d0f37ff7fee1d41c01ecfebcc2"
+    }
+  },
+  "note": "Original-protocol reruns. Symbolic models are exact executable exports, neural models use native numeric state arrays. No fitted model in this cohort is represented solely by rounded printed coefficients."
+}

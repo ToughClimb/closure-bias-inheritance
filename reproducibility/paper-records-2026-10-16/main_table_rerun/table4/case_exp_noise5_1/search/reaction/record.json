@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "id": "case_exp_noise5_1",
+  "branch": "reaction",
+  "config": {
+    "binary_operators": [
+      "+",
+      "-",
+      "*"
+    ],
+    "unary_operators": [
+      "exp"
+    ],
+    "elementwise_loss": "PySR default L2DistLoss (squared error)",
+    "model_selection": "best",
+    "parsimony": 0.0001,
+    "deterministic": true,
+    "parallelism": "serial",
+    "niterations": 40,
+    "populations": 8,
+    "population_size": 48,
+    "maxsize": 30,
+    "timeout_in_seconds": 180.0,
+    "precision": 32,
+    "early_stop_condition": null,
+    "max_evals": null,
+    "input_stream": "devnull",
+    "support_points": 256,
+    "random_state": 102
+  },
+  "versions": {
+    "pysr": "2.7.0",
+    "julia": "1.13.2",
+    "symbolic_regression": "2.7.1"
+  },
+  "teacher_record_sha256": "93f5f4b040a612935b8ef2f3cefa2d1027ebba9ebc9dd95cfa59dbefb6e35b2f",
+  "started_utc": "2026-10-17T03:17:50.696107+00:00",
+  "seconds": 2.510491694964003,
+  "stopping_reason": "iteration_budget",
+  "total_population_cycles": 320,
+  "completed_population_cycles": 320,
+  "remaining_population_cycles": 0,
+  "cycle_callbacks": 320,
+  "evaluations": 639293.0,
+  "expression": "x0*(-0.3452058) + exp(x0*(x0*x0*0.482701*x0*x0 - 0.43818295)*(-1.4119135)) - 0.3445766 - 0.18166028",
+  "expression_sympy_srepr": "Add(Mul(Float('-0.34520580000000001', precision=53), Symbol('x0')), exp(Mul(Float('-1.4119135', precision=53), Symbol('x0'), Add(Mul(Float('0.48270099999999999', precision=53), Symbol('x0'), Symbol('x0'), Symbol('x0'), Symbol('x0')), Float('-0.43818295000000002', precision=53)))), Float('-0.34457660000000001', precision=53), Float('-0.18166028000000001', precision=53))",
+  "complexity": 24,
+  "fit_loss": 0.00014888015,
+  "expression_roundtrip_max_absolute_difference": 3.3306690738754696e-16,
+  "metrics": {
+    "surrogate_error": 0.0173037276119358,
+    "true_error": 4.714506969093326,
+    "BIR": 1.0000832188300486
+  },
+  "model_export": "expression_sympy_srepr; exact constructor representation verified against native PySR predictions"
+}
