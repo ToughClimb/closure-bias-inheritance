@@ -1,0 +1,122 @@
+[
+  {
+    "id": "sameobs_case_exp_noise3_0",
+    "coefficient_interpretation": "Exact rational values of stored binary64 coefficients",
+    "checks": {
+      "numerator_at_zero_negative": true,
+      "numerator_at_001_negative": true,
+      "denominator_at_zero_positive": true,
+      "numerator_roots_on_0_001": 0,
+      "denominator_roots_on_0_18": 0
+    },
+    "real_numerator_root_isolations": [
+      {
+        "left": "251317/1609794",
+        "right": "280587/1797281",
+        "multiplicity": 1
+      },
+      {
+        "left": "2502364/2116487",
+        "right": "2944399/2490358",
+        "multiplicity": 1
+      }
+    ],
+    "conclusion": "R(u)<0 throughout [0,0.01]; no real denominator root throughout [0,1.8]."
+  },
+  {
+    "id": "sameobs_case_exp_noise3_1",
+    "coefficient_interpretation": "Exact rational values of stored binary64 coefficients",
+    "checks": {
+      "numerator_at_zero_negative": true,
+      "numerator_at_001_negative": true,
+      "denominator_at_zero_positive": true,
+      "numerator_roots_on_0_001": 0,
+      "denominator_roots_on_0_18": 0
+    },
+    "real_numerator_root_isolations": [
+      {
+        "left": "91894/2442639",
+        "right": "24707/656738",
+        "multiplicity": 1
+      },
+      {
+        "left": "2188490/1844887",
+        "right": "1399373/1179665",
+        "multiplicity": 1
+      }
+    ],
+    "conclusion": "R(u)<0 throughout [0,0.01]; no real denominator root throughout [0,1.8]."
+  },
+  {
+    "id": "sameobs_case_exp_noise3_2",
+    "coefficient_interpretation": "Exact rational values of stored binary64 coefficients",
+    "checks": {
+      "numerator_at_zero_negative": true,
+      "numerator_at_001_negative": true,
+      "denominator_at_zero_positive": true,
+      "numerator_roots_on_0_001": 0,
+      "denominator_roots_on_0_18": 0
+    },
+    "real_numerator_root_isolations": [
+      {
+        "left": "306481/4273278",
+        "right": "315207/4394945",
+        "multiplicity": 1
+      },
+      {
+        "left": "2115671/2198424",
+        "right": "2431310/2526409",
+        "multiplicity": 1
+      }
+    ],
+    "conclusion": "R(u)<0 throughout [0,0.01]; no real denominator root throughout [0,1.8]."
+  },
+  {
+    "id": "sameobs_case_exp_noise3_3",
+    "coefficient_interpretation": "Exact rational values of stored binary64 coefficients",
+    "checks": {
+      "numerator_at_zero_negative": true,
+      "numerator_at_001_negative": true,
+      "denominator_at_zero_positive": true,
+      "numerator_roots_on_0_001": 0,
+      "denominator_roots_on_0_18": 0
+    },
+    "real_numerator_root_isolations": [
+      {
+        "left": "17289/366497",
+        "right": "155717/3300932",
+        "multiplicity": 1
+      },
+      {
+        "left": "4607353/3890152",
+        "right": "1128877/953151",
+        "multiplicity": 1
+      }
+    ],
+    "conclusion": "R(u)<0 throughout [0,0.01]; no real denominator root throughout [0,1.8]."
+  },
+  {
+    "id": "sameobs_case_exp_noise3_4",
+    "coefficient_interpretation": "Exact rational values of stored binary64 coefficients",
+    "checks": {
+      "numerator_at_zero_negative": true,
+      "numerator_at_001_negative": true,
+      "denominator_at_zero_positive": true,
+      "numerator_roots_on_0_001": 0,
+      "denominator_roots_on_0_18": 0
+    },
+    "real_numerator_root_isolations": [
+      {
+        "left": "4000/151087",
+        "right": "267023/10085926",
+        "multiplicity": 1
+      },
+      {
+        "left": "6861434/5876639",
+        "right": "374559/320800",
+        "multiplicity": 1
+      }
+    ],
+    "conclusion": "R(u)<0 throughout [0,0.01]; no real denominator root throughout [0,1.8]."
+  }
+]

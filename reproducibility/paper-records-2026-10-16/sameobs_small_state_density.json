@@ -1,0 +1,72 @@
+[
+  {
+    "id": "main_case_exp_clean_0_default",
+    "setting": "clean",
+    "seed": 0,
+    "interior_fraction_below_001": 0.0008088699494949495,
+    "input_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557"
+  },
+  {
+    "id": "main_case_exp_clean_1_default",
+    "setting": "clean",
+    "seed": 1,
+    "interior_fraction_below_001": 0.0014204545454545455,
+    "input_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5"
+  },
+  {
+    "id": "main_case_exp_clean_2_default",
+    "setting": "clean",
+    "seed": 2,
+    "interior_fraction_below_001": 0.001736111111111111,
+    "input_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f"
+  },
+  {
+    "id": "main_case_exp_clean_3_default",
+    "setting": "clean",
+    "seed": 3,
+    "interior_fraction_below_001": 0.003689236111111111,
+    "input_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907"
+  },
+  {
+    "id": "main_case_exp_clean_4_default",
+    "setting": "clean",
+    "seed": 4,
+    "interior_fraction_below_001": 0.0026436237373737375,
+    "input_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076"
+  },
+  {
+    "id": "main_case_exp_noise3_0_default",
+    "setting": "noise3",
+    "seed": 0,
+    "interior_fraction_below_001": 0.0011442550505050505,
+    "input_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e"
+  },
+  {
+    "id": "main_case_exp_noise3_1_default",
+    "setting": "noise3",
+    "seed": 1,
+    "interior_fraction_below_001": 0.0019925820707070705,
+    "input_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10"
+  },
+  {
+    "id": "main_case_exp_noise3_2_default",
+    "setting": "noise3",
+    "seed": 2,
+    "interior_fraction_below_001": 0.002742266414141414,
+    "input_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9"
+  },
+  {
+    "id": "main_case_exp_noise3_3_default",
+    "setting": "noise3",
+    "seed": 3,
+    "interior_fraction_below_001": 0.005129419191919192,
+    "input_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0"
+  },
+  {
+    "id": "main_case_exp_noise3_4_default",
+    "setting": "noise3",
+    "seed": 4,
+    "interior_fraction_below_001": 0.003985164141414141,
+    "input_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff"
+  }
+]

@@ -17,9 +17,20 @@ The experiments distinguish **faithful compression of a frozen surrogate** from 
 - `results/paper_artifacts/`: historical selected tables and figures.
 - `research/`: loss-weight, objective, selector, forward-response and theoretical diagnostics.
 - `reproducibility/theory/`: frozen numerical inputs, expected results and input hashes for the theory diagnostics.
+- `reproducibility/paper-records-2026-10-16/`: the revised paper's full-precision coefficients, per-seed CSVs, uncertainty summaries and physical checks.
 - `CODE_AUDIT_FIXES.md`: defect mapping, validation and compatibility notes.
 
-Revision tools use this repository's core implementation. Generated outputs and checkpoints are ignored by Git. Manuscript and review correspondence are maintained separately.
+Revision tools use this repository's core implementation. Run outputs and checkpoints under `outputs/` remain Git-ignored. Frozen theory inputs and the curated numerical records cited by the paper are versioned under `reproducibility/`. Manuscript and review correspondence are maintained separately.
+
+## Numerical records cited by the revised paper
+
+The [numerical-records index](reproducibility/paper-records-2026-10-16/README.md) maps manuscript appendices to 41 checked-in CSV/JSON files. It includes [complete same-observation model coefficients](reproducibility/paper-records-2026-10-16/sameobs_model_descriptors.json) and [BIR means, sample SDs and confidence intervals](reproducibility/paper-records-2026-10-16/campaign_bir_summary.csv). The submission source package includes the same records in `LaTeX/Evidence/`.
+
+```bash
+python3 reproducibility/verify_paper_records.py
+```
+
+This standard-library command checks file hashes and statistical records without running training.
 
 ## Install and test
 

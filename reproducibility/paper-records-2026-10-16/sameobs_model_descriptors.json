@@ -1,0 +1,5242 @@
+[
+  {
+    "id": "sameobs_case_exp_clean_0",
+    "config": {
+      "case": "case_exp",
+      "setting": "clean",
+      "seed": 0
+    },
+    "source_sha256": "3e3c888ca2ca8f3e9b1d9d91d357a2c43183d9a827c3be600363fc1bc0653682",
+    "descriptors": {
+      "weak_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.018641577219572686,
+          0.03882048224990005,
+          -0.014560107539880369
+        ],
+        "parameters_R": [
+          0.015460415721838284,
+          0.6349932799398826,
+          -0.8277772037743462,
+          0.22977141724469585
+        ],
+        "fit_mse": 7.640805670369587e-05,
+        "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557",
+        "metrics": {
+          "D": 0.052472087052854235,
+          "R": 0.10911333886469239,
+          "min_D": 0.018641577219572686,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.052472087052854235,
+          "R_visited": 0.10911333886469239,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "strong_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.01509602897639149,
+          0.045819986581099835,
+          -0.01802849792776967
+        ],
+        "parameters_R": [
+          0.29565286443260885,
+          -0.5422521606949479,
+          0.5232662932565886,
+          -0.231508422257127
+        ],
+        "fit_mse": 0.025227719824659208,
+        "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557",
+        "metrics": {
+          "D": 0.046133893112770594,
+          "R": 0.5700509469011017,
+          "min_D": 0.01509602897639149,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.046133893112770594,
+          "R_visited": 0.5700509469011017,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "spacetime_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.01876682312942448,
+          0.03869693305120834,
+          -0.014545449629677753
+        ],
+        "parameters_R": [
+          0.01580790425879251,
+          0.6322391204905127,
+          -0.8238357106008043,
+          0.228403110827049
+        ],
+        "fit_mse": 1.5663566990443471e-06,
+        "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557",
+        "metrics": {
+          "D": 0.053496471668626124,
+          "R": 0.11044015566235937,
+          "min_D": 0.01876682312942448,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.053496471668626124,
+          "R_visited": 0.11044015566235937,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "neural_150": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_0/neural_adam_150.npz",
+        "native_file_sha256": "3139490d0c3a8b53d9f181f5529a49b141a778ce125b95d9717c6f370192d989",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.7755575615628914e-17,
+            "R": 5.551115123125783e-17
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.048762894445083416,
+          "R": 0.43770320771204874,
+          "min_D": 0.019063000589540222,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.048762894445083416,
+          "R_visited": 0.43770320771204874,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.048860441613126845,
+          "R": 0.43770452519996395,
+          "min_D": 0.019231379068255696,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.048860441613126845,
+          "R_visited": 0.43770452519996395,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.019231379068255696,
+              0.015308684492096112,
+              0.06488777385697042,
+              -0.26743864723940913,
+              1.5811057321606847
+            ],
+            "expression": "(0.0192314 + 0.0153087*u + 0.0648878*u^2) / (1 - 0.267439*u + 1.58111*u^2)",
+            "complexity": 5,
+            "fit_mse": 9.634743276595256e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.01156706970678489,
+              0.2981743303863685,
+              -0.2967211755365874,
+              0.036845512012947584,
+              0.004178441300922736
+            ],
+            "expression": "0.0115671 + 0.298174*u - 0.296721*u^2 + 0.0368455*u^3 + 0.00417844*u^4",
+            "complexity": 5,
+            "fit_mse": 1.1345006998221596e-10,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.02988517466404751,
+            "compression_absolute_error": 0.000503806839827825,
+            "symbolic_absolute_error": 0.029944958115955687,
+            "rho": 0.016858085839930363,
+            "BIR": 1.0020004384307681
+          },
+          "R": {
+            "neural_absolute_error": 0.8782456610263248,
+            "compression_absolute_error": 0.00017184544232143374,
+            "symbolic_absolute_error": 0.8782483045482927,
+            "rho": 0.00019566899097527428,
+            "BIR": 1.0000030100028787
+          }
+        },
+        "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557"
+      },
+      "frozen_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.019231379068255696,
+              0.015308684492096112,
+              0.06488777385697042,
+              -0.26743864723940913,
+              1.5811057321606847
+            ],
+            "expression": "(0.0192314 + 0.0153087*u + 0.0648878*u^2) / (1 - 0.267439*u + 1.58111*u^2)",
+            "complexity": 5,
+            "fit_mse": 9.634743276595256e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.01156706970678489,
+              0.2981743303863685,
+              -0.2967211755365874,
+              0.036845512012947584,
+              0.004178441300922736
+            ],
+            "expression": "0.0115671 + 0.298174*u - 0.296721*u^2 + 0.0368455*u^3 + 0.00417844*u^4",
+            "complexity": 5,
+            "fit_mse": 1.1345006998221596e-10,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "3139490d0c3a8b53d9f181f5529a49b141a778ce125b95d9717c6f370192d989",
+        "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557"
+      },
+      "neural_adam_final": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_0/neural_adam_20000.npz",
+        "native_file_sha256": "ffeec7eca363e3a5cca00cef244bb854b85cb913b8f60e97b8aa5513e2ecb23e",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.7755575615628914e-17,
+            "R": 1.1102230246251565e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.0007170409982016332,
+          "R": 0.014599696450243482,
+          "min_D": 0.010145224119828412,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0007170409982016332,
+          "R_visited": 0.014599696450243482,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.0006655808477399838,
+          "R": 0.014808849159817518,
+          "min_D": 0.010010383001535693,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0006655808477399838,
+          "R_visited": 0.014808849159817518,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.045029204228726694,
+              -0.035018821227191,
+              -2.5
+            ],
+            "expression": "0.0450292 + -0.0350188*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 7.690868032276455e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.001581988723593037,
+              0.8107592421593479,
+              -0.7071437561582586,
+              0.5937033538529933,
+              0.4701399852357259
+            ],
+            "expression": "(0.00158199 + 0.810759*u - 0.707144*u^2) / (1 + 0.593703*u + 0.47014*u^2)",
+            "complexity": 5,
+            "fit_mse": 8.326304048042448e-07,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.00043945085123427044,
+            "compression_absolute_error": 0.00016103506617660493,
+            "symbolic_absolute_error": 0.00040791261704440854,
+            "rho": 0.36644613549913785,
+            "BIR": 0.928232624646689
+          },
+          "R": {
+            "neural_absolute_error": 0.029294096624859663,
+            "compression_absolute_error": 0.014669272994232577,
+            "symbolic_absolute_error": 0.029713758753075407,
+            "rho": 0.5007586744212444,
+            "BIR": 1.0143258259023973
+          }
+        },
+        "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557"
+      },
+      "frozen_adam_final": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.045029204228726694,
+              -0.035018821227191,
+              -2.5
+            ],
+            "expression": "0.0450292 + -0.0350188*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 7.690868032276455e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.001581988723593037,
+              0.8107592421593479,
+              -0.7071437561582586,
+              0.5937033538529933,
+              0.4701399852357259
+            ],
+            "expression": "(0.00158199 + 0.810759*u - 0.707144*u^2) / (1 + 0.593703*u + 0.47014*u^2)",
+            "complexity": 5,
+            "fit_mse": 8.326304048042448e-07,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "ffeec7eca363e3a5cca00cef244bb854b85cb913b8f60e97b8aa5513e2ecb23e",
+        "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557"
+      },
+      "neural_lbfgs_float64": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_0/neural_lbfgs_float64.npz",
+        "native_file_sha256": "5738361ecdc15416e29f57b3335c12ea6c87ca22b4a4e8ded93d843e93aa3b9b",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float64",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.0816681711721685e-17,
+            "R": 1.1102230246251565e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.0008759862624180848,
+          "R": 0.01386707784934509,
+          "min_D": 0.010142539449432966,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0008759862624180848,
+          "R_visited": 0.01386707784934509,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.0008359444690569641,
+          "R": 0.014089497791154768,
+          "min_D": 0.01000796853827416,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0008359444690569641,
+          "R_visited": 0.014089497791154768,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.04503769219030489,
+              -0.03502972365203073,
+              -2.5
+            ],
+            "expression": "0.0450377 + -0.0350297*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 7.398388834943464e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.0018622162016356473,
+              0.8107899314480509,
+              -0.7073692813079568,
+              0.5929423733407005,
+              0.47067074598442704
+            ],
+            "expression": "(0.00186222 + 0.81079*u - 0.707369*u^2) / (1 + 0.592942*u + 0.470671*u^2)",
+            "complexity": 5,
+            "fit_mse": 8.345149068725014e-07,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.0005368631774956122,
+            "compression_absolute_error": 0.00015864692649694614,
+            "symbolic_absolute_error": 0.0005123228789330144,
+            "rho": 0.2955071853447106,
+            "BIR": 0.9542894733867301
+          },
+          "R": {
+            "neural_absolute_error": 0.02782410715233682,
+            "compression_absolute_error": 0.014685932467427578,
+            "symbolic_absolute_error": 0.028270389805464157,
+            "rho": 0.5278132515455819,
+            "BIR": 1.0160394240391593
+          }
+        },
+        "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557"
+      },
+      "frozen_lbfgs_float64": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.04503769219030489,
+              -0.03502972365203073,
+              -2.5
+            ],
+            "expression": "0.0450377 + -0.0350297*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 7.398388834943464e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.0018622162016356473,
+              0.8107899314480509,
+              -0.7073692813079568,
+              0.5929423733407005,
+              0.47067074598442704
+            ],
+            "expression": "(0.00186222 + 0.81079*u - 0.707369*u^2) / (1 + 0.592942*u + 0.470671*u^2)",
+            "complexity": 5,
+            "fit_mse": 8.345149068725014e-07,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "5738361ecdc15416e29f57b3335c12ea6c87ca22b4a4e8ded93d843e93aa3b9b",
+        "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557"
+      },
+      "refit_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.010057373743186262,
+              0.10107481753634262,
+              0.04966246036804843,
+              1.531910748882327,
+              1.2851797821529416
+            ],
+            "expression": "(0.049662460368048431*x0**2 + 0.10107481753634262*x0 + 0.010057373743186262)/(1.2851797821529416*x0**2 + 1.5319107488823269*x0 + 1)",
+            "complexity": 5,
+            "fit_mse": 3.421405792565367e-06,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0056583493874746826,
+              0.8061901086029679,
+              -1.258055030528635,
+              0.6091034674087159,
+              -0.11203229945168423
+            ],
+            "expression": "-0.11203229945168423*x0**4 + 0.6091034674087159*x0**3 - 1.2580550305286351*x0**2 + 0.80619010860296791*x0 + 0.0056583493874746826",
+            "complexity": 5,
+            "fit_mse": 0.0030388604689011106,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "3139490d0c3a8b53d9f181f5529a49b141a778ce125b95d9717c6f370192d989",
+        "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557",
+        "parameter_policy": "All coefficient slots and rates in the selected family are independent; family and degrees fixed; no reaction anchor"
+      }
+    },
+    "source": "outputs/reviewer-supplement-2026-10-12/evidence/matched_validation/sameobs_case_exp_clean_0.json"
+  },
+  {
+    "id": "sameobs_case_exp_clean_1",
+    "config": {
+      "case": "case_exp",
+      "setting": "clean",
+      "seed": 1
+    },
+    "source_sha256": "4db9387a495de90b458cb00d635180d573e2a9bffc6f151860431ebf589cbf2d",
+    "descriptors": {
+      "weak_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.017965865811269622,
+          0.0403963654441584,
+          -0.015404468613609253
+        ],
+        "parameters_R": [
+          0.028301225676930764,
+          0.5440178818807352,
+          -0.6796624845192413,
+          0.16600731517990708
+        ],
+        "fit_mse": 0.00014158587625605926,
+        "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5",
+        "metrics": {
+          "D": 0.050026680470431496,
+          "R": 0.07160206487316798,
+          "min_D": 0.017965865811269622,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.050026680470431496,
+          "R_visited": 0.07160206487316798,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "strong_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.015447983038708585,
+          0.04497449389367009,
+          -0.01760158027315103
+        ],
+        "parameters_R": [
+          0.1611993635980961,
+          -0.025499222869860637,
+          -0.04057347529887258,
+          -0.04541553822827681
+        ],
+        "fit_mse": 0.024267891342573015,
+        "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5",
+        "metrics": {
+          "D": 0.04574363922389382,
+          "R": 0.29792984174190174,
+          "min_D": 0.015447983038708585,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.04574363922389382,
+          "R_visited": 0.29792984174190174,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "spacetime_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.018005442503331862,
+          0.040403520223003545,
+          -0.01544828618329994
+        ],
+        "parameters_R": [
+          0.029933623355921573,
+          0.5354288226599889,
+          -0.6672642886859821,
+          0.16101862112023974
+        ],
+        "fit_mse": 3.105174266724676e-06,
+        "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5",
+        "metrics": {
+          "D": 0.05057806892693542,
+          "R": 0.07252123080686536,
+          "min_D": 0.018005442503331862,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.05057806892693542,
+          "R_visited": 0.07252123080686536,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "neural_150": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_1/neural_adam_150.npz",
+        "native_file_sha256": "19165589bb7e78e11422a7f1931a1dfbcca96c67f2ef9a88507ef2b9b48a1a3c",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.7755575615628914e-17,
+            "R": 6.938893903907228e-17
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.047132098129449275,
+          "R": 0.431332383298979,
+          "min_D": 0.018919886317517693,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.047132098129449275,
+          "R_visited": 0.431332383298979,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.04702885078892501,
+          "R": 0.43133451903129266,
+          "min_D": 0.018851662180624788,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.04702885078892501,
+          "R_visited": 0.43133451903129266,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.018851662180624788,
+              0.020235771906432908,
+              0.035818938038792034,
+              -0.30738177005055556,
+              1.0437192886101545
+            ],
+            "expression": "(0.0188517 + 0.0202358*u + 0.0358189*u^2) / (1 - 0.307382*u + 1.04372*u^2)",
+            "complexity": 5,
+            "fit_mse": 8.002301486542263e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.01677797699207138,
+              0.2712671830801718,
+              -0.26633615258268317,
+              0.025486108714557087,
+              0.004653481485195454
+            ],
+            "expression": "0.016778 + 0.271267*u - 0.266336*u^2 + 0.0254861*u^3 + 0.00465348*u^4",
+            "complexity": 5,
+            "fit_mse": 2.8817692473618096e-10,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.028885713223359272,
+            "compression_absolute_error": 0.00045419532733069565,
+            "symbolic_absolute_error": 0.0288224363231613,
+            "rho": 0.01572387442257778,
+            "BIR": 0.9978094049570914
+          },
+          "R": {
+            "neural_absolute_error": 0.8654626866287053,
+            "compression_absolute_error": 0.00027386498885737155,
+            "symbolic_absolute_error": 0.8654669719471688,
+            "rho": 0.00031643766171384716,
+            "BIR": 1.0000049514768572
+          }
+        },
+        "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5"
+      },
+      "frozen_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.018851662180624788,
+              0.020235771906432908,
+              0.035818938038792034,
+              -0.30738177005055556,
+              1.0437192886101545
+            ],
+            "expression": "(0.0188517 + 0.0202358*u + 0.0358189*u^2) / (1 - 0.307382*u + 1.04372*u^2)",
+            "complexity": 5,
+            "fit_mse": 8.002301486542263e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.01677797699207138,
+              0.2712671830801718,
+              -0.26633615258268317,
+              0.025486108714557087,
+              0.004653481485195454
+            ],
+            "expression": "0.016778 + 0.271267*u - 0.266336*u^2 + 0.0254861*u^3 + 0.00465348*u^4",
+            "complexity": 5,
+            "fit_mse": 2.8817692473618096e-10,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "19165589bb7e78e11422a7f1931a1dfbcca96c67f2ef9a88507ef2b9b48a1a3c",
+        "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5"
+      },
+      "neural_adam_final": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_1/neural_adam_20000.npz",
+        "native_file_sha256": "de676f7c82194633d436967da80ed0ed2bdd56c376fe33e0a6cacf3d7656364b",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 4.163336342344337e-17,
+            "R": 1.6653345369377348e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.0007583672318180203,
+          "R": 0.007596814772639108,
+          "min_D": 0.010124746157932586,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0007583672318180203,
+          "R_visited": 0.007596814772639108,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.0007268501827593349,
+          "R": 0.006793024880308207,
+          "min_D": 0.010011331275003726,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0007268501827593349,
+          "R_visited": 0.006793024880308207,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.045031894165323196,
+              -0.03502056289031947,
+              -2.5
+            ],
+            "expression": "0.0450319 + -0.0350206*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.8382000942609334e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.00016988387784482622,
+              0.8546212818567159,
+              -0.743342761131926,
+              0.7677540769791492,
+              0.40890782855141466
+            ],
+            "expression": "(0.000169884 + 0.854621*u - 0.743343*u^2) / (1 + 0.767754*u + 0.408908*u^2)",
+            "complexity": 5,
+            "fit_mse": 2.8187417213918966e-07,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.0004647783409964678,
+            "compression_absolute_error": 0.0001302840453911286,
+            "symbolic_absolute_error": 0.00044546257792020246,
+            "rho": 0.28031436471803817,
+            "BIR": 0.9584409139314601
+          },
+          "R": {
+            "neural_absolute_error": 0.01524290773779341,
+            "compression_absolute_error": 0.008522487210439526,
+            "symbolic_absolute_error": 0.013630114016206528,
+            "rho": 0.5591116443819174,
+            "BIR": 0.8941938277571473
+          }
+        },
+        "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5"
+      },
+      "frozen_adam_final": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.045031894165323196,
+              -0.03502056289031947,
+              -2.5
+            ],
+            "expression": "0.0450319 + -0.0350206*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.8382000942609334e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.00016988387784482622,
+              0.8546212818567159,
+              -0.743342761131926,
+              0.7677540769791492,
+              0.40890782855141466
+            ],
+            "expression": "(0.000169884 + 0.854621*u - 0.743343*u^2) / (1 + 0.767754*u + 0.408908*u^2)",
+            "complexity": 5,
+            "fit_mse": 2.8187417213918966e-07,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "de676f7c82194633d436967da80ed0ed2bdd56c376fe33e0a6cacf3d7656364b",
+        "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5"
+      },
+      "neural_lbfgs_float64": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_1/neural_lbfgs_float64.npz",
+        "native_file_sha256": "e47a49a859f24005daaee10d42bb1069ac9a6628eddff62bd58041bd7f72b919",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float64",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 3.469446951953614e-17,
+            "R": 1.6653345369377348e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.0007512335080113902,
+          "R": 0.007618500497780275,
+          "min_D": 0.01012311754750815,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0007512335080113902,
+          "R_visited": 0.007618500497780275,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.0007194306657396485,
+          "R": 0.006817186146187288,
+          "min_D": 0.010009363822139863,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0007194306657396485,
+          "R_visited": 0.006817186146187288,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.045031948263885624,
+              -0.03502258444174576,
+              -2.5
+            ],
+            "expression": "0.0450319 + -0.0350226*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.876187200310847e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.00016093332875399547,
+              0.8546254506888175,
+              -0.7433379849560673,
+              0.7677142513092767,
+              0.408932228476166
+            ],
+            "expression": "(0.000160933 + 0.854625*u - 0.743338*u^2) / (1 + 0.767714*u + 0.408932*u^2)",
+            "complexity": 5,
+            "fit_mse": 2.8192499641838445e-07,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.00046040631623476484,
+            "compression_absolute_error": 0.0001307568570915252,
+            "symbolic_absolute_error": 0.0004409153998951999,
+            "rho": 0.2840031782380049,
+            "BIR": 0.9576658363443773
+          },
+          "R": {
+            "neural_absolute_error": 0.015286419856680982,
+            "compression_absolute_error": 0.008523256551109625,
+            "symbolic_absolute_error": 0.01367859327463857,
+            "rho": 0.5575704861583077,
+            "BIR": 0.8948199384082921
+          }
+        },
+        "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5"
+      },
+      "frozen_lbfgs_float64": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.045031948263885624,
+              -0.03502258444174576,
+              -2.5
+            ],
+            "expression": "0.0450319 + -0.0350226*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.876187200310847e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.00016093332875399547,
+              0.8546254506888175,
+              -0.7433379849560673,
+              0.7677142513092767,
+              0.408932228476166
+            ],
+            "expression": "(0.000160933 + 0.854625*u - 0.743338*u^2) / (1 + 0.767714*u + 0.408932*u^2)",
+            "complexity": 5,
+            "fit_mse": 2.8192499641838445e-07,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "e47a49a859f24005daaee10d42bb1069ac9a6628eddff62bd58041bd7f72b919",
+        "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5"
+      },
+      "refit_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.010032827501433125,
+              0.10147646556709584,
+              0.049503332396398814,
+              1.5424190179204316,
+              1.2798417343039175
+            ],
+            "expression": "(0.049503332396398814*x0**2 + 0.10147646556709584*x0 + 0.010032827501433125)/(1.2798417343039175*x0**2 + 1.5424190179204316*x0 + 1)",
+            "complexity": 5,
+            "fit_mse": 3.1949241666471657e-06,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.004760884412022307,
+              0.8120163846868815,
+              -1.2669792427518205,
+              0.6123286690081557,
+              -0.11170356806185865
+            ],
+            "expression": "-0.11170356806185865*x0**4 + 0.61232866900815575*x0**3 - 1.2669792427518205*x0**2 + 0.81201638468688153*x0 + 0.0047608844120223068",
+            "complexity": 5,
+            "fit_mse": 0.002920344739046466,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "19165589bb7e78e11422a7f1931a1dfbcca96c67f2ef9a88507ef2b9b48a1a3c",
+        "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5",
+        "parameter_policy": "All coefficient slots and rates in the selected family are independent; family and degrees fixed; no reaction anchor"
+      }
+    },
+    "source": "outputs/reviewer-supplement-2026-10-12/evidence/matched_validation/sameobs_case_exp_clean_1.json"
+  },
+  {
+    "id": "sameobs_case_exp_clean_2",
+    "config": {
+      "case": "case_exp",
+      "setting": "clean",
+      "seed": 2
+    },
+    "source_sha256": "438bc71415f22e80b082f0bdc4d4efca6b7ffdff9850d865171d91820269e952",
+    "descriptors": {
+      "weak_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.0189229381866341,
+          0.03815627480897786,
+          -0.014325134254079197
+        ],
+        "parameters_R": [
+          -0.006709621392965924,
+          0.7131419084924943,
+          -0.8758406476765254,
+          0.23067801900267443
+        ],
+        "fit_mse": 0.00015135065493596215,
+        "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f",
+        "metrics": {
+          "D": 0.05439203218748791,
+          "R": 0.08064798538523195,
+          "min_D": 0.0189229381866341,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.05439203218748791,
+          "R_visited": 0.08064798538523195,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "strong_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.014985763484884644,
+          0.046482163223468306,
+          -0.018406875304697232
+        ],
+        "parameters_R": [
+          0.20893351738306834,
+          -0.31801100977252506,
+          0.323395824931386,
+          -0.17007208762948853
+        ],
+        "fit_mse": 0.02209213293751484,
+        "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f",
+        "metrics": {
+          "D": 0.046401362703734246,
+          "R": 0.41307014781120527,
+          "min_D": 0.014985763484884644,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.046401362703734246,
+          "R_visited": 0.41307014781120527,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "spacetime_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.018976864230198887,
+          0.03817439168259504,
+          -0.014379961891047907
+        ],
+        "parameters_R": [
+          -0.006765747494862216,
+          0.7101179850054136,
+          -0.8686181604684834,
+          0.22720849651084787
+        ],
+        "fit_mse": 3.315319440992055e-06,
+        "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f",
+        "metrics": {
+          "D": 0.05507154908946066,
+          "R": 0.08153581710078536,
+          "min_D": 0.018976864230198887,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.05507154908946066,
+          "R_visited": 0.08153581710078536,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "neural_150": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_2/neural_adam_150.npz",
+        "native_file_sha256": "c7bd46f39fac2ca5e627b0edbad2c54206fe749a049d3059fcfd9c6741229b3e",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.7755575615628914e-17,
+            "R": 5.551115123125783e-17
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.047275804874814475,
+          "R": 0.45090298588201105,
+          "min_D": 0.018589787920556242,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.047275804874814475,
+          "R_visited": 0.45090298588201105,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.047058483974932425,
+          "R": 0.4509056121866747,
+          "min_D": 0.018356906313527363,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.047058483974932425,
+          "R_visited": 0.4509056121866747,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.018356906313527363,
+              0.024399447504042937,
+              0.016923192288819274,
+              -0.34136686899938584,
+              0.7090302157357717
+            ],
+            "expression": "(0.0183569 + 0.0243994*u + 0.0169232*u^2) / (1 - 0.341367*u + 0.70903*u^2)",
+            "complexity": 5,
+            "fit_mse": 4.665763287406002e-09,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.011472507549543702,
+              0.24745161783778932,
+              -0.2299695234440255,
+              0.014082001347335754,
+              0.0032753999414006363
+            ],
+            "expression": "0.0114725 + 0.247452*u - 0.22997*u^2 + 0.014082*u^3 + 0.0032754*u^4",
+            "complexity": 5,
+            "fit_mse": 5.796664227196276e-10,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.028973786362464615,
+            "compression_absolute_error": 0.0010996295524935392,
+            "symbolic_absolute_error": 0.028840597528515526,
+            "rho": 0.03795256645911158,
+            "BIR": 0.9954031263886989
+          },
+          "R": {
+            "neural_absolute_error": 0.9047308402528519,
+            "compression_absolute_error": 0.0003886566321291473,
+            "symbolic_absolute_error": 0.9047361098982069,
+            "rho": 0.0004295826060494705,
+            "BIR": 1.0000058245448487
+          }
+        },
+        "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f"
+      },
+      "frozen_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.018356906313527363,
+              0.024399447504042937,
+              0.016923192288819274,
+              -0.34136686899938584,
+              0.7090302157357717
+            ],
+            "expression": "(0.0183569 + 0.0243994*u + 0.0169232*u^2) / (1 - 0.341367*u + 0.70903*u^2)",
+            "complexity": 5,
+            "fit_mse": 4.665763287406002e-09,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.011472507549543702,
+              0.24745161783778932,
+              -0.2299695234440255,
+              0.014082001347335754,
+              0.0032753999414006363
+            ],
+            "expression": "0.0114725 + 0.247452*u - 0.22997*u^2 + 0.014082*u^3 + 0.0032754*u^4",
+            "complexity": 5,
+            "fit_mse": 5.796664227196276e-10,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "c7bd46f39fac2ca5e627b0edbad2c54206fe749a049d3059fcfd9c6741229b3e",
+        "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f"
+      },
+      "neural_adam_final": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_2/neural_adam_20000.npz",
+        "native_file_sha256": "f9f2c1622c0a017e8a64de4b80f78ec09a8c9a185df2c0436037b33885707480",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.0816681711721685e-17,
+            "R": 1.1102230246251565e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.000675164148258561,
+          "R": 0.0062672980947997324,
+          "min_D": 0.01012061278202762,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.000675164148258561,
+          "R_visited": 0.0062672980947997324,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.0006404602410316358,
+          "R": 0.00462740647346347,
+          "min_D": 0.010010415446522265,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0006404602410316358,
+          "R_visited": 0.00462740647346347,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.04502801285083179,
+              -0.03501759740430953,
+              -2.5
+            ],
+            "expression": "0.045028 + -0.0350176*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.726168372061514e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.21893552477537268,
+              1.0954694386393513,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218936*u + 1.09547*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 2.6852715099064703e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.00041378590682990886,
+            "compression_absolute_error": 0.00012815244840841663,
+            "symbolic_absolute_error": 0.00039251702316736136,
+            "rho": 0.3097071366935053,
+            "BIR": 0.9485993038634583
+          },
+          "R": {
+            "neural_absolute_error": 0.012575250217808493,
+            "compression_absolute_error": 0.008384272954390853,
+            "symbolic_absolute_error": 0.009284829504375026,
+            "rho": 0.6667281214426596,
+            "BIR": 0.738341531465217
+          }
+        },
+        "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f"
+      },
+      "frozen_adam_final": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.04502801285083179,
+              -0.03501759740430953,
+              -2.5
+            ],
+            "expression": "0.045028 + -0.0350176*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.726168372061514e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.21893552477537268,
+              1.0954694386393513,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218936*u + 1.09547*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 2.6852715099064703e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "f9f2c1622c0a017e8a64de4b80f78ec09a8c9a185df2c0436037b33885707480",
+        "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f"
+      },
+      "neural_lbfgs_float64": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_2/neural_lbfgs_float64.npz",
+        "native_file_sha256": "d9c2fa8dd9a93779daa65f64eb54ce43e902f5f00122727f6e083ddad24521a4",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float64",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 3.469446951953614e-17,
+            "R": 1.1102230246251565e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.0005871455562649901,
+          "R": 0.006722423333818788,
+          "min_D": 0.010119953267865849,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0005871455562649901,
+          "R_visited": 0.006722423333818788,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.0005460654404455022,
+          "R": 0.005132488339660689,
+          "min_D": 0.010009001805318996,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0005460654404455022,
+          "R_visited": 0.005132488339660689,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.04502385847121275,
+              -0.035014856665893754,
+              -2.5
+            ],
+            "expression": "0.0450239 + -0.0350149*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.8738187469331434e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.2188224746088551,
+              1.0948155237929624,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218822*u + 1.09482*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 2.8378807357508796e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.0003598422058797159,
+            "compression_absolute_error": 0.00012981243118543304,
+            "symbolic_absolute_error": 0.0003346655536227973,
+            "rho": 0.3607482086990799,
+            "BIR": 0.9300341876368599
+          },
+          "R": {
+            "neural_absolute_error": 0.013488452952788247,
+            "compression_absolute_error": 0.00861009681496228,
+            "symbolic_absolute_error": 0.010298269546931457,
+            "rho": 0.6383309372171146,
+            "BIR": 0.7634878205066997
+          }
+        },
+        "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f"
+      },
+      "frozen_lbfgs_float64": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.04502385847121275,
+              -0.035014856665893754,
+              -2.5
+            ],
+            "expression": "0.0450239 + -0.0350149*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.8738187469331434e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.2188224746088551,
+              1.0948155237929624,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218822*u + 1.09482*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 2.8378807357508796e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "d9c2fa8dd9a93779daa65f64eb54ce43e902f5f00122727f6e083ddad24521a4",
+        "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f"
+      },
+      "refit_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.010034013707610215,
+              0.10154614742890333,
+              0.04875431030092218,
+              1.540867199973106,
+              1.265265347282379
+            ],
+            "expression": "(0.048754310300922178*x0**2 + 0.10154614742890333*x0 + 0.010034013707610215)/(1.2652653472823789*x0**2 + 1.5408671999731061*x0 + 1)",
+            "complexity": 5,
+            "fit_mse": 3.2106751881163305e-06,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0035407895340504756,
+              0.8187650754210664,
+              -1.2779787195159849,
+              0.6202605788394061,
+              -0.11388530669815615
+            ],
+            "expression": "-0.11388530669815615*x0**4 + 0.62026057883940611*x0**3 - 1.2779787195159849*x0**2 + 0.81876507542106636*x0 + 0.0035407895340504756",
+            "complexity": 5,
+            "fit_mse": 0.003211485200010034,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "c7bd46f39fac2ca5e627b0edbad2c54206fe749a049d3059fcfd9c6741229b3e",
+        "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f",
+        "parameter_policy": "All coefficient slots and rates in the selected family are independent; family and degrees fixed; no reaction anchor"
+      }
+    },
+    "source": "outputs/reviewer-supplement-2026-10-12/evidence/matched_validation/sameobs_case_exp_clean_2.json"
+  },
+  {
+    "id": "sameobs_case_exp_clean_3",
+    "config": {
+      "case": "case_exp",
+      "setting": "clean",
+      "seed": 3
+    },
+    "source_sha256": "53c3610da0a9cfd9d7db24bb496ac835393554b61f90240f1d555fea2cead91b",
+    "descriptors": {
+      "weak_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.017896477397847266,
+          0.04103268252214595,
+          -0.015832685748559595
+        ],
+        "parameters_R": [
+          0.008189987613825245,
+          0.5814646236634632,
+          -0.700529540932544,
+          0.17030759641299872
+        ],
+        "fit_mse": 0.00020563952355717898,
+        "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907",
+        "metrics": {
+          "D": 0.05110562670351775,
+          "R": 0.1070372447294885,
+          "min_D": 0.017896477397847266,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.05110562670351775,
+          "R_visited": 0.1070372447294885,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "strong_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.015554589007774884,
+          0.045237423952382796,
+          -0.017770392781678072
+        ],
+        "parameters_R": [
+          0.1229659562512663,
+          0.030128038715299555,
+          -0.07500477321215084,
+          -0.034652693991574064
+        ],
+        "fit_mse": 0.02674224158391768,
+        "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907",
+        "metrics": {
+          "D": 0.045459831266706885,
+          "R": 0.2655286532185614,
+          "min_D": 0.015554589007774884,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.045459831266706885,
+          "R_visited": 0.2655286532185614,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "spacetime_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.017903208194693064,
+          0.04119106319374162,
+          -0.015980881280027642
+        ],
+        "parameters_R": [
+          0.008154381599462577,
+          0.5782308393850257,
+          -0.6921736720084114,
+          0.1660671349670646
+        ],
+        "fit_mse": 4.527043500916858e-06,
+        "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907",
+        "metrics": {
+          "D": 0.051923182115898525,
+          "R": 0.10742033720290219,
+          "min_D": 0.017903208194693064,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.051923182115898525,
+          "R_visited": 0.10742033720290219,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "neural_150": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_3/neural_adam_150.npz",
+        "native_file_sha256": "d7c78b2536d7de397f893c33b6e401e5576323b8aec9d9e5f754657d2eccccad",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.0816681711721685e-17,
+            "R": 6.938893903907228e-17
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.04744896734983926,
+          "R": 0.4280467488304407,
+          "min_D": 0.01882091412834698,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.04744896734983926,
+          "R_visited": 0.4280467488304407,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.04726016435396475,
+          "R": 0.42805267426170174,
+          "min_D": 0.018600163335050462,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.04726016435396475,
+          "R_visited": 0.42805267426170174,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.018600163335050462,
+              0.024420495335138234,
+              0.014489286463013087,
+              -0.32118356858202873,
+              0.6464792915026778
+            ],
+            "expression": "(0.0186002 + 0.0244205*u + 0.0144893*u^2) / (1 - 0.321184*u + 0.646479*u^2)",
+            "complexity": 5,
+            "fit_mse": 4.107856024525578e-09,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.009180765619247855,
+              0.2549431630223647,
+              -0.23005611511752133,
+              0.0070620348584269355,
+              0.004625618115118996
+            ],
+            "expression": "0.00918077 + 0.254943*u - 0.230056*u^2 + 0.00706203*u^3 + 0.00462562*u^4",
+            "complexity": 5,
+            "fit_mse": 2.624893794767818e-09,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.029079911949763428,
+            "compression_absolute_error": 0.0010319995036437311,
+            "symbolic_absolute_error": 0.028964200801501715,
+            "rho": 0.035488398500880834,
+            "BIR": 0.9960209250818363
+          },
+          "R": {
+            "neural_absolute_error": 0.8588701047950107,
+            "compression_absolute_error": 0.0008271078949984764,
+            "symbolic_absolute_error": 0.8588819940939764,
+            "rho": 0.0009630186105917436,
+            "BIR": 1.0000138429535494
+          }
+        },
+        "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907"
+      },
+      "frozen_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.018600163335050462,
+              0.024420495335138234,
+              0.014489286463013087,
+              -0.32118356858202873,
+              0.6464792915026778
+            ],
+            "expression": "(0.0186002 + 0.0244205*u + 0.0144893*u^2) / (1 - 0.321184*u + 0.646479*u^2)",
+            "complexity": 5,
+            "fit_mse": 4.107856024525578e-09,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.009180765619247855,
+              0.2549431630223647,
+              -0.23005611511752133,
+              0.0070620348584269355,
+              0.004625618115118996
+            ],
+            "expression": "0.00918077 + 0.254943*u - 0.230056*u^2 + 0.00706203*u^3 + 0.00462562*u^4",
+            "complexity": 5,
+            "fit_mse": 2.624893794767818e-09,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "d7c78b2536d7de397f893c33b6e401e5576323b8aec9d9e5f754657d2eccccad",
+        "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907"
+      },
+      "neural_adam_final": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_3/neural_adam_20000.npz",
+        "native_file_sha256": "d62e0a3987fdce8f02123edb4575316d76e3a99fb548c03f22ed386d8c8034fc",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.7755575615628914e-17,
+            "R": 1.1102230246251565e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.0007168978139629899,
+          "R": 0.009966382916122066,
+          "min_D": 0.010112656314758842,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0007168978139629899,
+          "R_visited": 0.009966382916122066,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.0006837806062998806,
+          "R": 0.00803591247198246,
+          "min_D": 0.00999924626803464,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0006837806062998806,
+          "R_visited": 0.00803591247198246,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.04503209764733364,
+              -0.035032851379299,
+              -2.5
+            ],
+            "expression": "0.0450321 + -0.0350329*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 5.0698727500723184e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.21816435093994796,
+              1.0917047158277025,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218164*u + 1.0917*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 5.200595563998526e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.0004393630983223547,
+            "compression_absolute_error": 0.00013240807589887135,
+            "symbolic_absolute_error": 0.000419066650651223,
+            "rho": 0.3013636702864958,
+            "BIR": 0.9538048421712456
+          },
+          "R": {
+            "neural_absolute_error": 0.019997414681889595,
+            "compression_absolute_error": 0.01166695830903278,
+            "symbolic_absolute_error": 0.01612395142771911,
+            "rho": 0.5834233321969771,
+            "BIR": 0.8063017987180895
+          }
+        },
+        "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907"
+      },
+      "frozen_adam_final": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.04503209764733364,
+              -0.035032851379299,
+              -2.5
+            ],
+            "expression": "0.0450321 + -0.0350329*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 5.0698727500723184e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.21816435093994796,
+              1.0917047158277025,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218164*u + 1.0917*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 5.200595563998526e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "d62e0a3987fdce8f02123edb4575316d76e3a99fb548c03f22ed386d8c8034fc",
+        "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907"
+      },
+      "neural_lbfgs_float64": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_3/neural_lbfgs_float64.npz",
+        "native_file_sha256": "f448f93945f07224867447a88cd95ece43ce0342d688892401e0cb31a7d82eb6",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float64",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 3.469446951953614e-17,
+            "R": 1.1102230246251565e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.0006877103859674715,
+          "R": 0.01007850614424962,
+          "min_D": 0.010117968031934637,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0006877103859674715,
+          "R_visited": 0.01007850614424962,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.0006522252952410733,
+          "R": 0.008168425864441655,
+          "min_D": 0.010005273214969905,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0006522252952410733,
+          "R_visited": 0.008168425864441655,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.045029586023229505,
+              -0.0350243128082596,
+              -2.5
+            ],
+            "expression": "0.0450296 + -0.0350243*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 5.094770479307524e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.218138701861724,
+              1.091495346551563,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218139*u + 1.0915*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 5.216725862386755e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.0004214750833969338,
+            "compression_absolute_error": 0.00013243268161654422,
+            "symbolic_absolute_error": 0.0003997274380531512,
+            "rho": 0.3142123623280067,
+            "BIR": 0.9484011126624506
+          },
+          "R": {
+            "neural_absolute_error": 0.0202223884469164,
+            "compression_absolute_error": 0.011683539887243332,
+            "symbolic_absolute_error": 0.01638983778611137,
+            "rho": 0.5777527178806068,
+            "BIR": 0.8104798218635033
+          }
+        },
+        "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907"
+      },
+      "frozen_lbfgs_float64": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.045029586023229505,
+              -0.0350243128082596,
+              -2.5
+            ],
+            "expression": "0.0450296 + -0.0350243*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 5.094770479307524e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.218138701861724,
+              1.091495346551563,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218139*u + 1.0915*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 5.216725862386755e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "f448f93945f07224867447a88cd95ece43ce0342d688892401e0cb31a7d82eb6",
+        "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907"
+      },
+      "refit_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.010023481825828292,
+              0.10186023775176774,
+              0.046939599004083135,
+              1.542560875602635,
+              1.2279117403588533
+            ],
+            "expression": "(0.046939599004083135*x0**2 + 0.10186023775176774*x0 + 0.010023481825828292)/(1.2279117403588533*x0**2 + 1.542560875602635*x0 + 1)",
+            "complexity": 5,
+            "fit_mse": 3.230149729907907e-06,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0021842152836232423,
+              0.83297158765558,
+              -1.3082671322358392,
+              0.6433796379161424,
+              -0.11980226407673004
+            ],
+            "expression": "-0.11980226407673004*x0**4 + 0.64337963791614239*x0**3 - 1.3082671322358392*x0**2 + 0.83297158765557999*x0 + 0.0021842152836232423",
+            "complexity": 5,
+            "fit_mse": 0.0029339983860211067,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "d7c78b2536d7de397f893c33b6e401e5576323b8aec9d9e5f754657d2eccccad",
+        "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907",
+        "parameter_policy": "All coefficient slots and rates in the selected family are independent; family and degrees fixed; no reaction anchor"
+      }
+    },
+    "source": "outputs/reviewer-supplement-2026-10-12/evidence/matched_validation/sameobs_case_exp_clean_3.json"
+  },
+  {
+    "id": "sameobs_case_exp_clean_4",
+    "config": {
+      "case": "case_exp",
+      "setting": "clean",
+      "seed": 4
+    },
+    "source_sha256": "e30bca871d0994dae53cb95249c49220c237fed4762c052e7d9307cdc01f3d8a",
+    "descriptors": {
+      "weak_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.01734211651696284,
+          0.04188841651922896,
+          -0.01611358423218034
+        ],
+        "parameters_R": [
+          0.026114860898075912,
+          0.5356536595975173,
+          -0.6701099621917038,
+          0.1650590532354478
+        ],
+        "fit_mse": 0.00016432384695923708,
+        "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076",
+        "metrics": {
+          "D": 0.047710511869858786,
+          "R": 0.0893589258549613,
+          "min_D": 0.01734211651696284,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.047710511869858786,
+          "R_visited": 0.0893589258549613,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "strong_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.01423593819896858,
+          0.047058304119319314,
+          -0.018278035265012524
+        ],
+        "parameters_R": [
+          0.18836167940562065,
+          -0.19682543621091395,
+          0.13509951713359644,
+          -0.09217106124260878
+        ],
+        "fit_mse": 0.018973575019645743,
+        "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076",
+        "metrics": {
+          "D": 0.04300652268103268,
+          "R": 0.37233658024651456,
+          "min_D": 0.01423593819896858,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.04300652268103268,
+          "R_visited": 0.37233658024651456,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "spacetime_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.017382080870699652,
+          0.041944401584155966,
+          -0.016200755370050553
+        ],
+        "parameters_R": [
+          0.026124441015486246,
+          0.5325500862775494,
+          -0.6620750334418949,
+          0.16100570588314703
+        ],
+        "fit_mse": 3.6026616643037334e-06,
+        "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076",
+        "metrics": {
+          "D": 0.048468998966384624,
+          "R": 0.08867437505210995,
+          "min_D": 0.017382080870699652,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.048468998966384624,
+          "R_visited": 0.08867437505210995,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "neural_150": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_4/neural_adam_150.npz",
+        "native_file_sha256": "1dd4ae56362d09d7b5cfaac8543f2a0509bd68abfe990e8bf128aa2449e5ffd7",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.7755575615628914e-17,
+            "R": 8.326672684688674e-17
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.04550535356718,
+          "R": 0.4564499882532983,
+          "min_D": 0.018179726024212483,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.04550535356718,
+          "R_visited": 0.4564499882532983,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.04525872479232719,
+          "R": 0.45645171078415964,
+          "min_D": 0.01795635423013537,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.04525872479232719,
+          "R_visited": 0.45645171078415964,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.01795635423013537,
+              0.024021045767327144,
+              0.022816171900598484,
+              -0.34719730386760655,
+              0.8293105694075008
+            ],
+            "expression": "(0.0179564 + 0.024021*u + 0.0228162*u^2) / (1 - 0.347197*u + 0.829311*u^2)",
+            "complexity": 5,
+            "fit_mse": 4.52110422284266e-09,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.014184699244266888,
+              0.24742886220606067,
+              -0.2377325372173863,
+              0.019596320350242405,
+              0.003245046957573411
+            ],
+            "expression": "0.0141847 + 0.247429*u - 0.237733*u^2 + 0.0195963*u^3 + 0.00324505*u^4",
+            "complexity": 5,
+            "fit_mse": 2.369137870832983e-10,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.027888734969085272,
+            "compression_absolute_error": 0.0010820353823415535,
+            "symbolic_absolute_error": 0.027737584302219977,
+            "rho": 0.03879829556776212,
+            "BIR": 0.9945802250610203
+          },
+          "R": {
+            "neural_absolute_error": 0.9158608266876113,
+            "compression_absolute_error": 0.0002484015397694764,
+            "symbolic_absolute_error": 0.9158642829228599,
+            "rho": 0.00027122192862846735,
+            "BIR": 1.000003773755955
+          }
+        },
+        "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076"
+      },
+      "frozen_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.01795635423013537,
+              0.024021045767327144,
+              0.022816171900598484,
+              -0.34719730386760655,
+              0.8293105694075008
+            ],
+            "expression": "(0.0179564 + 0.024021*u + 0.0228162*u^2) / (1 - 0.347197*u + 0.829311*u^2)",
+            "complexity": 5,
+            "fit_mse": 4.52110422284266e-09,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.014184699244266888,
+              0.24742886220606067,
+              -0.2377325372173863,
+              0.019596320350242405,
+              0.003245046957573411
+            ],
+            "expression": "0.0141847 + 0.247429*u - 0.237733*u^2 + 0.0195963*u^3 + 0.00324505*u^4",
+            "complexity": 5,
+            "fit_mse": 2.369137870832983e-10,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "1dd4ae56362d09d7b5cfaac8543f2a0509bd68abfe990e8bf128aa2449e5ffd7",
+        "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076"
+      },
+      "neural_adam_final": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_4/neural_adam_20000.npz",
+        "native_file_sha256": "bfca1b94e3bf127f56ee407f41a0b77afdcfbcf76870521ca7e2c655ca28264a",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.0816681711721685e-17,
+            "R": 1.6653345369377348e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.0006815630645019913,
+          "R": 0.008071774298120383,
+          "min_D": 0.010108961559931694,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0006815630645019913,
+          "R_visited": 0.008071774298120383,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.0006516220455851823,
+          "R": 0.006118335040017898,
+          "min_D": 0.010009353378583455,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0006516220455851823,
+          "R_visited": 0.006118335040017898,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.045028759896438945,
+              -0.03501940651785549,
+              -2.5
+            ],
+            "expression": "0.0450288 + -0.0350194*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.264806473264198e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.21859231197966777,
+              1.0940850046914343,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218592*u + 1.09409*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 4.1750569579739696e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.0004177075921968611,
+            "compression_absolute_error": 0.00011998453262855492,
+            "symbolic_absolute_error": 0.0003993577261741192,
+            "rho": 0.2872452760494894,
+            "BIR": 0.9560700682354516
+          },
+          "R": {
+            "neural_absolute_error": 0.016195907704591617,
+            "compression_absolute_error": 0.01044129599853262,
+            "symbolic_absolute_error": 0.012276357830889,
+            "rho": 0.6446872993461467,
+            "BIR": 0.7579913429247682
+          }
+        },
+        "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076"
+      },
+      "frozen_adam_final": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.045028759896438945,
+              -0.03501940651785549,
+              -2.5
+            ],
+            "expression": "0.0450288 + -0.0350194*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.264806473264198e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.21859231197966777,
+              1.0940850046914343,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218592*u + 1.09409*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 4.1750569579739696e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "bfca1b94e3bf127f56ee407f41a0b77afdcfbcf76870521ca7e2c655ca28264a",
+        "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076"
+      },
+      "neural_lbfgs_float64": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_clean_4/neural_lbfgs_float64.npz",
+        "native_file_sha256": "98720d9c3f7a42b2d6c0a9de6f52b80b05c4839b01bf27b728edbb576a6190b3",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float64",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.7755575615628914e-17,
+            "R": 1.1102230246251565e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.0006818668424659565,
+          "R": 0.008065653338079537,
+          "min_D": 0.010108854176741067,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0006818668424659565,
+          "R_visited": 0.008065653338079537,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.0006519756342105102,
+          "R": 0.006110823555124121,
+          "min_D": 0.010009249800852056,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0006519756342105102,
+          "R_visited": 0.006110823555124121,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.04502879776825101,
+              -0.03501954796739895,
+              -2.5
+            ],
+            "expression": "0.0450288 + -0.0350195*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.260535544900768e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.21859404082739511,
+              1.0940929763941871,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218594*u + 1.09409*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 4.174078680942065e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.00041789376772264773,
+            "compression_absolute_error": 0.00011993837842262859,
+            "symbolic_absolute_error": 0.0003995744290164627,
+            "rho": 0.2870068608015963,
+            "BIR": 0.9561626898481448
+          },
+          "R": {
+            "neural_absolute_error": 0.016183626079731502,
+            "compression_absolute_error": 0.01044010483718671,
+            "symbolic_absolute_error": 0.012261286136417516,
+            "rho": 0.6451029445287282,
+            "BIR": 0.7576352837126931
+          }
+        },
+        "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076"
+      },
+      "frozen_lbfgs_float64": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "exp_decay",
+            "parameters": [
+              0.04502879776825101,
+              -0.03501954796739895,
+              -2.5
+            ],
+            "expression": "0.0450288 + -0.0350195*exp(-2.5*u)",
+            "complexity": 3,
+            "fit_mse": 4.260535544900768e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_exp_decay",
+            "parameters": [
+              -0.21859404082739511,
+              1.0940929763941871,
+              -1.3999999999999995
+            ],
+            "expression": "-0.218594*u + 1.09409*u*exp(-1.4*u)",
+            "complexity": 3,
+            "fit_mse": 4.174078680942065e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "98720d9c3f7a42b2d6c0a9de6f52b80b05c4839b01bf27b728edbb576a6190b3",
+        "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076"
+      },
+      "refit_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.010025309838233257,
+              0.10165383222000587,
+              0.04857867305435988,
+              1.5431321003744953,
+              1.2611697412106593
+            ],
+            "expression": "(0.04857867305435988*x0**2 + 0.10165383222000587*x0 + 0.010025309838233257)/(1.2611697412106593*x0**2 + 1.5431321003744953*x0 + 1)",
+            "complexity": 5,
+            "fit_mse": 2.9824263830396116e-06,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0037262447845470706,
+              0.8178221568268644,
+              -1.276835150443479,
+              0.6193790840159245,
+              -0.11358082193736474
+            ],
+            "expression": "-0.11358082193736474*x0**4 + 0.61937908401592445*x0**3 - 1.276835150443479*x0**2 + 0.81782215682686443*x0 + 0.0037262447845470706",
+            "complexity": 5,
+            "fit_mse": 0.0032885180189328672,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "1dd4ae56362d09d7b5cfaac8543f2a0509bd68abfe990e8bf128aa2449e5ffd7",
+        "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076",
+        "parameter_policy": "All coefficient slots and rates in the selected family are independent; family and degrees fixed; no reaction anchor"
+      }
+    },
+    "source": "outputs/reviewer-supplement-2026-10-12/evidence/matched_validation/sameobs_case_exp_clean_4.json"
+  },
+  {
+    "id": "sameobs_case_exp_noise3_0",
+    "config": {
+      "case": "case_exp",
+      "setting": "noise3",
+      "seed": 0
+    },
+    "source_sha256": "7c34e9440cdf5f3b16b39c1eb7bcaf59632a17c51446f43b903bc7afe8d49608",
+    "descriptors": {
+      "weak_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.02150033092360861,
+          0.033262560632007845,
+          -0.011866496798109865
+        ],
+        "parameters_R": [
+          -0.21534489607931,
+          1.5617182854305092,
+          -1.8905829891084511,
+          0.6022643382616137
+        ],
+        "fit_mse": 1.2405719762175471,
+        "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e",
+        "metrics": {
+          "D": 0.0715358533823278,
+          "R": 0.6125308942342377,
+          "min_D": 0.02150033092360861,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0715358533823278,
+          "R_visited": 0.6125308942342377,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "strong_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          -0.0018669578182832873,
+          0.021274845297130713,
+          -0.01169427582138948
+        ],
+        "parameters_R": [
+          3.7716800927401755,
+          -8.023395882539699,
+          7.2632143875624156,
+          -2.9829573966057708
+        ],
+        "fit_mse": 83.18606849559401,
+        "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e",
+        "metrics": {
+          "D": 0.876588369452735,
+          "R": 14.69522628048493,
+          "min_D": -0.0018669578182832873,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.876588369452735,
+          "R_visited": 14.69522628048493,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "spacetime_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.018938865289904298,
+          0.03844287023736446,
+          -0.01434725973986412
+        ],
+        "parameters_R": [
+          -0.034978052802154984,
+          0.8654640053621294,
+          -1.1335865119995352,
+          0.3515246572005347
+        ],
+        "fit_mse": 2.2010792057754112e-05,
+        "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e",
+        "metrics": {
+          "D": 0.05429314526653409,
+          "R": 0.2852280518235058,
+          "min_D": 0.018938865289904298,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.05429314526653409,
+          "R_visited": 0.2852280518235058,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "neural_150": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_0/neural_adam_150.npz",
+        "native_file_sha256": "2e94f52efc296dcad240ae4e7aa173085c5571ebbe3c968e26627d7dd18d0cde",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 8.673617379884035e-18,
+            "R": 4.440892098500626e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.789870235866102,
+          "R": 4.767641132649259,
+          "min_D": 0.007687776773575306,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.789870235866102,
+          "R_visited": 4.767641132649259,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.7898674420964801,
+          "R": 4.7624935203887295,
+          "min_D": 0.007677534728209854,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.7898674420964801,
+          "R_visited": 4.7624935203887295,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.007677534728209854,
+              0.0016282007513121304,
+              -0.000795434703100986
+            ],
+            "expression": "0.00767753 + 0.0016282*u - 0.000795435*u^2",
+            "complexity": 3,
+            "fit_mse": 6.895762652432418e-12,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.46250077638742015,
+              -0.1934331559398343,
+              -0.26519773446136063,
+              -1.4240709775982912,
+              0.6840746417568386
+            ],
+            "expression": "(0.462501 - 0.193433*u - 0.265198*u^2) / (1 - 1.42407*u + 0.684075*u^2)",
+            "complexity": 5,
+            "fit_mse": 0.00017968575979475593,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.48408549634753917,
+            "compression_absolute_error": 4.229796798370563e-05,
+            "symbolic_absolute_error": 0.48408378413799796,
+            "rho": 8.737706108290151e-05,
+            "BIR": 0.9999964630017752
+          },
+          "R": {
+            "neural_absolute_error": 9.566208481694396,
+            "compression_absolute_error": 0.21480443960748877,
+            "symbolic_absolute_error": 9.55587986620152,
+            "rho": 0.02245450117656666,
+            "BIR": 0.9989203020702884
+          }
+        },
+        "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e"
+      },
+      "frozen_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.007677534728209854,
+              0.0016282007513121304,
+              -0.000795434703100986
+            ],
+            "expression": "0.00767753 + 0.0016282*u - 0.000795435*u^2",
+            "complexity": 3,
+            "fit_mse": 6.895762652432418e-12,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.46250077638742015,
+              -0.1934331559398343,
+              -0.26519773446136063,
+              -1.4240709775982912,
+              0.6840746417568386
+            ],
+            "expression": "(0.462501 - 0.193433*u - 0.265198*u^2) / (1 - 1.42407*u + 0.684075*u^2)",
+            "complexity": 5,
+            "fit_mse": 0.00017968575979475593,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "2e94f52efc296dcad240ae4e7aa173085c5571ebbe3c968e26627d7dd18d0cde",
+        "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e"
+      },
+      "neural_adam_final": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_0/neural_adam_6000.npz",
+        "native_file_sha256": "288defc2085b8e25926fa04b175921d7586f12139a2844fc929cd314a6947672",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 6.938893903907228e-18,
+            "R": 1.7763568394002505e-15
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.8479418937256634,
+          "R": 12.699593490096396,
+          "min_D": 0.002163213459591883,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8479418937256634,
+          "R_visited": 12.699593490096396,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.8479448050312008,
+          "R": 12.563687188259058,
+          "min_D": 0.0021097624803515834,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8479448050312008,
+          "R_visited": 12.563687188259058,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0028591594844621037,
+              0.004897878122808202,
+              -0.002873248371540308,
+              -0.9775095532914239,
+              0.5805486855715778
+            ],
+            "expression": "(0.00285916 + 0.00489788*u - 0.00287325*u^2) / (1 - 0.97751*u + 0.580549*u^2)",
+            "complexity": 5,
+            "fit_mse": 3.0316122298963254e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.7602063617766119,
+              9.54973585713267,
+              -25.362158892285137,
+              20.916427690121655,
+              -5.98081004589862
+            ],
+            "expression": "0.760206 + 9.54974*u - 25.3622*u^2 + 20.9164*u^3 - 5.98081*u^4",
+            "complexity": 5,
+            "fit_mse": 0.061563479414211725,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5196757060328623,
+            "compression_absolute_error": 0.0002797718050391667,
+            "symbolic_absolute_error": 0.5196774902763014,
+            "rho": 0.0005383584450674224,
+            "BIR": 1.0000034333785828
+          },
+          "R": {
+            "neural_absolute_error": 25.481565323169324,
+            "compression_absolute_error": 4.001398469064913,
+            "symbolic_absolute_error": 25.208871137264936,
+            "rho": 0.15703110928694042,
+            "BIR": 0.9892983738461139
+          }
+        },
+        "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e"
+      },
+      "frozen_adam_final": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0028591594844621037,
+              0.004897878122808202,
+              -0.002873248371540308,
+              -0.9775095532914239,
+              0.5805486855715778
+            ],
+            "expression": "(0.00285916 + 0.00489788*u - 0.00287325*u^2) / (1 - 0.97751*u + 0.580549*u^2)",
+            "complexity": 5,
+            "fit_mse": 3.0316122298963254e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.7602063617766119,
+              9.54973585713267,
+              -25.362158892285137,
+              20.916427690121655,
+              -5.98081004589862
+            ],
+            "expression": "0.760206 + 9.54974*u - 25.3622*u^2 + 20.9164*u^3 - 5.98081*u^4",
+            "complexity": 5,
+            "fit_mse": 0.061563479414211725,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "288defc2085b8e25926fa04b175921d7586f12139a2844fc929cd314a6947672",
+        "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e"
+      },
+      "neural_lbfgs_float64": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_0/neural_lbfgs_float64.npz",
+        "native_file_sha256": "de76e3576bda8483d04625bc47be3a9737ebe7f13ea1fa98234bfc9897bb2332",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float64",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 2.6020852139652106e-18,
+            "R": 1.0658141036401503e-14
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.8628609051268143,
+          "R": 14.054568234983186,
+          "min_D": 0.00023480191369672047,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8628609051268143,
+          "R_visited": 14.054568234983186,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.8628274845440905,
+          "R": 13.820546562399732,
+          "min_D": -0.0010981897858831358,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8628274845440905,
+          "R_visited": 13.820546562399732,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              -0.0009793668537681603,
+              0.02083024874519098,
+              -0.011609034158474918
+            ],
+            "expression": "-0.000979367 + 0.0208302*u - 0.011609*u^2",
+            "complexity": 3,
+            "fit_mse": 1.951401604259682e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              2.2833001047193586,
+              1.729790685998519,
+              -12.930156260549953,
+              13.194781852747838,
+              -4.354040235505705
+            ],
+            "expression": "2.2833 + 1.72979*u - 12.9302*u^2 + 13.1948*u^3 - 4.35404*u^4",
+            "complexity": 5,
+            "fit_mse": 0.11533257751659783,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.528819077578217,
+            "compression_absolute_error": 0.007122112745207602,
+            "symbolic_absolute_error": 0.5287985952019463,
+            "rho": 0.013467957279121003,
+            "BIR": 0.9999612677054608
+          },
+          "R": {
+            "neural_absolute_error": 28.20030411587184,
+            "compression_absolute_error": 5.5733997990816455,
+            "symbolic_absolute_error": 27.730742744350543,
+            "rho": 0.1976361593896711,
+            "BIR": 0.9833490671025418
+          }
+        },
+        "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e"
+      },
+      "frozen_lbfgs_float64": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              -0.0009793668537681603,
+              0.02083024874519098,
+              -0.011609034158474918
+            ],
+            "expression": "-0.000979367 + 0.0208302*u - 0.011609*u^2",
+            "complexity": 3,
+            "fit_mse": 1.951401604259682e-07,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              2.2833001047193586,
+              1.729790685998519,
+              -12.930156260549953,
+              13.194781852747838,
+              -4.354040235505705
+            ],
+            "expression": "2.2833 + 1.72979*u - 12.9302*u^2 + 13.1948*u^3 - 4.35404*u^4",
+            "complexity": 5,
+            "fit_mse": 0.11533257751659783,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "de76e3576bda8483d04625bc47be3a9737ebe7f13ea1fa98234bfc9897bb2332",
+        "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e"
+      },
+      "refit_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.018952012146120665,
+              0.03927334970840174,
+              -0.015015516985280168
+            ],
+            "expression": "-0.015015516985280168*x0**2 + 0.039273349708401739*x0 + 0.018952012146120665",
+            "complexity": 3,
+            "fit_mse": 0.000938227968774811,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              -0.8805356352697131,
+              6.384963948579087,
+              -4.770462605207435,
+              4.397560173483992,
+              12.216638245847573
+            ],
+            "expression": "(-4.7704626052074346*x0**2 + 6.3849639485790872*x0 - 0.88053563526971312)/(12.216638245847573*x0**2 + 4.397560173483992*x0 + 1)",
+            "complexity": 5,
+            "fit_mse": 0.4525686936208797,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "2e94f52efc296dcad240ae4e7aa173085c5571ebbe3c968e26627d7dd18d0cde",
+        "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e",
+        "parameter_policy": "All coefficient slots and rates in the selected family are independent; family and degrees fixed; no reaction anchor"
+      }
+    },
+    "source": "outputs/reviewer-supplement-2026-10-12/evidence/matched_validation/sameobs_case_exp_noise3_0.json"
+  },
+  {
+    "id": "sameobs_case_exp_noise3_1",
+    "config": {
+      "case": "case_exp",
+      "setting": "noise3",
+      "seed": 1
+    },
+    "source_sha256": "41eb824870da85f2b8230380af6aeec713a07b1000f515a1e1f73b0631b2f78d",
+    "descriptors": {
+      "weak_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.015621248856096937,
+          0.044654040704214075,
+          -0.0172647385984499
+        ],
+        "parameters_R": [
+          0.12707698289249722,
+          0.12156096862279583,
+          -0.21279648419169542,
+          0.016641395420646743
+        ],
+        "fit_mse": 1.6279466476388216,
+        "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10",
+        "metrics": {
+          "D": 0.042669577766036394,
+          "R": 0.23129784137640053,
+          "min_D": 0.015621248856096937,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.042669577766036394,
+          "R_visited": 0.23129784137640053,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "strong_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          -0.001473459585986168,
+          0.014855081352075377,
+          -0.007761799285847572
+        ],
+        "parameters_R": [
+          1.714967403336252,
+          0.5690703308981857,
+          -3.324677936951263,
+          0.9542168916505825
+        ],
+        "fit_mse": 108.86486556266233,
+        "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10",
+        "metrics": {
+          "D": 0.9044999889072779,
+          "R": 10.162441356927065,
+          "min_D": -0.001473459585986168,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9044999889072779,
+          "R_visited": 10.162441356927065,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "spacetime_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.017704133746963856,
+          0.04057945064817,
+          -0.015381029173077173
+        ],
+        "parameters_R": [
+          0.03870892846581265,
+          0.48768198989421035,
+          -0.6124349559296305,
+          0.1453580240727469
+        ],
+        "fit_mse": 2.7064130176763236e-05,
+        "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10",
+        "metrics": {
+          "D": 0.04791562984354194,
+          "R": 0.09958570090466176,
+          "min_D": 0.017704133746963856,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.04791562984354194,
+          "R_visited": 0.09958570090466176,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "neural_150": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_1/neural_adam_150.npz",
+        "native_file_sha256": "f1eb2920b3ce9ee545c9b6765af15107f579f3a991f0beaf845b5791b4b9fe91",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 6.938893903907228e-18,
+            "R": 2.7755575615628914e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.8208885744968553,
+          "R": 4.662690684580649,
+          "min_D": 0.006288574501859152,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8208885744968553,
+          "R_visited": 4.662690684580649,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.820882889795078,
+          "R": 4.65784972869871,
+          "min_D": 0.006272387649200505,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.820882889795078,
+          "R_visited": 4.65784972869871,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.006272387649200505,
+              0.001669528138296933,
+              -0.0006986323009534605
+            ],
+            "expression": "0.00627239 + 0.00166953*u - 0.000698632*u^2",
+            "complexity": 3,
+            "fit_mse": 2.147938318734731e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.4508737850703466,
+              -0.19641362980449378,
+              -0.24300932099437125,
+              -1.4089537967241736,
+              0.6617004160164394
+            ],
+            "expression": "(0.450874 - 0.196414*u - 0.243009*u^2) / (1 - 1.40895*u + 0.6617*u^2)",
+            "complexity": 5,
+            "fit_mse": 0.00017404083333441878,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5030956162003014,
+            "compression_absolute_error": 7.459673560967043e-05,
+            "symbolic_absolute_error": 0.5030921322334971,
+            "rho": 0.0001482754633663328,
+            "BIR": 0.9999930749410408
+          },
+          "R": {
+            "neural_absolute_error": 9.355626804395692,
+            "compression_absolute_error": 0.21143044368201006,
+            "symbolic_absolute_error": 9.345913490845271,
+            "rho": 0.02259928149150526,
+            "BIR": 0.9989617677411141
+          }
+        },
+        "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10"
+      },
+      "frozen_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.006272387649200505,
+              0.001669528138296933,
+              -0.0006986323009534605
+            ],
+            "expression": "0.00627239 + 0.00166953*u - 0.000698632*u^2",
+            "complexity": 3,
+            "fit_mse": 2.147938318734731e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.4508737850703466,
+              -0.19641362980449378,
+              -0.24300932099437125,
+              -1.4089537967241736,
+              0.6617004160164394
+            ],
+            "expression": "(0.450874 - 0.196414*u - 0.243009*u^2) / (1 - 1.40895*u + 0.6617*u^2)",
+            "complexity": 5,
+            "fit_mse": 0.00017404083333441878,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "f1eb2920b3ce9ee545c9b6765af15107f579f3a991f0beaf845b5791b4b9fe91",
+        "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10"
+      },
+      "neural_adam_final": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_1/neural_adam_6000.npz",
+        "native_file_sha256": "d9f2b20361274be87d3a5e041c2cb7813757ab36d72ffecae78aa399c04b8ecb",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 6.071532165918825e-18,
+            "R": 1.7763568394002505e-15
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.8903305392151231,
+          "R": 9.229260056629148,
+          "min_D": 0.001571513481608675,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8903305392151231,
+          "R_visited": 9.229260056629148,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.8903310249775951,
+          "R": 8.839568220631616,
+          "min_D": 0.0015367786481914846,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8903310249775951,
+          "R_visited": 8.839568220631616,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0015367786481914846,
+              0.0033765082752410447,
+              -0.0018087413482896133,
+              -1.0085309106018587,
+              0.5352226980776347
+            ],
+            "expression": "(0.00153678 + 0.00337651*u - 0.00180874*u^2) / (1 - 1.00853*u + 0.535223*u^2)",
+            "complexity": 5,
+            "fit_mse": 1.4183710410416022e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.6268463532765822,
+              5.201402897615766,
+              -8.844861686613173,
+              2.911710508959074
+            ],
+            "expression": "0.626846 + 5.2014*u - 8.84486*u^2 + 2.91171*u^3",
+            "complexity": 4,
+            "fit_mse": 0.11275467732266611,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5456543130995849,
+            "compression_absolute_error": 0.00019138247646624846,
+            "symbolic_absolute_error": 0.5456546108074319,
+            "rho": 0.00035073941847742733,
+            "BIR": 1.0000005455978995
+          },
+          "R": {
+            "neural_absolute_error": 18.518387474442534,
+            "compression_absolute_error": 5.382537599923474,
+            "symbolic_absolute_error": 17.736475991793846,
+            "rho": 0.2906590872100491,
+            "BIR": 0.9577764811473022
+          }
+        },
+        "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10"
+      },
+      "frozen_adam_final": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0015367786481914846,
+              0.0033765082752410447,
+              -0.0018087413482896133,
+              -1.0085309106018587,
+              0.5352226980776347
+            ],
+            "expression": "(0.00153678 + 0.00337651*u - 0.00180874*u^2) / (1 - 1.00853*u + 0.535223*u^2)",
+            "complexity": 5,
+            "fit_mse": 1.4183710410416022e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.6268463532765822,
+              5.201402897615766,
+              -8.844861686613173,
+              2.911710508959074
+            ],
+            "expression": "0.626846 + 5.2014*u - 8.84486*u^2 + 2.91171*u^3",
+            "complexity": 4,
+            "fit_mse": 0.11275467732266611,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "d9f2b20361274be87d3a5e041c2cb7813757ab36d72ffecae78aa399c04b8ecb",
+        "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10"
+      },
+      "neural_lbfgs_float64": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_1/neural_lbfgs_float64.npz",
+        "native_file_sha256": "af72f0c4876893c442c65859ffc465f7bbdd086699475edc07b42cb5ebaa090b",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float64",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 8.673617379884035e-18,
+            "R": 5.329070518200751e-15
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.8965737543337025,
+          "R": 9.648318665203313,
+          "min_D": 0.000814549582706432,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8965737543337025,
+          "R_visited": 9.648318665203313,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.8965744919894768,
+          "R": 9.228297494123515,
+          "min_D": 0.0007333670861505787,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8965744919894768,
+          "R_visited": 9.228297494123515,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0007333670861505787,
+              0.003457981250175045,
+              -0.0018410516430480625,
+              -1.330441268939965,
+              0.6974005924570417
+            ],
+            "expression": "(0.000733367 + 0.00345798*u - 0.00184105*u^2) / (1 - 1.33044*u + 0.697401*u^2)",
+            "complexity": 5,
+            "fit_mse": 1.3226477262385448e-09,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              1.3413468314037729,
+              2.0685851763466907,
+              -5.212102910115121,
+              1.6860926310825084
+            ],
+            "expression": "1.34135 + 2.06859*u - 5.2121*u^2 + 1.68609*u^3",
+            "complexity": 4,
+            "fit_mse": 0.1281512156799679,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5494805743666246,
+            "compression_absolute_error": 0.0005830721367013483,
+            "symbolic_absolute_error": 0.5494810264515942,
+            "rho": 0.0010611333027986368,
+            "BIR": 1.0000008227496853
+          },
+          "R": {
+            "neural_absolute_error": 19.359222995433527,
+            "compression_absolute_error": 5.773629098446673,
+            "symbolic_absolute_error": 18.51645610558541,
+            "rho": 0.2982366131021148,
+            "BIR": 0.9564669052034315
+          }
+        },
+        "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10"
+      },
+      "frozen_lbfgs_float64": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0007333670861505787,
+              0.003457981250175045,
+              -0.0018410516430480625,
+              -1.330441268939965,
+              0.6974005924570417
+            ],
+            "expression": "(0.000733367 + 0.00345798*u - 0.00184105*u^2) / (1 - 1.33044*u + 0.697401*u^2)",
+            "complexity": 5,
+            "fit_mse": 1.3226477262385448e-09,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              1.3413468314037729,
+              2.0685851763466907,
+              -5.212102910115121,
+              1.6860926310825084
+            ],
+            "expression": "1.34135 + 2.06859*u - 5.2121*u^2 + 1.68609*u^3",
+            "complexity": 4,
+            "fit_mse": 0.1281512156799679,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "af72f0c4876893c442c65859ffc465f7bbdd086699475edc07b42cb5ebaa090b",
+        "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10"
+      },
+      "refit_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.01566278091463485,
+              0.04465626735413952,
+              -0.017364377383258037
+            ],
+            "expression": "-0.017364377383258037*x0**2 + 0.044656267354139523*x0 + 0.015662780914634852",
+            "complexity": 3,
+            "fit_mse": 0.0009657663142620818,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              -0.5546342090579515,
+              15.21031367629466,
+              -12.428078497932278,
+              56.24946429095312,
+              -15.16327829839973
+            ],
+            "expression": "(-12.428078497932278*x0**2 + 15.21031367629466*x0 - 0.55463420905795147)/(-15.16327829839973*x0**2 + 56.249464290953121*x0 + 1)",
+            "complexity": 5,
+            "fit_mse": 0.3498757585688122,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "f1eb2920b3ce9ee545c9b6765af15107f579f3a991f0beaf845b5791b4b9fe91",
+        "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10",
+        "parameter_policy": "All coefficient slots and rates in the selected family are independent; family and degrees fixed; no reaction anchor"
+      }
+    },
+    "source": "outputs/reviewer-supplement-2026-10-12/evidence/matched_validation/sameobs_case_exp_noise3_1.json"
+  },
+  {
+    "id": "sameobs_case_exp_noise3_2",
+    "config": {
+      "case": "case_exp",
+      "setting": "noise3",
+      "seed": 2
+    },
+    "source_sha256": "da3dd718f84ecedad4a448849d377e6aec90a4c4dcf57f66fc65f06aa2d96fab",
+    "descriptors": {
+      "weak_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.01946482561184967,
+          0.037695369709565364,
+          -0.014370048342366637
+        ],
+        "parameters_R": [
+          -0.09997083310461854,
+          1.0959476703142195,
+          -1.2770036028816154,
+          0.35508970262661854
+        ],
+        "fit_mse": 1.7126509954420353,
+        "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9",
+        "metrics": {
+          "D": 0.059706600021273294,
+          "R": 0.26040192304911103,
+          "min_D": 0.01946482561184967,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.059706600021273294,
+          "R_visited": 0.26040192304911103,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "strong_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          -0.00035463829656678404,
+          0.009977347927015495,
+          -0.005818177909865228
+        ],
+        "parameters_R": [
+          1.985791709516543,
+          0.00891955565825441,
+          -2.53453768346107,
+          0.6503903501322381
+        ],
+        "fit_mse": 112.30404219894156,
+        "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9",
+        "metrics": {
+          "D": 0.9390573218711143,
+          "R": 10.355798570970693,
+          "min_D": -0.0012463084559022307,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9390573218711143,
+          "R_visited": 10.355798570970693,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "spacetime_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.019540811221286154,
+          0.03685077059252261,
+          -0.01371851638818865
+        ],
+        "parameters_R": [
+          -0.06556220883602466,
+          1.0365764250322846,
+          -1.2722651407746892,
+          0.3650337132948454
+        ],
+        "fit_mse": 2.5666961107146087e-05,
+        "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9",
+        "metrics": {
+          "D": 0.057910691491653385,
+          "R": 0.1851590075795211,
+          "min_D": 0.019540811221286154,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.057910691491653385,
+          "R_visited": 0.1851590075795211,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "neural_150": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_2/neural_adam_150.npz",
+        "native_file_sha256": "7401ff77251e8730967f4c3ea02220d0b31fc895f3314982d674e7a8a51490d6",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 6.938893903907228e-18,
+            "R": 4.440892098500626e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.8330777771969683,
+          "R": 4.393458683483099,
+          "min_D": 0.0060247624175984995,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8330777771969683,
+          "R_visited": 4.393458683483099,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.8330808351370793,
+          "R": 4.39116974541526,
+          "min_D": 0.006012574825264589,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8330808351370793,
+          "R_visited": 4.39116974541526,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.006520577890671412,
+              0.000919458513536197,
+              -0.0006676013548678945
+            ],
+            "expression": "0.00652058 + 0.000919459*u - 0.000667601*u^2",
+            "complexity": 3,
+            "fit_mse": 1.0713440021630614e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.4430316469575157,
+              -0.19202266633945803,
+              -0.20708450867378708,
+              -1.3327835800864467,
+              0.5857336647539377
+            ],
+            "expression": "(0.443032 - 0.192023*u - 0.207085*u^2) / (1 - 1.33278*u + 0.585734*u^2)",
+            "complexity": 5,
+            "fit_mse": 0.00010303960777820701,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5105659777498728,
+            "compression_absolute_error": 5.2696537815873865e-05,
+            "symbolic_absolute_error": 0.5105678518608207,
+            "rho": 0.00010321200415294807,
+            "BIR": 1.000003670653803
+          },
+          "R": {
+            "neural_absolute_error": 8.815416377313532,
+            "compression_absolute_error": 0.16271952097893091,
+            "symbolic_absolute_error": 8.810823653543135,
+            "rho": 0.01845851789799623,
+            "BIR": 0.9994790122696624
+          }
+        },
+        "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9"
+      },
+      "frozen_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.006520577890671412,
+              0.000919458513536197,
+              -0.0006676013548678945
+            ],
+            "expression": "0.00652058 + 0.000919459*u - 0.000667601*u^2",
+            "complexity": 3,
+            "fit_mse": 1.0713440021630614e-11,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.4430316469575157,
+              -0.19202266633945803,
+              -0.20708450867378708,
+              -1.3327835800864467,
+              0.5857336647539377
+            ],
+            "expression": "(0.443032 - 0.192023*u - 0.207085*u^2) / (1 - 1.33278*u + 0.585734*u^2)",
+            "complexity": 5,
+            "fit_mse": 0.00010303960777820701,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "7401ff77251e8730967f4c3ea02220d0b31fc895f3314982d674e7a8a51490d6",
+        "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9"
+      },
+      "neural_adam_final": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_2/neural_adam_6000.npz",
+        "native_file_sha256": "3b0e0990461b695501de7c0326dee9069e1ee73bc44b861fdb28cf5535ea496b",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 3.469446951953614e-18,
+            "R": 1.3322676295501878e-15
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.9244140216433651,
+          "R": 9.536498119382523,
+          "min_D": 0.0011206058593510348,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9244140216433651,
+          "R_visited": 9.536498119382523,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.9243941381324979,
+          "R": 9.38466134162659,
+          "min_D": 0.0009264109656618056,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9243941381324979,
+          "R_visited": 9.38466134162659,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0017712756432419214,
+              0.00660498702939777,
+              -0.0056700488457224665,
+              0.0009665838356729579
+            ],
+            "expression": "0.00177128 + 0.00660499*u - 0.00567005*u^2 + 0.000966584*u^3",
+            "complexity": 4,
+            "fit_mse": 7.676202593184474e-09,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_saturation",
+            "parameters": [
+              -3.2241807942564917,
+              36.27503909196552,
+              9.991596638655462
+            ],
+            "expression": "-3.22418*u + 36.275*u/(1 + 9.9916*u)",
+            "complexity": 3,
+            "fit_mse": 0.04347299059166881,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5665429588028078,
+            "compression_absolute_error": 0.0014107290007543457,
+            "symbolic_absolute_error": 0.5665307728527743,
+            "rho": 0.0024900653672149282,
+            "BIR": 0.9999784906866388
+          },
+          "R": {
+            "neural_absolute_error": 19.134856558426947,
+            "compression_absolute_error": 3.3329437920504548,
+            "symbolic_absolute_error": 18.830198084605357,
+            "rho": 0.17418180177486797,
+            "BIR": 0.9840783507892344
+          }
+        },
+        "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9"
+      },
+      "frozen_adam_final": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0017712756432419214,
+              0.00660498702939777,
+              -0.0056700488457224665,
+              0.0009665838356729579
+            ],
+            "expression": "0.00177128 + 0.00660499*u - 0.00567005*u^2 + 0.000966584*u^3",
+            "complexity": 4,
+            "fit_mse": 7.676202593184474e-09,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "u_saturation",
+            "parameters": [
+              -3.2241807942564917,
+              36.27503909196552,
+              9.991596638655462
+            ],
+            "expression": "-3.22418*u + 36.275*u/(1 + 9.9916*u)",
+            "complexity": 3,
+            "fit_mse": 0.04347299059166881,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "3b0e0990461b695501de7c0326dee9069e1ee73bc44b861fdb28cf5535ea496b",
+        "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9"
+      },
+      "neural_lbfgs_float64": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_2/neural_lbfgs_float64.npz",
+        "native_file_sha256": "b8d0c1ad18585aafe17802ab4bca378eb4a6dcaae45d3c5db2512ad0087080db",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float64",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 5.204170427930421e-18,
+            "R": 5.329070518200751e-15
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.9277382249050784,
+          "R": 9.681021979521367,
+          "min_D": 0.0003847366296876592,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9277382249050784,
+          "R_visited": 9.681021979521367,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.9277409760186616,
+          "R": 9.42044837202441,
+          "min_D": 0.00029183974299742423,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9277409760186616,
+          "R_visited": 9.42044837202441,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0008354167524168888,
+              0.0025831540995009433,
+              -0.00157184555674179,
+              -1.555897231489259,
+              0.9706468194424035
+            ],
+            "expression": "(0.000835417 + 0.00258315*u - 0.00157185*u^2) / (1 - 1.5559*u + 0.970647*u^2)",
+            "complexity": 5,
+            "fit_mse": 2.4006775375439103e-09,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "u_saturation",
+            "parameters": [
+              -3.139866213502325,
+              41.506588882205094,
+              12.0
+            ],
+            "expression": "-3.13987*u + 41.5066*u/(1 + 12*u)",
+            "complexity": 3,
+            "fit_mse": 0.07485897527190556,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5685802536809242,
+            "compression_absolute_error": 0.0007846153963800299,
+            "symbolic_absolute_error": 0.5685819397479818,
+            "rho": 0.0013799554087580753,
+            "BIR": 1.000002965398546
+          },
+          "R": {
+            "neural_absolute_error": 19.424841760375056,
+            "compression_absolute_error": 4.400359822251481,
+            "symbolic_absolute_error": 18.902004284820777,
+            "rho": 0.2265325955564705,
+            "BIR": 0.9730840805807324
+          }
+        },
+        "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9"
+      },
+      "frozen_lbfgs_float64": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0008354167524168888,
+              0.0025831540995009433,
+              -0.00157184555674179,
+              -1.555897231489259,
+              0.9706468194424035
+            ],
+            "expression": "(0.000835417 + 0.00258315*u - 0.00157185*u^2) / (1 - 1.5559*u + 0.970647*u^2)",
+            "complexity": 5,
+            "fit_mse": 2.4006775375439103e-09,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "u_saturation",
+            "parameters": [
+              -3.139866213502325,
+              41.506588882205094,
+              12.0
+            ],
+            "expression": "-3.13987*u + 41.5066*u/(1 + 12*u)",
+            "complexity": 3,
+            "fit_mse": 0.07485897527190556,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "b8d0c1ad18585aafe17802ab4bca378eb4a6dcaae45d3c5db2512ad0087080db",
+        "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9"
+      },
+      "refit_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0166112077077759,
+              0.04207325625708541,
+              -0.015670192402845975
+            ],
+            "expression": "-0.015670192402845975*x0**2 + 0.042073256257085412*x0 + 0.0166112077077759",
+            "complexity": 3,
+            "fit_mse": 0.0010229469088650293,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              -0.13903960281787958,
+              2.083113309107121,
+              -2.014463639391097,
+              -1.279729669731007,
+              8.0543570134795
+            ],
+            "expression": "(-2.0144636393910971*x0**2 + 2.0831133091071208*x0 - 0.13903960281787958)/(8.0543570134794997*x0**2 - 1.279729669731007*x0 + 1)",
+            "complexity": 5,
+            "fit_mse": 0.33590904974914093,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "7401ff77251e8730967f4c3ea02220d0b31fc895f3314982d674e7a8a51490d6",
+        "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9",
+        "parameter_policy": "All coefficient slots and rates in the selected family are independent; family and degrees fixed; no reaction anchor"
+      }
+    },
+    "source": "outputs/reviewer-supplement-2026-10-12/evidence/matched_validation/sameobs_case_exp_noise3_2.json"
+  },
+  {
+    "id": "sameobs_case_exp_noise3_3",
+    "config": {
+      "case": "case_exp",
+      "setting": "noise3",
+      "seed": 3
+    },
+    "source_sha256": "ad89a4a8600d062dae7f4872c801eda133fe68b008dcbfcf7dc3620692ee16ce",
+    "descriptors": {
+      "weak_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.017814065606912635,
+          0.040235840153779685,
+          -0.015331309996827637
+        ],
+        "parameters_R": [
+          -0.020548515235982258,
+          0.8475557408360592,
+          -1.1159930387129324,
+          0.33555227715905267
+        ],
+        "fit_mse": 1.723373490899009,
+        "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0",
+        "metrics": {
+          "D": 0.0495062390592064,
+          "R": 0.15641618118216477,
+          "min_D": 0.017814065606912635,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.0495062390592064,
+          "R_visited": 0.15641618118216477,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "strong_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.00031802890107154955,
+          0.011484395094590247,
+          -0.006777696770660595
+        ],
+        "parameters_R": [
+          1.0717889061389834,
+          5.733728504436786,
+          -9.67956546533304,
+          3.103603848750412
+        ],
+        "fit_mse": 114.60677968511546,
+        "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0",
+        "metrics": {
+          "D": 0.9142184245958495,
+          "R": 10.835777231622357,
+          "min_D": -0.0009697974656063361,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9142184245958495,
+          "R_visited": 10.835777231622357,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "spacetime_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.017442898684579773,
+          0.042724691710286186,
+          -0.017133742446073588
+        ],
+        "parameters_R": [
+          0.0008383025556282887,
+          0.581372272189081,
+          -0.6270343036411862,
+          0.11961652256712195
+        ],
+        "fit_mse": 2.9750404495080796e-05,
+        "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0",
+        "metrics": {
+          "D": 0.05610443187078338,
+          "R": 0.16829807567185953,
+          "min_D": 0.017442898684579773,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.05610443187078338,
+          "R_visited": 0.16829807567185953,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "neural_150": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_3/neural_adam_150.npz",
+        "native_file_sha256": "1ddc35ea177427789f19875688be6f14a886610e62c19306d9db85d0c468ec5a",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 6.938893903907228e-18,
+            "R": 4.440892098500626e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.826065134179818,
+          "R": 4.802922878307815,
+          "min_D": 0.006398429897121462,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.826065134179818,
+          "R_visited": 4.802922878307815,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.8260662957622653,
+          "R": 4.79981695941977,
+          "min_D": 0.00638974425305726,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8260662957622653,
+          "R_visited": 4.79981695941977,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.006602566527013256,
+              0.001172659134170727,
+              -0.0007171631837849705
+            ],
+            "expression": "0.00660257 + 0.00117266*u - 0.000717163*u^2",
+            "complexity": 3,
+            "fit_mse": 5.036623436331815e-12,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.47443258243400466,
+              -0.22439537838118345,
+              -0.210547376893162,
+              -1.3492385285806119,
+              0.5955947674226424
+            ],
+            "expression": "(0.474433 - 0.224395*u - 0.210547*u^2) / (1 - 1.34924*u + 0.595595*u^2)",
+            "complexity": 5,
+            "fit_mse": 0.00013267610350640042,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5062681594228624,
+            "compression_absolute_error": 3.616049175308496e-05,
+            "symbolic_absolute_error": 0.5062688713185511,
+            "rho": 7.142556978955054e-05,
+            "BIR": 1.0000014061632665
+          },
+          "R": {
+            "neural_absolute_error": 9.63700083480515,
+            "compression_absolute_error": 0.18465876392981462,
+            "symbolic_absolute_error": 9.63076884989194,
+            "rho": 0.019161434879500894,
+            "BIR": 0.9993533273452978
+          }
+        },
+        "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0"
+      },
+      "frozen_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.006602566527013256,
+              0.001172659134170727,
+              -0.0007171631837849705
+            ],
+            "expression": "0.00660257 + 0.00117266*u - 0.000717163*u^2",
+            "complexity": 3,
+            "fit_mse": 5.036623436331815e-12,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.47443258243400466,
+              -0.22439537838118345,
+              -0.210547376893162,
+              -1.3492385285806119,
+              0.5955947674226424
+            ],
+            "expression": "(0.474433 - 0.224395*u - 0.210547*u^2) / (1 - 1.34924*u + 0.595595*u^2)",
+            "complexity": 5,
+            "fit_mse": 0.00013267610350640042,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "1ddc35ea177427789f19875688be6f14a886610e62c19306d9db85d0c468ec5a",
+        "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0"
+      },
+      "neural_adam_final": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_3/neural_adam_6000.npz",
+        "native_file_sha256": "3ae7cd075e09201cdef01cfe9e795ec68852743ae497b96eae1523d7abe5ccba",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 5.204170427930421e-18,
+            "R": 1.7763568394002505e-15
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.9020556535035128,
+          "R": 11.807616453111757,
+          "min_D": 0.0014003750308470646,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9020556535035128,
+          "R_visited": 11.807616453111757,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.9020574617875623,
+          "R": 11.723727291674383,
+          "min_D": 0.0013673662005965757,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9020574617875623,
+          "R_visited": 11.723727291674383,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0023924473681937175,
+              0.0027260692276708113,
+              -0.0017253084656882968,
+              -0.8905850292096882,
+              0.5719671528090067
+            ],
+            "expression": "(0.00239245 + 0.00272607*u - 0.00172531*u^2) / (1 - 0.890585*u + 0.571967*u^2)",
+            "complexity": 5,
+            "fit_mse": 1.1779071064636505e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              -0.43700435664436793,
+              19.496388321749315,
+              -41.918094905575686,
+              30.386125260048477,
+              -7.578016452851831
+            ],
+            "expression": "-0.437004 + 19.4964*u - 41.9181*u^2 + 30.3861*u^3 - 7.57802*u^4",
+            "complexity": 5,
+            "fit_mse": 0.030283070429853537,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5528402501210034,
+            "compression_absolute_error": 0.00017434007700557478,
+            "symbolic_absolute_error": 0.5528413583588403,
+            "rho": 0.00031535344426788023,
+            "BIR": 1.000002004625815
+          },
+          "R": {
+            "neural_absolute_error": 23.691825269488398,
+            "compression_absolute_error": 2.7922063167715,
+            "symbolic_absolute_error": 23.523502783517536,
+            "rho": 0.1178552637887066,
+            "BIR": 0.9928953348230355
+          }
+        },
+        "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0"
+      },
+      "frozen_adam_final": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0023924473681937175,
+              0.0027260692276708113,
+              -0.0017253084656882968,
+              -0.8905850292096882,
+              0.5719671528090067
+            ],
+            "expression": "(0.00239245 + 0.00272607*u - 0.00172531*u^2) / (1 - 0.890585*u + 0.571967*u^2)",
+            "complexity": 5,
+            "fit_mse": 1.1779071064636505e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              -0.43700435664436793,
+              19.496388321749315,
+              -41.918094905575686,
+              30.386125260048477,
+              -7.578016452851831
+            ],
+            "expression": "-0.437004 + 19.4964*u - 41.9181*u^2 + 30.3861*u^3 - 7.57802*u^4",
+            "complexity": 5,
+            "fit_mse": 0.030283070429853537,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "3ae7cd075e09201cdef01cfe9e795ec68852743ae497b96eae1523d7abe5ccba",
+        "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0"
+      },
+      "neural_lbfgs_float64": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_3/neural_lbfgs_float64.npz",
+        "native_file_sha256": "16076655f10994816e24bedae40aea7e32defc304f041da1897a3cacbfdadb0c",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float64",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 1.3010426069826053e-18,
+            "R": 3.4416913763379853e-15
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.9056268279787807,
+          "R": 11.974633607769684,
+          "min_D": 0.00027386843132374536,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9056268279787807,
+          "R_visited": 11.974633607769684,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.9057190609011223,
+          "R": 11.825862426375677,
+          "min_D": -0.00046814507333831773,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9057190609011223,
+          "R_visited": 11.825862426375677,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0015539091380927677,
+              0.009519197014672085,
+              -0.005912533591926185
+            ],
+            "expression": "0.00155391 + 0.0095192*u - 0.00591253*u^2",
+            "complexity": 3,
+            "fit_mse": 4.358387992093011e-08,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              -0.5271957264165238,
+              20.197975313827566,
+              -43.45450380285147,
+              31.66570832534874,
+              -7.937030446527302
+            ],
+            "expression": "-0.527196 + 20.198*u - 43.4545*u^2 + 31.6657*u^3 - 7.93703*u^4",
+            "complexity": 5,
+            "fit_mse": 0.05606621076417691,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5550289055354058,
+            "compression_absolute_error": 0.0033624943522518333,
+            "symbolic_absolute_error": 0.5550854320608577,
+            "rho": 0.006058232857274739,
+            "BIR": 1.0001018442911498
+          },
+          "R": {
+            "neural_absolute_error": 24.026942967533195,
+            "compression_absolute_error": 3.801090772966526,
+            "symbolic_absolute_error": 23.7284355720128,
+            "rho": 0.15820118181921075,
+            "BIR": 0.9875761391732707
+          }
+        },
+        "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0"
+      },
+      "frozen_lbfgs_float64": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0015539091380927677,
+              0.009519197014672085,
+              -0.005912533591926185
+            ],
+            "expression": "0.00155391 + 0.0095192*u - 0.00591253*u^2",
+            "complexity": 3,
+            "fit_mse": 4.358387992093011e-08,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              -0.5271957264165238,
+              20.197975313827566,
+              -43.45450380285147,
+              31.66570832534874,
+              -7.937030446527302
+            ],
+            "expression": "-0.527196 + 20.198*u - 43.4545*u^2 + 31.6657*u^3 - 7.93703*u^4",
+            "complexity": 5,
+            "fit_mse": 0.05606621076417691,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "16076655f10994816e24bedae40aea7e32defc304f041da1897a3cacbfdadb0c",
+        "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0"
+      },
+      "refit_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.016256021581457537,
+              0.043765689962208726,
+              -0.017372086789975157
+            ],
+            "expression": "-0.017372086789975157*x0**2 + 0.043765689962208726*x0 + 0.016256021581457537",
+            "complexity": 3,
+            "fit_mse": 0.0009583699062065739,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              -0.5939853559044774,
+              13.09298868976439,
+              -10.631422334379918,
+              52.075092323514404,
+              -16.50527951672986
+            ],
+            "expression": "(-10.631422334379918*x0**2 + 13.09298868976439*x0 - 0.59398535590447743)/(-16.50527951672986*x0**2 + 52.075092323514404*x0 + 1)",
+            "complexity": 5,
+            "fit_mse": 0.3730054788484749,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "1ddc35ea177427789f19875688be6f14a886610e62c19306d9db85d0c468ec5a",
+        "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0",
+        "parameter_policy": "All coefficient slots and rates in the selected family are independent; family and degrees fixed; no reaction anchor"
+      }
+    },
+    "source": "outputs/reviewer-supplement-2026-10-12/evidence/matched_validation/sameobs_case_exp_noise3_3.json"
+  },
+  {
+    "id": "sameobs_case_exp_noise3_4",
+    "config": {
+      "case": "case_exp",
+      "setting": "noise3",
+      "seed": 4
+    },
+    "source_sha256": "28cea330bb6d3fb935904e0babe664f85d060a92c13812f5b432cc69ec30358b",
+    "descriptors": {
+      "weak_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.01620456424614888,
+          0.04382924733733552,
+          -0.016769724257791826
+        ],
+        "parameters_R": [
+          0.10646720166203595,
+          0.11559977944277626,
+          -0.21478139080405131,
+          0.03140746603591691
+        ],
+        "fit_mse": 1.8209540643737592,
+        "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff",
+        "metrics": {
+          "D": 0.04228224445799424,
+          "R": 0.2827206490777856,
+          "min_D": 0.01620456424614888,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.04228224445799424,
+          "R_visited": 0.2827206490777856,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "strong_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          -0.0010285483573293393,
+          0.008301534310318924,
+          -0.004393084453167052
+        ],
+        "parameters_R": [
+          1.732955977704736,
+          -1.336709846341952,
+          0.08225397462066553,
+          -0.37891610160774053
+        ],
+        "fit_mse": 118.63995208710061,
+        "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff",
+        "metrics": {
+          "D": 0.9533965625279148,
+          "R": 8.830206802571976,
+          "min_D": -0.0010285483573293393,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9533965625279148,
+          "R_visited": 8.830206802571976,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "spacetime_poly": {
+        "kind": "polynomial",
+        "parameters_D": [
+          0.01769230792282776,
+          0.040934226580310346,
+          -0.01539026018714021
+        ],
+        "parameters_R": [
+          0.002120384389623564,
+          0.6803958926261245,
+          -0.8847635845443355,
+          0.25228008542234404
+        ],
+        "fit_mse": 2.6849468990986844e-05,
+        "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff",
+        "metrics": {
+          "D": 0.04748949693660298,
+          "R": 0.14255999291170385,
+          "min_D": 0.01769230792282776,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.04748949693660298,
+          "R_visited": 0.14255999291170385,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        }
+      },
+      "neural_150": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_4/neural_adam_150.npz",
+        "native_file_sha256": "589b87b94bffef47f30e5132c90af6da79d1e6945e3fd931e76b646d40c5211f",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 6.071532165918825e-18,
+            "R": 2.220446049250313e-16
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.8342970407342045,
+          "R": 3.830419377129827,
+          "min_D": 0.0060305055664653965,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8342970407342045,
+          "R_visited": 3.830419377129827,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.8342946746649919,
+          "R": 3.829064617472269,
+          "min_D": 0.006021158812398108,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.8342946746649919,
+          "R_visited": 3.829064617472269,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.006021158812398108,
+              0.0013679253842975398,
+              -0.0006768672007506335
+            ],
+            "expression": "0.00602116 + 0.00136793*u - 0.000676867*u^2",
+            "complexity": 3,
+            "fit_mse": 5.750919339316651e-12,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.3668184708670843,
+              -0.09794204157602288,
+              -0.23049781194919494,
+              -1.3261700856708651,
+              0.5904663592821239
+            ],
+            "expression": "(0.366818 - 0.097942*u - 0.230498*u^2) / (1 - 1.32617*u + 0.590466*u^2)",
+            "complexity": 5,
+            "fit_mse": 8.438831691818459e-05,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5113132242820253,
+            "compression_absolute_error": 3.862816925300713e-05,
+            "symbolic_absolute_error": 0.511311774196002,
+            "rho": 7.554697867876964e-05,
+            "BIR": 0.9999971639966377
+          },
+          "R": {
+            "neural_absolute_error": 7.685685502420469,
+            "compression_absolute_error": 0.14722626083960694,
+            "symbolic_absolute_error": 7.68296719519763,
+            "rho": 0.019155904934340686,
+            "BIR": 0.9996463155795299
+          }
+        },
+        "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff"
+      },
+      "frozen_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.006021158812398108,
+              0.0013679253842975398,
+              -0.0006768672007506335
+            ],
+            "expression": "0.00602116 + 0.00136793*u - 0.000676867*u^2",
+            "complexity": 3,
+            "fit_mse": 5.750919339316651e-12,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              0.3668184708670843,
+              -0.09794204157602288,
+              -0.23049781194919494,
+              -1.3261700856708651,
+              0.5904663592821239
+            ],
+            "expression": "(0.366818 - 0.097942*u - 0.230498*u^2) / (1 - 1.32617*u + 0.590466*u^2)",
+            "complexity": 5,
+            "fit_mse": 8.438831691818459e-05,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "589b87b94bffef47f30e5132c90af6da79d1e6945e3fd931e76b646d40c5211f",
+        "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff"
+      },
+      "neural_adam_final": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_4/neural_adam_6000.npz",
+        "native_file_sha256": "a4b539d11cdb09dfe9366d11c857c99216f35c0ef102946a30dcc4e375740ed3",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float32",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 3.0357660829594124e-18,
+            "R": 2.220446049250313e-15
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.9449689349581315,
+          "R": 8.569373406728118,
+          "min_D": 0.0014061282343411719,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9449689349581315,
+          "R_visited": 8.569373406728118,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.944956720566159,
+          "R": 8.386483244619331,
+          "min_D": 0.0013253779470518946,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.944956720566159,
+          "R_visited": 8.386483244619331,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0013253779470518946,
+              0.002471819298097927,
+              -0.001317710604432712
+            ],
+            "expression": "0.00132538 + 0.00247182*u - 0.00131771*u^2",
+            "complexity": 3,
+            "fit_mse": 5.572666655009799e-10,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.43322432745306233,
+              8.87418675082843,
+              -21.6687143377458,
+              16.662592989941093,
+              -4.41104635474422
+            ],
+            "expression": "0.433224 + 8.87419*u - 21.6687*u^2 + 16.6626*u^3 - 4.41105*u^4",
+            "complexity": 5,
+            "fit_mse": 0.05186954321099364,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5791403893205544,
+            "compression_absolute_error": 0.0003802176109074021,
+            "symbolic_absolute_error": 0.5791329035213281,
+            "rho": 0.0006565206259461063,
+            "BIR": 0.9999870742925818
+          },
+          "R": {
+            "neural_absolute_error": 17.19433369363031,
+            "compression_absolute_error": 3.6558818322621565,
+            "symbolic_absolute_error": 16.827367017383988,
+            "rho": 0.21262131452156757,
+            "BIR": 0.9786576971934502
+          }
+        },
+        "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff"
+      },
+      "frozen_adam_final": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.0013253779470518946,
+              0.002471819298097927,
+              -0.001317710604432712
+            ],
+            "expression": "0.00132538 + 0.00247182*u - 0.00131771*u^2",
+            "complexity": 3,
+            "fit_mse": 5.572666655009799e-10,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.43322432745306233,
+              8.87418675082843,
+              -21.6687143377458,
+              16.662592989941093,
+              -4.41104635474422
+            ],
+            "expression": "0.433224 + 8.87419*u - 21.6687*u^2 + 16.6626*u^3 - 4.41105*u^4",
+            "complexity": 5,
+            "fit_mse": 0.05186954321099364,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "a4b539d11cdb09dfe9366d11c857c99216f35c0ef102946a30dcc4e375740ed3",
+        "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff"
+      },
+      "neural_lbfgs_float64": {
+        "kind": "native_mlp",
+        "native_file": "outputs/runs/sameobs_case_exp_noise3_4/neural_lbfgs_float64.npz",
+        "native_file_sha256": "2894735721e403651e02960de73f3641e8837c1ede4048a20ea7d94528326093",
+        "export_verification": {
+          "evaluation_dtype": "float64",
+          "original_training_dtype": "torch.float64",
+          "outside_support_probe": true,
+          "maximum_absolute_difference": {
+            "D": 3.0357660829594124e-18,
+            "R": 4.440892098500626e-15
+          },
+          "rule": "Same trained weights, normalization, polynomial backbone and tanh residual; no state clamping or endpoint extension"
+        },
+        "metrics": {
+          "D": 0.9460395372787236,
+          "R": 8.5942008886779,
+          "min_D": 0.0005210780171721162,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9460395372787236,
+          "R_visited": 8.5942008886779,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "frozen_metrics": {
+          "D": 0.9460393721416338,
+          "R": 8.316569182138906,
+          "min_D": 0.0004859779060831161,
+          "visited_min": 0.0,
+          "visited_max": 1.8,
+          "visited_grid_count": 256,
+          "support_min": 0.0,
+          "support_max": 1.8,
+          "support_points": 256,
+          "D_visited": 0.9460393721416338,
+          "R_visited": 8.316569182138906,
+          "D_extrapolation": null,
+          "R_extrapolation": null
+        },
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0004859779060831161,
+              0.0016645452530044563,
+              -0.0008847801790610387,
+              -1.267226627602978,
+              0.6630842965632276
+            ],
+            "expression": "(0.000485978 + 0.00166455*u - 0.00088478*u^2) / (1 - 1.26723*u + 0.663084*u^2)",
+            "complexity": 5,
+            "fit_mse": 2.1468833060637316e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.562609093344213,
+              7.8367479662366115,
+              -19.841213359308185,
+              15.522651533304735,
+              -4.179796642872444
+            ],
+            "expression": "0.562609 + 7.83675*u - 19.8412*u^2 + 15.5227*u^3 - 4.1798*u^4",
+            "complexity": 5,
+            "fit_mse": 0.07783290015770628,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "compression": {
+          "D": {
+            "neural_absolute_error": 0.5797965262810596,
+            "compression_absolute_error": 0.00023500253264430038,
+            "symbolic_absolute_error": 0.579796425073967,
+            "rho": 0.00040531897310882057,
+            "BIR": 0.9999998254437755
+          },
+          "R": {
+            "neural_absolute_error": 17.244149705741762,
+            "compression_absolute_error": 4.517190903715166,
+            "symbolic_absolute_error": 16.68708538148026,
+            "rho": 0.26195498072085766,
+            "BIR": 0.967695459981073
+          }
+        },
+        "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff"
+      },
+      "frozen_lbfgs_float64": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "rational",
+            "parameters": [
+              0.0004859779060831161,
+              0.0016645452530044563,
+              -0.0008847801790610387,
+              -1.267226627602978,
+              0.6630842965632276
+            ],
+            "expression": "(0.000485978 + 0.00166455*u - 0.00088478*u^2) / (1 - 1.26723*u + 0.663084*u^2)",
+            "complexity": 5,
+            "fit_mse": 2.1468833060637316e-10,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          },
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.562609093344213,
+              7.8367479662366115,
+              -19.841213359308185,
+              15.522651533304735,
+              -4.179796642872444
+            ],
+            "expression": "0.562609 + 7.83675*u - 19.8412*u^2 + 15.5227*u^3 - 4.1798*u^4",
+            "complexity": 5,
+            "fit_mse": 0.07783290015770628,
+            "numerator_degree": null,
+            "denominator_degree": null
+          }
+        ],
+        "teacher_native_sha256": "2894735721e403651e02960de73f3641e8837c1ede4048a20ea7d94528326093",
+        "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff"
+      },
+      "refit_150": {
+        "kind": "restricted",
+        "symbols": [
+          {
+            "family": "polynomial",
+            "parameters": [
+              0.015338449678588372,
+              0.04575949033606031,
+              -0.017816842461176482
+            ],
+            "expression": "-0.017816842461176482*x0**2 + 0.045759490336060311*x0 + 0.015338449678588372",
+            "complexity": 3,
+            "fit_mse": 0.0010119307765684407,
+            "numerator_degree": null,
+            "denominator_degree": null
+          },
+          {
+            "family": "rational",
+            "parameters": [
+              -0.6334565562391855,
+              24.469301672500755,
+              -20.492647265459016,
+              87.8845622633492,
+              -18.98798283803023
+            ],
+            "expression": "(-20.492647265459016*x0**2 + 24.469301672500755*x0 - 0.63345655623918551)/(-18.987982838030231*x0**2 + 87.884562263349196*x0 + 1)",
+            "complexity": 5,
+            "fit_mse": 0.23486906992911882,
+            "numerator_degree": 2,
+            "denominator_degree": 2
+          }
+        ],
+        "teacher_native_sha256": "589b87b94bffef47f30e5132c90af6da79d1e6945e3fd931e76b646d40c5211f",
+        "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff",
+        "parameter_policy": "All coefficient slots and rates in the selected family are independent; family and degrees fixed; no reaction anchor"
+      }
+    },
+    "source": "outputs/reviewer-supplement-2026-10-12/evidence/matched_validation/sameobs_case_exp_noise3_4.json"
+  }
+]

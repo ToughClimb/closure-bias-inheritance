@@ -1,0 +1,3019 @@
+[
+  {
+    "id": "sameobs_case_exp_clean_0",
+    "setting": "clean",
+    "seed": 0,
+    "arm": "hard_anchor",
+    "fit_record_sha256": "ee5856f5aa256f357d3ee145479a8a0605c155cc66cec2fdd8ab23a618723d09",
+    "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.01005199212344748,
+            0.10166971509313777,
+            0.04635812097995946,
+            1.5354690142187652,
+            1.2170636165383515
+          ],
+          "expression": "(0.046358120979959463*x0**2 + 0.10166971509313777*x0 + 0.010051992123447481)/(1.2170636165383515*x0**2 + 1.5354690142187652*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 9.634743276595256e-10
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.0,
+            0.8445533948680112,
+            -1.3347599942588813,
+            0.6683546596440271,
+            -0.12760883341420753
+          ],
+          "expression": "-0.12760883341420753*x0**4 + 0.66835465964402707*x0**3 - 1.3347599942588813*x0**2 + 0.84455339486801118*x0",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 1.1345006998221596e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0004988703268210688,
+      "R": 0.01421361692428528,
+      "min_D": 0.01005199212344748,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0004988703268210688,
+      "R_visited": 0.01421361692428528,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0,
+    "R_prime_zero": 0.8445533948680112,
+    "R_at_001": 0.008312725027825534,
+    "positive_reaction_roots": [
+      1.1480325932083382
+    ],
+    "root_derivatives": [
+      -0.3498415252948398
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12026,
+        "seconds": 0.12804677200620063
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.01086618755091056,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.13597590300196316
+      }
+    },
+    "fit_components": {
+      "observation_mse": 5.12854723811634e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_0",
+    "setting": "clean",
+    "seed": 0,
+    "arm": "soft_anchor",
+    "fit_record_sha256": "d6d70ce86571f8a7eee0fc7f91816a4b7570fc73cb2c784943a6969edc345105",
+    "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010051994334508924,
+            0.10166967553097349,
+            0.046358307833908145,
+            1.5354687606311688,
+            1.2170674294937132
+          ],
+          "expression": "(0.046358307833908145*x0**2 + 0.10166967553097349*x0 + 0.010051994334508924)/(1.2170674294937132*x0**2 + 1.5354687606311688*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 9.634743276595256e-10
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            5.4713974228699856e-08,
+            0.8445530302564996,
+            -1.3347592632224963,
+            0.6683540888993906,
+            -0.1276086813234378
+          ],
+          "expression": "-0.12760868132343781*x0**4 + 0.66835408889939063*x0**3 - 1.3347592632224963*x0**2 + 0.84455303025649964*x0 + 5.4713974228699856e-8",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 1.1345006998221596e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0004988665456944157,
+      "R": 0.014213549179112545,
+      "min_D": 0.010051994334508924,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0004988665456944157,
+      "R_visited": 0.014213549179112545,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 5.4713974228699856e-08,
+    "R_prime_zero": 0.8445530302564996,
+    "R_at_001": 0.008312776168219063,
+    "positive_reaction_roots": [
+      1.1480325938565925
+    ],
+    "root_derivatives": [
+      -0.3498415476380332
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 5.709085672976513e-09,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.13296529499348253
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.010866192864193628,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.13961235200986266
+      }
+    },
+    "fit_components": {
+      "observation_mse": 5.128487372309093e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 2.993618975898832e-15
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_0",
+    "setting": "clean",
+    "seed": 0,
+    "arm": "unanchored",
+    "fit_record_sha256": "484c7991c870952d416d0cad676ef42b271c688310a54abde7af1daa8b8e0bbc",
+    "observation_file_sha256": "f6f94782b66af34b552cd766cd1b658927da2806827a196d7fa08cf180467557",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010057419488689975,
+            0.10107398432310664,
+            0.04966534510292161,
+            1.5319003202871635,
+            1.2852397354606964
+          ],
+          "expression": "(0.049665345102921608*x0**2 + 0.10107398432310664*x0 + 0.010057419488689975)/(1.2852397354606964*x0**2 + 1.5319003202871635*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 9.634743276595256e-10
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.0056596355337349,
+            0.8061779839319164,
+            -1.2580251190236382,
+            0.6090767749633469,
+            -0.11202450889750089
+          ],
+          "expression": "-0.11202450889750089*x0**4 + 0.60907677496334689*x0**3 - 1.2580251190236382*x0**2 + 0.80617798393191642*x0 + 0.0056596355337348997",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 1.1345006998221596e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0004302886945885255,
+      "R": 0.011031850400052735,
+      "min_D": 0.010057419488689975,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0004302886945885255,
+      "R_visited": 0.011031850400052735,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0056596355337349,
+    "R_prime_zero": 0.8061779839319164,
+    "R_at_001": 0.013596220817681574,
+    "positive_reaction_roots": [
+      1.1483650231226123
+    ],
+    "root_derivatives": [
+      -0.3521188404031538
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0005893879723342318,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1397246849955991
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.011414056659491521,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.13968384599138517
+      }
+    },
+    "fit_components": {
+      "observation_mse": 2.0333466801335904e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_1",
+    "setting": "clean",
+    "seed": 1,
+    "arm": "hard_anchor",
+    "fit_record_sha256": "d2a53eef3b8a7939be7bdeb4b8b35ecf0ff181bb399a0ce4febc67721021de5d",
+    "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.01003963042623574,
+            0.10199553147523642,
+            0.04657133321203065,
+            1.5466529928673558,
+            1.2182835679447863
+          ],
+          "expression": "(0.046571333212030649*x0**2 + 0.10199553147523642*x0 + 0.01003963042623574)/(1.2182835679447863*x0**2 + 1.5466529928673558*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 8.002301486542263e-10
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.0,
+            0.848239851116075,
+            -1.3416469338082997,
+            0.669531503632312,
+            -0.12631813622588967
+          ],
+          "expression": "-0.12631813622588967*x0**4 + 0.66953150363231195*x0**3 - 1.3416469338082997*x0**2 + 0.84823985111607503*x0",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.8817692473618096e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0003910449817650538,
+      "R": 0.010175086581619773,
+      "min_D": 0.01003963042623574,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0003910449817650538,
+      "R_visited": 0.010175086581619773,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0,
+    "R_prime_zero": 0.848239851116075,
+    "R_at_001": 0.008348902086102193,
+    "positive_reaction_roots": [
+      1.1456801955916955
+    ],
+    "root_derivatives": [
+      -0.3493386539302402
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12026,
+        "seconds": 0.13341400799981784
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.010870113385434524,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14243010099744424
+      }
+    },
+    "fit_components": {
+      "observation_mse": 7.94089120474722e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_1",
+    "setting": "clean",
+    "seed": 1,
+    "arm": "soft_anchor",
+    "fit_record_sha256": "a3e4587b20a1e0b006c3b95759fdd09bde8bcd7f8d865decccbd6c9808ba166b",
+    "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010039629855935242,
+            0.10199552909576368,
+            0.046571352545902396,
+            1.5466529631376558,
+            1.218283988582572
+          ],
+          "expression": "(0.046571352545902396*x0**2 + 0.10199552909576368*x0 + 0.010039629855935242)/(1.218283988582572*x0**2 + 1.5466529631376558*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 8.002301486542263e-10
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            8.584758377066633e-08,
+            0.8482392428288223,
+            -1.3416457324267466,
+            0.6695306088220796,
+            -0.12631791216687283
+          ],
+          "expression": "-0.12631791216687283*x0**4 + 0.6695306088220796*x0**3 - 1.3416457324267466*x0**2 + 0.84823924282882235*x0 + 8.5847583770666334e-8",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.8817692473618096e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.000391042887893225,
+      "R": 0.01017500608694431,
+      "min_D": 0.010039629855935242,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.000391042887893225,
+      "R_visited": 0.01017500608694431,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 8.584758377066633e-08,
+    "R_prime_zero": 0.8482392428288223,
+    "R_at_001": 0.008348981970059021,
+    "positive_reaction_roots": [
+      1.1456802135329016
+    ],
+    "root_derivatives": [
+      -0.34933868646271504
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 8.959371582957519e-09,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.13470544200390577
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.010870121684785627,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.16207979700993747
+      }
+    },
+    "fit_components": {
+      "observation_mse": 7.940743807581881e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 7.369807639261574e-15
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_1",
+    "setting": "clean",
+    "seed": 1,
+    "arm": "unanchored",
+    "fit_record_sha256": "17f048f32f7f4dbbd9cf54ed29e1ae7d1d771dde863c06869222263bb7b5905d",
+    "observation_file_sha256": "e9dbe37c51d11ec30aca1170fa398a9d11233092d1840f980bf41f1eac6d0fc5",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010032844651334832,
+            0.10147617058140157,
+            0.049505963184316173,
+            1.5424230220771922,
+            1.2798936954316529
+          ],
+          "expression": "(0.049505963184316173*x0**2 + 0.10147617058140157*x0 + 0.010032844651334832)/(1.2798936954316529*x0**2 + 1.5424230220771922*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 8.002301486542263e-10
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.004761194596970433,
+            0.812013220188614,
+            -1.2669713013197217,
+            0.6123216356031713,
+            -0.1117015568354587
+          ],
+          "expression": "-0.1117015568354587*x0**4 + 0.61232163560317132*x0**3 - 1.2669713013197217*x0**2 + 0.81201322018861399*x0 + 0.004761194596970433",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.8817692473618096e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0003524042160727967,
+      "R": 0.008265827733905638,
+      "min_D": 0.010032844651334832,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0003524042160727967,
+      "R_visited": 0.008265827733905638,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.004761194596970433,
+    "R_prime_zero": 0.812013220188614,
+    "R_at_001": 0.012755240873344635,
+    "positive_reaction_roots": [
+      1.1468890132152982
+    ],
+    "root_derivatives": [
+      -0.3519142907949254
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0004959738641392216,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1340541070094332
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.011326976125439328,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14281119899533223
+      }
+    },
+    "fit_components": {
+      "observation_mse": 3.854313362525209e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_2",
+    "setting": "clean",
+    "seed": 2,
+    "arm": "hard_anchor",
+    "fit_record_sha256": "b5d53d7d1b35559afa6e5e66ade759854bd58bd5be1cb4aa9fdc308ae86007a8",
+    "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010049031121696111,
+            0.10180105744214395,
+            0.04642655150082975,
+            1.540123712756044,
+            1.2170172823778895
+          ],
+          "expression": "(0.046426551500829749*x0**2 + 0.10180105744214395*x0 + 0.010049031121696111)/(1.2170172823778895*x0**2 + 1.5401237127560441*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 4.665763287406002e-09
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.0,
+            0.8459285715104463,
+            -1.3346872490165125,
+            0.6643883920239464,
+            -0.12536362207768242
+          ],
+          "expression": "-0.12536362207768242*x0**4 + 0.66438839202394639*x0**3 - 1.3346872490165125*x0**2 + 0.84592857151044631*x0",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 5.796664227196276e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0004379507762569718,
+      "R": 0.01078589989224769,
+      "min_D": 0.010049031121696111,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0004379507762569718,
+      "R_visited": 0.01078589989224769,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0,
+    "R_prime_zero": 0.8459285715104463,
+    "R_at_001": 0.008326480124958615,
+    "positive_reaction_roots": [
+      1.1468149959543905
+    ],
+    "root_derivatives": [
+      -0.3503004151951308
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12026,
+        "seconds": 0.1360121089965105
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.01086768126148768,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.15104517199506517
+      }
+    },
+    "fit_components": {
+      "observation_mse": 6.209317756354696e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_2",
+    "setting": "clean",
+    "seed": 2,
+    "arm": "soft_anchor",
+    "fit_record_sha256": "3fa58bb1967408ba7bb455b5ec7e7e050f2180e53c60c877923b12c340e993da",
+    "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010049030467953584,
+            0.10180105540769774,
+            0.04642659627581084,
+            1.5401237823011626,
+            1.2170182149726518
+          ],
+          "expression": "(0.04642659627581084*x0**2 + 0.10180105540769774*x0 + 0.010049030467953584)/(1.2170182149726518*x0**2 + 1.5401237823011626*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 4.665763287406002e-09
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            8.996038516778602e-08,
+            0.8459278430474942,
+            -1.3346856801916809,
+            0.6643871482398326,
+            -0.12536329465430932
+          ],
+          "expression": "-0.12536329465430932*x0**4 + 0.66438714823983258*x0**3 - 1.3346856801916809*x0**2 + 0.84592784304749424*x0 + 8.9960385167786017e-8",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 5.796664227196276e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0004379485395276245,
+      "R": 0.010785799739532016,
+      "min_D": 0.010049030467953584,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0004379485395276245,
+      "R_visited": 0.010785799739532016,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 8.996038516778602e-08,
+    "R_prime_zero": 0.8459278430474942,
+    "R_at_001": 0.008326562956356236,
+    "positive_reaction_roots": [
+      1.1468150194301714
+    ],
+    "root_derivatives": [
+      -0.3503004791870933
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 9.3874984663701e-09,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1322961160039995
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.010867689862175935,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14026786500471644
+      }
+    },
+    "fit_components": {
+      "observation_mse": 6.209155896963357e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 8.092870899536414e-15
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_2",
+    "setting": "clean",
+    "seed": 2,
+    "arm": "unanchored",
+    "fit_record_sha256": "02e4d5c295bdb7da32f8491a14314fceb62c7b2c4d90147ad8733c60c0562f6e",
+    "observation_file_sha256": "a54cab54a79f5378595356395c45c5277e52c266739a045a8b0ab78104be528f",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010034054182597115,
+            0.10154541245343081,
+            0.04875884317356125,
+            1.5408668167392041,
+            1.2653571305591549
+          ],
+          "expression": "(0.048758843173561252*x0**2 + 0.10154541245343081*x0 + 0.010034054182597115)/(1.2653571305591549*x0**2 + 1.5408668167392041*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 4.665763287406002e-09
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.003541315520540128,
+            0.8187583759527091,
+            -1.277959830526678,
+            0.6202428147906456,
+            -0.1138800366814174
+          ],
+          "expression": "-0.1138800366814174*x0**4 + 0.62024281479064558*x0**3 - 1.2779598305266779*x0**2 + 0.81875837595270906*x0 + 0.0035413155205401281",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 5.796664227196276e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0003853574725708505,
+      "R": 0.008504424491676753,
+      "min_D": 0.010034054182597115,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0003853574725708505,
+      "R_visited": 0.008504424491676753,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.003541315520540128,
+    "R_prime_zero": 0.8187583759527091,
+    "R_at_001": 0.011601722401028976,
+    "positive_reaction_roots": [
+      1.1475781033427679
+    ],
+    "root_derivatives": [
+      -0.352321089195859
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.00036902705738758786,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.13242165400879458
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.01120737589573037,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1448598950082669
+      }
+    },
+    "fit_components": {
+      "observation_mse": 3.024671754672733e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_3",
+    "setting": "clean",
+    "seed": 3,
+    "arm": "hard_anchor",
+    "fit_record_sha256": "4e3ee56847753ec0168488e68a46149548258c597448f1e7b8f3df3ae3d2f4ce",
+    "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010048649548098922,
+            0.10182090258241021,
+            0.04626596716220643,
+            1.5406785131146978,
+            1.213562275697994
+          ],
+          "expression": "(0.046265967162206427*x0**2 + 0.10182090258241021*x0 + 0.010048649548098922)/(1.213562275697994*x0**2 + 1.5406785131146978*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 4.107856024525578e-09
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.0,
+            0.8521464382821627,
+            -1.3482462252547867,
+            0.6738423905372655,
+            -0.12755893003563196
+          ],
+          "expression": "-0.12755893003563196*x0**4 + 0.67384239053726547*x0**3 - 1.3482462252547867*x0**2 + 0.85214643828216274*x0",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.624893794767818e-09
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.00046093514366302027,
+      "R": 0.01222859416877384,
+      "min_D": 0.010048649548098922,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.00046093514366302027,
+      "R_visited": 0.01222859416877384,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0,
+    "R_prime_zero": 0.8521464382821627,
+    "R_at_001": 0.008387312327097385,
+    "positive_reaction_roots": [
+      1.1461318665441858
+    ],
+    "root_derivatives": [
+      -0.3510750549665883
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12026,
+        "seconds": 0.13543622400902677
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.010874283442418423,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14055511800688691
+      }
+    },
+    "fit_components": {
+      "observation_mse": 5.872083850093491e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_3",
+    "setting": "clean",
+    "seed": 3,
+    "arm": "soft_anchor",
+    "fit_record_sha256": "cd2a6bbeabaa37b5b8d2732a02af7b3f07155dac1e1252f63112842682aa1ee2",
+    "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010048648342239364,
+            0.10182090944532388,
+            0.04626594022399742,
+            1.5406785163701373,
+            1.2135617587015428
+          ],
+          "expression": "(0.046265940223997423*x0**2 + 0.10182090944532388*x0 + 0.010048648342239364)/(1.2135617587015428*x0**2 + 1.5406785163701373*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 4.107856024525578e-09
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            7.381719857550596e-08,
+            0.8521458758243408,
+            -1.3482451834100817,
+            0.6738416750592056,
+            -0.12755876418372966
+          ],
+          "expression": "-0.12755876418372966*x0**4 + 0.67384167505920556*x0**3 - 1.3482451834100817*x0**2 + 0.85214587582434076*x0 + 7.3817198575505957e-8",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.624893794767818e-09
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.00046093404725267543,
+      "R": 0.012228520064262798,
+      "min_D": 0.010048648342239364,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.00046093404725267543,
+      "R_visited": 0.012228520064262798,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 7.381719857550596e-08,
+    "R_prime_zero": 0.8521458758243408,
+    "R_at_001": 0.008387380623188393,
+    "positive_reaction_roots": [
+      1.146131885731491
+    ],
+    "root_derivatives": [
+      -0.3510750514316856
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 7.705362331809378e-09,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.12808049301384017
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.010874290537261298,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14105155499419197
+      }
+    },
+    "fit_components": {
+      "observation_mse": 5.871974866660754e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 5.448978805535679e-15
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_3",
+    "setting": "clean",
+    "seed": 3,
+    "arm": "unanchored",
+    "fit_record_sha256": "3a38f9a978726cd62baf4d250179028f1bdde22c459f3c8cac8dbfb6eb599a58",
+    "observation_file_sha256": "5624f8b6d5eb754b0dbbb0f3e634e72db60c64adb16c05fcb9762744f0d78907",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010023492988059135,
+            0.10186005130781596,
+            0.0469409618740595,
+            1.5425621722348024,
+            1.2279387991500808
+          ],
+          "expression": "(0.046940961874059502*x0**2 + 0.10186005130781596*x0 + 0.010023492988059135)/(1.2279387991500808*x0**2 + 1.5425621722348024*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 4.107856024525578e-09
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.0021843754590553854,
+            0.8329692691725463,
+            -1.3082599704629279,
+            0.6433725127022875,
+            -0.11980006261447422
+          ],
+          "expression": "-0.11980006261447422*x0**4 + 0.64337251270228746*x0**3 - 1.3082599704629279*x0**2 + 0.83296926917254632*x0 + 0.0021843754590553854",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.624893794767818e-09
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0004292330426369197,
+      "R": 0.009857586183147585,
+      "min_D": 0.010023492988059135,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0004292330426369197,
+      "R_visited": 0.009857586183147585,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0021843754590553854,
+    "R_prime_zero": 0.8329692691725463,
+    "R_at_001": 0.010383884328246632,
+    "positive_reaction_roots": [
+      1.146828799237802
+    ],
+    "root_derivatives": [
+      -0.3520002349203768
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0002277908214028032,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1309612369950628
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.01108138719586431,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1364089730050182
+      }
+    },
+    "fit_components": {
+      "observation_mse": 4.2606538083666533e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_4",
+    "setting": "clean",
+    "seed": 4,
+    "arm": "hard_anchor",
+    "fit_record_sha256": "78e0a560273af8394856aa84a608fd0b41190c96b186a61f035b3a988c5462d7",
+    "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010042978128721503,
+            0.1019709091888157,
+            0.04619199579231683,
+            1.544497576673984,
+            1.2111075711289208
+          ],
+          "expression": "(0.04619199579231683*x0**2 + 0.1019709091888157*x0 + 0.010042978128721503)/(1.2111075711289208*x0**2 + 1.5444975766739839*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 4.52110422284266e-09
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.0,
+            0.8495263505142763,
+            -1.3437752683234616,
+            0.671106167982558,
+            -0.1268929548790835
+          ],
+          "expression": "-0.1268929548790835*x0**4 + 0.67110616798255796*x0**3 - 1.3437752683234616*x0**2 + 0.84952635051427627*x0",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.369137870832983e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.00041743091479932553,
+      "R": 0.010930887151925604,
+      "min_D": 0.010042978128721503,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.00041743091479932553,
+      "R_visited": 0.010930887151925604,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0,
+    "R_prime_zero": 0.8495263505142763,
+    "R_at_001": 0.00836155581554885,
+    "positive_reaction_roots": [
+      1.1458456522220224
+    ],
+    "root_derivatives": [
+      -0.35019802415168466
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12026,
+        "seconds": 0.13053831399884075
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.010871487003170973,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1359477059886558
+      }
+    },
+    "fit_components": {
+      "observation_mse": 7.306966030561515e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_4",
+    "setting": "clean",
+    "seed": 4,
+    "arm": "soft_anchor",
+    "fit_record_sha256": "e02b4f02925db0f714c0e748a6b6b7411676f5b8cb1e8f069d23b7d77c017370",
+    "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010042980416777283,
+            0.10197085352886039,
+            0.0461923620799849,
+            1.5444975830703713,
+            1.2111150210926453
+          ],
+          "expression": "(0.046192362079984901*x0**2 + 0.10197085352886039*x0 + 0.010042980416777283)/(1.2111150210926453*x0**2 + 1.5444975830703713*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 4.52110422284266e-09
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            1.0503515665987334e-07,
+            0.8495254191370061,
+            -1.3437731897459941,
+            0.6711044741553437,
+            -0.12689249775423456
+          ],
+          "expression": "-0.12689249775423456*x0**4 + 0.67110447415534369*x0**3 - 1.3437731897459941*x0**2 + 0.84952541913700608*x0 + 1.0503515665987334e-7",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.369137870832983e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.00041742209966017245,
+      "R": 0.010930738153125476,
+      "min_D": 0.010042980416777283,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.00041742209966017245,
+      "R_visited": 0.010930738153125476,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 1.0503515665987334e-07,
+    "R_prime_zero": 0.8495254191370061,
+    "R_at_001": 0.008361651743101299,
+    "positive_reaction_roots": [
+      1.145845671228945
+    ],
+    "root_derivatives": [
+      -0.3501981143607893
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 1.0962572645857184e-08,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.13556206099747214
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.010871496961605772,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14567356499901507
+      }
+    },
+    "fit_components": {
+      "observation_mse": 7.306745382379871e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 1.1032384134564134e-14
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_clean_4",
+    "setting": "clean",
+    "seed": 4,
+    "arm": "unanchored",
+    "fit_record_sha256": "1ae009063ae7d8befcf7d45b3bd26ef06c15523c3a1b9feb29a1a4d474077e79",
+    "observation_file_sha256": "b84ca43243924e6aba401976c78ef1b9fae5afc73629d8d587e324bf183c1076",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "rational",
+          "parameters": [
+            0.010025305723128783,
+            0.10165390422766817,
+            0.04857839489506502,
+            1.5431328550107182,
+            1.2611639645480952
+          ],
+          "expression": "(0.048578394895065019*x0**2 + 0.10165390422766817*x0 + 0.010025305723128783)/(1.2611639645480952*x0**2 + 1.5431328550107182*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 4.52110422284266e-09
+        },
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.0037261865467145615,
+            0.8178228056350293,
+            -1.276836768535735,
+            0.6193804912722753,
+            -0.11358121810349696
+          ],
+          "expression": "-0.11358121810349696*x0**4 + 0.61938049127227535*x0**3 - 1.2768367685357349*x0**2 + 0.81782280563502929*x0 + 0.0037261865467145615",
+          "complexity": 5,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.369137870832983e-10
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.00037132579085445965,
+      "R": 0.00834618312936577,
+      "min_D": 0.010025305723128783,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.00037132579085445965,
+      "R_visited": 0.00834618312936577,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0037261865467145615,
+    "R_prime_zero": 0.8178228056350293,
+    "R_at_001": 0.011777349170890374,
+    "positive_reaction_roots": [
+      1.147025267923852
+    ],
+    "root_derivatives": [
+      -0.3522330565665627
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.00038827304226527707,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1272601399978157
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.01122559554781164,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.13834775700524915
+      }
+    },
+    "fit_components": {
+      "observation_mse": 3.393683552371781e-10,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_0",
+    "setting": "noise3",
+    "seed": 0,
+    "arm": "hard_anchor",
+    "fit_record_sha256": "bfe3aadba2363f0d07f632d60984354d6c10a7efbc1756e275864e7f9a91c0d4",
+    "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.01703228405311264,
+            0.042985355066109475,
+            -0.01664831940892609
+          ],
+          "expression": "-0.016648319408926089*x0**2 + 0.042985355066109475*x0 + 0.017032284053112641",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 6.895762652432418e-12
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            0.0,
+            0.32643622922232485,
+            -0.2853013866491202,
+            -1.8575887955705794,
+            2.134835749919716
+          ],
+          "expression": "(-0.28530138664912019*x0**2 + 0.32643622922232485*x0)/(2.1348357499197159*x0**2 - 1.8575887955705794*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00017968575979475593
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0472518785337899,
+      "R": 0.45676241857697175,
+      "min_D": 0.01703228405311264,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0472518785337899,
+      "R_visited": 0.45676241857697175,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0,
+    "R_prime_zero": 0.32643622922232485,
+    "R_at_001": 0.0032963612722238344,
+    "positive_reaction_roots": [
+      1.144180310710493
+    ],
+    "root_derivatives": [
+      -0.19554097143379642
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12026,
+        "seconds": 0.14363415799743962
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.010335184227254768,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1565119359875098
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.00016875048635466318,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_0",
+    "setting": "noise3",
+    "seed": 0,
+    "arm": "soft_anchor",
+    "fit_record_sha256": "3c8a513874b017f069f7335932bd3e92e54cf32e3c3b39cab0a1e0326c33bbe5",
+    "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.01703243096981173,
+            0.042984846879133266,
+            -0.01664796753265031
+          ],
+          "expression": "-0.016647967532650309*x0**2 + 0.042984846879133266*x0 + 0.017032430969811729",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 6.895762652432418e-12
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            -6.264271446883507e-06,
+            0.32640341744600593,
+            -0.2852747378009731,
+            -1.8581711101457503,
+            2.135390897331917
+          ],
+          "expression": "(-0.28527473780097312*x0**2 + 0.32640341744600593*x0 - 6.2642714468835073e-6)/(2.1353908973319169*x0**2 - 1.8581711101457503*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00017968575979475593
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.04725132597803391,
+      "R": 0.4568090133796086,
+      "min_D": 0.01703243096981173,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.04725132597803391,
+      "R_visited": 0.4568090133796086,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": -6.264271446883507e-06,
+    "R_prime_zero": 0.3263917773577772,
+    "R_at_001": 0.0032896676097503717,
+    "positive_reaction_roots": [
+      1.9192129093958954e-05,
+      1.1441529836551037
+    ],
+    "root_derivatives": [
+      0.32640410743817133,
+      -0.19551736407763762
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": -6.367623111260646e-07,
+        "minimum_state": -6.367623111260646e-07,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14525721600512043
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.01033450289702598,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.15530817900435068
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.0001687504074811211,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 3.924109676023999e-11
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_0",
+    "setting": "noise3",
+    "seed": 0,
+    "arm": "unanchored",
+    "fit_record_sha256": "ace48339f1590f164c5b6abbcaab17a3e9e834e4d7ee56b9f55175df7eaece90",
+    "observation_file_sha256": "9c260650ddd0924ddd073fcbc14772b16fe4fccc97ebddd38065ba1f21bb585e",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.01895177946616327,
+            0.039274111531117734,
+            -0.01501607188258501
+          ],
+          "expression": "-0.015016071882585009*x0**2 + 0.039274111531117734*x0 + 0.01895177946616327",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 6.895762652432418e-12
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            -0.8832486721425505,
+            6.409461910218859,
+            -4.788962317939971,
+            4.4452637885936594,
+            12.23844658600331
+          ],
+          "expression": "(-4.788962317939971*x0**2 + 6.4094619102188588*x0 - 0.88324867214255054)/(12.23844658600331*x0**2 + 4.4452637885936594*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00017968575979475593
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.056853445760205915,
+      "R": 1.1804160003840432,
+      "min_D": 0.01895177946616327,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.056853445760205915,
+      "R_visited": 1.1804160003840432,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": -0.8832486721425505,
+    "R_prime_zero": 10.335735248817572,
+    "R_at_001": -0.7838303365852415,
+    "positive_reaction_roots": [
+      0.15598307378710108,
+      1.182399123585453
+    ],
+    "root_derivatives": [
+      2.4686501174407334,
+      -0.21036611402841282
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": -0.19038462072858717,
+        "minimum_state": -0.19038462072858717,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14755371899809688
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 1,
+        "message": "A termination event occurred.",
+        "reached_time": 0.012020695225837348,
+        "final_state": 1.034294991233281e-16,
+        "minimum_state": 1.034294991233281e-16,
+        "zero_time": 0.012020695225837348,
+        "nfev": 1457,
+        "seconds": 0.018052454994176514
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.00016616338682434113,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_1",
+    "setting": "noise3",
+    "seed": 1,
+    "arm": "hard_anchor",
+    "fit_record_sha256": "6ff07b718342a8f99eea99a3f949625f4c0664c61d3a3014f813d1bd1d4d20ec",
+    "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.015177518878992852,
+            0.045792738860171725,
+            -0.017958763013029275
+          ],
+          "expression": "-0.017958763013029275*x0**2 + 0.045792738860171725*x0 + 0.015177518878992852",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.147938318734731e-11
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            0.0,
+            3.517617413540409,
+            -2.932536149914777,
+            14.199445150016206,
+            -4.545414685174402
+          ],
+          "expression": "(-2.9325361499147768*x0**2 + 3.517617413540409*x0)/(-4.5454146851744017*x0**2 + 14.199445150016206*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00017404083333441878
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.044698817347308246,
+      "R": 0.1837232571894039,
+      "min_D": 0.015177518878992852,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.044698817347308246,
+      "R_visited": 0.1837232571894039,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0,
+    "R_prime_zero": 3.517617413540409,
+    "R_at_001": 0.03055777569743105,
+    "positive_reaction_roots": [
+      1.199513742956804
+    ],
+    "root_derivatives": [
+      -0.3060837611748077
+    ],
+    "reaction_poles_all_real": [
+      -0.06890540887948582,
+      3.1928107362261793
+    ],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12026,
+        "seconds": 0.14399937400594354
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.013485541477183472,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14802219800185412
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.00020103757307274734,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_1",
+    "setting": "noise3",
+    "seed": 1,
+    "arm": "soft_anchor",
+    "fit_record_sha256": "29996938ec90565af98b2ad4c6cff46bb6a23ae801aaad56e6a80263b6544905",
+    "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.015177612035734206,
+            0.04579250958862211,
+            -0.01795864131074832
+          ],
+          "expression": "-0.01795864131074832*x0**2 + 0.045792509588622111*x0 + 0.015177612035734206",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.147938318734731e-11
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            -5.887252341499483e-07,
+            3.517024134005262,
+            -2.932053128885969,
+            14.196166845968971,
+            -4.544084128696081
+          ],
+          "expression": "(-2.9320531288859688*x0**2 + 3.5170241340052621*x0 - 5.8872523414994826e-7)/(-4.5440841286960811*x0**2 + 14.196166845968971*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00017404083333441878
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.044698614484484485,
+      "R": 0.18370702998878707,
+      "min_D": 0.015177612035734206,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.044698614484484485,
+      "R_visited": 0.18370702998878707,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": -5.887252341499483e-07,
+    "R_prime_zero": 3.5170324916469125,
+    "R_at_001": 0.030552978962656258,
+    "positive_reaction_roots": [
+      1.6739302699519953e-07,
+      1.199508838551061
+    ],
+    "root_derivatives": [
+      3.517014794774603,
+      -0.30608622742910935
+    ],
+    "reaction_poles_all_real": [
+      -0.06892107498838485,
+      3.1930196708571503
+    ],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": -7.055375475559907e-08,
+        "minimum_state": -7.055375475559907e-08,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1412853770016227
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.013484948049010336,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.15533125599904452
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.0002010375725448057,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 3.465974013249114e-13
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_1",
+    "setting": "noise3",
+    "seed": 1,
+    "arm": "unanchored",
+    "fit_record_sha256": "f796b5291d1566aaac61eeef7ff02fb5348648e2be19e86a9523f9bd528aac61",
+    "observation_file_sha256": "4ea91d530e04647fb52a72246ffda42cb7375ad99931c12cf4f76cbc35f51c10",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.01566306155525051,
+            0.04465503619119759,
+            -0.01736349591111735
+          ],
+          "expression": "-0.017363495911117351*x0**2 + 0.044655036191197588*x0 + 0.015663061555250511",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 2.147938318734731e-11
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            -0.5558478515631072,
+            15.240382981778444,
+            -12.453121293424836,
+            56.35487387040528,
+            -15.183788512421314
+          ],
+          "expression": "(-12.453121293424836*x0**2 + 15.240382981778444*x0 - 0.55584785156310723)/(-15.183788512421314*x0**2 + 56.354873870405278*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00017404083333441878
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.043977626564899175,
+      "R": 0.38256408096506966,
+      "min_D": 0.01566306155525051,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.043977626564899175,
+      "R_visited": 0.38256408096506966,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": -0.5558478515631072,
+    "R_prime_zero": 46.56511854775311,
+    "R_at_001": -0.25907904498911205,
+    "positive_reaction_roots": [
+      0.03762902610198582,
+      1.186191301563598
+    ],
+    "root_derivatives": [
+      4.615301002129791,
+      -0.30770579662594577
+    ],
+    "reaction_poles_all_real": [
+      -0.017660658701387,
+      3.7291766498720604
+    ],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": false,
+        "status": -1,
+        "message": "Required step size is less than spacing between numbers.",
+        "reached_time": 0.01381495644458521,
+        "final_state": -0.017660657973964496,
+        "minimum_state": -0.017660657973964496,
+        "zero_time": null,
+        "nfev": 3398,
+        "seconds": 0.040652562005561776
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 1,
+        "message": "A termination event occurred.",
+        "reached_time": 0.02722514947305551,
+        "final_state": 8.250100906256885e-19,
+        "minimum_state": 8.250100906256885e-19,
+        "zero_time": 0.02722514947305551,
+        "nfev": 3281,
+        "seconds": 0.04236514800868463
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.000200841438973731,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_2",
+    "setting": "noise3",
+    "seed": 2,
+    "arm": "hard_anchor",
+    "fit_record_sha256": "3113dc224192ddc8b1fc007c7b89916493ba7f8b2fd1c644a8eeaf79f5b41677",
+    "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.01620403262884149,
+            0.042523570912156056,
+            -0.015632615519434047
+          ],
+          "expression": "-0.015632615519434047*x0**2 + 0.042523570912156056*x0 + 0.016204032628841489",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 1.0713440021630614e-11
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            0.0,
+            0.5907701296054026,
+            -0.6906736254128805,
+            -3.3844738924636197,
+            5.61829598389067
+          ],
+          "expression": "(-0.69067362541288047*x0**2 + 0.59077012960540265*x0)/(5.6182959838906701*x0**2 - 3.3844738924636197*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00010303960777820701
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.039844909931703525,
+      "R": 0.549653505270023,
+      "min_D": 0.01620403262884149,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.039844909931703525,
+      "R_visited": 0.549653505270023,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0,
+    "R_prime_zero": 0.5907701296054026,
+    "R_at_001": 0.006039651093210224,
+    "positive_reaction_roots": [
+      0.8553535387314724
+    ],
+    "root_derivatives": [
+      -0.2666423101880466
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12026,
+        "seconds": 0.1449719840020407
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.01062301224732943,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.15444833500077948
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.00020961118064427591,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_2",
+    "setting": "noise3",
+    "seed": 2,
+    "arm": "soft_anchor",
+    "fit_record_sha256": "86deff549d76fa65a459438b252646fa60f9a3450200e271c2eb491b721cbf01",
+    "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.016204052161167652,
+            0.042523071143589365,
+            -0.015632045712581543
+          ],
+          "expression": "-0.015632045712581543*x0**2 + 0.042523071143589365*x0 + 0.016204052161167652",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 1.0713440021630614e-11
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            -3.6404965098454046e-06,
+            0.5904625138417049,
+            -0.690433019031439,
+            -3.386414067869692,
+            5.620022634657169
+          ],
+          "expression": "(-0.69043301903143905*x0**2 + 0.59046251384170489*x0 - 3.6404965098454046e-6)/(5.6200226346571691*x0**2 - 3.3864140678696919*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00010303960777820701
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.039845071192207863,
+      "R": 0.5498647858312572,
+      "min_D": 0.016204052161167652,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.039845071192207863,
+      "R_visited": 0.5498647858312572,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": -3.6404965098454046e-06,
+    "R_prime_zero": 0.5904501856131099,
+    "R_at_001": 0.006032848081864369,
+    "positive_reaction_roots": [
+      6.165544248148969e-06,
+      0.855199911752032
+    ],
+    "root_derivatives": [
+      0.5904663283220178,
+      -0.2666624565105215
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": -3.7501199567630473e-07,
+        "minimum_state": -3.7501199567630473e-07,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.146948703986709
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.010622300667220847,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14852555000106804
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.0002096111530551247,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 1.3253214838196573e-11
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_2",
+    "setting": "noise3",
+    "seed": 2,
+    "arm": "unanchored",
+    "fit_record_sha256": "aef6f7d243629fef6c0beecc4ffb93a7fda68a893b4f89d81a16eb0949b881d0",
+    "observation_file_sha256": "707e2a461daa45e2ef56c5d21bd6b04ab2692ebff5dc243b33683d242e9404b9",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.016611097788223762,
+            0.04207418280210915,
+            -0.015671030094154124
+          ],
+          "expression": "-0.015671030094154124*x0**2 + 0.042074182802109152*x0 + 0.016611097788223762",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 1.0713440021630614e-11
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            -0.13911358240035818,
+            2.084674876884949,
+            -2.015746198349079,
+            -1.2739738976035893,
+            8.052191880643791
+          ],
+          "expression": "(-2.015746198349079*x0**2 + 2.0846748768849488*x0 - 0.13911358240035818)/(8.0521918806437913*x0**2 - 1.2739738976035893*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00010303960777820701
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.04140565128585511,
+      "R": 0.4619736683436478,
+      "min_D": 0.016611097788223762,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.04140565128585511,
+      "R_visited": 0.4619736683436478,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": -0.13911358240035818,
+    "R_prime_zero": 1.9074478041047664,
+    "R_at_001": -0.1198993494094354,
+    "positive_reaction_roots": [
+      0.07170285317977765,
+      0.9624922645351031
+    ],
+    "root_derivatives": [
+      1.8900091253672202,
+      -0.24824182787906668
+    ],
+    "reaction_poles_all_real": [],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": -0.015313519887733143,
+        "minimum_state": -0.015313519887733143,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14404742998885922
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 1,
+        "message": "A termination event occurred.",
+        "reached_time": 0.07734511339163659,
+        "final_state": -1.268855354986942e-18,
+        "minimum_state": -1.268855354986942e-18,
+        "zero_time": 0.07734511339163659,
+        "nfev": 9293,
+        "seconds": 0.11553630999696907
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.0002092533247617577,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_3",
+    "setting": "noise3",
+    "seed": 3,
+    "arm": "hard_anchor",
+    "fit_record_sha256": "3f29e01eaebbeb65f2b118fe3bfa16bc5c10acc74c83a6f1592d6dcb7ca2fbf2",
+    "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.015453427935792796,
+            0.04603974319086849,
+            -0.01863009911613449
+          ],
+          "expression": "-0.018630099116134492*x0**2 + 0.046039743190868489*x0 + 0.015453427935792796",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 5.036623436331815e-12
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            0.0,
+            1.7402259447153452,
+            -1.4303052468256146,
+            8.040471094802678,
+            -3.366513234688608
+          ],
+          "expression": "(-1.4303052468256146*x0**2 + 1.7402259447153452*x0)/(-3.366513234688608*x0**2 + 8.0404710948026779*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00013267610350640042
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0539151475594704,
+      "R": 0.223927071750076,
+      "min_D": 0.015453427935792796,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0539151475594704,
+      "R_visited": 0.223927071750076,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0,
+    "R_prime_zero": 1.7402259447153452,
+    "R_at_001": 0.01597976050552811,
+    "positive_reaction_roots": [
+      1.21668150807498
+    ],
+    "root_derivatives": [
+      -0.30008054362859915
+    ],
+    "reaction_poles_all_real": [
+      -0.11849216533287432,
+      2.5068597534812085
+    ],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12026,
+        "seconds": 0.14263912799651735
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.011719933936128819,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.15067389600153547
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.0002271365114398791,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_3",
+    "setting": "noise3",
+    "seed": 3,
+    "arm": "soft_anchor",
+    "fit_record_sha256": "7478eb32e01ae61cfe819950506f47ef6a41898b8ec4851013d1086e131ee621",
+    "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.015453539029798603,
+            0.0460394788117902,
+            -0.01862997169646851
+          ],
+          "expression": "-0.01862997169646851*x0**2 + 0.046039478811790199*x0 + 0.015453539029798603",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 5.036623436331815e-12
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            -3.7797476201926487e-06,
+            1.7399664099772114,
+            -1.4300926538156589,
+            8.038353292452191,
+            -3.3654904282323024
+          ],
+          "expression": "(-1.4300926538156589*x0**2 + 1.7399664099772114*x0 - 3.7797476201926487e-6)/(-3.3654904282323024*x0**2 + 8.0383532924521912*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00013267610350640042
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.05391514184244858,
+      "R": 0.22390234267218972,
+      "min_D": 0.015453539029798603,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.05391514184244858,
+      "R_visited": 0.22390234267218972,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": -3.7797476201926487e-06,
+    "R_prime_zero": 1.7399967929239388,
+    "R_at_001": 0.015974189404949185,
+    "positive_reaction_roots": [
+      2.1723145613439243e-06,
+      1.2166787226853342
+    ],
+    "root_derivatives": [
+      1.7399298144207047,
+      -0.30008968385178303
+    ],
+    "reaction_poles_all_real": [
+      -0.1185221905598306,
+      2.506986357630504
+    ],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": -4.128517852521633e-07,
+        "minimum_state": -4.128517852521633e-07,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.1428311850031605
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.011719323146906544,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14984958399145398
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.00022713648305763408,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 1.4286492072351991e-11
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_3",
+    "setting": "noise3",
+    "seed": 3,
+    "arm": "unanchored",
+    "fit_record_sha256": "c589d15a46063a92fc9edfec77e0b06e6ab781204f31892909310386e2eb5427",
+    "observation_file_sha256": "2754b504e2b2293e8895222f073198d6f7f8fae40b24c44e2aee08320c218eb0",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.01625691659035951,
+            0.04376268818277017,
+            -0.017370272817003384
+          ],
+          "expression": "-0.017370272817003384*x0**2 + 0.043762688182770168*x0 + 0.016256916590359511",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 5.036623436331815e-12
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            -0.5932098231042873,
+            13.067045711950495,
+            -10.610859439517158,
+            51.93129270247994,
+            -16.44192455557712
+          ],
+          "expression": "(-10.610859439517158*x0**2 + 13.067045711950495*x0 - 0.59320982310428727)/(-16.441924555577121*x0**2 + 51.931292702479936*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 0.00013267610350640042
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.05169609720880299,
+      "R": 0.41026802731922435,
+      "min_D": 0.01625691659035951,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.05169609720880299,
+      "R_visited": 0.41026802731922435,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": -0.5932098231042873,
+    "R_prime_zero": 43.87319866956558,
+    "R_at_001": -0.30546880315111535,
+    "positive_reaction_roots": [
+      0.047207008739974965,
+      1.1842715332606817
+    ],
+    "root_derivatives": [
+      3.5331348031776026,
+      -0.3059060796069001
+    ],
+    "reaction_poles_all_real": [
+      -0.01914022316314501,
+      3.1776082313906113
+    ],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": false,
+        "status": -1,
+        "message": "Required step size is less than spacing between numbers.",
+        "reached_time": 0.014264245497483815,
+        "final_state": -0.019140222759308823,
+        "minimum_state": -0.019140222759308823,
+        "zero_time": null,
+        "nfev": 3458,
+        "seconds": 0.040184488010709174
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 1,
+        "message": "A termination event occurred.",
+        "reached_time": 0.024159224036008967,
+        "final_state": 1.0028870095490916e-18,
+        "minimum_state": 1.0028870095490916e-18,
+        "zero_time": 0.024159224036008967,
+        "nfev": 2909,
+        "seconds": 0.03668463400390465
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.0002256005593608265,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_4",
+    "setting": "noise3",
+    "seed": 4,
+    "arm": "hard_anchor",
+    "fit_record_sha256": "e5e6665f492d165a5d4ab9a5f23c423b73f67aa99792dc30b07a0aedc3f0eba3",
+    "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.014657788528831915,
+            0.04824717941741016,
+            -0.01937324298355196
+          ],
+          "expression": "-0.019373242983551961*x0**2 + 0.048247179417410163*x0 + 0.014657788528831915",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 5.750919339316651e-12
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            0.0,
+            6.810958261265982,
+            -5.468676148811171,
+            33.73433238740836,
+            -13.943444786707634
+          ],
+          "expression": "(-5.4686761488111708*x0**2 + 6.8109582612659816*x0)/(-13.943444786707634*x0**2 + 33.734332387408358*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 8.438831691818459e-05
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.04752771091920617,
+      "R": 0.26582813703636854,
+      "min_D": 0.014657788528831915,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.04752771091920617,
+      "R_visited": 0.26582813703636854,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": 0.0,
+    "R_prime_zero": 6.810958261265982,
+    "R_at_001": 0.05057282578886686,
+    "positive_reaction_roots": [
+      1.2454491865909096
+    ],
+    "root_derivatives": [
+      -0.31847577995548015
+    ],
+    "reaction_poles_all_real": [
+      -0.029288821049090252,
+      2.4486574134910017
+    ],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.0,
+        "minimum_state": 0.0,
+        "zero_time": null,
+        "nfev": 12026,
+        "seconds": 0.14542925800196826
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.01602861684846669,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.15169205100391991
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.00022327150109164673,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_4",
+    "setting": "noise3",
+    "seed": 4,
+    "arm": "soft_anchor",
+    "fit_record_sha256": "79053ca5fb9c34e86d87f7c7df12417ffdc06212d084cf27d67a161cccf827db",
+    "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.014655960694227794,
+            0.0482544403525393,
+            -0.01937783131552164
+          ],
+          "expression": "-0.019377831315521642*x0**2 + 0.048254440352539299*x0 + 0.014655960694227794",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 5.750919339316651e-12
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            -6.197698106566111e-07,
+            6.839532141561558,
+            -5.490419534092524,
+            33.919755273544105,
+            -14.035962620763154
+          ],
+          "expression": "(-5.4904195340925241*x0**2 + 6.8395321415615582*x0 - 6.197698106566111e-7)/(-14.035962620763154*x0**2 + 33.919755273544105*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 8.438831691818459e-05
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.047545805783245944,
+      "R": 0.2663897264225997,
+      "min_D": 0.014655960694227794,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.047545805783245944,
+      "R_visited": 0.2663897264225997,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": -6.197698106566111e-07,
+    "R_prime_zero": 6.839553164001861,
+    "R_at_001": 0.05071458079482397,
+    "positive_reaction_roots": [
+      9.061582617597708e-08,
+      1.2457211332527283
+    ],
+    "root_derivatives": [
+      6.839510124150389,
+      -0.31851398227751987
+    ],
+    "reaction_poles_all_real": [
+      -0.02913020772804753,
+      2.4457621260381748
+    ],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": -8.895738400449108e-08,
+        "minimum_state": -8.895738400449108e-08,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.14029740401019808
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 0,
+        "message": "The solver successfully reached the end of the integration interval.",
+        "reached_time": 0.1,
+        "final_state": 0.01604641384874873,
+        "minimum_state": 0.01,
+        "zero_time": null,
+        "nfev": 12002,
+        "seconds": 0.15426842200395186
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.0002232715045193309,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 3.8411461820133157e-13
+    },
+    "optimizer_success": true
+  },
+  {
+    "id": "sameobs_case_exp_noise3_4",
+    "setting": "noise3",
+    "seed": 4,
+    "arm": "unanchored",
+    "fit_record_sha256": "2ce63889909914a91d63e987a74ede01cbfeaa11db028f5619ab5140be034594",
+    "observation_file_sha256": "c4016a0149646f765b2e85d33775d21376b8e26df7b58a2b2fd39efc646753ff",
+    "model": {
+      "kind": "restricted",
+      "symbols": [
+        {
+          "family": "polynomial",
+          "parameters": [
+            0.015338331572576868,
+            0.045760196610680516,
+            -0.01781735543048564
+          ],
+          "expression": "-0.01781735543048564*x0**2 + 0.045760196610680516*x0 + 0.015338331572576868",
+          "complexity": 3,
+          "numerator_degree": null,
+          "denominator_degree": null,
+          "source_teacher_fit_mse": 5.750919339316651e-12
+        },
+        {
+          "family": "rational",
+          "parameters": [
+            -0.6335445819851121,
+            24.47584938784663,
+            -20.49757220782552,
+            87.92086925756871,
+            -19.00666365129089
+          ],
+          "expression": "(-20.49757220782552*x0**2 + 24.47584938784663*x0 - 0.6335445819851121)/(-19.006663651290889*x0**2 + 87.920869257568711*x0 + 1)",
+          "complexity": 5,
+          "numerator_degree": 2,
+          "denominator_degree": 2,
+          "source_teacher_fit_mse": 8.438831691818459e-05
+        }
+      ]
+    },
+    "metrics": {
+      "D": 0.0425255627533955,
+      "R": 0.43047749674950014,
+      "min_D": 0.015338331572576868,
+      "visited_min": 0.0,
+      "visited_max": 1.8,
+      "visited_grid_count": 256,
+      "support_min": 0.0,
+      "support_max": 1.8,
+      "support_points": 256,
+      "D_visited": 0.0425255627533955,
+      "R_visited": 0.43047749674950014,
+      "D_extrapolation": null,
+      "R_extrapolation": null
+    },
+    "R0": -0.6335445819851121,
+    "R_prime_zero": 80.1776397494007,
+    "R_at_001": -0.20818951385210366,
+    "positive_reaction_roots": [
+      0.026471312320908602,
+      1.1676139744479455
+    ],
+    "root_derivatives": [
+      7.058000846317099,
+      -0.3008621278006509
+    ],
+    "reaction_poles_all_real": [
+      -0.011346034599901245,
+      4.637137855333117
+    ],
+    "scalar": {
+      "0.0": {
+        "initial_state": 0.0,
+        "success": false,
+        "status": -1,
+        "message": "Required step size is less than spacing between numbers.",
+        "reached_time": 0.007876306034147578,
+        "final_state": -0.011346033982056756,
+        "minimum_state": -0.011346033982056756,
+        "zero_time": null,
+        "nfev": 2702,
+        "seconds": 0.03259830400929786
+      },
+      "0.01": {
+        "initial_state": 0.01,
+        "success": true,
+        "status": 1,
+        "message": "A termination event occurred.",
+        "reached_time": 0.029358677768817454,
+        "final_state": 3.5914196963582334e-19,
+        "minimum_state": 3.5914196963582334e-19,
+        "zero_time": 0.029358677768817454,
+        "nfev": 3533,
+        "seconds": 0.06466931299655698
+      }
+    },
+    "fit_components": {
+      "observation_mse": 0.00022293230653034097,
+      "diffusion_penalty": 0.0,
+      "anchor_penalty": 0.0
+    },
+    "optimizer_success": true
+  }
+]

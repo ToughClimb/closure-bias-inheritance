@@ -1,0 +1,57 @@
+[
+  {
+    "id": "sameobs_case_exp_noise3_0",
+    "initial_state": 0.01,
+    "true_initial_growth": 0.008647072986891482,
+    "learned_initial_growth": -0.7818266168224903,
+    "zero_crossing_time": 0.01205452597951868,
+    "quadrature_crossing_time": 0.012054525979518678,
+    "time_difference": 1.734723475976807e-18,
+    "event_status": 1,
+    "solver": "DOP853, rtol=1e-11, atol=1e-13, max_step=1e-4"
+  },
+  {
+    "id": "sameobs_case_exp_noise3_1",
+    "initial_state": 0.01,
+    "true_initial_growth": 0.008647072986891482,
+    "learned_initial_growth": -0.2586671936721841,
+    "zero_crossing_time": 0.027274156351652337,
+    "quadrature_crossing_time": 0.027274156351652326,
+    "time_difference": 1.0408340855860843e-17,
+    "event_status": 1,
+    "solver": "DOP853, rtol=1e-11, atol=1e-13, max_step=1e-4"
+  },
+  {
+    "id": "sameobs_case_exp_noise3_2",
+    "initial_state": 0.01,
+    "true_initial_growth": 0.008647072986891482,
+    "learned_initial_growth": -0.11984710592577777,
+    "zero_crossing_time": 0.07738253826388311,
+    "quadrature_crossing_time": 0.07738253826388308,
+    "time_difference": 2.7755575615628914e-17,
+    "event_status": 1,
+    "solver": "DOP853, rtol=1e-11, atol=1e-13, max_step=1e-4"
+  },
+  {
+    "id": "sameobs_case_exp_noise3_3",
+    "initial_state": 0.01,
+    "true_initial_growth": 0.008647072986891482,
+    "learned_initial_growth": -0.30552201334505275,
+    "zero_crossing_time": 0.024144215394153987,
+    "quadrature_crossing_time": 0.024144215394154026,
+    "time_difference": 3.8163916471489756e-17,
+    "event_status": 1,
+    "solver": "DOP853, rtol=1e-11, atol=1e-13, max_step=1e-4"
+  },
+  {
+    "id": "sameobs_case_exp_noise3_4",
+    "initial_state": 0.01,
+    "true_initial_growth": 0.008647072986891482,
+    "learned_initial_growth": -0.20821730225422336,
+    "zero_crossing_time": 0.029357667571663,
+    "quadrature_crossing_time": 0.029357667571662978,
+    "time_difference": 2.0816681711721685e-17,
+    "event_status": 1,
+    "solver": "DOP853, rtol=1e-11, atol=1e-13, max_step=1e-4"
+  }
+]
